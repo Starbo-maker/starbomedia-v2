@@ -1,0 +1,456 @@
+<article class="ucp-article" itemscope="" itemtype="https://schema.org/Article">
+  <header>
+    <p><time datetime="2026-03-16" itemprop="datePublished">16. marca 2026</time> · Čas čítania: 12 min</p>
+  </header>
+
+  <nav aria-label="Obsah článku">
+    <strong>Obsah</strong>
+    <ol>
+      <li><a href="#tldr">TL;DR — Kľúčové body v skratke</a></li>
+      <li><a href="#co-je-server-side-tracking">Čo je server side tracking</a></li>
+      <li><a href="#co-je-server-side-tagging">Čo je server side tagging</a></li>
+      <li><a href="#hlavne-rozdiely">Server side tagging vs tracking: Hlavné rozdiely</a></li>
+      <li><a href="#preco-si-to-ludia-pletu">Prečo si to ľudia pletú: 3 hlavné dôvody</a></li>
+      <li><a href="#kedy-potrebujete-tagging">Kedy potrebujete server side tagging</a></li>
+      <li><a href="#kedy-potrebujete-tracking">Kedy potrebujete server side tracking (bez taggingu)</a></li>
+      <li><a href="#prakticky-priklad">Praktický príklad: GA4 + GTM server-side</a></li>
+      <li><a href="#nastroje-a-riesenia">Nástroje a riešenia pre server side tagging</a></li>
+      <li><a href="#kolko-to-stoji">Koľko to celkovo stojí</a></li>
+      <li><a href="#faq">Často kladené otázky</a></li>
+    </ol>
+  </nav>
+
+  <p>Na konferenciách, v blogoch aj v ponukách agentúr sa tieto dva pojmy používajú ako synonymá. „Potrebujete server side tracking,“ povie konzultant. „Implementujeme vám server side tagging,“ napíše agentúra. Znamenajú to isté? Nie. A práve táto zámena spôsobuje problémy pri plánovaní, rozpočtovaní aj implementácii.</p>
+
+  <p>Ak ste sa niekedy stratili v tom, čo presne tieto pojmy znamenajú a kedy ktorý potrebujete, nie ste sami. Tento článok raz a navždy vysvetlí rozdiel — jednoducho, prakticky a bez zbytočného technického žargónu.</p>
+
+  <hr>
+
+  <section id="tldr">
+    <h2>TL;DR — Kľúčové body v skratke</h2>
+    <ul>
+      <li><strong>Server side tracking</strong> = cieľ. Znamená zber dát o používateľoch cez server namiesto prehliadača.</li>
+      <li><strong>Server side tagging</strong> = nástroj. Znamená správu trackingových tagov (pixelov, skriptov) na serveri namiesto v prehliadači.</li>
+      <li><strong>Tagging je najčastejší spôsob</strong>, ako dosiahnuť tracking. Preto si ich ľudia pletú.</li>
+      <li><strong>Nie každý server side tracking je tagging</strong> — existujú aj čisto serverové riešenia (API, data warehouse).</li>
+      <li>V roku 2026 je server side prístup už štandard, nie luxus — ad blockery blokujú viac ako 40 % klientských skriptov.</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section id="co-je-server-side-tracking">
+    <h2>Čo je server side tracking</h2>
+
+    <p>Server side tracking je proces, pri ktorom sa dáta o správaní používateľov zbierajú a odosielajú prostredníctvom servera namiesto prehliadača. Namiesto toho, aby JavaScript kódy v prehliadači odosielali informácie priamo do Google Analytics, Meta Pixelu či iných platforiem, dáta najprv putujú na váš server. Ten ich spracuje, obohatí a až potom prepošle na cieľové platformy.</p>
+
+    <h3>Prečo to vzniklo</h3>
+
+    <p>Tradičný (klientský) tracking fungoval jednoducho: do kódu stránky ste vložili JavaScript snippet a ten odosielal dáta priamo z prehliadača návštevníka. Tento model fungoval roky — až kým nezačal zlyhávať.</p>
+
+    <p>Tri hlavné príčiny:</p>
+
+    <ol>
+      <li><strong>Ad blockery a prehliadačové blokovanie</strong> — V roku 2026 používa ad blockery viac ako 40 percent používateľov. Tieto nástroje blokujú väčšinu trackingových skriptov, čím znehodnocujú vaše dáta.</li>
+      <li><strong>Skrátená životnosť cookies</strong> — Safari cez ITP obmedzuje klientské cookies na 7 dní. Ak sa zákazník vráti po týždni, analytika ho nerozpozná ako vracajúceho sa návštevníka.</li>
+      <li><strong>GDPR a Consent Mode v2</strong> — Od marca 2025 musia európski inzerenti implementovať Consent Mode v2. Bez pokročilého režimu strácate 20 až 40 percent dát o konverziách.</li>
+    </ol>
+
+    <p>Server side tracking tieto problémy rieši tým, že presúva zber dát z prehliadača (ktorý je pod kontrolou používateľa) na server (ktorý je pod vašou kontrolou).</p>
+
+    <h3>Hlavné výhody</h3>
+
+    <ul>
+      <li><strong>Presnejšie dáta:</strong> E-commerce firmy typicky reportujú 20 až 25 percent nárast meraných konverzií po prechode na server side tracking — nie viac predajov, ale lepšie meranie.</li>
+      <li><strong>Dlhšia životnosť cookies:</strong> Serverom nastavené cookies majú životnosť 400 a viac dní oproti 7 dňom v Safari.</li>
+      <li><strong>Rýchlejší web:</strong> Menej skriptov v prehliadači môže ušetriť až 200 milisekúnd na načítaní stránky.</li>
+      <li><strong>Odolnosť voči ad blockerom:</strong> Serverové volania prechádzajú cez vašu doménu, takže ich ad blockery neblokujú.</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section id="co-je-server-side-tagging">
+    <h2>Čo je server side tagging</h2>
+
+    <p>Server side tagging je spôsob správy a spúšťania trackingových tagov na serverovom prostredí. Namiesto toho, aby v prehliadači bežalo 10 rôznych skriptov (Google Analytics, Meta Pixel, LinkedIn Insight Tag, Google Ads remarketing…), na webe je len jeden ľahký skript. Ten odošle dáta na váš server, kde serverový tag manager rozhodne, kam a aké dáta prepošle.</p>
+
+    <h3>Ako to funguje v praxi (GTM server-side)</h3>
+
+    <p>Najrozšírenejšou implementáciou server side taggovania je Google Tag Manager server-side (sGTM). Proces vyzerá takto:</p>
+
+    <ol>
+      <li>Na webe je <strong>jeden klientský GTM kontajner</strong> (web container) s minimálnym kódom.</li>
+      <li>Klientský kontajner zbiera dáta (pageview, nákup, klik) a posiela ich na <strong>váš serverový endpoint</strong> (napr. tracking.vasadomena.sk).</li>
+      <li><strong>Serverový GTM kontajner</strong> prijíma dáta cez entitu zvanú „Client“.</li>
+      <li>Client spracuje HTTP requesty a vytvorí štruktúrovaný dátový objekt (event data).</li>
+      <li><strong>Tagy v serverovom kontajneri</strong> mapujú dáta a posielajú ich na cieľové platformy: GA4, Meta Conversions API, Google Ads Enhanced Conversions a ďalšie.</li>
+    </ol>
+
+    <h3>Dôležitý detail</h3>
+
+    <p>Server side tagging <strong>neodstraňuje klientský JavaScript úplne</strong>. Na webe stále musí byť aspoň jeden skript, ktorý zbiera dáta a posiela ich na server. Rozdiel je v tom, že namiesto 10 skriptov od rôznych vendorov máte jeden kontrolovaný skript, ktorý komunikuje s vaším serverom.</p>
+
+    <p>Toto je jedna z najčastejších mylných predstáv — ľudia si myslia, že server side tagging úplne eliminuje klientské skripty. Nie je to pravda.</p>
+
+    <figure>
+      <img src="/blog/server-side-tagging-vs-server-side-tracking-aky-je-skutocny-rozdiel/schema_klientsky_vs_serverovy_tagging.webp" alt="Schéma porovnávajúca klientský a serverový tagging — klientský model s 8 skriptami v prehliadači vs serverový model s 1 skriptom a serverovým GTM kontajnerom">
+      <figcaption>Porovnanie klientského a serverového tagging modelu</figcaption>
+    </figure>
+  </section>
+
+  <hr>
+
+  <section id="hlavne-rozdiely">
+    <h2>Server side tagging vs tracking: Hlavné rozdiely</h2>
+
+    <p>Teraz, keď rozumiete obom pojmom, poďme si ich porovnať:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Server side tracking</th>
+          <th>Server side tagging</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Čo to je</strong></td>
+          <td>Cieľ — zber dát cez server</td>
+          <td>Nástroj — správa tagov na serveri</td>
+        </tr>
+        <tr>
+          <td><strong>Analógia</strong></td>
+          <td>„Chceme merať návštevnosť“</td>
+          <td>„Použijeme na to serverový GTM“</td>
+        </tr>
+        <tr>
+          <td><strong>Zahŕňa klientský kód</strong></td>
+          <td>Nie nutne (čisté API riešenie)</td>
+          <td>Áno, vždy (aspoň 1 klientský tag)</td>
+        </tr>
+        <tr>
+          <td><strong>Príklady</strong></td>
+          <td>Conversions API, webhooky, DWH pipeline</td>
+          <td>GTM server-side, MetaRouter, Tealium</td>
+        </tr>
+        <tr>
+          <td><strong>Komplexnosť</strong></td>
+          <td>Závisí od prístupu (nízka → vysoká)</td>
+          <td>Stredná</td>
+        </tr>
+        <tr>
+          <td><strong>Behaviorálne dáta</strong></td>
+          <td>Len pri hybridnom prístupe</td>
+          <td>Áno, plná podpora</td>
+        </tr>
+        <tr>
+          <td><strong>Typický používateľ</strong></td>
+          <td>Veľké firmy, vlastné riešenia</td>
+          <td>E-shopy, agentúry, stredné firmy</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Jednoducho povedané</h3>
+
+    <p>Server side tracking je <strong>čo</strong> chcete dosiahnuť. Server side tagging je <strong>ako</strong> to najčastejšie urobíte. Je to ako rozdiel medzi „dopravou“ a „autom“. Doprava je cieľ, auto je jeden zo spôsobov, ako sa tam dostať. Ale dopravovať sa môžete aj vlakom, lietadlom alebo bicyklom.</p>
+
+    <p>Rovnako server side tracking môžete implementovať cez:</p>
+
+    <ul>
+      <li><strong>Server side tagging</strong> (GTM SS) — najčastejší spôsob, hybridný prístup</li>
+      <li><strong>API integrácie</strong> (Meta CAPI, Google Enhanced Conversions) — čisto serverové volania</li>
+      <li><strong>Data warehouse</strong> (BigQuery, Snowflake) — dáta z DWH odosielate na platformy</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section id="preco-si-to-ludia-pletu">
+    <h2>Prečo si to ľudia pletú: 3 hlavné dôvody</h2>
+
+    <h3>1. Vendori ich používajú zameniteľne</h3>
+
+    <p>Stape.io — najrozšírenejšia platforma pre serverový GTM hosting — sa prezentuje ako „Server-Side Tracking“ riešenie. Pritom technicky poskytuje hosting pre server side tagging kontajner. Nie je to klamlivé, ale je to nepresné. A keď najväčší hráč na trhu zamieňa pojmy, zvyšok trhu to prevezme.</p>
+
+    <h3>2. V praxi sa prekrývajú</h3>
+
+    <p>Keď agentúra povie „implementujeme vám server side tracking“, v 90 percentách prípadov myslí nasadenie serverového GTM kontajnera — čiže server side tagging. A keďže tagging je najčastejší spôsob implementácie trackingu, pojmy sa funkčne prekrývajú. Je to ako keby ste povedali „idem autom“ namiesto „idem sa dopravovať“ — nepresné, ale v praxi zrozumiteľné.</p>
+
+    <h3>3. Anglické pojmy v slovenskom kontexte</h3>
+
+    <p>Na Slovensku oba pojmy používame v angličtine. Nikto nepovie „serverové tagovanie“ alebo „serverové sledovanie“. Keď máte dva podobne znejúce anglické výrazy v slovenskej vete, mozog ich prirodzene zjednotí. Keby existovali zavedené slovenské ekvivalenty, zmätok by bol menší.</p>
+
+    <figure>
+      <img src="/blog/server-side-tagging-vs-server-side-tracking-aky-je-skutocny-rozdiel/infografika_tracking_vs_tagging.webp" alt="Infografika vysvetľujúca rozdiel medzi server side tracking a server side tagging — tracking je cieľ, tagging je nástroj">
+      <figcaption>Tracking je cieľ, tagging je nástroj na jeho dosiahnutie</figcaption>
+    </figure>
+  </section>
+
+  <hr>
+
+  <section id="kedy-potrebujete-tagging">
+    <h2>Kedy potrebujete server side tagging</h2>
+
+    <p>Server side tagging (GTM server-side) je správna voľba, keď:</p>
+
+    <ul>
+      <li><strong>Prevádzkujete e-shop alebo web s platbami</strong> — Presné meranie konverzií priamo ovplyvňuje váš ROAS. Bez kvalitných dát Google Ads a Meta nedokážu optimalizovať kampane.</li>
+      <li><strong>Máte problém s ad blockermi</strong> — Ak vaše analytické dáta nezodpovedajú realite a vidíte veľké rozdiely medzi GA4 a serverovými logmi, tagging cez vlastnú doménu problém zmierni.</li>
+      <li><strong>Potrebujete rýchle riešenie</strong> — Server side tagging cez GTM je najrýchlejší spôsob, ako prejsť na serverové meranie. S platformami ako Stape môžete mať produkčné prostredie za niekoľko hodín.</li>
+      <li><strong>Chcete kontrolovať dáta pred odoslaním</strong> — V serverovom kontajneri môžete filtrovať, hashovať alebo odstraňovať osobné údaje ešte pred tým, ako opustia váš server.</li>
+      <li><strong>Posielate dáta do viacerých platforiem</strong> — Namiesto 8 skriptov v prehliadači máte 1 skript a server rozhodne, kam dáta putujú (GA4, Meta, Google Ads, TikTok, LinkedIn…).</li>
+    </ul>
+
+    <h3>Pre koho je to ideálne</h3>
+
+    <p>E-shopy, digitálne agentúry, stredne veľké firmy s aktívnymi PPC kampaňami a webmi, ktoré potrebujú rýchlu implementáciu bez kompletnej rekonštrukcie infraštruktúry.</p>
+  </section>
+
+  <hr>
+
+  <section id="kedy-potrebujete-tracking">
+    <h2>Kedy potrebujete server side tracking (bez taggingu)</h2>
+
+    <p>Čistý server side tracking bez tagging vrstvy dáva zmysel, keď:</p>
+
+    <ul>
+      <li><strong>Máte vlastný dátový tím a infraštruktúru</strong> — Veľké firmy s data engineermi dokážu postaviť priame API integrácie (napr. Meta Conversions API priamo z backendu), kde nepotrebujú prostredníka v podobe GTM.</li>
+      <li><strong>Budujete centrálny data warehouse</strong> — Ak máte BigQuery alebo Snowflake a chcete z neho posielať dáta do reklamných platforiem, obchádzate tagging úplne.</li>
+      <li><strong>Potrebujete plnú kontrolu nad pipeline</strong> — Pri citlivých dátach (fintech, zdravotníctvo) môže byť medzivrstva v podobe GTM nežiaduca. Priame serverové volania dávajú väčšiu kontrolu.</li>
+      <li><strong>Vytvárate pokročilé publiká</strong> — Data warehouse prístup umožňuje vytvárať komplexné publiká na základe historických dát a posielať ich do reklamných platforiem cez Customer Match alebo podobné API.</li>
+    </ul>
+
+    <h3>Pre koho je to ideálne</h3>
+
+    <p>Enterprise firmy s vlastným dátovým tímom, fintech a healthtech spoločnosti s prísnymi požiadavkami na dáta, a firmy, ktoré už prevádzkujú centrálny data warehouse.</p>
+  </section>
+
+  <hr>
+
+  <section id="prakticky-priklad">
+    <h2>Praktický príklad: GA4 + GTM server-side</h2>
+
+    <p>Pozrime sa na konkrétny príklad, ako server side tagging funguje v praxi pre bežný slovenský e-shop.</p>
+
+    <h3>Pred implementáciou (klientský model)</h3>
+
+    <p>Zákazník príde na web → prehliadač spustí 8 skriptov (GA4, Meta Pixel, Google Ads remarketing, LinkedIn, TikTok, Hotjar, CRM pixel, Consent Mode) → každý skript posiela dáta priamo na svoju platformu → ad blockery zablokujú 3-4 z nich → dáta sú neúplné.</p>
+
+    <h3>Po implementácii (server side model)</h3>
+
+    <p>Zákazník príde na web → prehliadač spustí <strong>1 skript</strong> (klientský GTM) → GTM posiela dáta na tracking.vasadomena.sk (váš server) → serverový GTM spracuje dáta a prepošle ich na GA4, Meta CAPI, Google Ads, LinkedIn CAPI → ad blockery neblokujú nič, pretože volanie ide na vašu doménu → dáta sú kompletné.</p>
+
+    <h3>Výsledok v číslach</h3>
+
+    <p>Typický e-shop po prechode na server side tagging vidí:</p>
+
+    <ul>
+      <li><strong>20 až 25 percent viac meraných konverzií</strong> (nie reálny nárast predajov, ale presnejšie meranie)</li>
+      <li><strong>Predĺženie cookies</strong> zo 7 na 400+ dní → lepšia atribúcia dlhších nákupných ciest</li>
+      <li><strong>Úspora 100 až 200 ms</strong> na načítaní stránky → lepšie Core Web Vitals</li>
+      <li><strong>Kompletné dáta pre Smart Bidding</strong> → potenciálne lepší ROAS</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section id="nastroje-a-riesenia">
+    <h2>Nástroje a riešenia pre server side tagging</h2>
+
+    <p>Ak sa rozhodnete pre server side tagging cez GTM, potrebujete hosting pre serverový kontajner. Tu sú hlavné možnosti:</p>
+
+    <h3>Managed hosting platformy</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Platforma</th>
+          <th>Cena od</th>
+          <th>Free tier</th>
+          <th>Hosting</th>
+          <th>Ideálne pre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Stape</strong></td>
+          <td>$20/mes</td>
+          <td>10K req/mes</td>
+          <td>Globálny</td>
+          <td>Najlacnejšie, najrozšírenejšie</td>
+        </tr>
+        <tr>
+          <td><strong>Addingwell</strong></td>
+          <td>~€20/mes</td>
+          <td>10K req/mes</td>
+          <td>EU</td>
+          <td>Firmy s GDPR požiadavkami</td>
+        </tr>
+        <tr>
+          <td><strong>TAGGRS</strong></td>
+          <td>~€15/mes</td>
+          <td>Áno</td>
+          <td>EU (Holandsko)</td>
+          <td>Jednoduchá správa</td>
+        </tr>
+        <tr>
+          <td><strong>OwnTag</strong></td>
+          <td>~€19/mes</td>
+          <td>Nie</td>
+          <td>EU</td>
+          <td>Open-source friendly</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>DIY na Google Cloud Platform</h3>
+
+    <ul>
+      <li><strong>Minimálna produkcia:</strong> 3 servery × $40 = ~$120/mes</li>
+      <li><strong>Vyšší traffic:</strong> 5-6 serverov = $240-300/mes</li>
+      <li><strong>Jednorazový setup:</strong> 50 až 120 hodín práce vývojára</li>
+    </ul>
+
+    <h3>Skrytý náklad, o ktorom sa nehovorí</h3>
+
+    <p>Hosting rieši len beh kontajnera. Konfigurácia tagov, triggerov a premenných vyžaduje GTM špecialistu. Managed platforma vám dá server — ale nastaviť, čo server robí, musíte vy (alebo vaša agentúra). Počítajte s dodatočnými 10 až 30 hodinami odbornej práce na správne nastavenie.</p>
+
+    <figure>
+      <img src="/blog/server-side-tagging-vs-server-side-tracking-aky-je-skutocny-rozdiel/porovnanie_nakladov_sst.webp" alt="Porovnanie nákladov na server side tagging — managed hosting Stape od 20 dolárov mesačne vs DIY Google Cloud od 120 dolárov mesačne">
+      <figcaption>Porovnanie nákladov: managed hosting vs DIY riešenie</figcaption>
+    </figure>
+  </section>
+
+  <hr>
+
+  <section id="kolko-to-stoji">
+    <h2>Koľko to celkovo stojí</h2>
+
+    <p>Pre prehľadnosť: orientačný rozpočet pre stredne veľký slovenský e-shop (100K až 500K návštev mesačne):</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Položka</th>
+          <th>Jednorazovo</th>
+          <th>Mesačne</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Stape hosting (Pro)</td>
+          <td>—</td>
+          <td>€20-50</td>
+        </tr>
+        <tr>
+          <td>GTM konfigurácia (agentúra)</td>
+          <td>€1 000-3 000</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Údržba a aktualizácie</td>
+          <td>—</td>
+          <td>€100-300</td>
+        </tr>
+        <tr>
+          <td><strong>Celkom</strong></td>
+          <td><strong>€1 000-3 000</strong></td>
+          <td><strong>€120-350</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Porovnanie s DIY Google Cloud:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Položka</th>
+          <th>Jednorazovo</th>
+          <th>Mesačne</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GCP hosting</td>
+          <td>—</td>
+          <td>€120-300</td>
+        </tr>
+        <tr>
+          <td>Setup a konfigurácia</td>
+          <td>€3 000-8 000</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Údržba</td>
+          <td>—</td>
+          <td>€200-500</td>
+        </tr>
+        <tr>
+          <td><strong>Celkom</strong></td>
+          <td><strong>€3 000-8 000</strong></td>
+          <td><strong>€320-800</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Pre väčšinu slovenských e-shopov a firiem je managed riešenie (Stape, Addingwell) ekonomicky výhodnejšie.</p>
+  </section>
+
+  <hr>
+
+  <section id="faq">
+    <h2>Často kladené otázky</h2>
+
+    <details>
+      <summary>Je server side tagging to isté ako server side tracking?</summary>
+      <p>Nie. Server side tracking je všeobecný pojem pre zber dát cez server. Server side tagging je konkrétna metóda, pri ktorej spravujete trackingové tagy na serverovom prostredí (najčastejšie cez GTM server-side). Tagging je najrozšírenejší spôsob implementácie trackingu, preto si ich ľudia zamieňajú.</p>
+    </details>
+
+    <details>
+      <summary>Potrebujem server side tagging, ak mám malý web?</summary>
+      <p>Závisí od vašich cieľov. Ak investujete do PPC kampaní a potrebujete presné konverzné dáta, server side tagging sa oplatí aj pre menšie weby. Ak web slúži len ako vizitka bez aktívneho marketingu, pravdepodobne to zatiaľ nepotrebujete.</p>
+    </details>
+
+    <details>
+      <summary>Eliminuje server side tagging všetky klientské skripty?</summary>
+      <p>Nie. Aj pri server side taggingu musí v prehliadači bežať aspoň jeden JavaScript skript, ktorý zbiera dáta a posiela ich na server. Rozdiel je v tom, že namiesto 8 až 10 skriptov od rôznych platforiem máte len jeden kontrolovaný skript.</p>
+    </details>
+
+    <details>
+      <summary>Je server side tracking GDPR kompatibilný?</summary>
+      <p>Server side tracking sám osebe nezaručuje GDPR súlad. Stále musíte získať súhlas používateľa pred spracovaním osobných údajov. Server side prístup však výrazne uľahčuje compliance — máte centralizovanú kontrolu nad dátami, môžete filtrovať PII pred odoslaním a vytvárať audit trails.</p>
+    </details>
+
+    <details>
+      <summary>Koľko stojí server side tagging pre slovenský e-shop?</summary>
+      <p>Pre stredne veľký e-shop počítajte s jednorazovým nákladom 1 000 až 3 000 eur za konfiguráciu a mesačnými nákladmi 120 až 350 eur (hosting + údržba). Managed platformy ako Stape začínajú od 20 dolárov mesačne, ale k tomu pridajte náklady na GTM špecialistu.</p>
+    </details>
+
+    <details>
+      <summary>Ako server side tagging ovplyvní rýchlosť webu?</summary>
+      <p>Pozitívne. Presun skriptov z prehliadača na server môže ušetriť 100 až 200 milisekúnd na načítaní stránky. Menej JavaScript kódu v prehliadači znamená rýchlejšie vykreslenie stránky a lepšie Core Web Vitals — čo nepriamo pomáha aj SEO.</p>
+    </details>
+
+    <details>
+      <summary>Aký je rozdiel medzi GTM server-side a Meta Conversions API?</summary>
+      <p>GTM server-side je server side tagging platforma — spravuje a posiela dáta do viacerých platforiem súčasne. Meta Conversions API (CAPI) je server side tracking API od Meta — prijíma konverzné dáta priamo zo servera. V praxi GTM server-side často slúži ako prostredník, ktorý dáta posiela aj do Meta CAPI, aj do GA4, aj do Google Ads.</p>
+    </details>
+  </section>
+
+  <hr>
+
+  <p><em>Posledná aktualizácia: 16. marca 2026</em></p>
+
+  <p><strong>Zdroje:</strong></p>
+  <ul>
+    <li><a href="https://developers.google.com/tag-platform/tag-manager/server-side/intro" title="Google Developers — Introduction to server-side tagging" target="_blank" rel="noopener noreferrer">Google Developers — Introduction to server-side tagging</a></li>
+    <li><a href="https://piwik.pro/blog/server-side-tracking-first-party-collector/" title="Piwik PRO — Server-side tracking and server-side tagging: The complete guide" target="_blank" rel="noopener noreferrer">Piwik PRO — Server-side tracking and server-side tagging: The complete guide</a></li>
+    <li><a href="https://www.human37.com/articles/the-difference-between-server-side-tracking-and-server-side-tagging/" title="Human37 — The difference between server-side tracking and server-side tagging" target="_blank" rel="noopener noreferrer">Human37 — The difference between server-side tracking and server-side tagging</a></li>
+    <li><a href="https://www.bounteous.com/insights/2026/03/02/server-side-analytics-2026-and-beyond/" title="Bounteous — Server-Side Analytics in 2026 and Beyond" target="_blank" rel="noopener noreferrer">Bounteous — Server-Side Analytics in 2026 and Beyond</a></li>
+  </ul>
+
+</article>

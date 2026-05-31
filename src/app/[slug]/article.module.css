@@ -1,0 +1,358 @@
+/* Blog article layout + styling for migrated .ucp-article content */
+
+.hero {
+    position: relative;
+    padding: 8rem 0 2rem;
+    overflow: hidden;
+}
+
+.heroBackground {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.08), transparent 60%);
+    pointer-events: none;
+}
+
+.heroInner {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary);
+}
+
+.category {
+    display: inline-block;
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--primary-dark);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+    margin-bottom: 1.25rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin-bottom: 2.5rem;
+}
+
+.metaItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.featured {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    margin: 0 auto;
+    display: block;
+}
+
+/* ---- Article body ---- */
+.entry {
+    max-width: 760px;
+    margin: 3rem auto 0;
+    font-size: 1.075rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+/* Article intro / lead paragraph (kept from original) */
+.entry :global(header) {
+    margin-bottom: 1.5rem;
+}
+
+.entry :global(.intro),
+.entry :global(header) p:first-child {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #334155;
+    font-weight: 500;
+}
+
+/* Table of contents / "obsah" box with in-article anchor links (kept from original) */
+.entry :global(nav.toc),
+.entry :global(.toc) {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    margin: 2.5rem 0;
+}
+
+.entry :global(nav.toc) h2,
+.entry :global(.toc) h2 {
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+}
+
+.entry :global(nav.toc) ol,
+.entry :global(.toc) ol {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.entry :global(nav.toc) li,
+.entry :global(.toc) li {
+    margin-bottom: 0.5rem;
+}
+
+.entry :global(nav.toc) a,
+.entry :global(.toc) a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.entry :global(nav.toc) a:hover,
+.entry :global(.toc) a:hover {
+    text-decoration: underline;
+    color: var(--accent);
+}
+
+.entry h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.25;
+    margin: 3rem 0 1rem;
+    letter-spacing: -0.01em;
+}
+
+.entry h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 2.25rem 0 0.75rem;
+}
+
+.entry h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 1.75rem 0 0.5rem;
+}
+
+.entry p {
+    margin: 0 0 1.35rem;
+}
+
+.entry a {
+    color: var(--primary-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 500;
+}
+
+.entry a:hover {
+    color: var(--accent);
+}
+
+.entry strong {
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.entry ul,
+.entry ol {
+    margin: 0 0 1.5rem;
+    padding-left: 1.4rem;
+}
+
+.entry li {
+    margin-bottom: 0.6rem;
+}
+
+.entry img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: var(--shadow-md);
+}
+
+.entry figure {
+    margin: 2rem 0;
+}
+
+.entry figcaption {
+    text-align: center;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+}
+
+.entry blockquote {
+    border-left: 4px solid var(--primary);
+    background: var(--surface);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 12px 12px 0;
+    margin: 2rem 0;
+    color: #334155;
+}
+
+.entry blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Tables (comparison tables in articles) */
+.entry table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    display: block;
+    overflow-x: auto;
+    white-space: normal;
+}
+
+.entry th,
+.entry td {
+    border: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.entry th {
+    background: var(--surface-highlight);
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.entry tbody tr:nth-child(even) {
+    background: var(--surface);
+}
+
+/* TL;DR / callout boxes if present */
+.entry :global(.tldr),
+.entry :global(.callout),
+.entry :global(.note) {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+}
+
+/* FAQ section (section#faq > details/summary) */
+.entry :global(section) {
+    margin-top: 1rem;
+}
+
+.entry :global(details) {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0;
+    margin-bottom: 0.75rem;
+    background: white;
+    overflow: hidden;
+}
+
+.entry :global(summary) {
+    cursor: pointer;
+    font-weight: 600;
+    color: #0f172a;
+    padding: 1rem 1.25rem;
+    list-style: none;
+    position: relative;
+    padding-right: 2.5rem;
+}
+
+.entry :global(summary)::-webkit-details-marker {
+    display: none;
+}
+
+.entry :global(summary)::after {
+    content: '+';
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.entry :global(details[open]) summary::after {
+    content: '−';
+}
+
+.entry :global(details[open]) {
+    box-shadow: var(--shadow-sm);
+}
+
+.entry :global(details) > :global(*):not(summary) {
+    padding: 0 1.25rem 1rem;
+    margin-top: 0;
+}
+
+/* Article footer (sources / references) */
+.entry :global(footer) {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.entry :global(footer) a {
+    color: var(--text-secondary);
+}
+
+/* Bottom CTA / back link */
+.footerNav {
+    max-width: 760px;
+    margin: 4rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}

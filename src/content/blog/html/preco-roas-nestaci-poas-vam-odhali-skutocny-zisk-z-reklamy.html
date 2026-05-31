@@ -1,0 +1,83 @@
+<div id="elevenlabs-audionative-widget" data-height="90" data-width="100%" data-frameborder="no" data-scrolling="no" data-publicuserid="b53fd4f589d8029642734e0b7b56386dac749ffb8556d970770b7d9a422c37fd" data-playerurl="https://elevenlabs.io/player/index.html">Loading the <a target="_blank" href="https://elevenlabs.io/text-to-speech" rel="noopener">Elevenlabs Text to Speech</a> AudioNative Player…</div>
+<p></p>
+
+<p>&nbsp;</p>
+<h2 class="wp-block-heading"><strong>TL;DR</strong></h2>
+
+<ul class="wp-block-list">
+<li>Tradičné ROAS (Return on Ad Spend) meria výnosy, nie zisk, čo vedie k neefektívnej optimalizácii reklamných kampaní.</li>
+
+<li>POAS (Profit on Ad Spend) je presnejšia metrika, ktorá berie do úvahy náklady a marže, čím umožňuje optimalizovať na skutočný zisk.</li>
+
+<li>Implementácia POAS vyžaduje sledovanie nákladov na tovar a ďalších poplatkov pri každej transakcii, čo umožňuje presnejšie zacielenie reklám.</li>
+
+<li>Používanie POAS namiesto ROAS vedie k lepšiemu rozdeleniu rozpočtu, transparentnejšiemu vyhodnocovaniu kampaní a potenciálne k zvýšeniu ziskov.</li>
+</ul>
+
+<p><span style="font-weight: 400;">Viete, že váš ROAS môže ukazovať pozitívne výsledky kampane, ale v skutočnosti môžete byť v strate? Ak chcete zistiť viac, čítajte ďalej.</span></p>
+
+<h2><b>Prečo klasická ROAS nie je dostatočná?</b></h2>
+
+<p><b>ROAS (Return on Ad Spend) je bežná metrika, ale v skutočnosti sa väčšinou počíta ako „Revenue on Ad Spend“ – teda výnosy z reklamy, nie reálny zisk</b><span style="font-weight: 400;">. To znamená, že systém optimalizuje reklamy na produkty s vyššou cenou, aby dosiahol stanovenú ROAS, no </span><b>vyššia cena neznamená vždy vyššiu maržu a zisk</b><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">V rámci kampane môžete mať produkty s rôznou maržou. </span><b>Produkty s vyššou maržou nemusia dostať dostatočnú príležitosť, ak kampaň optimalizuje na priemernú ROAS</b><span style="font-weight: 400;">, ktorá uprednostňuje vysoké výnosy.</span></p>
+<p><span style="font-weight: 400;">Aj keď rozdelíte kampane podľa maržových hladín, stále </span><b>poznáte iba maržu produktu, na ktorý zákazník klikol, nie maržu toho, čo reálne nakúpil</b><span style="font-weight: 400;">. Zákazníci často nakupujú iné produkty, ako tie, na ktoré klikli, alebo pridávajú ďalšie položky do objednávky s rôznymi maržami.</span></p>
+<p><span style="font-weight: 400;">Môžu nastať napríklad scenáre:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Zákazník klikne na produkt s dobrou maržou, ale nakúpi produkt s nízkou maržou.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Zákazník klikne na produkt s nízkou maržou, ale k objednávke pridá ďalšie produkty s dobrou maržou.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Tieto faktory spôsobujú, že optimalizácia na základe ROAS môže byť nepresná a </span><b>kampaň, ktorá vyzerá ziskovo, môže byť v skutočnosti stratová, a naopak</b><span style="font-weight: 400;">.</span></p>
+
+<h2><b>Prečo POAS?</b></h2>
+
+<p><b>POAS (Profit on Ad Spend) je metrika, ktorá namiesto výnosov meria zisk z reklamy,</b><span style="font-weight: 400;"> teda skutočný „return on ad spend“. </span><b>POAS je transparentnejšia metrika, ktorá jednoducho ukáže, či je kampaň zisková</b><span style="font-weight: 400;">. Ak je POAS 1, ste na nule; všetko nad 1 je váš zisk.</span></p>
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img fetchpriority="high" class="wp-image-2940" src="/blog/preco-roas-nestaci-poas-vam-odhali-skutocny-zisk-z-reklamy/Profit-Tracking-–-Meranie-a-Optimalizacia-Zisku-visual-selection-2.webp" alt="roas vs poas"></figure>
+</div>
+
+<h2><b>Ako vypočítame zisk?</b></h2>
+
+<p><span style="font-weight: 400;">Zisk z každej objednávky vypočítame ako súčet zisku každého produktu v objednávke. Na to potrebujeme poznať </span><b>cenu tovaru (cost of goods sold)</b><span style="font-weight: 400;">. Pre presnejší obraz odpočítavame aj </span><b>DPH, náklady na dopravu, platobné poplatky, zľavy</b><span style="font-weight: 400;"> a ďalšie relevantné náklady.</span></p>
+
+<h2><b>POAS v praxi</b></h2>
+
+<p><span style="font-weight: 400;">V niektorých prípadoch sa môže stať, že kampaň vyzerá nevýkonne pri pohľade na ROAS, no POAS ukáže, že je v skutočnosti zisková.</span></p>
+<p><span style="font-weight: 400;">Klient, ktorý predáva náradie a potreby pre remeselníkov, čelil výzve pri nastavovaní kampaní v Google Ads. Keďže jeho produkty majú široké cenové rozpätie a výrazné rozdiely v marži, spočiatku rozdelil kampane podľa maržových hladín.</span></p>
+<p><span style="font-weight: 400;">Jedna z kampaní, zameraná na produkty s maržou 5–10 %, vykazovala </span><b>PNO na úrovni 12 %</b><span style="font-weight: 400;">, čo sa na prvý pohľad javilo ako neprofitabilné. Klient preto zvažoval jej vypnutie, aj keď obsahovala dôležité produkty.</span></p>
+<p><span style="font-weight: 400;">Situácia sa však zásadne zmenila po zavedení </span><b>merania profitu</b><span style="font-weight: 400;">. Ukázalo sa, že priemerná marža objednávok z tejto kampane bola v skutočnosti </span><b>25 %</b><span style="font-weight: 400;">, čo znamenalo, že bola nielen zisková, ale dokonca mala vysoké </span><b>POAS</b><span style="font-weight: 400;"> (Profit on Ad Spend). Vďaka tejto novej perspektíve sme nielen potvrdili efektivitu kampane, ale zároveň sme mohli </span><b>navýšiť rozpočet</b><span style="font-weight: 400;"> a maximalizovať zisky.</span></p>
+
+<h2><b>Implementácia POAS</b></h2>
+
+<ol>
+<li style="font-weight: 400;" aria-level="1"><b>Získajte profit z každej transakcie.</b><span style="font-weight: 400;"> Vyžaduje si to technickú implementáciu, prípadne využitie služby tretej strany.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Importujte zisk ako konverznú akciu do Google Ads.</b><span style="font-weight: 400;"> Nastavte profit ako sekundárnu konverznú akciu a vytvorte si stĺpce pre zobrazenie profitu a POAS.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Sledujte dáta a vyhodnocujte.</b><span style="font-weight: 400;"> Sledujte, ako sa menia vaše zisky a POAS, a na základe toho upravujte svoje stratégie.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Prepnite Smart Bidding na optimalizáciu na zisk.</b><span style="font-weight: 400;"> Po dostatočnej dobe sledovania profitu ako sekundárnej konverzie, prepnite na primárnu konverziu a začnite optimalizovať. Nastavenie ROAS (teda už POAS) treba postupne prispôsobovať, aby Smart Bidding pochopil túto zmenu.</span></li>
+</ol>
+
+<h2><b>Prečo je POAS lepšia ako ROAS?</b></h2>
+
+<ul>
+<li style="font-weight: 400;" aria-level="1"><b>Presnejšie meranie:</b><span style="font-weight: 400;"> POAS sleduje skutočný zisk, nie len výnosy, čo vedie k efektívnejšej optimalizácii.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Lepšia alokácia rozpočtu:</b><span style="font-weight: 400;"> POAS umožňuje alokovať rozpočet na produkty, ktoré prinášajú najvyšší zisk, nie len tie s najvyššou cenou.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Transparentnosť:</b><span style="font-weight: 400;"> POAS jasne ukazuje, ktoré kampane sú ziskové a ktoré nie, vďaka čomu môžete robiť informovanejšie rozhodnutia.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Flexibilita:</b><span style="font-weight: 400;"> POAS zohľadňuje rôzne faktory ako marže, zľavy, náklady na dopravu a poplatky, čo umožňuje flexibilnejšie riadenie kampaní.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Vyšší zisk:</b><span style="font-weight: 400;"> V konečnom dôsledku môže použitie POAS viesť k výraznému zvýšeniu ziskov v porovnaní s ROAS.</span></li>
+</ul>
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img class="wp-image-2937" src="/blog/preco-roas-nestaci-poas-vam-odhali-skutocny-zisk-z-reklamy/Profit-Tracking-–-Meranie-a-Optimalizacia-Zisku-visual-selection.webp" alt="roas vs poas vizualizácia"></figure>
+</div>
+
+<h2><b>Dôležité upozornenia</b></h2>
+
+<ul>
+<li style="font-weight: 400;" aria-level="1"><b>Zmena na POAS je veľká zmena a je potrebné postupovať pomaly, aby ste predišli šokom pre systém.</b></li>
+<li style="font-weight: 400;" aria-level="1"><b>Smart Bidding môže mať problémy s nízkymi hodnotami POAS, takže je dobré sledovať výkonnosť a v prípade potreby sa vrátiť k optimalizácii na výnosy.</b></li>
+<li style="font-weight: 400;" aria-level="1"><b>Nezabudnite sledovať aj celkovú výkonnosť vášho podnikania, nie len dáta v Google Ads.</b></li>
+</ul>
+
+<h2><b>Záver</b></h2>
+
+<p><span style="font-weight: 400;">Používanie </span><b>POAS namiesto ROAS je kľúčové pre firmy, ktoré chcú dosahovať skutočné zisky z reklamy</b><span style="font-weight: 400;">. Implementácia si vyžaduje počiatočné úsilie, no v dlhodobom horizonte sa vám to vráti v podobe vyšších ziskov a efektívnejšieho riadenia reklamných kampaní. </span><b>Začnite s implementáciou už dnes a prevezmite kontrolu nad svojím ziskom.</b></p>
