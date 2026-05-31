@@ -1,67 +1,115 @@
 import Link from 'next/link';
-import { Camera, Video, MessageSquare, Monitor, BarChart, Smartphone, Mic, Layers, Wand2, ArrowRight, Sparkles, Bot, Zap } from 'lucide-react';
+import { Camera, Layers, Video, Wand2, Monitor, Mic, Languages, FileText, Search, BarChart3, ArrowRight, Sparkles, Bot, Zap } from 'lucide-react';
 import styles from '../ai-studio.module.css';
 
 export const metadata = {
     title: 'AI Studio | Starbomedia',
-    description: 'Vaša vízia, naša AI technológia. Transformujeme váš biznis pomocou umelej inteligencie.',
+    description: 'AI nástroje pre marketing, ktoré reálne používame pre klientov — produktová fotografia, marketing bannery, video z produktov, viacjazyčný dabing, SEO obsah, weby aj automatizované reporty.',
+};
+
+type Service = {
+    id: string;
+    title: string;
+    desc: string;
+    icon: React.ReactNode;
+    beta?: boolean;
+};
+
+type Category = {
+    name: string;
+    services: Service[];
 };
 
 export default function AiStudioPage() {
-    const services = [
+    const categories: Category[] = [
         {
-            id: 'produktova-fotografia',
-            title: 'AI Produktová fotografia',
-            desc: 'Transformujeme bežné fotky na profesionálne produktové snímky.',
-            icon: <Camera size={28} />,
+            name: 'Vizuál',
+            services: [
+                {
+                    id: 'produktova-fotografia',
+                    title: 'AI produktová fotografia',
+                    desc: 'Z jednej fotky produktu vytvárame desiatky profesionálnych reklamných scén.',
+                    icon: <Camera size={28} />,
+                },
+                {
+                    id: 'marketing-bannery',
+                    title: 'Marketing bannery',
+                    desc: 'AI-generované reklamné bannery vo formátoch pripravených do kampaní.',
+                    icon: <Layers size={28} />,
+                },
+            ],
         },
         {
-            id: 'product-to-video',
-            title: 'Product to Video',
-            desc: 'Vytvárame pútavé videá z produktových fotografií.',
-            icon: <Video size={28} />,
+            name: 'Video & Hlas',
+            services: [
+                {
+                    id: 'product-to-video',
+                    title: 'Product to Video',
+                    desc: 'Z produktových fotiek tvoríme pútavé krátke videá pre reklamu a sociálne siete.',
+                    icon: <Video size={28} />,
+                },
+                {
+                    id: 'ai-influencer',
+                    title: 'AI influencer & lip sync',
+                    desc: 'Virtuálni influenceri a videá so synchronizáciou pier pre vašu značku.',
+                    icon: <Wand2 size={28} />,
+                    beta: true,
+                },
+                {
+                    id: 'video-prezentacie',
+                    title: 'AI video prezentácie',
+                    desc: 'Firemné prezentácie a videá generované pomocou AI.',
+                    icon: <Monitor size={28} />,
+                    beta: true,
+                },
+                {
+                    id: 'voice-boti',
+                    title: 'AI voice boti',
+                    desc: 'Hlasoví asistenti, ktorí dokážu komunikovať so zákazníkmi.',
+                    icon: <Mic size={28} />,
+                    beta: true,
+                },
+                {
+                    id: 'multilingual-dubbing',
+                    title: 'Viacjazyčný dabing',
+                    desc: 'Automatický dabing videí do viacerých jazykov pre zahraničné trhy.',
+                    icon: <Languages size={28} />,
+                },
+            ],
         },
         {
-            id: 'voice-boti',
-            title: 'AI Voice Boti',
-            desc: 'Inteligentní hlasoví asistenti pre váš biznis.',
-            icon: <Mic size={28} />,
+            name: 'Obsah & SEO',
+            services: [
+                {
+                    id: 'seo-clanky',
+                    title: 'AI tvorba SEO článkov',
+                    desc: 'Optimalizované články pre vyhľadávače tvorené s podporou AI.',
+                    icon: <FileText size={28} />,
+                },
+                {
+                    id: 'seo-meta-texty',
+                    title: 'Hromadné SEO meta a alt texty',
+                    desc: 'Hromadné generovanie meta popisov a alt textov pre celý katalóg.',
+                    icon: <Search size={28} />,
+                },
+            ],
         },
         {
-            id: 'marketing-bannery',
-            title: 'Marketing Bannery',
-            desc: 'AI-generované reklamné materiály na počkanie.',
-            icon: <Layers size={28} />,
-        },
-        {
-            id: 'vibecode-weby',
-            title: 'VibeCode Webstránky',
-            desc: 'Moderné weby vytvorené s AI asistenciou.',
-            icon: <Monitor size={28} />,
-        },
-        {
-            id: 'report-vizualizacia',
-            title: 'Report Vizualizácia',
-            desc: 'Premeňte tabuľky na interaktívne dashboardy.',
-            icon: <BarChart size={28} />,
-        },
-        {
-            id: 'video-prezentacie',
-            title: 'Video Prezentácie',
-            desc: 'Profesionálne firemné prezentácie s AI avatarmy.',
-            icon: <Smartphone size={28} />,
-        },
-        {
-            id: 'ai-influencer',
-            title: 'AI Influencer & Lip Sync',
-            desc: 'Virtuálni influenceri pre vašu značku.',
-            icon: <Wand2 size={28} />,
-        },
-        {
-            id: 'multilingual-dubbing',
-            title: 'Viacjazyčný dabing',
-            desc: 'Automatický dabing videí do 40+ jazykov.',
-            icon: <MessageSquare size={28} />,
+            name: 'Web & Dáta',
+            services: [
+                {
+                    id: 'vibecode-weby',
+                    title: 'VibeCode weby',
+                    desc: 'Moderné webstránky vytvorené rýchlo s asistenciou AI.',
+                    icon: <Monitor size={28} />,
+                },
+                {
+                    id: 'report-vizualizacia',
+                    title: 'Automatizované reporty & dáta',
+                    desc: 'Premena dát z tabuliek na prehľadné reporty a vizualizácie.',
+                    icon: <BarChart3 size={28} />,
+                },
+            ],
         },
     ];
 
@@ -80,8 +128,8 @@ export default function AiStudioPage() {
                             naša AI technológia.
                         </h1>
                         <p className={styles.subtitle}>
-                            Využite silu umelej inteligencie pre exponenciálny rast.
-                            Od generovania obsahu až po automatizáciu procesov. Budúcnosť je tu.
+                            Od produktovej fotografie cez SEO obsah až po automatizované reporty —
+                            nástroje, ktoré reálne používame pre klientov.
                         </p>
                         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                             <Link href="#sluzby" className="btn btn-primary" style={{ padding: '1rem 2.5rem', background: 'var(--ai-gradient)' }}>
@@ -111,22 +159,47 @@ export default function AiStudioPage() {
                 </div>
             </header>
 
-            {/* Services Grid */}
+            {/* Services by Category */}
             <section id="sluzby" className="container" style={{ paddingBottom: '8rem' }}>
-                <div className={styles.grid}>
-                    {services.map((service) => (
-                        <div key={service.id} className={styles.card}>
-                            <div className={styles.cardIcon}>
-                                {service.icon}
-                            </div>
-                            <h3 className={styles.cardTitle}>{service.title}</h3>
-                            <p className={styles.cardDesc}>{service.desc}</p>
-                            <Link href={`/ai-studio/${service.id}`} className={styles.cardLink}>
-                                Zistiť viac <ArrowRight size={18} />
-                            </Link>
+                {categories.map((category, index) => (
+                    <div key={category.name} style={{ marginTop: index === 0 ? 0 : '5rem' }}>
+                        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '2.5rem', color: '#1e293b' }}>
+                            {category.name}
+                        </h2>
+                        <div className={styles.grid}>
+                            {category.services.map((service) => (
+                                <div key={service.id} className={styles.card}>
+                                    <div className={styles.cardIcon}>
+                                        {service.icon}
+                                    </div>
+                                    <h3 className={styles.cardTitle} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
+                                        {service.title}
+                                        {service.beta && (
+                                            <span style={{
+                                                fontSize: '0.7rem',
+                                                fontWeight: 600,
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.04em',
+                                                color: '#f97316',
+                                                background: 'rgba(249, 115, 22, 0.1)',
+                                                border: '1px solid rgba(249, 115, 22, 0.2)',
+                                                borderRadius: '50px',
+                                                padding: '0.2rem 0.7rem',
+                                                whiteSpace: 'nowrap',
+                                            }}>
+                                                na vyžiadanie
+                                            </span>
+                                        )}
+                                    </h3>
+                                    <p className={styles.cardDesc}>{service.desc}</p>
+                                    <Link href={`/ai-studio/${service.id}`} className={styles.cardLink}>
+                                        Zistiť viac <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </section>
 
             {/* Process Section */}

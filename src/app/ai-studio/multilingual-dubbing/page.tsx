@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { MessageSquare, Globe, Mic2, Languages, AudioWaveform } from 'lucide-react';
+import { MessageSquare, Globe, Mic2, AudioWaveform } from 'lucide-react';
 import styles from '../../ai-studio.module.css';
 
 export const metadata = {
-    title: 'Multilingual Dubbing | AI Studio',
-    description: 'AI dabing a preklad videí do celého sveta.',
+    title: 'Viacjazyčný dabing videí | Starbomedia',
+    description: 'AI dabing videí do viac než 40 jazykov so zachovaním pôvodného hlasu a synchronizáciou pier. Expandujte s obsahom na trhy CEE — SK, CZ, HU, PL, RO, DE, AT, HR, SI.',
 };
 
 export default function MultilingualDubbingPage() {
@@ -14,15 +14,16 @@ export default function MultilingualDubbingPage() {
                 <div className={styles.heroBackground} />
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
-                        <div className={styles.badge}>Audio AI</div>
-                        <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>Multilingual Dubbing</h1>
+                        <div className={styles.badge}>Video a hlas</div>
+                        <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>Viacjazyčný dabing videí</h1>
                         <p className={styles.subtitle}>
-                            Zbúrajte jazykové bariéry. Hovorte k zákazníkom ich rodnou rečou.
-                            Automatický preklad a dabing videa so zachovaním vášho hlasu a synchronizácie pier.
+                            Zbúrajte jazykové bariéry a oslovte zákazníkov v ich rodnej reči.
+                            Automaticky nadabujeme vaše video do viac než 40 jazykov so zachovaním pôvodného
+                            hlasu a synchronizáciou pier — jedno video pokryje celý región CEE.
                         </p>
                         <div style={{ marginTop: '2rem' }}>
                             <Link href="/kontakt" className="btn btn-primary" style={{ background: 'var(--ai-gradient)' }}>
-                                Expandovať do sveta
+                                Expandovať na nové trhy
                             </Link>
                         </div>
                     </div>
@@ -47,18 +48,18 @@ export default function MultilingualDubbingPage() {
                 <div className={styles.grid}>
                     <div className={styles.card}>
                         <Globe className={styles.cardIcon} />
-                        <h3 className={styles.cardTitle}>Svetový dosah</h3>
-                        <p className={styles.cardDesc}>Jedno video, 40+ jazykov. Expandujte na nové trhy (Nemecko, Maďarsko, Poľsko) bez nutnosti natáčať nový obsah.</p>
+                        <h3 className={styles.cardTitle}>Dosah na celý región CEE</h3>
+                        <p className={styles.cardDesc}>Jedno video, viac než 40 jazykov. Expandujte na nové trhy (SK, CZ, HU, PL, RO, DE, AT, HR, SI) bez nutnosti natáčať nový obsah pre každú krajinu.</p>
                     </div>
                     <div className={styles.card}>
                         <Mic2 className={styles.cardIcon} />
-                        <h3 className={styles.cardTitle}>Klonovanie hlasu</h3>
-                        <p className={styles.cardDesc}>AI sa naučí farbu vášho hlasu a použije ju pri dabingu. Výsledok znie autenticky, ako keby ste daným jazykom hovorili plynule vy.</p>
+                        <h3 className={styles.cardTitle}>Zachovanie pôvodného hlasu</h3>
+                        <p className={styles.cardDesc}>Technológia klonovania hlasu sa naučí farbu vášho hlasu a použije ju pri dabingu. Výsledok znie autenticky, akoby ste daným jazykom hovorili priamo vy.</p>
                     </div>
                     <div className={styles.card}>
                         <MessageSquare className={styles.cardIcon} />
-                        <h3 className={styles.cardTitle}>Lip-Sync</h3>
-                        <p className={styles.cardDesc}>Nielen zvuk, ale aj obraz. AI upraví pohyb pier vo videu tak, aby sedel s preloženým textom.</p>
+                        <h3 className={styles.cardTitle}>Synchronizácia pier</h3>
+                        <p className={styles.cardDesc}>Nielen zvuk, ale aj obraz. Lip-sync upraví pohyb pier vo videu tak, aby sedel s preloženým textom v cieľovom jazyku.</p>
                     </div>
                 </div>
 
