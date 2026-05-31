@@ -14,7 +14,7 @@ export default function ProductToVideoPage() {
                 <div className={styles.heroBackground} />
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
-                        <div className={styles.badge}>Video Generation</div>
+                        <div className={styles.badge}>Generovanie videa</div>
                         <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>Product to Video</h1>
                         <p className={styles.subtitle}>
                             Statické fotky už nestačia. Rozhýbte svoje produkty a zvýšte konverzie až o 80% pomocou AI generovaného videa.
@@ -33,10 +33,10 @@ export default function ProductToVideoPage() {
                             <div className={styles.orbCore} />
 
                             <div className={`${styles.floatingCard} ${styles.fc1}`}>
-                                <Film size={20} color="#f97316" /> Cinematic
+                                <Film size={20} color="#f97316" /> Filmový vzhľad
                             </div>
                             <div className={`${styles.floatingCard} ${styles.fc2}`}>
-                                <MonitorPlay size={20} color="#ef4444" /> Ads Ready
+                                <MonitorPlay size={20} color="#ef4444" /> Pripravené na reklamu
                             </div>
                         </div>
                     </div>

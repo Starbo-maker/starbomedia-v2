@@ -1,10 +1,14 @@
 import Link from 'next/link';
-import { Search, BarChart2, Target, MousePointer, TrendingUp, CheckCircle, Smartphone, Globe, ShieldCheck } from 'lucide-react';
+import {
+    Search, ShoppingBag, Target, Repeat, Globe, Youtube,
+    ShieldCheck, Scale, Activity, GitCompare,
+    Store, MapPin, Building2, CheckCircle
+} from 'lucide-react';
 import styles from '../service.module.css';
 
 export const metadata = {
-    title: 'Google Ads (PPC) Reklama | Starbo Media',
-    description: 'Získajte viac zákazníkov okamžite s Google Ads. Profesionálna správa PPC kampaní, ktoré zarábajú. Certifikovaný Google Partner.',
+    title: 'Google reklama — správa Google Ads kampaní na mieru | Starbomedia',
+    description: 'Google Ads spravujeme od roku 2012, ročne cez ne preinvestujeme viac než 10 mil. € naprieč 13 trhmi CEE. Search, PMax, Shopping a remarketing s dôrazom na reálne tržby. Certifikovaný Google Partner.',
 };
 
 export default function GoogleAdsPage() {
@@ -16,11 +20,12 @@ export default function GoogleAdsPage() {
                     <div className={styles.headerContent}>
                         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#eff6ff', padding: '0.3rem 0.8rem', borderRadius: '50px', marginBottom: '1.5rem', border: '1px solid #dbeafe' }}>
                             <ShieldCheck size={16} color="#3b82f6" />
-                            <span style={{ color: '#3b82f6', fontWeight: 600, fontSize: '0.85rem' }}>GOOGLE PARTNER AGENCY</span>
+                            <span style={{ color: '#3b82f6', fontWeight: 600, fontSize: '0.85rem' }}>CERTIFIKOVANÝ GOOGLE PARTNER</span>
                         </div>
-                        <h1 className={styles.title}>Buďte tam, kde vás hľadajú. Okamžite.</h1>
+                        <h1 className={styles.title}>Google reklama, ktorá platí vaše účty.</h1>
                         <p className={styles.subtitle}>
-                            Neplaťte za zobrazenia, plaťte len za reálnych návštevníkov, ktorí chcú nakúpiť. 700% ROAS nie je sen, ale náš štandard.
+                            Google Ads spravujeme od roku 2012 a ročne cez ne preinvestujeme viac než 10 miliónov eur naprieč 13 trhmi
+                            strednej a východnej Európy. Neplatíte za zobrazenia — platíte za zákazníkov pripravených nakúpiť.
                         </p>
                         <div style={{ marginTop: '2rem' }}>
                             <Link href="/kontakt" className="btn btn-primary" style={{ background: '#3b82f6', boxShadow: '0 4px 14px 0 rgba(59, 130, 246, 0.4)' }}>
@@ -40,7 +45,7 @@ export default function GoogleAdsPage() {
                                 <Target size={32} color="#f59e0b" />
                             </div>
                             <div className={`${styles.floatingIcon} ${styles.fi3}`}>
-                                <MousePointer size={24} color="#10b981" />
+                                <ShoppingBag size={24} color="#10b981" />
                             </div>
                         </div>
                     </div>
@@ -54,98 +59,263 @@ export default function GoogleAdsPage() {
                         <div>
                             <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Prečo vaše reklamy nefungujú?</h2>
                             <p className={styles.text} style={{ marginBottom: '1rem' }}>
-                                Mnoho agentúr sa chváli počtom preklikov. Nás zaujíma jediné číslo: <strong>PNO (Podiel Nákladov na Obrate)</strong>.
-                                Ak do reklamy dáte 100€ a nevrátia sa vám aspoň 500€, niečo je zle.
+                                Mnoho agentúr sa chváli počtom preklikov. Nás zaujíma jediné číslo: <strong>PNO (podiel nákladov na obrate)</strong>,
+                                respektíve to, koľko z investovaného eura sa vám reálne vráti v tržbách a v zisku.
                             </p>
                             <p className={styles.text}>
-                                Najčastejšie chyby, ktoré vidíme pri auditoch:
+                                Najčastejšie chyby, ktoré vidíme pri auditoch účtov:
                             </p>
                             <ul style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                <li className={styles.featureItem}><span style={{ color: '#ef4444', fontWeight: 800 }}>✖</span> Zlé nastavenie zhody kľúčových slov (broad match waste)</li>
-                                <li className={styles.featureItem}><span style={{ color: '#ef4444', fontWeight: 800 }}>✖</span> Chýbajúce vylučujúce slová (negatives)</li>
+                                <li className={styles.featureItem}><span style={{ color: '#ef4444', fontWeight: 800 }}>✖</span> Zle nastavená zhoda kľúčových slov a plytvanie pri širokej zhode (broad match)</li>
+                                <li className={styles.featureItem}><span style={{ color: '#ef4444', fontWeight: 800 }}>✖</span> Chýbajúce vylučujúce slová (negatíva)</li>
                                 <li className={styles.featureItem}><span style={{ color: '#ef4444', fontWeight: 800 }}>✖</span> Reklamy vedú na domovskú stránku namiesto konkrétneho produktu</li>
+                                <li className={styles.featureItem}><span style={{ color: '#ef4444', fontWeight: 800 }}>✖</span> Meranie konverzií, ktoré zachytáva len časť reálnych tržieb</li>
                             </ul>
                         </div>
                         {/* Stats Box */}
                         <div style={{ background: '#f8fafc', padding: '2.5rem', borderRadius: '20px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
-                            <h3 style={{ fontSize: '1.2rem', color: '#64748b', marginBottom: '2rem' }}>Priemerný výkon našich kampaní</h3>
+                            <h3 style={{ fontSize: '1.2rem', color: '#64748b', marginBottom: '2rem' }}>Starbomedia v skratke</h3>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#3b82f6' }}>8.5x</div>
-                                    <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>ROAS (Návratnosť)</div>
+                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#3b82f6' }}>10 M€+</div>
+                                    <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Ročný ad spend (CEE)</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#10b981' }}>-35%</div>
-                                    <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Cena za konverziu</div>
+                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#10b981' }}>od 2012</div>
+                                    <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Skúseností s Google Ads</div>
+                                </div>
+                                <div>
+                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#8b5cf6' }}>13</div>
+                                    <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Trhov CEE, kde inzerujeme</div>
+                                </div>
+                                <div>
+                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#f59e0b' }}>90 %+</div>
+                                    <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Presnosť merania tržieb</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* Advanced Strategy - DENSE Grid */}
+                {/* Campaign Types - 6 cards */}
                 <section className={styles.section} style={{ background: '#fff', padding: '0' }}>
-                    <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Komplexná stratégia, nie len "nastavenie"</h2>
+                    <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>Typy Google Ads kampaní, ktoré spravujeme</h2>
+                    <p className={styles.text} style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3rem' }}>
+                        Nekombinujeme náhodne. Mix kampaní staviame podľa toho, kde sa rozhoduje váš zákazník — od aktívneho hľadania až po dokončenie nákupu.
+                    </p>
                     <div className={styles.cardGrid}>
                         {/* Search */}
                         <div className={styles.card}>
                             <Search className={styles.cardIcon} />
-                            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Search Kampane (PPC)</h3>
+                            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Reklama vo vyhľadávaní (Search)</h3>
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
-                                Zasiahneme ľudí v momente, keď aktívne hľadajú váš produkt.
+                                Zasiahneme ľudí presne vtedy, keď aktívne hľadajú váš produkt. Pri čistom meraní prináša Search najnižšiu cenu za získanie zákazníka.
                             </p>
                             <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-                                <li>• SKAG / STAG štruktúra účtu</li>
-                                <li>• Responsive Search Ads optimalizácia</li>
-                                <li>• Rozšírenia o odkazy, volanie, ceny</li>
+                                <li>• Premyslená štruktúra účtu a kľúčových slov</li>
+                                <li>• Responsive Search Ads a Smart Bidding (cieľový ROAS)</li>
+                                <li>• Rozšírenia o odkazy, volanie a ceny</li>
+                            </ul>
+                        </div>
+                        {/* Performance Max */}
+                        <div className={styles.card}>
+                            <Target className={styles.cardIcon} />
+                            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Performance Max (PMax)</h3>
+                            <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
+                                Pre e-shopy dominantný formát roku 2026 — pokrýva Search, Shopping, Display, YouTube, Gmail aj Discover naraz.
+                            </p>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                                <li>• Kvalitný produktový feed a asset groups</li>
+                                <li>• Vlastná metodika kontroly PMax (search terms)</li>
+                                <li>• Oddelenie brand vs. non-brand rozpočtu</li>
                             </ul>
                         </div>
                         {/* Shopping */}
                         <div className={styles.card}>
-                            <BarChart2 className={styles.cardIcon} />
-                            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Google Shopping</h3>
+                            <ShoppingBag className={styles.cardIcon} />
+                            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Google Shopping (nákupy)</h3>
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
-                                Pre e-shopy nutnosť. Fotka + Cena priamo vo výsledkoch.
+                                Pre e-shopy nutnosť. Fotka, cena a názov obchodu priamo vo výsledkoch vyhľadávania.
                             </p>
                             <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-                                <li>• Optimalizácia XML feedu (názvy produktov)</li>
-                                <li>• Performance Max stratégie</li>
-                                <li>• CSS Program (zľava 20% z CPC)</li>
+                                <li>• Optimalizácia feedu v Merchant Center</li>
+                                <li>• Názvy a kategorizácia produktov</li>
+                                <li>• Kampane pre viacero krajín naraz</li>
                             </ul>
                         </div>
                         {/* Remarketing */}
                         <div className={styles.card}>
-                            <Target className={styles.cardIcon} />
-                            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Dynamický Remarketing</h3>
+                            <Repeat className={styles.cardIcon} />
+                            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Remarketing a dynamický remarketing</h3>
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
-                                Pripomenieme sa ľuďom, ktorí vložili tovar do košíka, ale nedokončili nákup.
+                                Približne 90 % transakcií nevznikne pri prvej návšteve. Pripomenieme sa ľuďom, ktorí už prejavili záujem.
                             </p>
                             <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-                                <li>• Personalizované bannery</li>
+                                <li>• Personalizované dynamické bannery</li>
                                 <li>• Cielenie podľa času od návštevy</li>
-                                <li>• Cross-device targeting (mobil &rarr; PC)</li>
+                                <li>• Consent Mode v2 pre EHP</li>
+                            </ul>
+                        </div>
+                        {/* Display */}
+                        <div className={styles.card}>
+                            <Globe className={styles.cardIcon} />
+                            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Obsahová (Display) reklama</h3>
+                            <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
+                                Obsahová sieť Google zasahuje vyše 90 % používateľov internetu. Ideálna na budovanie povedomia a sezónne kampane.
+                            </p>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                                <li>• Responzívne bannery s AI kombináciou</li>
+                                <li>• Cielenie na relevantné publiká</li>
+                                <li>• Podpora pri zavádzaní novej značky</li>
+                            </ul>
+                        </div>
+                        {/* YouTube */}
+                        <div className={styles.card}>
+                            <Youtube className={styles.cardIcon} />
+                            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>YouTube reklama (video)</h3>
+                            <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
+                                Najrýchlejšie rastúci formát v Google Ads. Platíte len za zhliadnutia, ktoré divák nepreskočí.
+                            </p>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                                <li>• Video kampane v celom ekosystéme Google</li>
+                                <li>• Integrácia videa do Performance Max</li>
+                                <li>• Cielenie podľa záujmov a zámeru</li>
                             </ul>
                         </div>
                     </div>
                 </section>
 
-                {/* Process List - Clean & Professional */}
+                {/* What we do differently - E-E-A-T */}
+                <section className={styles.section}>
+                    <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>Čo robíme inak</h2>
+                    <p className={styles.text} style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3rem' }}>
+                        Kampane sú len špička. Pod ňou je meranie a ekonomika, ktoré rozhodujú o tom, či reklama reálne zarába.
+                    </p>
+                    <div className={styles.gridTwo}>
+                        <div className={styles.card}>
+                            <ShieldCheck className={styles.cardIcon} style={{ color: '#3b82f6' }} />
+                            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Meranie ako základ</h3>
+                            <p className={styles.text} style={{ fontSize: '0.92rem' }}>
+                                Nasadzujeme server-side tagging, Enhanced Conversions a Conversion API. Bez nich GA4 zachytí typicky len
+                                60–70 % reálnych tržieb — s nimi sa dostávame nad 90 %. Bez čistých dát je optimalizácia len hádanie.
+                            </p>
+                        </div>
+                        <div className={styles.card}>
+                            <Scale className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Ekonomika pred cieľmi</h3>
+                            <p className={styles.text} style={{ fontSize: '0.92rem' }}>
+                                Skôr než nastavíme ciele, analyzujeme vaše marže, fixné náklady a bod zvratu. Nepozeráme len na ROAS, ale na
+                                POAS — skutočný zisk z reklamy po odpočítaní marže a nákladov.
+                            </p>
+                        </div>
+                        <div className={styles.card}>
+                            <Activity className={styles.cardIcon} style={{ color: '#f59e0b' }} />
+                            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Validácia voči tržbám</h3>
+                            <p className={styles.text} style={{ fontSize: '0.92rem' }}>
+                                Dáta z Google Ads a GA4 každý mesiac porovnávame so skutočnými tržbami v e-shope. Ak sa čísla rozchádzajú,
+                                vieme to skôr než vy.
+                            </p>
+                        </div>
+                        <div className={styles.card}>
+                            <GitCompare className={styles.cardIcon} style={{ color: '#8b5cf6' }} />
+                            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Pohľad naprieč kanálmi</h3>
+                            <p className={styles.text} style={{ fontSize: '0.92rem' }}>
+                                Sledujeme, ako Google Ads spolupracuje s Meta Ads a organickou návštevnosťou. Atribúciu riešime celkovo,
+                                nie izolovane podľa jednej platformy.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Process */}
                 <section className={styles.section} style={{ marginTop: '2rem' }}>
                     <div style={{ background: '#eff6ff', borderRadius: '24px', padding: '3rem' }}>
                         <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Ako prebieha spolupráca?</h2>
                         <div className={styles.grid} style={{ alignItems: 'flex-start', gap: '2rem' }}>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #dbeafe' }}>
-                                <div style={{ color: '#3b82f6', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>01. Audit</div>
-                                <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Hĺbková analýza histórie účtu. Nájdeme "diery", kadiaľ vám utekajú peniaze.</p>
+                                <div style={{ color: '#3b82f6', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>01. Audit zdarma</div>
+                                <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Hĺbková analýza histórie účtu. Nájdeme miesta, kadiaľ vám utekajú peniaze, a ukážeme potenciál.</p>
                             </div>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #dbeafe' }}>
-                                <div style={{ color: '#3b82f6', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>02. Setup</div>
-                                <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Nastavenie merania konverzií, prepojenie s GA4, štruktúra kampaní podľa maržovosti.</p>
+                                <div style={{ color: '#3b82f6', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>02. Nastavenie</div>
+                                <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Nastavenie merania konverzií, prepojenie s GA4 a štruktúra kampaní podľa maržovosti produktov.</p>
                             </div>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #dbeafe' }}>
                                 <div style={{ color: '#3b82f6', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>03. Škálovanie</div>
-                                <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Každý týždeň optimalizujeme bidy, pridávame negatívne slová a testujeme nové kreatívy.</p>
+                                <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Priebežne optimalizujeme ponuky, dopĺňame vylučujúce slová a testujeme nové reklamy a publiká.</p>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Who is it for */}
+                <section className={styles.section}>
+                    <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Pre koho je Google Ads vhodná</h2>
+                    <div className={styles.gridTwo}>
+                        <div className={styles.card}>
+                            <Store className={styles.cardIcon} style={{ color: '#3b82f6' }} />
+                            <h3 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>E-shopy</h3>
+                            <p className={styles.text} style={{ fontSize: '0.92rem' }}>Shopping a PMax s priamo merateľnou návratnosťou z predaja produktov.</p>
+                        </div>
+                        <div className={styles.card}>
+                            <MapPin className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <h3 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>Lokálne služby</h3>
+                            <p className={styles.text} style={{ fontSize: '0.92rem' }}>Geograficky cielené Search kampane pre zákazníkov vo vašom okolí.</p>
+                        </div>
+                        <div className={styles.card}>
+                            <Building2 className={styles.cardIcon} style={{ color: '#f59e0b' }} />
+                            <h3 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>B2B firmy</h3>
+                            <p className={styles.text} style={{ fontSize: '0.92rem' }}>Kľúčové slová s vysokým zámerom a dlhším rozhodovacím cyklom.</p>
+                        </div>
+                        <div className={styles.card}>
+                            <Globe className={styles.cardIcon} style={{ color: '#8b5cf6' }} />
+                            <h3 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>Export do zahraničia</h3>
+                            <p className={styles.text} style={{ fontSize: '0.92rem' }}>Kampane pre viacero trhov CEE s lokalizáciou feedu aj reklám.</p>
+                        </div>
+                    </div>
+                    <p className={styles.text} style={{ textAlign: 'center', maxWidth: '640px', margin: '2.5rem auto 0', fontSize: '0.95rem' }}>
+                        <CheckCircle size={16} style={{ display: 'inline', verticalAlign: 'middle', color: '#10b981', marginRight: '0.4rem' }} />
+                        Hráme férovo — ak Google Ads vášmu biznisu nesadne, povieme vám to a odporučíme, kam investovať radšej.
+                    </p>
+                </section>
+
+                {/* FAQ */}
+                <section className={styles.section}>
+                    <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Často kladené otázky o Google reklame</h2>
+                    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                        <div className={styles.faqItem}>
+                            <div className={styles.faqQuestion}>Koľko stojí Google reklama?</div>
+                            <p className={styles.faqAnswer}>
+                                Cena má dve časti: mediálny rozpočet, ktorý ide priamo Googlu, a odmena za správu kampaní. Menšie e-shopy
+                                zvyčajne začínajú na 300–500 € mesačne, väčšie projekty sa pohybujú v tisícoch. Presný odhad dostanete po bezplatnej analýze účtu.
+                            </p>
+                        </div>
+                        <div className={styles.faqItem}>
+                            <div className={styles.faqQuestion}>Ako dlho trvá, kým začne prinášať výsledky?</div>
+                            <p className={styles.faqAnswer}>
+                                Prvé prekliky prídu okamžite. Reálna optimalizácia trvá 2–4 týždne, kým Smart Bidding nazbiera dáta;
+                                pri dlhšom rozhodovacom cykle (B2B, prémiové produkty) to môže byť 4–8 týždňov.
+                            </p>
+                        </div>
+                        <div className={styles.faqItem}>
+                            <div className={styles.faqQuestion}>Aký je rozdiel medzi Google Ads a SEO?</div>
+                            <p className={styles.faqAnswer}>
+                                Google Ads prináša viditeľnosť okamžite (platená pozícia), SEO je dlhodobá investícia do organického rastu.
+                                Najlepšie výsledky zvyčajne prináša ich kombinácia.
+                            </p>
+                        </div>
+                        <div className={styles.faqItem}>
+                            <div className={styles.faqQuestion}>Spravujete kampane aj pre zahraničné trhy?</div>
+                            <p className={styles.faqAnswer}>
+                                Áno. Inzerujeme naprieč regiónom CEE — SK, CZ, HU, PL, RO, DE, AT, HR, SI, IT, FR, BE aj BG — vrátane lokalizácie feedu a znalosti miestnych trhov.
+                            </p>
+                        </div>
+                        <div className={styles.faqItem}>
+                            <div className={styles.faqQuestion}>Potrebujem nastavený tracking?</div>
+                            <p className={styles.faqAnswer}>
+                                Áno, je to základ. Skôr než spustíme kampane, chceme meranie, ktoré zachytí aspoň 90 % reálnych tržieb.
+                                Bez toho by sme optimalizovali naslepo.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -153,7 +323,7 @@ export default function GoogleAdsPage() {
                 <div className={styles.ctaBox} style={{ marginTop: '3rem' }}>
                     <h2 className={styles.ctaTitle}>Nechajte svoje kampane zarábať</h2>
                     <Link href="/kontakt" className="btn btn-primary" style={{ padding: '1rem 3rem' }}>
-                        Mám záujem o správu kampaní
+                        Chcem audit kampaní zdarma
                     </Link>
                 </div>
             </div>

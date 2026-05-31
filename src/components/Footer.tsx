@@ -13,7 +13,7 @@ const Footer = () => {
                     <Link href="/" className={styles.logo}>
                         <Image
                             src="/logo.png"
-                            alt="Starbo Media Logo"
+                            alt="Starbomedia logo"
                             width={120}
                             height={32}
                         />
@@ -27,10 +27,13 @@ const Footer = () => {
                 <div className={styles.column}>
                     <h3>Služby</h3>
                     <ul className={styles.linkList}>
-                        <li><Link href="/google-reklama">Google Reklama</Link></li>
-                        <li><Link href="/facebook-reklama">Facebook Reklama</Link></li>
-                        <li><Link href="/seo">SEO Optimalizácia</Link></li>
-                        <li><Link href="/cenove-porovnavace">Cenové Porovnávače</Link></li>
+                        <li><Link href="/reklama-na-internete">Reklama na internete</Link></li>
+                        <li><Link href="/google-reklama">Google reklama</Link></li>
+                        <li><Link href="/facebook-reklama">Facebook reklama</Link></li>
+                        <li><Link href="/seo">SEO optimalizácia</Link></li>
+                        <li><Link href="/youtube-reklama">YouTube reklama</Link></li>
+                        <li><Link href="/cenove-porovnavace">Cenové porovnávače</Link></li>
+                        <li><Link href="/analyza-webu">Webová analytika</Link></li>
                     </ul>
                 </div>
 

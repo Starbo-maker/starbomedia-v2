@@ -22,7 +22,7 @@ const Header = () => {
 
     const navLinks = [
         { name: 'Domov', href: '/' },
-        { name: 'Služby', href: '/#sluzby' },
+        { name: 'Služby', href: '/reklama-na-internete' },
         { name: 'AI Studio', href: '/ai-studio' },
         { name: 'Referencie', href: '/referencie-2' },
         { name: 'O nás', href: '/tim-starbomedia' },

@@ -3,7 +3,7 @@ import { Youtube, Play, MonitorPlay, Tv, Eye, Video as VideoIcon } from 'lucide-
 import styles from '../service.module.css';
 
 export const metadata = {
-    title: 'YouTube Reklama | Starbo Media',
+    title: 'YouTube reklama | Starbomedia',
     description: 'Video reklama na YouTube. Budujte povedomie o značke vďaka najväčšej video platforme sveta. Video produkcia a správa kampaní.',
 };
 
@@ -15,7 +15,7 @@ export default function YoutubeAdsPage() {
                 <div className={`container ${styles.headerGrid}`}>
                     <div className={styles.headerContent}>
                         <span style={{ color: '#ef4444', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem', display: 'block' }}>
-                            Video Marketing
+                            Video marketing
                         </span>
                         <h1 className={styles.title}>Buďte tam, kde sú oči všetkých</h1>
                         <p className={styles.subtitle}>
@@ -52,7 +52,7 @@ export default function YoutubeAdsPage() {
 
                 <section className={styles.grid}>
                     <div>
-                        <h2>Prečo YouTube Reklama?</h2>
+                        <h2>Prečo YouTube reklama?</h2>
                         <p className={styles.text}>
                             Video je najsilnejší formát súčasnosti. Dokážete v ňom predať emóciu, vysvetliť produkt a vybudovať dôveru oveľa rýchlejšie ako textom.
                             Navyše, YouTube reklama je stále cenovo veľmi dostupná v porovnaní s TV reklamou, pričom ponúka oveľa lepšie cielenie.
@@ -157,7 +157,7 @@ export default function YoutubeAdsPage() {
                 <div className={styles.ctaBox}>
                     <h2 className={styles.ctaTitle}>Ukážte sa svetu</h2>
                     <Link href="/kontakt" className="btn btn-primary" style={{ background: '#ef4444', border: 'none', padding: '1rem 3rem' }}>
-                        Kontaktujte nás
+                        Chcem video kampaň
                     </Link>
                 </div>
 

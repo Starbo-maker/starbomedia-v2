@@ -3,7 +3,7 @@ import { Camera, Video, MessageSquare, Monitor, BarChart, Smartphone, Mic, Layer
 import styles from '../ai-studio.module.css';
 
 export const metadata = {
-    title: 'AI Studio | Starbo Media',
+    title: 'AI Studio | Starbomedia',
     description: 'Vaša vízia, naša AI technológia. Transformujeme váš biznis pomocou umelej inteligencie.',
 };
 
@@ -59,7 +59,7 @@ export default function AiStudioPage() {
         },
         {
             id: 'multilingual-dubbing',
-            title: 'Muiltilingual Dubbing',
+            title: 'Viacjazyčný dabing',
             desc: 'Automatický dabing videí do 40+ jazykov.',
             icon: <MessageSquare size={28} />,
         },
@@ -73,7 +73,7 @@ export default function AiStudioPage() {
                     {/* Text Content */}
                     <div className={styles.heroContent}>
                         <div className={styles.badge}>
-                            <Sparkles size={16} /> Starbo Media AI Studio
+                            <Sparkles size={16} /> Starbomedia AI Studio
                         </div>
                         <h1 className={styles.title}>
                             Vaša vízia,<br />
@@ -101,10 +101,10 @@ export default function AiStudioPage() {
                                 <Bot size={20} color="#6366f1" /> AI Chatbot
                             </div>
                             <div className={`${styles.floatingCard} ${styles.fc2}`}>
-                                <Video size={20} color="#f97316" /> Video gen
+                                <Video size={20} color="#f97316" /> Tvorba videa
                             </div>
                             <div className={`${styles.floatingCard} ${styles.fc3}`}>
-                                <Zap size={20} color="#10b981" /> Automation
+                                <Zap size={20} color="#10b981" /> Automatizácia
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@ export default function AiStudioPage() {
                         </div>
                         <div className={styles.processStep}>
                             <div className={styles.stepNumber}>02</div>
-                            <h3>AI Processing</h3>
+                            <h3>AI spracovanie</h3>
                             <p style={{ color: '#64748b' }}>Modely spracujú dáta.</p>
                         </div>
                         <div className={styles.processStep}>

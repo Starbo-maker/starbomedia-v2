@@ -3,7 +3,7 @@ import { ShoppingBag, Star, RefreshCcw, Globe, Tag, Percent } from 'lucide-react
 import styles from '../service.module.css';
 
 export const metadata = {
-    title: 'Cenové Porovnávače (Heureka, Glami) | Starbo Media',
+    title: 'Cenové porovnávače (Heureka, Glami) | Starbomedia',
     description: 'Zvýšte predaj cez Heureku, Glami, Favi a ďalšie. XML feed audit, párovanie produktov a biddingové stratégie pre e-shopy.',
 };
 
@@ -15,7 +15,7 @@ export default function ComparisonsPage() {
                 <div className={`container ${styles.headerGrid}`}>
                     <div className={styles.headerContent}>
                         <span style={{ color: '#0ea5e9', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem', display: 'block' }}>
-                            Comparison Shopping Services
+                            Porovnávače cien
                         </span>
                         <h1 className={styles.title}>Ovládnite porovnávače cien</h1>
                         <p className={styles.subtitle}>
@@ -24,7 +24,7 @@ export default function ComparisonsPage() {
                         </p>
                         <div style={{ marginTop: '2rem' }}>
                             <Link href="/kontakt" className="btn btn-primary" style={{ background: '#0ea5e9', boxShadow: '0 4px 14px 0 rgba(14, 165, 233, 0.4)' }}>
-                                Audit XML feedu
+                                Chcem audit feedu zdarma
                             </Link>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ export default function ComparisonsPage() {
                 <div className={styles.ctaBox} style={{ marginTop: '5rem' }}>
                     <h2 className={styles.ctaTitle}>Využite potenciál porovnávačov naplno</h2>
                     <Link href="/kontakt" className="btn btn-primary" style={{ background: '#0ea5e9', border: 'none', padding: '1rem 3rem' }}>
-                        Kontaktujte nás
+                        Chcem audit feedu zdarma
                     </Link>
                 </div>
             </div>

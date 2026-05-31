@@ -14,7 +14,7 @@ export default function VoiceBotsPage() {
                 <div className={styles.heroBackground} />
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
-                        <div className={styles.badge}>Conversational AI</div>
+                        <div className={styles.badge}>Konverzačná AI</div>
                         <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>AI Voice Boti</h1>
                         <p className={styles.subtitle}>
                             Zdvihnú každé volanie, odpovedia na otázky a dohodnú schôdzku.
@@ -33,10 +33,10 @@ export default function VoiceBotsPage() {
                             <div className={styles.orbCore} />
 
                             <div className={`${styles.floatingCard} ${styles.fc1}`}>
-                                <Bot size={20} color="#10b981" /> GPT-4
+                                <Bot size={20} color="#10b981" /> Najnovšie LLM modely
                             </div>
                             <div className={`${styles.floatingCard} ${styles.fc2}`}>
-                                <Headphones size={20} color="#3b82f6" /> 24/7 Support
+                                <Headphones size={20} color="#3b82f6" /> Podpora 24/7
                             </div>
                         </div>
                     </div>
@@ -49,17 +49,17 @@ export default function VoiceBotsPage() {
                         <Mic size={48} color="#6366f1" style={{ marginBottom: '1.5rem' }} />
                         <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>O čom sa porozprávame?</h2>
                         <p style={{ color: '#64748b', fontSize: '1.1rem', marginBottom: '3rem' }}>
-                            Naši boti využívajú pokročilé LLM modely (ako GPT-4), takže konverzácia je plynulá a prirodzená. Žiadne "stlačte jednotku". Klient ani nespozná, že hovorí s robotom.
+                            Naši boti využívajú najnovšie LLM modely, takže konverzácia je plynulá a prirodzená. Žiadne "stlačte jednotku". Klient ani nespozná, že hovorí s robotom.
                         </p>
                         <div className={styles.grid} style={{ textAlign: 'left' }}>
                             <div className={styles.card} style={{ padding: '1.5rem' }}>
                                 <Phone size={24} color="#f97316" style={{ marginBottom: '0.5rem' }} />
-                                <h3 style={{ fontSize: '1.2rem', fontWeight: 700 }}>Outbound Volania</h3>
+                                <h3 style={{ fontSize: '1.2rem', fontWeight: 700 }}>Odchádzajúce volania</h3>
                                 <p style={{ fontSize: '0.9rem', color: '#64748b' }}>Aktívne obvolávanie leadov, pripomínanie termínov alebo zber spätnej väzby.</p>
                             </div>
                             <div className={styles.card} style={{ padding: '1.5rem' }}>
                                 <MessageSquare size={24} color="#6366f1" style={{ marginBottom: '0.5rem' }} />
-                                <h3 style={{ fontSize: '1.2rem', fontWeight: 700 }}>Inbound Support</h3>
+                                <h3 style={{ fontSize: '1.2rem', fontWeight: 700 }}>Prichádzajúca podpora</h3>
                                 <p style={{ fontSize: '0.9rem', color: '#64748b' }}>Riešenie reklamácií, informácie o objednávkach a FAQ 24/7.</p>
                             </div>
                         </div>

@@ -14,7 +14,7 @@ export default function VideoPresentationsPage() {
                 <div className={styles.heroBackground} />
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
-                        <div className={styles.badge}>AI Avatars</div>
+                        <div className={styles.badge}>AI avatari</div>
                         <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>Video Prezentácie</h1>
                         <p className={styles.subtitle}>
                             Ušetrite tisíce eur za produkciu. Vytvorte profesionálne školiace videá, onboarding materiály alebo novinky pre zamestnancov s AI avatarmi.
@@ -33,10 +33,10 @@ export default function VideoPresentationsPage() {
                             <div className={styles.orbCore} />
 
                             <div className={`${styles.floatingCard} ${styles.fc1}`}>
-                                <UserCircle size={20} color="#8b5cf6" /> Digital Twin
+                                <UserCircle size={20} color="#8b5cf6" /> Digitálne dvojča
                             </div>
                             <div className={`${styles.floatingCard} ${styles.fc2}`}>
-                                <Mic size={20} color="#3b82f6" /> Text-to-Speech
+                                <Mic size={20} color="#3b82f6" /> Text na reč
                             </div>
                         </div>
                     </div>

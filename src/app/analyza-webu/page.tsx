@@ -3,7 +3,7 @@ import { PieChart, TrendingUp, Search, MousePointer, Activity, Lock, BarChart, C
 import styles from '../service.module.css';
 
 export const metadata = {
-    title: 'Webová Analytika a UX | Starbo Media',
+    title: 'Webová analytika a UX | Starbomedia',
     description: 'Pokročilá implementácia GA4, Server-side GTM a UX audit. Získajte dáta, ktoré konkurencia nemá.',
 };
 
@@ -15,7 +15,7 @@ export default function AnalyticsPage() {
                 <div className={`container ${styles.headerGrid}`}>
                     <div className={styles.headerContent}>
                         <span style={{ color: '#f97316', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem', display: 'block' }}>
-                            Data & Analytics
+                            Dáta a analytika
                         </span>
                         <h1 className={styles.title}>Dáta, nie pocity</h1>
                         <p className={styles.subtitle}>
@@ -55,14 +55,14 @@ export default function AnalyticsPage() {
                             <h2 style={{ marginBottom: '1.5rem', fontSize: '2.5rem' }}>Meráte správne? Pravdepodobne nie.</h2>
                             <p className={styles.text} style={{ marginBottom: '1.5rem' }}>
                                 S príchodom <strong>Google Analytics 4 (GA4)</strong> sa pravidlá hry zmenili. Staré "Universal Analytics" návyky už nefungujú.
-                                Ak nemáte nastavený <strong>Server-side GTM</strong> a <strong>Consent Mode v2</strong>, prichádzate o 30-40% dát o vašich konverziách kvôli blokovačom reklám a cookies lištám.
+                                Ak nemáte nastavený <strong>Server-side GTM</strong> a <strong>Consent Mode v2</strong>, môžete prichádzať aj o 20-40 % dát o vašich konverziách kvôli blokovačom reklám a cookie lištám.
                             </p>
                             <p className={styles.text} style={{ fontWeight: 600, color: '#f97316' }}>
-                                Bez presných dát riadite firmu "naslepo". My vám vrátime zrak.
+                                Bez presných dát riadite firmu "naslepo". My vám vrátime presný a úplný prehľad o vašich dátach.
                             </p>
                         </div>
                         <div style={{ background: '#fff7ed', padding: '2rem', borderRadius: '16px', border: '1px solid #ffedd5' }}>
-                            <h3 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>Rýchly Audit: Máte toto nastavené?</h3>
+                            <h3 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>Rýchly audit: máte toto nastavené?</h3>
                             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', color: '#475569' }}>
                                     <CheckSquare size={18} color="#f97316" /> Vylúčenie vlastných IP adries a platobných brán
@@ -96,7 +96,7 @@ export default function AnalyticsPage() {
                                 <h3 style={{ fontSize: '1.25rem', margin: 0 }}>Server-side Tagging</h3>
                             </div>
                             <p className={styles.text} style={{ fontSize: '0.95rem' }}>
-                                Obíďte AdBlockery a predĺžte životnosť cookies. Dáta posielame priamo z vášho servera do Google/Facebooku, nie cez prehliadač užívateľa. Presnejšie meranie konverzií o +15%.
+                                Obíďte AdBlockery a predĺžte životnosť cookies. Dáta posielame priamo z vášho servera do Google/Facebooku, nie cez prehliadač užívateľa. Výsledkom je výrazne presnejšie meranie konverzií.
                             </p>
                         </div>
                         {/* Card 2 */}
@@ -106,7 +106,7 @@ export default function AnalyticsPage() {
                                 <h3 style={{ fontSize: '1.25rem', margin: 0 }}>Consent Mode v2 + Lišta</h3>
                             </div>
                             <p className={styles.text} style={{ fontSize: '0.95rem' }}>
-                                Nastavíme Cookie lištu tak, aby bola legálna, no zároveň agresívne (v medziach zákona) zbierala súhlasy. S Consent Mode v2 dopočítame modelované konverzie od ľudí, ktorí odmietli cookies.
+                                Nastavíme cookie lištu tak, aby bola v súlade so zákonom a zároveň maximalizovala mieru udelených súhlasov. S Consent Mode v2 dopočítame modelované konverzie od ľudí, ktorí cookies odmietli.
                             </p>
                         </div>
                         {/* Card 3 */}
@@ -151,14 +151,14 @@ export default function AnalyticsPage() {
                                 <li style={{ display: 'flex', gap: '1rem' }}>
                                     <Smartphone size={20} color="#f97316" style={{ flexShrink: 0 }} />
                                     <div>
-                                        <strong>Mobile Usability</strong>
+                                        <strong>Použiteľnosť na mobile</strong>
                                         <div style={{ fontSize: '0.85rem', color: '#94a3b8' }}>Dostupnosť tlačidiel palcom, čitateľnosť, rýchlosť</div>
                                     </div>
                                 </li>
                                 <li style={{ display: 'flex', gap: '1rem' }}>
                                     <CheckSquare size={20} color="#f97316" style={{ flexShrink: 0 }} />
                                     <div>
-                                        <strong>Forms & Checkout</strong>
+                                        <strong>Formuláre a košík</strong>
                                         <div style={{ fontSize: '0.85rem', color: '#94a3b8' }}>Validácia polí, automatické dopĺňanie, jasné CTA</div>
                                     </div>
                                 </li>
@@ -181,7 +181,7 @@ export default function AnalyticsPage() {
                         Objednajte si kompletný audit merania a UX. Zistíme, kde strácate peniaze a navrhneme riešenie.
                     </p>
                     <Link href="/kontakt" className="btn btn-primary" style={{ background: '#f97316', border: 'none', padding: '1rem 3rem' }}>
-                        Mám záujem o audit
+                        Chcem audit merania zdarma
                     </Link>
                 </div>
             </div>

@@ -33,10 +33,10 @@ export default function MultilingualDubbingPage() {
                             <div className={styles.orbCore} />
 
                             <div className={`${styles.floatingCard} ${styles.fc1}`}>
-                                <Globe size={20} color="#f97316" /> 40+ Languages
+                                <Globe size={20} color="#f97316" /> 40+ jazykov
                             </div>
                             <div className={`${styles.floatingCard} ${styles.fc2}`}>
-                                <AudioWaveform size={20} color="#facc15" /> Voice Cloning
+                                <AudioWaveform size={20} color="#facc15" /> Klonovanie hlasu
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ export default function MultilingualDubbingPage() {
                     </div>
                     <div className={styles.card}>
                         <Mic2 className={styles.cardIcon} />
-                        <h3 className={styles.cardTitle}>Voice Cloning</h3>
+                        <h3 className={styles.cardTitle}>Klonovanie hlasu</h3>
                         <p className={styles.cardDesc}>AI sa naučí farbu vášho hlasu a použije ju pri dabingu. Výsledok znie autenticky, ako keby ste daným jazykom hovorili plynule vy.</p>
                     </div>
                     <div className={styles.card}>

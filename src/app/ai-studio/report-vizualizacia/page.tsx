@@ -33,10 +33,10 @@ export default function ReportVisualizationPage() {
                             <div className={styles.orbCore} />
 
                             <div className={`${styles.floatingCard} ${styles.fc1}`}>
-                                <TrendingUp size={20} color="#10b981" /> Growth +24%
+                                <TrendingUp size={20} color="#10b981" /> Rast +24 %
                             </div>
                             <div className={`${styles.floatingCard} ${styles.fc2}`}>
-                                <Database size={20} color="#f59e0b" /> Big Data
+                                <Database size={20} color="#f59e0b" /> Veľké dáta
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@ export default function ReportVisualizationPage() {
                             </ul>
                         </div>
                         <div style={{ background: '#1e293b', borderRadius: '16px', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <span style={{ color: 'white', opacity: 0.5 }}>Interaktívny Dashboard Demo</span>
+                            <span style={{ color: 'white', opacity: 0.5 }}>Ukážka interaktívneho dashboardu</span>
                         </div>
                     </div>
                 </div>

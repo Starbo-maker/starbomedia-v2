@@ -14,7 +14,7 @@ export default function MarketingBannersPage() {
                 <div className={styles.heroBackground} />
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
-                        <div className={styles.badge}>Ad Creative Gen</div>
+                        <div className={styles.badge}>Generovanie kreatív</div>
                         <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>Marketing Bannery</h1>
                         <p className={styles.subtitle}>
                             Jeden dizajn nestačí. Generujte stovky variácií pre A/B testovanie a nájdite víťaznú kreatívu.
@@ -33,10 +33,10 @@ export default function MarketingBannersPage() {
                             <div className={styles.orbCore} />
 
                             <div className={`${styles.floatingCard} ${styles.fc1}`}>
-                                <Palette size={20} color="#ec4899" /> Brand Match
+                                <Palette size={20} color="#ec4899" /> Súlad s brandom
                             </div>
                             <div className={`${styles.floatingCard} ${styles.fc2}`}>
-                                <LayoutTemplate size={20} color="#8b5cf6" /> 100+ Templates
+                                <LayoutTemplate size={20} color="#8b5cf6" /> 100+ šablón
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ export default function MarketingBannersPage() {
                     </div>
                     <div className={styles.card}>
                         <ImageIcon className={styles.cardIcon} />
-                        <h3 className={styles.cardTitle}>Brand Styleguard</h3>
+                        <h3 className={styles.cardTitle}>Stráženie brandu</h3>
                         <p className={styles.cardDesc}>Nahrajte svoje logo a farby. AI zabezpečí, že každý banner bude dodržiavať vašu vizuálnu identitu.</p>
                     </div>
                     <div className={styles.card}>

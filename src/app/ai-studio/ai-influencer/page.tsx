@@ -14,7 +14,7 @@ export default function AiInfluencerPage() {
                 <div className={styles.heroBackground} />
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
-                        <div className={styles.badge}>Virtual Talent</div>
+                        <div className={styles.badge}>Virtuálny talent</div>
                         <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>AI Influencer</h1>
                         <p className={styles.subtitle}>
                             Vytvorte si tvár značky, ktorá nikdy nestarne, nerobí škandály a je vždy k dispozícii.
@@ -33,10 +33,10 @@ export default function AiInfluencerPage() {
                             <div className={styles.orbCore} />
 
                             <div className={`${styles.floatingCard} ${styles.fc1}`}>
-                                <Instagram size={20} color="#f472b6" /> Viral Reach
+                                <Instagram size={20} color="#f472b6" /> Virálny dosah
                             </div>
                             <div className={`${styles.floatingCard} ${styles.fc2}`}>
-                                <Star size={20} color="#c084fc" /> Perfect Image
+                                <Star size={20} color="#c084fc" /> Dokonalý imidž
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ export default function AiInfluencerPage() {
                                     <Instagram size={20} color="#ec4899" /> Instagram
                                 </div>
                                 <div style={{ background: '#fae8ff', padding: '0.8rem', borderRadius: '12px', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                                    <Heart size={20} color="#a855f7" /> Engagement
+                                    <Heart size={20} color="#a855f7" /> Interakcie
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@ export default function AiInfluencerPage() {
                             {/* Placeholder for AI Avatar image */}
                             <div style={{ position: 'absolute', bottom: '2rem', left: '2rem', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
                                 <strong>@ai_sofia</strong><br />
-                                Fashion Model
+                                Módna modelka
                             </div>
                         </div>
                     </div>

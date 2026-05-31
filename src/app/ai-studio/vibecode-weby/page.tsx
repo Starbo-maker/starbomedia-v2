@@ -14,7 +14,7 @@ export default function VibeCodePage() {
                 <div className={styles.heroBackground} />
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
-                        <div className={styles.badge}>AI Web Development</div>
+                        <div className={styles.badge}>Tvorba webov s AI</div>
                         <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>VibeCode Weby</h1>
                         <p className={styles.subtitle}>
                             Webstránky novej generácie. Kód napísaný s pomocou AI, dizajn vyladený človekom.
@@ -33,10 +33,10 @@ export default function VibeCodePage() {
                             <div className={styles.orbCore} />
 
                             <div className={`${styles.floatingCard} ${styles.fc1}`}>
-                                <Code size={20} color="#06b6d4" /> Clean Code
+                                <Code size={20} color="#06b6d4" /> Čistý kód
                             </div>
                             <div className={`${styles.floatingCard} ${styles.fc2}`}>
-                                <Zap size={20} color="#3b82f6" /> 100/100 Speed
+                                <Zap size={20} color="#3b82f6" /> Rýchlosť 100/100
                             </div>
                         </div>
                     </div>
@@ -54,15 +54,15 @@ export default function VibeCodePage() {
                                     <Zap color="#f97316" /> <strong>Extrémna rýchlosť</strong> - Čistý kód bez zbytočných pluginov.
                                 </li>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                    <Monitor color="#6366f1" /> <strong>Mobile-First</strong> - Dizajn, ktorý vyzerá skvele na každom zariadení.
+                                    <Monitor color="#6366f1" /> <strong>Mobile-first</strong> - Dizajn, ktorý vyzerá skvele na každom zariadení.
                                 </li>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                    <Layers color="#10b981" /> <strong>Moderný Stack</strong> - Next.js, React, Tailwind (žiaden Wordpress bloat).
+                                    <Layers color="#10b981" /> <strong>Moderný stack</strong> - Next.js, React, Tailwind (bez balastu WordPressu).
                                 </li>
                             </ul>
                         </div>
                         <div style={{ background: '#f8fafc', borderRadius: '16px', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px dashed #cbd5e1' }}>
-                            <span style={{ color: '#94a3b8' }}>Visual Preview</span>
+                            <span style={{ color: '#94a3b8' }}>Vizuálny náhľad</span>
                         </div>
                     </div>
                 </div>

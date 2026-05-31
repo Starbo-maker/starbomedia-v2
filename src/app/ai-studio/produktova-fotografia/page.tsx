@@ -14,7 +14,7 @@ export default function AiProductPhotoPage() {
                 <div className={styles.heroBackground} />
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
-                        <div className={styles.badge}>AI Photo Studio</div>
+                        <div className={styles.badge}>AI foto štúdio</div>
                         <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>AI Produktová Fotografia</h1>
                         <p className={styles.subtitle}>
                             Zabudnite na drahé fotenie v ateliéri. Naša AI premení vaše surové fotky na predajné vizuály.
@@ -33,10 +33,10 @@ export default function AiProductPhotoPage() {
                             <div className={styles.orbCore} />
 
                             <div className={`${styles.floatingCard} ${styles.fc1}`}>
-                                <Camera size={20} color="#6366f1" /> Studio Light
+                                <Camera size={20} color="#6366f1" /> Štúdiové svetlo
                             </div>
                             <div className={`${styles.floatingCard} ${styles.fc2}`}>
-                                <Sparkles size={20} color="#ec4899" /> 4K Upscale
+                                <Sparkles size={20} color="#ec4899" /> 4K zvýšenie rozlíšenia
                             </div>
                         </div>
                     </div>

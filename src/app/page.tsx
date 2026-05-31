@@ -22,7 +22,7 @@ export default function Home() {
               marginBottom: '2rem'
             }}>
               <Zap size={16} fill="#8b5cf6" />
-              Ditch the Agency Bloat. Get Results.
+              Marketing bez balastu. Len výsledky.
             </div>
 
             <h1 className={styles.heroTitle}>
@@ -52,7 +52,7 @@ export default function Home() {
             Technológie, ktoré ovládame
           </div>
           <div className={styles.marqueeContainer}>
-            {['Google Ads', 'Meta Business', 'OpenAI', 'Next.js', 'Vercel', 'Stripe', 'Python', 'Shopify'].map((tech) => (
+            {['Google Ads', 'Meta Ads', 'GA4', 'Looker Studio', 'Merchant Center', 'Mergado', 'Heureka', 'TikTok Ads'].map((tech) => (
               <span key={tech} style={{ fontWeight: 700, fontSize: '1.2rem', color: '#cbd5e1' }}>{tech}</span>
             ))}
           </div>
@@ -60,7 +60,7 @@ export default function Home() {
       </section>
 
       {/* Services BENTO GRID */}
-      <section className={styles.bentoSection}>
+      <section id="sluzby" className={styles.bentoSection}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Komplexný ekosystém pre váš rast</h2>
@@ -81,8 +81,8 @@ export default function Home() {
                 </p>
               </div>
               <div style={{ marginTop: '2rem', display: 'flex', gap: '2rem' }}>
-                <div><div style={{ fontWeight: 800, fontSize: '1.5rem', color: '#8b5cf6' }}>8.5x</div><div style={{ fontSize: '0.8rem' }}>Priemerné ROAS</div></div>
-                <div><div style={{ fontWeight: 800, fontSize: '1.5rem', color: '#10b981' }}>Top 3</div><div style={{ fontSize: '0.8rem' }}>Pozície v Searchi</div></div>
+                <div><div style={{ fontWeight: 800, fontSize: '1.5rem', color: '#8b5cf6' }}>10 M€+</div><div style={{ fontSize: '0.8rem' }}>Ročný spend</div></div>
+                <div><div style={{ fontWeight: 800, fontSize: '1.5rem', color: '#10b981' }}>od 2012</div><div style={{ fontSize: '0.8rem' }}>Skúsenosti</div></div>
               </div>
               <Link href="/google-reklama" style={{ position: 'absolute', bottom: '2rem', right: '2rem', background: '#f8fafc', padding: '0.8rem', borderRadius: '50%' }}>
                 <ArrowRight size={20} />
@@ -119,6 +119,11 @@ export default function Home() {
               <h3 className={styles.cardTitle}>Export do zahraničia</h3>
               <p className={styles.cardDesc}>Expandujte do CZ, HU, RO. Lokalizácia kampaní a podpora.</p>
             </div>
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <Link href="/reklama-na-internete" className="btn" style={{ background: 'white', border: '1px solid #e2e8f0', color: '#0f172a', padding: '0.9rem 2.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+              Pozrieť všetky služby <ArrowRight size={18} />
+            </Link>
           </div>
         </div>
       </section>
@@ -175,20 +180,20 @@ export default function Home() {
       <section className="container">
         <div className={styles.statsContainer}>
           <div>
-            <span className={styles.statNumber}>50+</span>
-            <span className={styles.statLabel}>Spokojných Klientov</span>
+            <span className={styles.statNumber}>84+</span>
+            <span className={styles.statLabel}>Spokojných klientov</span>
           </div>
           <div>
-            <span className={styles.statNumber}>€2M+</span>
-            <span className={styles.statLabel}>Ročný Spend</span>
+            <span className={styles.statNumber}>10 M€+</span>
+            <span className={styles.statLabel}>Ročný ad spend</span>
           </div>
           <div>
-            <span className={styles.statNumber}>300%</span>
-            <span className={styles.statLabel}>Priemerný Nárast Tržieb</span>
+            <span className={styles.statNumber}>269+</span>
+            <span className={styles.statLabel}>Spravovaných kampaní</span>
           </div>
           <div>
-            <span className={styles.statNumber}>24/7</span>
-            <span className={styles.statLabel}>Podpora & Monitoring</span>
+            <span className={styles.statNumber}>13</span>
+            <span className={styles.statLabel}>Trhov v CEE</span>
           </div>
         </div>
       </section>
