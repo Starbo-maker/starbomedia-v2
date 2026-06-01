@@ -39,7 +39,7 @@ export default function Home() {
               <Link href="/kontakt" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}>
                 Mám záujem o audit
               </Link>
-              <Link href="/ai-studio" className="btn" style={{ background: 'white', border: '1px solid #e2e8f0', color: '#0f172a', padding: '1rem 2rem' }}>
+              <Link href="/ai-studio" className="btn btn-secondary" style={{ padding: '1rem 2rem' }}>
                 Objaviť AI Studio
               </Link>
             </div>
@@ -121,7 +121,7 @@ export default function Home() {
             </div>
           </div>
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <Link href="/reklama-na-internete" className="btn" style={{ background: 'white', border: '1px solid #e2e8f0', color: '#0f172a', padding: '0.9rem 2.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+            <Link href="/reklama-na-internete" className="btn btn-secondary" style={{ padding: '0.9rem 2.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
               Pozrieť všetky služby <ArrowRight size={18} />
             </Link>
           </div>
