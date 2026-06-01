@@ -80,7 +80,7 @@ const Footer = () => {
                     <a href="https://www.linkedin.com/company/starbomedia/" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">
                         <Linkedin size={18} />
                     </a>
-                    <a href="https://twitter.com/Staarbo" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Twitter">
+                    <a href="https://twitter.com/starbomedia" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Twitter">
                         <Twitter size={18} />
                     </a>
                 </div>

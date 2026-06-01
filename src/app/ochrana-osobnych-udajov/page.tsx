@@ -1,7 +1,7 @@
 import styles from '../service.module.css';
 
 export const metadata = {
-    title: 'Ochrana osobných údajov | Starbo Media',
+    title: 'Ochrana osobných údajov | Starbomedia',
     description: 'Informácie o spracúvaní osobných údajov v súlade s GDPR.',
 };
 
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
 
                         <h2 style={{ fontSize: '1.8rem', marginTop: '3rem', marginBottom: '1.5rem' }}>2. Za akým účelom, aké osobné údaje spracúvame a na akom právnom základe a ako dlho?</h2>
                         <p className={styles.text}>
-                            Vaše osobné údaje v pozícii Prevádzkovateľa spracovávame na rôzne účely, na základe rôzneho právneho základu a po rôznu dobu. Poskytovanie bežných osobných údajov je požiadavkou, ktorá je v niektorých prípadoch potrebná na uzavretie zmluvy, napr. ak nám neposkytnete Vaše meno, fakturačnú adresu, adresu doručenia a Váš kontakt, nebudeme Vám vedieť doručiť zásielku. Vy ako dotknutá osoba ste povinná poskytnúť osobné údaje nevyhnutné na dosiahnutie uvedeného účelu. Neposkytnutie týchto osobných údajov by malo za následok nemožnosť uzatvorenia zmluvného vzťahu s nami – s Prevádzkovateľom.
+                            Vaše osobné údaje v pozícii Prevádzkovateľa spracúvame na rôzne účely, na základe rôzneho právneho základu a po rôznu dobu. Poskytnutie bežných osobných údajov (napr. meno, fakturačné a kontaktné údaje) je v niektorých prípadoch potrebné na uzavretie a plnenie zmluvy o poskytovaní marketingových služieb. Bez týchto údajov s Vami nevieme uzatvoriť zmluvný vzťah ani poskytnúť dohodnuté služby. Poskytnutie údajov nad rámec zmluvných alebo zákonných povinností je dobrovoľné.
                         </p>
 
                         <div style={{ background: '#f8fafc', padding: '2rem', borderRadius: '12px', marginTop: '2rem' }}>
@@ -59,10 +59,10 @@ export default function PrivacyPage() {
                         </div>
 
                         <div style={{ background: '#f8fafc', padding: '2rem', borderRadius: '12px', marginTop: '1.5rem' }}>
-                            <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>ÚDAJE ZÁKAZNÍKOV</h3>
+                            <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>ÚDAJE KLIENTOV</h3>
                             <p className={styles.text} style={{ fontSize: '0.95rem' }}>
-                                <strong>Účel:</strong> poskytovanie služieb zákazníkom prostredníctvom www.starbomedia.sk<br />
-                                <strong>Údaje:</strong> bežné osobné údaje, t.j. meno, priezvisko, fakturačnú adresu, adresu doručenia, telefónne číslo, e-mail a platobné údaje.<br />
+                                <strong>Účel:</strong> poskytovanie marketingových služieb klientom agentúry (správa reklamných kampaní, SEO, tvorba obsahu a súvisiace služby).<br />
+                                <strong>Údaje:</strong> bežné osobné údaje, t.j. meno, priezvisko, fakturačné údaje, telefónne číslo a e-mail.<br />
                                 <strong>Právny základ:</strong> predzmluvný a zmluvný vzťah (čl. 6 ods. 1 písm. b) GDPR).<br />
                                 <strong>Doba spracúvania:</strong> 10 rokov po ukončení zmluvného vzťahu.
                             </p>
@@ -71,11 +71,21 @@ export default function PrivacyPage() {
                         <div style={{ background: '#f8fafc', padding: '2rem', borderRadius: '12px', marginTop: '1.5rem' }}>
                             <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>PRIAMY MARKETING</h3>
                             <p className={styles.text} style={{ fontSize: '0.95rem' }}>
-                                <strong>Účel:</strong> propagácia eshopu a stránky www.starbomedia.sk<br />
+                                <strong>Účel:</strong> propagácia služieb agentúry a webu www.starbomedia.sk (napr. newsletter a ponuky).<br />
                                 <strong>Údaje:</strong> bežné osobné údaje, t.j. meno, priezvisko, adresu, telefónne číslo, e-mail.<br />
                                 <strong>Právny základ:</strong> oprávnený záujem (čl. 6 ods. 1 písm. f) GDPR).<br />
                                 <strong>Doba spracúvania:</strong> 10 rokov po ukončení zmluvného vzťahu.<br />
-                                <em>Poučenie: Každý zákazník môže voči priamemu marketingu namietať.</em>
+                                <em>Poučenie: Každý klient môže voči priamemu marketingu namietať.</em>
+                            </p>
+                        </div>
+
+                        <div style={{ background: '#f8fafc', padding: '2rem', borderRadius: '12px', marginTop: '1.5rem' }}>
+                            <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>ÚDAJE Z KONTAKTNÉHO FORMULÁRA</h3>
+                            <p className={styles.text} style={{ fontSize: '0.95rem' }}>
+                                <strong>Účel:</strong> spracovanie a zodpovedanie dopytu zaslaného cez kontaktný formulár na webe.<br />
+                                <strong>Údaje:</strong> meno, e-mail a obsah správy.<br />
+                                <strong>Právny základ:</strong> predzmluvné vzťahy, resp. oprávnený záujem (čl. 6 ods. 1 písm. b) a f) GDPR).<br />
+                                <strong>Doba spracúvania:</strong> najviac 1 rok od poslednej komunikácie, ak nevznikne zmluvný vzťah.
                             </p>
                         </div>
 
@@ -149,10 +159,10 @@ export default function PrivacyPage() {
                             Ak je to nevyhnutné na plnenie zmluvy, Vaše údaje poskytujeme aj tretím stranám:
                         </p>
                         <ul style={{ listStyle: 'disc', paddingLeft: '2rem', margin: '1rem 0' }} className={styles.text}>
-                            <li>Spoločnostiam zabezpečujúcim dopravu</li>
-                            <li>Odborným externým konzultantom (IT, marketing)</li>
-                            <li>Poskytovateľom platobných služieb</li>
-                            <li>Marketingovým platformám (Google, Meta...)</li>
+                            <li>Poskytovateľom hostingu, e-mailových a IT služieb</li>
+                            <li>Odborným externým konzultantom (IT, právo, účtovníctvo)</li>
+                            <li>Účtovníckej spoločnosti (fakturácia)</li>
+                            <li>Marketingovým a analytickým platformám (Google, Meta...)</li>
                         </ul>
 
                         <h2 style={{ fontSize: '1.8rem', marginTop: '3rem', marginBottom: '1.5rem' }}>5. Vaše práva</h2>
@@ -173,7 +183,7 @@ export default function PrivacyPage() {
                             V prípade akýchkoľvek otázok ohľadom ochrany osobných údajov nás kontaktujte na: <strong>marketing@starbomedia.sk</strong>
                         </p>
                         <p className={styles.text} style={{ marginTop: '2rem', fontSize: '0.9rem', color: '#64748b' }}>
-                            Verzia platná a účinná od: 10.05.2022
+                            Verzia platná a účinná od: 01.06.2026
                         </p>
 
                     </div>

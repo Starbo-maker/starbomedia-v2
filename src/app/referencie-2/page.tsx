@@ -3,7 +3,7 @@ import { ArrowRight, Trophy, TrendingUp, Globe, Users } from 'lucide-react';
 import styles from '../service.module.css';
 
 export const metadata = {
-    title: 'Referencie a Case Studies | Starbo Media',
+    title: 'Referencie a prípadové štúdie | Starbomedia',
     description: 'Pozrite si výsledky našej práce. Prípadové štúdie a referencie od našich klientov ako Mobilonline, Ecoprodukt a ďalší.',
 };
 
@@ -30,8 +30,8 @@ export default function CaseStudiesPage() {
         {
             client: 'Bubulákovo',
             service: 'Google Ads',
-            result: '8 Krajín EÚ',
-            description: 'Medzinárodné kampane pre obchod s látkami. Cielenie na trhy SK, CZ, HU, AT, DE, FR, BE, RO.',
+            result: '12 krajín EÚ',
+            description: 'Medzinárodné kampane pre obchod s látkami. Cielenie na trhy SK, CZ, HU, DE, HR, SI, PL, AT, RO, IT, FR, BE.',
             icon: <Users size={40} color="#f43f5e" />,
             color: '#f43f5e',
             bg: '#fff1f2'
@@ -52,7 +52,7 @@ export default function CaseStudiesPage() {
             <header className={styles.header}>
                 <div className={styles.headerBackground} style={{ background: 'radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.1), transparent 70%)' }} />
                 <div className={`container ${styles.headerContent}`}>
-                    <h1 className={styles.title}>Naše Výsledky</h1>
+                    <h1 className={styles.title}>Naše výsledky</h1>
                     <p className={styles.subtitle}>
                         Za nás hovoria čísla a spokojní klienti. Pozrite si, ako sme pomohli rásť firmám v rôznych segmentoch.
                     </p>
@@ -61,7 +61,7 @@ export default function CaseStudiesPage() {
 
             <div className={`container ${styles.content}`}>
                 <section className={styles.section}>
-                    <div className={styles.cardGrid} style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))' }}>
+                    <div className={styles.cardGrid} style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))' }}>
                         {cases.map((item, index) => (
                             <div key={index} className={styles.card} style={{ borderColor: 'transparent', background: item.bg }}>
                                 {/* Card Content */}
