@@ -3,8 +3,8 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import styles from '../service.module.css';
 
 export const metadata = {
-    title: 'Kontakt | Starbo Media',
-    description: 'Kontaktujte nás pre nezáväznú konzultáciu. Starbo Media - vaša online marketing agentúra.',
+    title: 'Kontakt | Starbomedia',
+    description: 'Kontaktujte nás pre nezáväznú konzultáciu. Starbomedia — vaša online marketing agentúra.',
 };
 
 export default function ContactPage() {
@@ -13,7 +13,7 @@ export default function ContactPage() {
             <header className={styles.header}>
                 <div className={styles.headerBackground} style={{ background: 'radial-gradient(circle at 50% 0%, rgba(249, 115, 22, 0.1), transparent 70%)' }} />
                 <div className={`container ${styles.headerContent}`}>
-                    <h1 className={styles.title}>Kontaktujte Nás</h1>
+                    <h1 className={styles.title}>Kontaktujte nás</h1>
                     <p className={styles.subtitle}>
                         Ste pripravení posunúť svoj biznis na vyšší level? Napíšte nám alebo zavolajte.
                         Tešíme sa na spoluprácu.
@@ -68,23 +68,23 @@ export default function ContactPage() {
                         <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                    <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Meno</label>
-                                    <input type="text" placeholder="Ján Novák" style={{ padding: '0.8rem', borderRadius: '8px', background: '#f8fafc', border: '1px solid var(--border)', color: 'var(--foreground)' }} />
+                                    <label htmlFor="meno" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Meno</label>
+                                    <input id="meno" name="meno" type="text" placeholder="Ján Novák" style={{ padding: '0.8rem', borderRadius: '8px', background: '#f8fafc', border: '1px solid var(--border)', color: 'var(--foreground)' }} />
                                 </div>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                    <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Email</label>
-                                    <input type="email" placeholder="jan@firma.sk" style={{ padding: '0.8rem', borderRadius: '8px', background: '#f8fafc', border: '1px solid var(--border)', color: 'var(--foreground)' }} />
+                                    <label htmlFor="email" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Email</label>
+                                    <input id="email" name="email" type="email" placeholder="jan@firma.sk" style={{ padding: '0.8rem', borderRadius: '8px', background: '#f8fafc', border: '1px solid var(--border)', color: 'var(--foreground)' }} />
                                 </div>
                             </div>
 
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Predmet</label>
-                                <input type="text" placeholder="Mám záujem o audit..." style={{ padding: '0.8rem', borderRadius: '8px', background: '#f8fafc', border: '1px solid var(--border)', color: 'var(--foreground)' }} />
+                                <label htmlFor="predmet" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Predmet</label>
+                                <input id="predmet" name="predmet" type="text" placeholder="Mám záujem o audit..." style={{ padding: '0.8rem', borderRadius: '8px', background: '#f8fafc', border: '1px solid var(--border)', color: 'var(--foreground)' }} />
                             </div>
 
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Správa</label>
-                                <textarea rows={5} placeholder="Dobrý deň, potreboval by som..." style={{ padding: '0.8rem', borderRadius: '8px', background: '#f8fafc', border: '1px solid var(--border)', color: 'var(--foreground)', resize: 'vertical' }} />
+                                <label htmlFor="sprava" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Správa</label>
+                                <textarea id="sprava" name="sprava" rows={5} placeholder="Dobrý deň, potreboval by som..." style={{ padding: '0.8rem', borderRadius: '8px', background: '#f8fafc', border: '1px solid var(--border)', color: 'var(--foreground)', resize: 'vertical' }} />
                             </div>
 
                             <button type="submit" className="btn btn-primary" style={{ marginTop: '1rem' }}>

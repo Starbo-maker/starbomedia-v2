@@ -11,8 +11,8 @@
   /* Slate 800 */
   --text-secondary: #475569;
   /* Slate 600 */
-  --text-muted: #94a3b8;
-  /* Slate 400 */
+  --text-muted: #64748b;
+  /* Slate 500 — WCAG-vyhovujúci kontrast na bielej */
 
   --primary: #8b5cf6;
   /* Violet 500 */
@@ -23,7 +23,7 @@
   --border: #e2e8f0;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #f97316 100%);
+  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #ea580c 100%);
   --gradient-hover: linear-gradient(135deg, #7c3aed 0%, #ea580c 100%);
   --gradient-text: linear-gradient(135deg, #6d28d9 0%, #c2410c 100%);
 
@@ -84,6 +84,8 @@ h6 {
 h1 {
   font-size: 3.5rem;
   letter-spacing: -0.02em;
+  color: #6d28d9;
+  /* fallback ak background-clip:text zlyhá */
   background: var(--gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -159,4 +161,24 @@ p {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary);
+}
+
+/* Accessibility: viditeľný fokus pre klávesnicu */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Accessibility: rešpektuj preferenciu obmedzeného pohybu */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

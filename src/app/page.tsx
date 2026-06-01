@@ -48,12 +48,12 @@ export default function Home() {
 
         {/* Quick Social Proof / Marquee */}
         <div className={styles.marqueeSection}>
-          <div className="container" style={{ textAlign: 'center', fontSize: '0.9rem', color: '#94a3b8', marginBottom: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+          <div className="container" style={{ textAlign: 'center', fontSize: '0.9rem', color: '#64748b', marginBottom: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
             Technológie, ktoré ovládame
           </div>
           <div className={styles.marqueeContainer}>
             {['Google Ads', 'Meta Ads', 'GA4', 'Looker Studio', 'Merchant Center', 'Mergado', 'Heureka', 'TikTok Ads'].map((tech) => (
-              <span key={tech} style={{ fontWeight: 700, fontSize: '1.2rem', color: '#cbd5e1' }}>{tech}</span>
+              <span key={tech} style={{ fontWeight: 700, fontSize: '1.2rem', color: '#64748b' }}>{tech}</span>
             ))}
           </div>
         </div>
