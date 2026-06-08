@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import './globals.css';
@@ -11,8 +12,12 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: 'Starbo Media | Online Marketing Agentúra',
-  description: 'Profesionálna online marketing agentúra špecializujúca sa na PPC kampane, SEO optimalizáciu a digitálny marketing.',
+  metadataBase: new URL('https://starbomedia.sk'),
+  title: {
+    default: 'Starbomedia | Online marketing agentúra — Google Ads, Meta Ads, SEO',
+    template: '%s',
+  },
+  description: 'Profesionálna online marketing agentúra. Google Ads, Meta Ads, SEO a AI nástroje pre e-shopy a firmy v strednej a východnej Európe.',
 };
 
 export default function RootLayout({
@@ -22,6 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="sk" className={outfit.variable}>
+      <GoogleTagManager gtmId="GTM-KHPVW4NB" />
       <body>
         <Header />
         <main>{children}</main>
