@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
-import { GoogleTagManager } from '@next/third-parties/google';
+import GtmProduction from '@/components/GtmProduction';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import './globals.css';
@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="sk" className={outfit.variable}>
-      <GoogleTagManager gtmId="GTM-KHPVW4NB" />
+      <GtmProduction />
       <body>
         <Header />
         <main>{children}</main>
