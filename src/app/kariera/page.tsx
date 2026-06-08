@@ -3,7 +3,7 @@ import { Briefcase, Coffee, Zap } from 'lucide-react';
 import styles from '../service.module.css';
 
 export const metadata = {
-    title: 'Kariéra | Starbo Media',
+    title: 'Kariéra | Starbomedia',
     description: 'Pridaj sa k nám. Hľadáme talentovaných ľudí do tímu. PPC špecialista, SEO a ďalší.',
 };
 
@@ -45,21 +45,21 @@ export default function CareerPage() {
                     <h2 style={{ marginBottom: '2rem' }}>Otvorené pozície</h2>
                     <div className={styles.cardGrid}>
                         <div className={styles.card}>
-                            <h3 className={styles.cardTitle}>PPC Špecialista</h3>
-                            <p className={styles.text} style={{ fontSize: '0.9rem' }}>Senior / Medior</p>
+                            <h3 className={styles.cardTitle}>Senior PPC špecialista</h3>
+                            <p className={styles.text} style={{ fontSize: '0.9rem' }}>Šaľa · plný úväzok</p>
                             <p className={styles.text} style={{ marginTop: '1rem' }}>
-                                Správa Google Ads a Facebook kampaní pre e-shopy. Analytické myslenie a skúsenosti podmienkou.
+                                Správa Google Ads a Meta Ads kampaní pre projekty doma aj v zahraničí. Analytické myslenie a skúsenosti podmienkou.
                             </p>
-                            <Link href="/kontakt" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#0d9488', boxShadow: '0 4px 14px 0 rgba(13, 148, 136, 0.4)' }}>Aplikovať</Link>
+                            <Link href="/kariera-ppc-specialista" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#0d9488', boxShadow: '0 4px 14px 0 rgba(13, 148, 136, 0.4)' }}>Zobraziť inzerát</Link>
                         </div>
 
                         <div className={styles.card}>
-                            <h3 className={styles.cardTitle}>SEO Špecialista</h3>
-                            <p className={styles.text} style={{ fontSize: '0.9rem' }}>Medior</p>
+                            <h3 className={styles.cardTitle}>Marketing stáž</h3>
+                            <p className={styles.text} style={{ fontSize: '0.9rem' }}>Šaľa · stáž</p>
                             <p className={styles.text} style={{ marginTop: '1rem' }}>
-                                On-page a technické SEO. Tvorba analýz kľúčových slov a návrh obsahovej stratégie.
+                                Tvorba obsahu s pomocou AI (ChatGPT, Claude, Gemini) a moderný digitálny marketing v praxi. Hľadáme talent, ktorý vychováme.
                             </p>
-                            <Link href="/kontakt" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#0d9488', boxShadow: '0 4px 14px 0 rgba(13, 148, 136, 0.4)' }}>Aplikovať</Link>
+                            <Link href="/kariera-marketing-staz" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#0d9488', boxShadow: '0 4px 14px 0 rgba(13, 148, 136, 0.4)' }}>Zobraziť inzerát</Link>
                         </div>
                     </div>
                 </section>

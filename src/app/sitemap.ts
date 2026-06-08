@@ -31,6 +31,8 @@ const STATIC_PATHS = [
     'referencie-2',
     'tim-starbomedia',
     'kariera',
+    'kariera-marketing-staz',
+    'kariera-ppc-specialista',
     'kontakt',
     'ochrana-osobnych-udajov',
 ];
