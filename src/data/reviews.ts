@@ -15,9 +15,9 @@ export type Review = {
 export const REVIEW_AGGREGATE = {
     rating: 5.0,
     count: 26,
-    // Otvorí recenzie priamo na Google Maps profile
-    profileUrl:
-        'https://www.google.com/maps/place/Starbo+Media+-+reklama+na+internete/@48.1695821,17.8648354,17z/data=!4m8!3m7!1s0x476b6d0d3c73f4e7:0xed82e9202ed7cdc9!8m2!3d48.1695821!4d17.8648354!9m1!1b1',
+    // Stabilný odkaz na náš Google profil cez CID (feature ID 0x...:0xed82e9202ed7cdc9 → CID 17114497858395426249).
+    // Overené: presmeruje priamo na profil „Starbo Media - reklama na internete" v Mapách (vrátane recenzií).
+    profileUrl: 'https://www.google.com/maps?cid=17114497858395426249',
 };
 
 export const REVIEWS: Review[] = [
