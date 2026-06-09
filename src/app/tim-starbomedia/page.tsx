@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 const TEAM: { name: string; role: string; photo?: string }[] = [
-    { name: 'Peter Štrbo', role: 'Head of Marketing' },
+    { name: 'Peter Štrbo', role: 'Head of Marketing', photo: '/team/peter-strbo.webp' },
     { name: 'Štefan Gajdošík', role: 'Online marketing konzultant', photo: '/team/stefan-gajdosik.webp' },
     { name: 'Dávid Barczi', role: 'Online marketing konzultant', photo: '/team/david-barczi.webp' },
     { name: 'Tatiana Takáčová', role: 'Online marketing konzultant & grafička', photo: '/team/tatiana-takacova.webp' },
