@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import styles from '../service.module.css';
+import GoogleReviews from '../../components/GoogleReviews';
+import CountryFlags from '../../components/CountryFlags';
+import { REVIEWS, REVIEW_AGGREGATE } from '../../data/reviews';
 
 export const metadata = {
     title: 'Referencie | Starbomedia',
@@ -15,15 +18,15 @@ const SERVICE_COLORS: Record<string, string> = {
     'Sklik': '#dc2626',
 };
 
-const CLIENTS: { name: string; services: string[] }[] = [
-    { name: 'Bubulákovo', services: ['Google Ads'] },
-    { name: 'Murat', services: ['Google Ads', 'Meta Ads', 'SEO', 'Heureka'] },
-    { name: 'Bežeckepotreby.sk', services: ['Google Ads', 'Meta Ads', 'SEO', 'Heureka'] },
-    { name: 'Športrysy', services: ['SEO', 'Google Ads'] },
-    { name: 'Ecoprodukt', services: ['Google Ads', 'Meta Ads', 'Heureka', 'Zboží'] },
-    { name: 'Ecovacs', services: ['Google Ads', 'Meta Ads', 'SEO'] },
-    { name: 'Stadlerform', services: ['Google Ads', 'Meta Ads', 'SEO'] },
-    { name: 'Fabulo', services: ['Google Ads', 'Meta Ads', 'Heureka', 'Sklik'] },
+const CLIENTS: { name: string; note?: string; services: string[]; countries: string[] }[] = [
+    { name: 'Bubulákovo', services: ['Google Ads'], countries: ['SK', 'CZ', 'HU', 'DE', 'HR', 'SI', 'PL', 'AT', 'RO', 'IT', 'FR', 'BE'] },
+    { name: 'Murat', services: ['Google Ads', 'Meta Ads', 'SEO', 'Heureka'], countries: ['SK'] },
+    { name: 'Bežeckepotreby.sk', services: ['Google Ads', 'Meta Ads', 'SEO', 'Heureka'], countries: ['SK', 'CZ', 'HU'] },
+    { name: 'Športrysy', services: ['SEO', 'Google Ads'], countries: ['SK'] },
+    { name: 'Ecoprodukt', note: 'v zahraničí Edimo', services: ['Google Ads', 'Meta Ads', 'Heureka', 'Zboží'], countries: ['SK', 'CZ', 'HU', 'RO', 'AT'] },
+    { name: 'Ecovacs', services: ['Google Ads', 'Meta Ads', 'SEO'], countries: ['SK', 'CZ'] },
+    { name: 'Stadlerform', services: ['Google Ads', 'Meta Ads', 'SEO'], countries: ['SK', 'CZ'] },
+    { name: 'Fabulo', services: ['Google Ads', 'Meta Ads', 'Heureka', 'Sklik'], countries: ['SK', 'CZ', 'RO', 'HU'] },
 ];
 
 function ServiceBadge({ service }: { service: string }) {
@@ -44,6 +47,26 @@ function ServiceBadge({ service }: { service: string }) {
     );
 }
 
+const reviewSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Starbo Media',
+    url: 'https://starbomedia.sk',
+    aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: REVIEW_AGGREGATE.rating.toFixed(1),
+        reviewCount: String(REVIEW_AGGREGATE.count),
+        bestRating: '5',
+        worstRating: '1',
+    },
+    review: REVIEWS.map((r) => ({
+        '@type': 'Review',
+        author: { '@type': 'Person', name: r.author },
+        reviewRating: { '@type': 'Rating', ratingValue: String(r.rating), bestRating: '5' },
+        reviewBody: r.text,
+    })),
+};
+
 export default function ReferencesPage() {
     return (
         <>
@@ -62,13 +85,21 @@ export default function ReferencesPage() {
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 270px), 1fr))', gap: '1.5rem' }}>
                         {CLIENTS.map((client) => (
                             <div key={client.name} className={styles.card} style={{ display: 'flex', flexDirection: 'column' }}>
-                                <h3 style={{ fontSize: '1.35rem', fontWeight: 700, color: '#0f172a', marginBottom: '1.25rem' }}>
+                                <h3 style={{ fontSize: '1.35rem', fontWeight: 700, color: '#0f172a', marginBottom: client.note ? '0.25rem' : '1.25rem' }}>
                                     {client.name}
                                 </h3>
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: 'auto' }}>
-                                    {client.services.map((s) => (
-                                        <ServiceBadge key={s} service={s} />
-                                    ))}
+                                {client.note && (
+                                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontStyle: 'italic', margin: '0 0 1rem' }}>
+                                        {client.note}
+                                    </p>
+                                )}
+                                <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                                        {client.services.map((s) => (
+                                            <ServiceBadge key={s} service={s} />
+                                        ))}
+                                    </div>
+                                    <CountryFlags codes={client.countries} size={22} />
                                 </div>
                             </div>
                         ))}
@@ -85,7 +116,11 @@ export default function ReferencesPage() {
                         ))}
                     </div>
                 </section>
+            </div>
 
+            <GoogleReviews />
+
+            <div className="container">
                 <div className={styles.ctaBox}>
                     <h2 className={styles.ctaTitle}>Chcete sa pridať k nim?</h2>
                     <Link href="/kontakt" className="btn btn-primary" style={{ padding: '1rem 3rem' }}>
@@ -93,6 +128,11 @@ export default function ReferencesPage() {
                     </Link>
                 </div>
             </div>
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+            />
         </>
     );
 }

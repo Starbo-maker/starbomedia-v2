@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Search, BarChart2, Share2, Globe, TrendingUp, Monitor, Zap, Mic, Video, Layers, ArrowRight, ShieldCheck, PieChart } from 'lucide-react';
 import styles from './home.module.css';
+import GoogleReviews from '../components/GoogleReviews';
 
 export default function Home() {
   return (
@@ -197,6 +198,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Google Reviews teaser */}
+      <GoogleReviews limit={3} ctaHref="/referencie-2" ctaLabel="Pozrieť všetky recenzie" />
 
       {/* Final CTA */}
       <section className={styles.ctaSection}>
