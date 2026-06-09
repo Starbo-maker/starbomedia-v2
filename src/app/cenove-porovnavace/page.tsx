@@ -24,7 +24,7 @@ export default function ComparisonsPage() {
                         </p>
                         <div style={{ marginTop: '2rem' }}>
                             <Link href="/kontakt" className="btn btn-primary" style={{ background: '#0ea5e9', boxShadow: '0 4px 14px 0 rgba(14, 165, 233, 0.4)' }}>
-                                Chcem audit feedu zdarma
+                                Chcem audit feedu
                             </Link>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ export default function ComparisonsPage() {
                 <div className={styles.ctaBox} style={{ marginTop: '5rem' }}>
                     <h2 className={styles.ctaTitle}>Využite potenciál porovnávačov naplno</h2>
                     <Link href="/kontakt" className="btn btn-primary" style={{ background: '#0ea5e9', border: 'none', padding: '1rem 3rem' }}>
-                        Chcem audit feedu zdarma
+                        Chcem audit feedu
                     </Link>
                 </div>
             </div>

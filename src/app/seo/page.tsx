@@ -29,7 +29,7 @@ export default function SeoPage() {
                         </p>
                         <div style={{ marginTop: '2rem' }}>
                             <Link href="/kontakt" className="btn btn-primary" style={{ background: '#10b981', boxShadow: '0 4px 14px 0 rgba(16, 185, 129, 0.4)' }}>
-                                Chcem SEO audit zdarma
+                                Chcem SEO audit
                             </Link>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ export default function SeoPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Bez čistého technického základu obsah nepomôže. Ideme do hĺbky kódu, nie len do online SEO skóre.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Crawlability, indexácia, server-side rendering</li>
                                 <li>• Core Web Vitals (LCP, CLS, INP)</li>
                                 <li>• Štruktúrované dáta a hreflang pre viac trhov</li>
@@ -129,7 +129,7 @@ export default function SeoPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Nepozeráme len na objem dopytov. Mapujeme zámer vyhľadávania, aby každá stránka odpovedala na to, čo človek naozaj hľadá.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Informačný, navigačný, komerčný a transakčný zámer</li>
                                 <li>• Analýza medzery oproti konkurencii</li>
                                 <li>• Priradenie dopytov ku konkrétnym URL</li>
@@ -142,7 +142,7 @@ export default function SeoPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Obsah s originálnymi údajmi, vlastnými skúsenosťami a konkrétnymi benchmarkmi — nie prepísaný z konkurencie.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Obsahový kalendár a cluster stratégia</li>
                                 <li>• Pillar stránky a podporné články</li>
                                 <li>• Interné prelinkovanie a topická autorita</li>
@@ -155,7 +155,7 @@ export default function SeoPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Kvalitné spätné odkazy zostávajú jedným z najsilnejších signálov. Žiadny masový nákup z PBN sietí ani katalógov.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Digitálny PR a odborné publikácie</li>
                                 <li>• Partnerské spolupráce s dlhodobým potenciálom</li>
                                 <li>• Dôraz na relevanciu, nie na množstvo</li>
@@ -168,7 +168,7 @@ export default function SeoPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Pre kamenné prevádzky je lokálne vyhľadávanie často priorita číslo jeden — najmä na mobiloch.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Google Moja Firma (Business Profile)</li>
                                 <li>• Lokálne citácie a správa recenzií</li>
                                 <li>• Lokalizovaný obsah pre konkrétne mestá</li>
@@ -181,7 +181,7 @@ export default function SeoPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Samostatná disciplína — pri tisícoch URL rozhoduje kanonizácia, indexačná stratégia a poriadok v štruktúre.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Produktové stránky a kategórie</li>
                                 <li>• Filtrácia a kanonizácia duplicít</li>
                                 <li>• Štruktúrované dáta (Product, Offer, AggregateRating)</li>
@@ -239,7 +239,7 @@ export default function SeoPage() {
                         <div className={styles.cardGrid} style={{ alignItems: 'flex-start' }}>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #d1fae5' }}>
                                 <div style={{ color: '#10b981', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>01. Úvodná analýza</div>
-                                <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Zdarma, do 2–3 dní. Rýchly pohľad na indexáciu, viditeľnosť, technické bloky a najväčšie príležitosti.</p>
+                                <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Nezáväzne, do 2–3 dní. Rýchly pohľad na indexáciu, viditeľnosť, technické bloky a najväčšie príležitosti.</p>
                             </div>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #d1fae5' }}>
                                 <div style={{ color: '#10b981', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>02. Komplexný audit</div>
@@ -362,7 +362,7 @@ export default function SeoPage() {
                 <div className={styles.ctaBox} style={{ background: '#ecfdf5', borderColor: '#6ee7b7', marginTop: '3rem' }}>
                     <h2 className={styles.ctaTitle}>Kde sa váš web nachádza dnes?</h2>
                     <Link href="/kontakt" className="btn btn-primary" style={{ background: '#10b981', border: 'none', padding: '1rem 3rem' }}>
-                        Chcem SEO audit zdarma
+                        Chcem SEO audit
                     </Link>
                 </div>
             </div>

@@ -35,7 +35,7 @@ export default function FacebookAdsPage() {
                         </p>
                         <div style={{ marginTop: '2rem' }}>
                             <Link href="/kontakt" className="btn btn-primary" style={{ background: `linear-gradient(135deg, ${ACCENT} 0%, ${PURPLE} 100%)`, boxShadow: '0 4px 14px 0 rgba(236, 72, 153, 0.4)' }}>
-                                Chcem audit Meta Ads zdarma
+                                Chcem audit Meta Ads
                             </Link>
                         </div>
                     </div>
@@ -158,7 +158,7 @@ export default function FacebookAdsPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Odpoveď Mety na Google Performance Max. AI kampaň, ktorá optimalizuje cielenie, umiestnenia aj rozpočet naraz. Pre e-shopy s katalógom často najefektívnejší formát.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Kvalitný katalóg a segmentácia produktov</li>
                                 <li>• Limity na nových vs. existujúcich zákazníkov</li>
                                 <li>• Strážime, aby rozpočet nezožral remarketing</li>
@@ -171,7 +171,7 @@ export default function FacebookAdsPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Klasika, ktorá zostáva základom — najmä pre e-shopy, kde treba ukázať produkt, cenu a jasnú výzvu k akcii. Carousel zobrazí viacero produktov či uhlov v jednej reklame.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Mix formátov v každej reklamnej zostave</li>
                                 <li>• Rôzne hook stratégie (produkt, benefit, dôkaz)</li>
                                 <li>• Optimalizácia na predaj, nie na prekliky</li>
@@ -184,7 +184,7 @@ export default function FacebookAdsPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Najrýchlejšie rastúce umiestnenie na Mete a zároveň miesto s najnižším CPM. Vertikálne video (9:16), kde rozhodujú prvé tri sekundy.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Okamžitý hook — vizuálny aj textový</li>
                                 <li>• Autentický UGC formát namiesto „dokonalej“ produkcie</li>
                                 <li>• Storytelling, nie len záber produktu s cenou</li>
@@ -197,7 +197,7 @@ export default function FacebookAdsPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Pripomenieme ľuďom presne tie produkty, ktoré si prezerali. Z pohľadu ROAS jeden z najsilnejších formátov — ale len ak vieme oddeliť reálny prínos od preceneného.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Personalizované produktové reklamy</li>
                                 <li>• Realistické atribučné okno (7-day click)</li>
                                 <li>• Validácia inkrementality voči tržbám</li>
@@ -210,7 +210,7 @@ export default function FacebookAdsPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Pre firmy, ktoré nepredávajú online, ale generujú dopyty — B2B služby, nehnuteľnosti, vzdelávanie, financie. Natívny formulár vyplní používateľ jedným klikom.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Natívne formuláre priamo v aplikácii</li>
                                 <li>• Test formulárov vs. pristávacia stránka</li>
                                 <li>• Optimalizácia na kvalitný dopyt, nie počet</li>
@@ -223,7 +223,7 @@ export default function FacebookAdsPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Pri launchoch nových produktov a sezónnych akciách. Video a Reels majú na Mete najlepší dosah za najnižšiu cenu za tisíc zobrazení.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Tvorba dopytu tam, kde ešte neexistuje</li>
                                 <li>• Video formáty pre maximálny dosah</li>
                                 <li>• Prepojenie s remarketingom a výkonom</li>
@@ -318,7 +318,7 @@ export default function FacebookAdsPage() {
                         <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Ako prebieha spolupráca?</h2>
                         <div className={styles.grid} style={{ alignItems: 'flex-start', gap: '2rem' }}>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: `1px solid ${ACCENT_BORDER}` }}>
-                                <div style={{ color: ACCENT, fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>01. Audit zdarma</div>
+                                <div style={{ color: ACCENT, fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>01. Nezáväzný audit</div>
                                 <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Prejdeme účet, meranie aj kreatívy. Skontrolujeme EMQ skóre, atribučné nastavenia a štruktúru kampaní a ukážeme, kde je potenciál.</p>
                             </div>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: `1px solid ${ACCENT_BORDER}` }}>
@@ -426,7 +426,7 @@ export default function FacebookAdsPage() {
                 <div className={styles.ctaBox} style={{ background: ACCENT_SOFT, borderColor: ACCENT_BORDER, marginTop: '3rem' }}>
                     <h2 className={styles.ctaTitle}>Nechajte svoje Meta kampane reálne zarábať</h2>
                     <Link href="/kontakt" className="btn btn-primary" style={{ background: `linear-gradient(135deg, ${ACCENT} 0%, ${PURPLE} 100%)`, border: 'none', padding: '1rem 3rem' }}>
-                        Chcem audit Meta Ads zdarma
+                        Chcem audit Meta Ads
                     </Link>
                 </div>
             </div>

@@ -31,7 +31,7 @@ export default function ReklamaNaInternetePage() {
                         </p>
                         <div style={{ marginTop: '2rem' }}>
                             <Link href="/kontakt" className="btn btn-primary" style={{ background: 'linear-gradient(135deg, #8b5cf6, #f97316)', boxShadow: '0 4px 14px 0 rgba(139, 92, 246, 0.4)' }}>
-                                Chcem audit zdarma
+                                Chcem nezáväzný audit
                             </Link>
                         </div>
                     </div>
@@ -237,7 +237,7 @@ export default function ReklamaNaInternetePage() {
                         <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Ako prebieha spolupráca</h2>
                         <div className={styles.grid} style={{ alignItems: 'flex-start', gap: '1.5rem' }}>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #ede9fe' }}>
-                                <div style={{ color: '#8b5cf6', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>01. Audit zdarma</div>
+                                <div style={{ color: '#8b5cf6', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>01. Nezáväzný audit</div>
                                 <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Skontrolujeme kampane, tracking, web aj konkurenciu. Dostanete konkrétnu spätnú väzbu s odporúčaniami, nie generické PDF.</p>
                             </div>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #ede9fe' }}>
@@ -355,14 +355,14 @@ export default function ReklamaNaInternetePage() {
                 </section>
 
                 <div className={styles.ctaBox} style={{ marginTop: '3rem' }}>
-                    <h2 className={styles.ctaTitle}>Začnime bezplatným auditom</h2>
+                    <h2 className={styles.ctaTitle}>Začnime nezáväzným auditom</h2>
                     <p className={styles.text} style={{ maxWidth: '620px', margin: '0 auto 2rem' }}>
                         Ak máte pocit, že vaše kampane by mohli fungovať lepšie, alebo si nie ste istí, či váš dodávateľ robí správne veci,
                         ozvite sa. Dostanete nezáväznú analýzu s konkrétnymi odporúčaniami — žiadne dlhé prezentácie ani sľuby bez podkladov,
                         len dáta a úprimný pohľad.
                     </p>
                     <Link href="/kontakt" className="btn btn-primary" style={{ padding: '1rem 3rem', background: 'linear-gradient(135deg, #8b5cf6, #f97316)' }}>
-                        Chcem bezplatný audit
+                        Chcem nezáväzný audit
                     </Link>
                 </div>
             </div>

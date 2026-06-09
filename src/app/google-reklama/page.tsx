@@ -29,7 +29,7 @@ export default function GoogleAdsPage() {
                         </p>
                         <div style={{ marginTop: '2rem' }}>
                             <Link href="/kontakt" className="btn btn-primary" style={{ background: '#3b82f6', boxShadow: '0 4px 14px 0 rgba(59, 130, 246, 0.4)' }}>
-                                Chcem audit kampaní zdarma
+                                Chcem audit kampaní
                             </Link>
                         </div>
                     </div>
@@ -111,7 +111,7 @@ export default function GoogleAdsPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Zasiahneme ľudí presne vtedy, keď aktívne hľadajú váš produkt. Pri čistom meraní prináša Search najnižšiu cenu za získanie zákazníka.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Premyslená štruktúra účtu a kľúčových slov</li>
                                 <li>• Responsive Search Ads a Smart Bidding (cieľový ROAS)</li>
                                 <li>• Rozšírenia o odkazy, volanie a ceny</li>
@@ -124,7 +124,7 @@ export default function GoogleAdsPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Pre e-shopy dominantný formát roku 2026 — pokrýva Search, Shopping, Display, YouTube, Gmail aj Discover naraz.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Kvalitný produktový feed a asset groups</li>
                                 <li>• Vlastná metodika kontroly PMax (search terms)</li>
                                 <li>• Oddelenie brand vs. non-brand rozpočtu</li>
@@ -137,7 +137,7 @@ export default function GoogleAdsPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Pre e-shopy nutnosť. Fotka, cena a názov obchodu priamo vo výsledkoch vyhľadávania.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Optimalizácia feedu v Merchant Center</li>
                                 <li>• Názvy a kategorizácia produktov</li>
                                 <li>• Kampane pre viacero krajín naraz</li>
@@ -150,7 +150,7 @@ export default function GoogleAdsPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Približne 90 % transakcií nevznikne pri prvej návšteve. Pripomenieme sa ľuďom, ktorí už prejavili záujem.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Personalizované dynamické bannery</li>
                                 <li>• Cielenie podľa času od návštevy</li>
                                 <li>• Consent Mode v2 pre EHP</li>
@@ -163,7 +163,7 @@ export default function GoogleAdsPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Obsahová sieť Google zasahuje vyše 90 % používateľov internetu. Ideálna na budovanie povedomia a sezónne kampane.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Responzívne bannery s AI kombináciou</li>
                                 <li>• Cielenie na relevantné publiká</li>
                                 <li>• Podpora pri zavádzaní novej značky</li>
@@ -176,7 +176,7 @@ export default function GoogleAdsPage() {
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Najrýchlejšie rastúci formát v Google Ads. Platíte len za zhliadnutia, ktoré divák nepreskočí.
                             </p>
-                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            <ul style={{ fontSize: '0.9rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', paddingLeft: 0, margin: 0 }}>
                                 <li>• Video kampane v celom ekosystéme Google</li>
                                 <li>• Integrácia videa do Performance Max</li>
                                 <li>• Cielenie podľa záujmov a zámeru</li>
@@ -233,7 +233,7 @@ export default function GoogleAdsPage() {
                         <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Ako prebieha spolupráca?</h2>
                         <div className={styles.grid} style={{ alignItems: 'flex-start', gap: '2rem' }}>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #dbeafe' }}>
-                                <div style={{ color: '#3b82f6', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>01. Audit zdarma</div>
+                                <div style={{ color: '#3b82f6', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>01. Nezáväzný audit</div>
                                 <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Hĺbková analýza histórie účtu. Nájdeme miesta, kadiaľ vám utekajú peniaze, a ukážeme potenciál.</p>
                             </div>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #dbeafe' }}>
@@ -323,7 +323,7 @@ export default function GoogleAdsPage() {
                 <div className={styles.ctaBox} style={{ marginTop: '3rem' }}>
                     <h2 className={styles.ctaTitle}>Nechajte svoje kampane zarábať</h2>
                     <Link href="/kontakt" className="btn btn-primary" style={{ padding: '1rem 3rem' }}>
-                        Chcem audit kampaní zdarma
+                        Chcem audit kampaní
                     </Link>
                 </div>
             </div>

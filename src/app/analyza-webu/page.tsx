@@ -24,7 +24,7 @@ export default function AnalyticsPage() {
                         </p>
                         <div style={{ marginTop: '2rem' }}>
                             <Link href="/kontakt" className="btn btn-primary" style={{ background: 'linear-gradient(135deg, #f97316 0%, #ec4899 100%)', boxShadow: '0 4px 14px 0 rgba(249, 115, 22, 0.4)' }}>
-                                Audit merania zdarma
+                                Chcem audit merania
                             </Link>
                         </div>
                     </div>
@@ -181,7 +181,7 @@ export default function AnalyticsPage() {
                         Objednajte si kompletný audit merania a UX. Zistíme, kde strácate peniaze a navrhneme riešenie.
                     </p>
                     <Link href="/kontakt" className="btn btn-primary" style={{ background: '#f97316', border: 'none', padding: '1rem 3rem' }}>
-                        Chcem audit merania zdarma
+                        Chcem audit merania
                     </Link>
                 </div>
             </div>

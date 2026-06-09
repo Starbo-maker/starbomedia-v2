@@ -212,7 +212,7 @@ export default function Home() {
             Nečakajte na zázrak. Objednajte si nezáväzný audit a my vám ukážeme, kde leží potenciál pre rast vášho biznisu.
           </p>
           <Link href="/kontakt" className="btn btn-primary" style={{ padding: '1.2rem 4rem', fontSize: '1.2rem', boxShadow: '0 10px 30px rgba(249, 115, 22, 0.3)' }}>
-            Získať Audit Zdarma
+            Chcem nezáväzný audit
           </Link>
         </div>
       </section>
