@@ -26,6 +26,24 @@ function Stars({ rating, size = 16 }: { rating: number; size?: number }) {
     );
 }
 
+export function ReviewBadge({ aggregate = REVIEW_AGGREGATE }: { aggregate?: typeof REVIEW_AGGREGATE }) {
+    return (
+        <a
+            className={styles.badge}
+            href={aggregate.profileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Hodnotenie ${aggregate.rating.toFixed(1)} z 5 na základe ${aggregate.count} Google recenzií — otvoriť profil`}
+        >
+            <GoogleG size={22} />
+            <span className={styles.badgeScore}>{aggregate.rating.toFixed(1).replace('.', ',')}</span>
+            <Stars rating={Math.round(aggregate.rating)} size={18} />
+            <span className={styles.badgeMeta}>{aggregate.count} recenzií na Google</span>
+            <span className={styles.badgeLink}>Zobraziť na Google →</span>
+        </a>
+    );
+}
+
 const AVATAR_COLORS = ['#8b5cf6', '#ec4899', '#3b82f6', '#10b981', '#f59e0b', '#06b6d4', '#ef4444'];
 
 function initials(name: string) {
@@ -50,6 +68,7 @@ type Props = {
     limit?: number;
     ctaHref?: string;
     ctaLabel?: string;
+    showBadge?: boolean;
 };
 
 export default function GoogleReviews({
@@ -61,6 +80,7 @@ export default function GoogleReviews({
     limit,
     ctaHref,
     ctaLabel = 'Zobraziť všetky referencie',
+    showBadge = true,
 }: Props) {
     const list = limit ? reviews.slice(0, limit) : reviews;
 
@@ -72,19 +92,7 @@ export default function GoogleReviews({
                     <h2 className={styles.title}>{title}</h2>
                     <p className={styles.sub}>{subtitle}</p>
 
-                    <a
-                        className={styles.badge}
-                        href={aggregate.profileUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Hodnotenie ${aggregate.rating.toFixed(1)} z 5 na základe ${aggregate.count} Google recenzií — otvoriť profil`}
-                    >
-                        <GoogleG size={22} />
-                        <span className={styles.badgeScore}>{aggregate.rating.toFixed(1).replace('.', ',')}</span>
-                        <Stars rating={Math.round(aggregate.rating)} size={18} />
-                        <span className={styles.badgeMeta}>{aggregate.count} recenzií na Google</span>
-                        <span className={styles.badgeLink}>Zobraziť na Google →</span>
-                    </a>
+                    {showBadge && <ReviewBadge aggregate={aggregate} />}
                 </div>
 
                 <div className={styles.masonry}>

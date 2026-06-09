@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from '../service.module.css';
-import GoogleReviews from '../../components/GoogleReviews';
+import GoogleReviews, { ReviewBadge } from '../../components/GoogleReviews';
 import CountryFlags from '../../components/CountryFlags';
 import { REVIEWS, REVIEW_AGGREGATE } from '../../data/reviews';
 
@@ -77,6 +77,7 @@ export default function ReferencesPage() {
                     <p className={styles.subtitle}>
                         Dlhodobo sa staráme o rast e-shopov a značiek doma aj v zahraničí. Tu je výber klientov a toho, čo pre nich robíme.
                     </p>
+                    <ReviewBadge />
                 </div>
             </header>
 
@@ -118,7 +119,7 @@ export default function ReferencesPage() {
                 </section>
             </div>
 
-            <GoogleReviews />
+            <GoogleReviews showBadge={false} />
 
             <div className="container">
                 <div className={styles.ctaBox}>
