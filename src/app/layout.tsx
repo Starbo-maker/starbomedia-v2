@@ -27,8 +27,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="sk" className={outfit.variable}>
-      <GtmProduction />
       <body>
+        <GtmProduction />
         <Header />
         <main>{children}</main>
         <Footer />

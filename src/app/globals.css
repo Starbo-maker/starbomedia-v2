@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+/* Font Outfit sa načítava self-hosted cez next/font v layout.tsx (premenná --font-outfit).
+   Žiadny @import z fonts.googleapis.com — ten bol render-blocking a zdržiaval FCP/LCP. */
 
 :root {
   /* Colors - Light Theme */
@@ -60,7 +61,7 @@ body {
   overflow-x: hidden;
   background-color: var(--background);
   color: var(--foreground);
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
   scroll-behavior: smooth;
 }
 

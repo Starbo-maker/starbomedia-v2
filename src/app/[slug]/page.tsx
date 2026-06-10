@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { Calendar, User, ArrowLeft } from 'lucide-react';
@@ -16,6 +17,8 @@ type Post = {
     excerpt: string;
     category: string;
     featuredImage: string | null;
+    featuredW?: number;
+    featuredH?: number;
 };
 
 const POSTS = postsData as Post[];
@@ -109,8 +112,15 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </div>
                 {post.featuredImage && (
                     <div className="container">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={post.featuredImage} alt={post.title} className={styles.featured} />
+                        <Image
+                            src={post.featuredImage}
+                            alt={post.title}
+                            width={post.featuredW ?? 1200}
+                            height={post.featuredH ?? 630}
+                            className={styles.featured}
+                            priority
+                            sizes="(max-width: 1200px) 100vw, 1200px"
+                        />
                     </div>
                 )}
             </header>
