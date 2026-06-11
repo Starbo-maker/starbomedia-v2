@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     template: '%s',
   },
   description: 'Profesionálna online marketing agentúra. Google Ads, Meta Ads, SEO a AI nástroje pre e-shopy a firmy v strednej a východnej Európe.',
+  // Self-canonical pre každú stránku (relatívna './' sa resolvuje per-route voči metadataBase).
+  // Stránky s vlastným alternates (blog články) si ho prepíšu.
+  alternates: { canonical: './' },
 };
 
 export default function RootLayout({

@@ -48,7 +48,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params;
     const post = getPost(slug);
     if (!post) return {};
-    const url = `${SITE_URL}/${slug}/`;
+    // Bez koncového lomítka — zhodné so servovanou URL aj sitemap (staré /slug/ z WP 308-uje sem).
+    const url = `${SITE_URL}/${slug}`;
     const img = post.featuredImage ? `${SITE_URL}${post.featuredImage}` : undefined;
     const author = getAuthor(post.author);
     return {
@@ -103,7 +104,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` },
         },
         image: post.featuredImage ? `${SITE_URL}${post.featuredImage}` : undefined,
-        mainEntityOfPage: `${SITE_URL}/${slug}/`,
+        mainEntityOfPage: `${SITE_URL}/${slug}`,
     };
 
     return (
