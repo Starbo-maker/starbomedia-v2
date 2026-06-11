@@ -1,0 +1,452 @@
+import type { GlossaryTerm } from './index';
+
+// PPC a online reklama, Google Ads, Meta Ads, YouTube/video.
+// Pojmy ako Google Ads, Meta Ads či YouTube reklama zámerne NEMAJÚ vlastnú stránku v slovníku —
+// odkazujú na service stránky, aby slovník nekanibalizoval komerčné landing pages.
+
+export const reklamaTerms: GlossaryTerm[] = [
+    // ——— PPC a online reklama ———
+    {
+        slug: 'ppc',
+        term: 'PPC',
+        fullName: 'Pay-Per-Click (platba za kliknutie)',
+        category: 'ppc',
+        short: 'Model online reklamy, pri ktorom inzerent platí za kliknutie, nie za zobrazenie. Patrí sem reklama vo vyhľadávačoch (Google Ads, Sklik) aj veľká časť reklamy na sociálnych sieťach.',
+        page: {
+            quick: 'PPC (Pay-Per-Click) je model online reklamy, pri ktorom inzerent neplatí za zobrazenie reklamy, ale až za kliknutie na ňu. Najznámejšími PPC systémami sú Google Ads a český Sklik; v širšom zmysle sa pod PPC zaraďuje aj výkonnostná reklama na sociálnych sieťach.',
+            sections: [
+                {
+                    heading: 'Ako PPC funguje',
+                    paragraphs: [
+                        'Základom je aukcia. Inzerenti si vyberú kľúčové slová alebo publiká, nastavia ponuky a systém pri každom vyhľadávaní či zobrazení v zlomku sekundy rozhodne, ktoré reklamy a v akom poradí sa zobrazia. O výsledku nerozhoduje len výška ponuky, ale aj kvalita a relevancia reklamy — kvalitnejšia reklama môže poraziť vyššiu ponuku.',
+                        'Veľkou výhodou PPC oproti klasickej reklame je merateľnosť a rýchlosť: kampaň viete spustiť v priebehu dní, presne vidíte náklady na každú objednávku či dopyt a rozpočty viete priebežne presúvať tam, kde zarábajú.',
+                    ],
+                },
+                {
+                    heading: 'Kedy PPC dáva zmysel',
+                    paragraphs: [
+                        'PPC reklama je najsilnejšia tam, kde existuje aktívny dopyt — ľudia produkt či službu už hľadajú a reklama ich zachytí v správnom momente. Pre nové kategórie produktov, ktoré ešte nikto nehľadá, býva vhodnejšia kombinácia so sociálnymi sieťami a videom, ktoré dopyt vytvárajú.',
+                        'PPC a SEO sa nevylučujú, naopak sa dopĺňajú: PPC prináša výsledky okamžite a dáta z neho (vyhľadávané výrazy, konverzné pomery) zlepšujú SEO stratégiu. Porovnaniu oboch kanálov sme venovali samostatný článok.',
+                    ],
+                },
+            ],
+        },
+        related: ['cpc', 'klucove-slova', 'skore-kvality', 'landing-page'],
+        links: [
+            { label: 'Google reklama — naša služba', href: '/google-reklama' },
+            { label: 'Google Ads vs SEO — čo je lepšie pre slovenský biznis', href: '/google-ads-vs-seo-co-je-lepsie-pre-slovensky-biznis-v-roku-2026' },
+        ],
+    },
+    {
+        slug: 'landing-page',
+        term: 'Landing page',
+        fullName: 'Cieľová (vstupná) stránka',
+        category: 'ppc',
+        short: 'Stránka, na ktorú návštevník dorazí po kliknutí na reklamu alebo odkaz. Dobrá landing page má jeden jasný cieľ a obsahovo nadväzuje na reklamu, z ktorej človek prišiel.',
+        page: {
+            quick: 'Landing page (cieľová stránka) je stránka, na ktorú návštevník „pristane" po kliknutí na reklamu, odkaz v e-maile či výsledok vyhľadávania. Na rozdiel od homepage má jeden konkrétny cieľ — predať produkt, získať dopyt alebo registráciu — a všetko na nej k tomu cieľu smeruje.',
+            sections: [
+                {
+                    heading: 'Čo robí landing page úspešnou',
+                    paragraphs: [
+                        'Najdôležitejší princíp je zhoda správ (message match): stránka musí pokračovať tam, kde reklama skončila. Ak reklama sľubuje zľavu na bežecké topánky, kliknutie musí viesť na bežecké topánky so zľavou — nie na homepage. Nesúlad medzi reklamou a stránkou je jedna z najčastejších príčin slabého výkonu kampaní.',
+                        'Ďalej rozhoduje rýchlosť načítania (najmä na mobile), zrozumiteľná hlavná ponuka v prvom okne, dôveryhodnostné prvky (recenzie, certifikáty, reálne fotky) a jednoznačná výzva na akciu. Čím menej rozptýlení a možností, tým lepšie stránka konvertuje.',
+                    ],
+                },
+                {
+                    heading: 'Landing page a kvalita reklamy',
+                    paragraphs: [
+                        'Kvalita cieľovej stránky priamo vplýva aj na cenu reklamy: v Google Ads je zážitok zo vstupnej stránky súčasťou skóre kvality, takže pomalá či nerelevantná stránka reklamu predražuje.',
+                        'Landing pages sa oplatí priebežne A/B testovať — aj malé zmeny v nadpise, formulári či rozložení dokážu citeľne pohnúť konverzným pomerom pri rovnakých nákladoch na reklamu.',
+                    ],
+                },
+            ],
+        },
+        related: ['konverzny-pomer', 'ab-testovanie', 'cta', 'skore-kvality'],
+        links: [
+            { label: 'Webová analytika — naša služba', href: '/analyza-webu' },
+        ],
+    },
+    {
+        slug: 'ab-testovanie',
+        term: 'A/B testovanie',
+        fullName: 'Split testing',
+        category: 'ppc',
+        short: 'Porovnanie dvoch variantov reklamy, stránky či e-mailu na reálnom publiku. Polovica ľudí vidí variant A, polovica B — vyhráva ten s lepším výsledkom.',
+        page: {
+            quick: 'A/B testovanie je metóda, pri ktorej sa dva varianty reklamy, stránky alebo e-mailu zobrazujú súčasne dvom porovnateľným skupinám ľudí. Meraním, ktorý variant dosahuje lepší výsledok (preklik, konverziu), sa rozhoduje na základe dát, nie pocitov.',
+            sections: [
+                {
+                    heading: 'Ako A/B test správne nastaviť',
+                    paragraphs: [
+                        'Testujte jednu zmenu naraz — ak naraz zmeníte nadpis, obrázok aj tlačidlo, nebudete vedieť, čo rozdiel spôsobilo. Definujte si vopred metriku úspechu (napr. konverzný pomer, nie „viac kliknutí") a nechajte test bežať, kým nenazbiera dostatočný objem dát.',
+                        'Najčastejšou chybou je predčasné vyhodnotenie: rozdiely na malých číslach sú často len náhoda. Druhým extrémom je testovanie maličkostí na webe s malou návštevnosťou — taký test môže trvať mesiace a výsledok nič nezmení. Testujte veci, ktoré majú šancu reálne pohnúť výsledkami: ponuku, hlavný nadpis, cenu, formulár.',
+                    ],
+                },
+                {
+                    heading: 'Kde sa A/B testovanie používa',
+                    paragraphs: [
+                        'V reklamných systémoch sa testujú kreatívy a texty (Meta aj Google majú na testy vstavané nástroje a do veľkej miery ich automatizujú), na weboch sa testujú landing pages, košíkový proces či cenníky, v e-mailingu predmety správ.',
+                        'Moderné kampane typu Performance Max či Advantage+ časť testovania preberajú na seba — strojové učenie kombinuje podklady a samo vyhodnocuje, čo funguje. O to dôležitejšie je dodávať im dostatočne pestré podklady.',
+                    ],
+                },
+            ],
+        },
+        related: ['konverzny-pomer', 'landing-page', 'kreativa'],
+        links: [
+            { label: 'Webová analytika — naša služba', href: '/analyza-webu' },
+        ],
+    },
+    {
+        slug: 'online-reklama',
+        term: 'Online reklama',
+        category: 'ppc',
+        short: 'Súhrnné označenie platenej propagácie na internete — reklama vo vyhľadávačoch, na sociálnych sieťach, vo videu, v obsahových sieťach aj v porovnávačoch cien.',
+        related: ['ppc', 'display-reklama', 'nativna-reklama'],
+        links: [{ label: 'Reklama na internete — naša služba', href: '/reklama-na-internete' }],
+    },
+    {
+        slug: 'display-reklama',
+        term: 'Display reklama',
+        fullName: 'Bannerová reklama',
+        category: 'ppc',
+        short: 'Vizuálna (bannerová) reklama zobrazovaná na weboch, v aplikáciách a videách. Využíva sa najmä na budovanie povedomia a remarketing; nakupuje sa prevažne cez CPM.',
+        related: ['obsahova-siet', 'remarketing', 'cpm'],
+    },
+    {
+        slug: 'nativna-reklama',
+        term: 'Natívna reklama',
+        category: 'ppc',
+        short: 'Platený obsah, ktorý formou aj umiestnením splýva s prostredím, v ktorom sa zobrazuje — napríklad PR články či odporúčané obsahové boxy. Musí byť označená ako reklama.',
+        related: ['display-reklama', 'copywriting'],
+    },
+    {
+        slug: 'programaticka-reklama',
+        term: 'Programatická reklama',
+        category: 'ppc',
+        short: 'Automatizovaný nákup reklamného priestoru v reálnom čase cez technologické platformy (DSP). Inzerent nekupuje konkrétny web, ale publikum so zvolenými parametrami.',
+        related: ['rtb', 'display-reklama'],
+    },
+    {
+        slug: 'rtb',
+        term: 'RTB',
+        fullName: 'Real-Time Bidding',
+        category: 'ppc',
+        short: 'Aukcia reklamného priestoru v reálnom čase — o každé zobrazenie sa v milisekundách dražia inzerenti cez programatické platformy.',
+        related: ['programaticka-reklama'],
+    },
+    {
+        slug: 'remarketing',
+        term: 'Remarketing',
+        category: 'ppc',
+        short: 'Cielenie reklamy na ľudí, ktorí už web navštívili alebo so značkou interagovali — napríklad vložili tovar do košíka, ale nenakúpili. Jedna z najefektívnejších taktík výkonnostnej reklamy.',
+        related: ['retargeting', 'vlastne-publikum', 'meta-pixel'],
+        links: [{ label: 'Remarketing — naháňačka v online marketingu', href: '/remarketing-nahanacka-v-online-marketingu' }],
+    },
+    {
+        slug: 'retargeting',
+        term: 'Retargeting',
+        category: 'ppc',
+        short: 'Synonymum remarketingu — opätovné oslovenie ľudí, ktorí už prejavili záujem. Pojem retargeting sa historicky spájal skôr s bannerovou reklamou, remarketing s ekosystémom Google.',
+        related: ['remarketing'],
+    },
+    {
+        slug: 'utm-parametre',
+        term: 'UTM parametre',
+        category: 'ppc',
+        short: 'Značky pridávané do URL adries (utm_source, utm_medium, utm_campaign…), vďaka ktorým analytika rozozná, z akého zdroja a kampane návšteva prišla.',
+        related: ['google-analytics-4', 'atribucia'],
+    },
+    {
+        slug: 'atribucia',
+        term: 'Atribúcia',
+        category: 'ppc',
+        short: 'Spôsob, akým sa zásluha za konverziu rozdeľuje medzi kanály a kampane, ktoré k nej prispeli. Atribučný model určuje, či kredit dostane posledné kliknutie, prvé, alebo sa rozdelí (data-driven atribúcia).',
+        related: ['konverzia', 'google-analytics-4'],
+        links: [{ label: 'E-commerce tracking 2026: bullshit vs. realita merania', href: '/ecommerce-tracking-2026-bullshit-vs-realita-merania-e-shopov' }],
+    },
+    {
+        slug: 'cielenie',
+        term: 'Cielenie',
+        fullName: 'Targeting',
+        category: 'ppc',
+        short: 'Určenie, komu sa reklama zobrazí — podľa kľúčových slov, demografie, záujmov, správania, polohy alebo vlastných dát (návštevníci webu, zákaznícke zoznamy).',
+        related: ['publikum', 'remarketing', 'klucove-slova'],
+    },
+    {
+        slug: 'publikum',
+        term: 'Publikum',
+        fullName: 'Audience',
+        category: 'ppc',
+        short: 'Skupina ľudí, na ktorú reklama cieli. Publiká môžu byť široké (záujmy, demografia) alebo vlastné — postavené z návštevníkov webu, zákazníkov či interakcií so značkou.',
+        related: ['cielenie', 'vlastne-publikum', 'lookalike-publikum'],
+    },
+    {
+        slug: 'kreativa',
+        term: 'Kreatíva',
+        fullName: 'Ad creative',
+        category: 'ppc',
+        short: 'Vizuálna a textová podoba reklamy — obrázok, video, nadpis, text. Na sociálnych sieťach je kvalita kreatívy najväčšou pákou výkonu kampaní.',
+        related: ['ab-testovanie', 'ugc'],
+    },
+
+    // ——— Google Ads ———
+    {
+        slug: 'google-ads',
+        term: 'Google Ads',
+        category: 'google-ads',
+        short: 'Reklamný systém Googlu — reklamy vo vyhľadávaní, v Nákupoch, na YouTube, v Gmaili a v obsahovej sieti. Najpoužívanejšia PPC platforma na svete.',
+        related: ['ppc', 'performance-max', 'vyhladavacia-siet'],
+        links: [
+            { label: 'Google reklama — naša služba', href: '/google-reklama' },
+            { label: 'Kam smeruje Google Ads v roku 2026', href: '/kam-smeruje-google-ads-v-roku-2026-trendy-novinky-a-co-caka-inzerentov' },
+        ],
+    },
+    {
+        slug: 'klucove-slova',
+        term: 'Kľúčové slová',
+        fullName: 'Keywords',
+        category: 'google-ads',
+        short: 'Výrazy, ktoré ľudia zadávajú do vyhľadávača a na ktoré inzerenti cielia reklamy či optimalizujú obsah. Základ reklamy vo vyhľadávaní aj SEO.',
+        page: {
+            quick: 'Kľúčové slová sú výrazy, ktoré ľudia zadávajú do vyhľadávača, keď niečo hľadajú. V PPC reklame na ne inzerenti cielia svoje reklamy, v SEO sa na ne optimalizuje obsah webu. Výber správnych kľúčových slov rozhoduje o tom, či oslovíte ľudí s reálnym záujmom.',
+            sections: [
+                {
+                    heading: 'Typy kľúčových slov a zámer',
+                    paragraphs: [
+                        'Kľúčové slová sa líšia zámerom (search intent): informačné („ako vybrať matrac"), komerčné („najlepší matrac recenzie"), transakčné („matrac 90×200 kúpiť") a navigačné (názov značky). Čím bližšie k nákupu, tým vyššia konkurencia a cena — ale aj konverzný pomer.',
+                        'Dôležité je aj rozdelenie podľa dĺžky: krátke všeobecné výrazy majú veľký objem a širokú konkurenciu, long-tail frázy (dlhšie, konkrétnejšie) menší objem, ale presnejší zámer a často lepšiu návratnosť.',
+                    ],
+                },
+                {
+                    heading: 'Kľúčové slová v Google Ads',
+                    paragraphs: [
+                        'V kampaniach vo vyhľadávaní určujú kľúčové slová spolu s typmi zhody (presná, frázová, voľná), na ktoré vyhľadávania sa reklama zobrazí. Rovnako dôležité sú vylučujúce kľúčové slová — výrazy, na ktoré sa reklama zobrazovať nemá, aby rozpočet neodtekal na nerelevantné dopyty.',
+                        'Analýza kľúčových slov je prvý krok každej search kampane aj SEO stratégie: ukáže reálny dopyt, sezónnosť a konkurenčnosť výrazov skôr, než miniete prvé euro. Ako na ňu, sme spísali v samostatnom článku.',
+                    ],
+                },
+            ],
+        },
+        related: ['zhody-klucovych-slov', 'vylucujuce-klucove-slova', 'long-tail', 'search-intent'],
+        links: [
+            { label: 'Analýza kľúčových slov — cesta k úspešnému podnikaniu', href: '/analyza-klucovych-slov-cesta-k-vasmu-uspesnemu-online-podnikaniu' },
+            { label: 'Google reklama — naša služba', href: '/google-reklama' },
+        ],
+    },
+    {
+        slug: 'vyhladavacia-siet',
+        term: 'Vyhľadávacia sieť',
+        fullName: 'Search Network',
+        category: 'google-ads',
+        short: 'Reklamy zobrazované priamo vo výsledkoch vyhľadávania Google nad a pod organickými výsledkami. Zachytávajú aktívny dopyt — ľudí, ktorí práve niečo hľadajú.',
+        related: ['klucove-slova', 'obsahova-siet', 'serp'],
+    },
+    {
+        slug: 'obsahova-siet',
+        term: 'Obsahová sieť',
+        fullName: 'Display Network (GDN)',
+        category: 'google-ads',
+        short: 'Sieť miliónov webov, aplikácií a služieb Googlu, kde sa zobrazujú bannerové reklamy. Využíva sa na povedomie, zásah a remarketing.',
+        related: ['display-reklama', 'remarketing', 'cpm'],
+    },
+    {
+        slug: 'performance-max',
+        term: 'Performance Max',
+        fullName: 'PMax',
+        category: 'google-ads',
+        short: 'Plne automatizovaný typ kampane Google Ads, ktorý z jedných podkladov obsluhuje všetky umiestnenia naraz — vyhľadávanie, Nákupy, YouTube, Gmail aj obsahovú sieť. Inzerent dodáva podklady a ciele, strojové učenie rieši zvyšok.',
+        related: ['smart-bidding', 'google-shopping', 'kreativa'],
+        links: [{ label: 'AI Max pre vyhľadávanie — revolúcia v Google reklamách', href: '/ai-max-pre-vyhladavanie-revolucia-v-google-reklamach-ktora-cita-myslienky-vasich-zakaznikov' }],
+    },
+    {
+        slug: 'responzivne-reklamy',
+        term: 'Responzívne reklamy (RSA)',
+        fullName: 'Responsive Search Ads',
+        category: 'google-ads',
+        short: 'Reklamy vo vyhľadávaní zložené z viacerých nadpisov a popisov, ktoré Google automaticky kombinuje a testuje. Štandardný formát search reklám.',
+        related: ['ab-testovanie', 'klucove-slova'],
+    },
+    {
+        slug: 'zhody-klucovych-slov',
+        term: 'Zhody kľúčových slov',
+        fullName: 'Match types',
+        category: 'google-ads',
+        short: 'Určujú, ako voľne sa vyhľadávanie môže líšiť od kľúčového slova: presná zhoda [matrac], frázová „matrac" a voľná zhoda. Čím voľnejšia zhoda, tým širší zásah — a väčšia potreba vylučujúcich slov.',
+        related: ['klucove-slova', 'vylucujuce-klucove-slova'],
+    },
+    {
+        slug: 'vylucujuce-klucove-slova',
+        term: 'Vylučujúce kľúčové slová',
+        fullName: 'Negative keywords',
+        category: 'google-ads',
+        short: 'Výrazy, na ktoré sa reklama zobrazovať nemá (napr. „zadarmo", „bazár"). Chránia rozpočet pred nerelevantnými kliknutiami a patria k základnej hygiene search kampaní.',
+        related: ['klucove-slova', 'zhody-klucovych-slov'],
+    },
+    {
+        slug: 'skore-kvality',
+        term: 'Skóre kvality',
+        fullName: 'Quality Score',
+        category: 'google-ads',
+        short: 'Hodnotenie kvality reklamy v Google Ads (1–10) na základe očakávaného CTR, relevancie reklamy a zážitku zo vstupnej stránky. Vyššie skóre znižuje cenu za kliknutie a zlepšuje pozície.',
+        related: ['ctr', 'landing-page', 'cpc'],
+    },
+    {
+        slug: 'google-shopping',
+        term: 'Google Nákupy',
+        fullName: 'Google Shopping',
+        category: 'google-ads',
+        short: 'Produktové reklamy s obrázkom, cenou a názvom obchodu vo vyhľadávaní. Čerpajú z produktového feedu v Merchant Center; pre e-shopy spravidla najvýkonnejší formát.',
+        related: ['merchant-center', 'performance-max', 'produktovy-feed'],
+        links: [{ label: 'Google Shopping v Chorvátsku, Slovinsku a Bulharsku', href: '/google-shopping-kampane-v-chorvatsku-slovinsku-a-bulharsku-co-prinesie-roll-out-v-2026' }],
+    },
+    {
+        slug: 'merchant-center',
+        term: 'Merchant Center',
+        category: 'google-ads',
+        short: 'Nástroj Googlu, do ktorého e-shop nahráva produktový feed — zdroj dát pre Google Nákupy, Performance Max a bezplatné produktové výpisy.',
+        related: ['google-shopping', 'produktovy-feed'],
+    },
+    {
+        slug: 'produktovy-feed',
+        term: 'Produktový feed',
+        category: 'google-ads',
+        short: 'Štruktúrovaný súbor s údajmi o produktoch (názov, cena, dostupnosť, obrázok…), z ktorého čerpajú Google Nákupy, Meta katalógy aj porovnávače cien. Kvalita feedu priamo ovplyvňuje výkon produktových kampaní.',
+        related: ['merchant-center', 'google-shopping', 'katalogove-reklamy'],
+        links: [{ label: 'Cenové porovnávače — naša služba', href: '/cenove-porovnavace' }],
+    },
+    {
+        slug: 'demand-gen',
+        term: 'Demand Gen',
+        category: 'google-ads',
+        short: 'Typ kampane Google Ads pre vizuálne umiestnenia — YouTube (vrátane Shorts), Discover a Gmail. Cieli na vytváranie dopytu u ľudí, ktorí ešte aktívne nehľadajú.',
+        related: ['youtube-reklama', 'shorts-reklama'],
+    },
+    {
+        slug: 'smart-bidding',
+        term: 'Smart Bidding',
+        category: 'google-ads',
+        short: 'Automatizované ponukové stratégie Google Ads založené na strojovom učení — cieľové CPA, cieľový ROAS, maximalizácia konverzií či ich hodnoty. Systém upravuje ponuku pre každú aukciu zvlášť.',
+        related: ['cpa', 'roas', 'performance-max'],
+    },
+    {
+        slug: 'rozsirenia-reklam',
+        term: 'Podklady reklám (rozšírenia)',
+        fullName: 'Ad assets',
+        category: 'google-ads',
+        short: 'Doplnky search reklám — odkazy na podstránky, popisky, štruktúrované úryvky, telefónne číslo či ceny. Zväčšujú reklamu na stránke výsledkov a zvyšujú CTR.',
+        related: ['ctr', 'responzivne-reklamy'],
+    },
+
+    // ——— Meta Ads ———
+    {
+        slug: 'meta-ads',
+        term: 'Meta Ads',
+        category: 'meta-ads',
+        short: 'Reklamný systém spoločnosti Meta — reklamy na Facebooku, Instagrame, v Messengeri a Audience Network. Spravuje sa cez Ads Manager (Správcu reklám).',
+        related: ['meta-pixel', 'advantage-plus', 'kreativa'],
+        links: [
+            { label: 'Facebook reklama — naša služba', href: '/facebook-reklama' },
+            { label: 'Andromeda — ako nový algoritmus zmenil logiku Meta reklám', href: '/andromeda-ako-novy-algoritmus-zmenil-logiku-meta-reklam-a-co-robit-v-roku-2025' },
+        ],
+    },
+    {
+        slug: 'meta-pixel',
+        term: 'Meta Pixel',
+        fullName: 'Facebook Pixel',
+        category: 'meta-ads',
+        short: 'Merací kód vložený do webu, ktorý zaznamenáva návštevy a akcie (nákupy, košíky) a posiela ich Mete. Základ merania konverzií, remarketingu a optimalizácie Meta kampaní.',
+        related: ['conversions-api', 'remarketing', 'konverzia'],
+    },
+    {
+        slug: 'conversions-api',
+        term: 'Conversions API (CAPI)',
+        category: 'meta-ads',
+        short: 'Serverové meranie konverzií pre Meta — udalosti sa posielajú priamo zo servera, nie z prehliadača. Dopĺňa Pixel tam, kde ho blokujú prehliadače a ad-blockery, a zlepšuje kvalitu dát na optimalizáciu.',
+        related: ['meta-pixel', 'server-side-tracking', 'cookies'],
+        links: [{ label: 'Server-side tagging vs server-side tracking', href: '/server-side-tagging-vs-server-side-tracking-aky-je-skutocny-rozdiel' }],
+    },
+    {
+        slug: 'vlastne-publikum',
+        term: 'Vlastné publikum',
+        fullName: 'Custom Audience',
+        category: 'meta-ads',
+        short: 'Publikum postavené z vlastných dát — návštevníkov webu, zákazníckych zoznamov, interakcií s profilom či videami. Základ remarketingu na Mete.',
+        related: ['lookalike-publikum', 'remarketing', 'meta-pixel'],
+    },
+    {
+        slug: 'lookalike-publikum',
+        term: 'Lookalike publikum',
+        category: 'meta-ads',
+        short: 'Publikum ľudí podobných vašim zákazníkom, ktoré Meta nájde na základe zdrojového vlastného publika. S nástupom Advantage+ jeho rolu postupne preberá automatické cielenie.',
+        related: ['vlastne-publikum', 'advantage-plus'],
+    },
+    {
+        slug: 'advantage-plus',
+        term: 'Advantage+',
+        category: 'meta-ads',
+        short: 'Rodina AI-automatizácií Meta Ads — od nákupných kampaní (ASC) po automatické úpravy kreatív a rozšírené cielenie. Inzerent dodáva podklady a limity, algoritmus rozhoduje o doručovaní.',
+        related: ['meta-ads', 'smart-bidding', 'kreativa'],
+        links: [{ label: 'Andromeda — ako nový algoritmus zmenil logiku Meta reklám', href: '/andromeda-ako-novy-algoritmus-zmenil-logiku-meta-reklam-a-co-robit-v-roku-2025' }],
+    },
+    {
+        slug: 'faza-ucenia',
+        term: 'Fáza učenia',
+        fullName: 'Learning phase',
+        category: 'meta-ads',
+        short: 'Obdobie po spustení či väčšej úprave reklamnej sady, počas ktorého sa algoritmus učí, komu reklamu doručovať. Výkon býva nestabilný; časté zásahy učenie resetujú a kampani škodia.',
+        related: ['advantage-plus', 'meta-ads'],
+    },
+    {
+        slug: 'katalogove-reklamy',
+        term: 'Katalógové reklamy',
+        fullName: 'Dynamic / Advantage+ Catalog Ads',
+        category: 'meta-ads',
+        short: 'Reklamy, ktoré automaticky zobrazujú produkty z katalógu — typicky dynamický remarketing na ľudí, ktorí si produkty prezerali. Čerpajú z produktového feedu.',
+        related: ['produktovy-feed', 'remarketing'],
+    },
+    {
+        slug: 'lead-ads',
+        term: 'Lead ads',
+        category: 'meta-ads',
+        short: 'Formát Meta reklám so vstavaným formulárom — kontakt možno odoslať priamo v aplikácii bez prechodu na web. Znižuje trenie pri zbere dopytov, vyžaduje však rýchle spracovanie leadov.',
+        related: ['cpl', 'konverzia'],
+    },
+
+    // ——— YouTube a video ———
+    {
+        slug: 'youtube-reklama',
+        term: 'YouTube reklama',
+        category: 'video',
+        short: 'Videoreklamy na YouTube nakupované cez Google Ads — preskočiteľné a nepreskočiteľné in-stream spoty, šesťsekundové bumpery, in-feed formáty aj reklamy v Shorts.',
+        related: ['cpv', 'in-stream-reklama', 'bumper-reklama', 'shorts-reklama'],
+        links: [{ label: 'YouTube reklama — naša služba', href: '/youtube-reklama' }],
+    },
+    {
+        slug: 'in-stream-reklama',
+        term: 'In-stream reklama',
+        category: 'video',
+        short: 'Videoreklama prehrávaná pred videom alebo počas neho. Preskočiteľná verzia sa platí cez CPV (po 30 sekundách či dopozeraní), nepreskočiteľná (do 15 s) cez CPM.',
+        related: ['cpv', 'cpm', 'youtube-reklama'],
+    },
+    {
+        slug: 'bumper-reklama',
+        term: 'Bumper reklama',
+        category: 'video',
+        short: 'Šesťsekundový nepreskočiteľný videospot na YouTube. Nakupuje sa cez CPM a slúži na rýchle, frekvenčné budovanie povedomia.',
+        related: ['cpm', 'youtube-reklama'],
+    },
+    {
+        slug: 'in-feed-reklama',
+        term: 'In-feed videoreklama',
+        category: 'video',
+        short: 'Reklama zobrazovaná vo výsledkoch vyhľadávania YouTube, vedľa súvisiacich videí a na domovskej stránke — divák na ňu musí kliknúť, aby si video pozrel.',
+        related: ['youtube-reklama'],
+    },
+    {
+        slug: 'shorts-reklama',
+        term: 'Reklama v Shorts',
+        category: 'video',
+        short: 'Vertikálne videoreklamy zobrazované medzi krátkymi videami YouTube Shorts. Vyžadujú natívny vertikálny formát a rýchly nástup — podobne ako reklamy na TikToku či v Reels.',
+        related: ['youtube-reklama', 'ugc'],
+    },
+];

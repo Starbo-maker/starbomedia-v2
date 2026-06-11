@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import posts from '../content/blog/posts.json';
+import { getPagedTerms } from '../data/glossary';
 
 const SITE = 'https://starbomedia.sk';
 
@@ -28,6 +29,7 @@ const STATIC_PATHS = [
     'ai-studio/vibecode-weby',
     'ai-studio/report-vizualizacia',
     'blog',
+    'slovnik-pojmov',
     'referencie-2',
     'tim-starbomedia',
     'kariera',
@@ -41,7 +43,7 @@ function priorityFor(p: string): number {
     if (p === '') return 1;
     if (['google-reklama', 'facebook-reklama', 'seo', 'reklama-na-internete', 'ai-studio', 'blog'].includes(p)) return 0.9;
     if (p.startsWith('ai-studio/')) return 0.8;
-    if (['kontakt', 'referencie-2', 'cenove-porovnavace', 'youtube-reklama', 'analyza-webu'].includes(p)) return 0.7;
+    if (['kontakt', 'referencie-2', 'cenove-porovnavace', 'youtube-reklama', 'analyza-webu', 'slovnik-pojmov'].includes(p)) return 0.7;
     return 0.5;
 }
 
@@ -64,5 +66,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.7,
     }));
 
-    return [...staticEntries, ...blogEntries];
+    // Stránky pojmov zo slovníka — generujú sa z dát, nový pojem so stránkou
+    // sa do sitemap pridá automaticky.
+    const glossaryEntries: MetadataRoute.Sitemap = getPagedTerms().map((t) => ({
+        url: `${SITE}/slovnik-pojmov/${t.slug}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.5,
+    }));
+
+    return [...staticEntries, ...blogEntries, ...glossaryEntries];
 }
