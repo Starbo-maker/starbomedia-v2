@@ -281,7 +281,7 @@ export default function FacebookAdsPage() {
 
                 {/* Creative is more important than targeting - callout band */}
                 <section className={styles.section} style={{ marginTop: '1rem' }}>
-                    <div style={{ background: ACCENT_SOFT, borderRadius: '24px', padding: '3rem', border: `1px solid ${ACCENT_BORDER}` }}>
+                    <div style={{ background: ACCENT_SOFT, borderRadius: '24px', padding: 'clamp(1.5rem, 5vw, 3rem)', border: `1px solid ${ACCENT_BORDER}` }}>
                         <div style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
                             <Sparkles size={32} color={ACCENT} style={{ marginBottom: '1rem' }} />
                             <h2 style={{ marginBottom: '1rem' }}>Kreatíva dnes rozhoduje viac než cielenie</h2>
@@ -314,7 +314,7 @@ export default function FacebookAdsPage() {
 
                 {/* Process */}
                 <section className={styles.section} style={{ marginTop: '2rem' }}>
-                    <div style={{ background: '#f8fafc', borderRadius: '24px', padding: '3rem', border: '1px solid #e2e8f0' }}>
+                    <div style={{ background: '#f8fafc', borderRadius: '24px', padding: 'clamp(1.5rem, 5vw, 3rem)', border: '1px solid #e2e8f0' }}>
                         <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Ako prebieha spolupráca?</h2>
                         <div className={styles.grid} style={{ alignItems: 'flex-start', gap: '2rem' }}>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: `1px solid ${ACCENT_BORDER}` }}>

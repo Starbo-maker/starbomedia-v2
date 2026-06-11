@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { GoogleTagManager } from '@next/third-parties/google';
 
-const GTM_ID = 'GTM-KHPVW4NB';
+const GTM_ID = 'GTM-T27GBQX';
 
 // Production hostnames where the shared GTM container should actually run.
 // On staging (*.vercel.app) and localhost GTM stays OFF so test traffic does

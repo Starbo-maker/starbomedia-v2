@@ -21,6 +21,13 @@
     display: block;
 }
 
+/* Rovnaké renderovanie loga ako v hlavičke — pevná výška, šírka podľa pomeru strán. */
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
 .description {
     color: var(--text-secondary);
     font-size: 0.95rem;

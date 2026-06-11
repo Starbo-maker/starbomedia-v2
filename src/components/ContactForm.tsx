@@ -86,7 +86,8 @@ export default function ContactForm() {
 
     return (
         <form ref={formRef} onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+            {/* auto-fit: na mobile sa stĺpce zlomia pod seba namiesto pretekania cez okraj */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))', gap: '1.5rem' }}>
                 <div style={fieldStyle}>
                     <label htmlFor="meno" style={labelStyle}>Meno</label>
                     <input id="meno" name="meno" type="text" required minLength={2} maxLength={100} placeholder="Ján Novák" style={inputStyle} />

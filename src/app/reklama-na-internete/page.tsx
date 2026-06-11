@@ -233,7 +233,7 @@ export default function ReklamaNaInternetePage() {
 
                 {/* Ako prebieha spolupráca (process) */}
                 <section className={styles.section} style={{ marginTop: '2rem' }}>
-                    <div style={{ background: '#f5f3ff', borderRadius: '24px', padding: '3rem' }}>
+                    <div style={{ background: '#f5f3ff', borderRadius: '24px', padding: 'clamp(1.5rem, 5vw, 3rem)' }}>
                         <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Ako prebieha spolupráca</h2>
                         <div className={styles.grid} style={{ alignItems: 'flex-start', gap: '1.5rem' }}>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #ede9fe' }}>

@@ -234,7 +234,7 @@ export default function SeoPage() {
 
                 {/* Process */}
                 <section className={styles.section} style={{ marginTop: '2rem' }}>
-                    <div style={{ background: '#ecfdf5', borderRadius: '24px', padding: '3rem' }}>
+                    <div style={{ background: '#ecfdf5', borderRadius: '24px', padding: 'clamp(1.5rem, 5vw, 3rem)' }}>
                         <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Ako prebieha spolupráca?</h2>
                         <div className={styles.cardGrid} style={{ alignItems: 'flex-start' }}>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #d1fae5' }}>

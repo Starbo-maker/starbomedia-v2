@@ -14,8 +14,8 @@ const Footer = () => {
                         <Image
                             src="/logo.png"
                             alt="Starbomedia logo"
-                            width={120}
-                            height={32}
+                            width={92}
+                            height={40}
                         />
                     </Link>
                     <p className={styles.description}>
@@ -43,6 +43,7 @@ const Footer = () => {
                         <li><Link href="/tim-starbomedia">O nás</Link></li>
                         <li><Link href="/kariera">Kariéra</Link></li>
                         <li><Link href="/referencie-2">Prípadové štúdie</Link></li>
+                        <li><Link href="/slovnik-pojmov">Slovník pojmov</Link></li>
                         <li><Link href="/kontakt">Kontakt</Link></li>
                     </ul>
                 </div>

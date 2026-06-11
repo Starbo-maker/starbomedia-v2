@@ -38,7 +38,7 @@ const Header = () => {
                     <Image
                         src="/logo.png"
                         alt="Starbo Media Logo"
-                        width={150}
+                        width={92}
                         height={40}
                         className={styles.logo}
                         priority
