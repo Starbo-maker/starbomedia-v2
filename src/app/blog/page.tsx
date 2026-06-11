@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, ArrowRight } from 'lucide-react';
 import postsData from '../../content/blog/posts.json';
+import { getAuthor } from '../../data/authors';
 import styles from '../service.module.css';
 
 type Post = {
@@ -13,6 +14,7 @@ type Post = {
     featuredImage: string | null;
     featuredW?: number;
     featuredH?: number;
+    author?: string;
 };
 
 const POSTS = postsData as Post[];
@@ -80,7 +82,7 @@ export default function BlogPage() {
                                 </p>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto', borderTop: '1px solid #e2e8f0', paddingTop: '1rem' }}>
                                     <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', color: 'var(--text-muted)', fontSize: '0.8rem' }}>
-                                        <Calendar size={14} /> {formatDate(post.date)}
+                                        <Calendar size={14} /> {formatDate(post.date)} · {getAuthor(post.author).name}
                                     </span>
                                     <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', color: 'var(--primary)', fontWeight: 600, fontSize: '0.85rem' }}>
                                         Čítať <ArrowRight size={14} />

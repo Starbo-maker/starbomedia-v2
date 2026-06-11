@@ -5,6 +5,8 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { Calendar, User, ArrowLeft } from 'lucide-react';
 import postsData from '../../content/blog/posts.json';
+import { getAuthor } from '../../data/authors';
+import AuthorBox from '../../components/AuthorBox';
 import styles from './article.module.css';
 
 const SITE_URL = 'https://starbomedia.sk';
@@ -19,6 +21,7 @@ type Post = {
     featuredImage: string | null;
     featuredW?: number;
     featuredH?: number;
+    author?: string;
 };
 
 const POSTS = postsData as Post[];
@@ -47,9 +50,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     if (!post) return {};
     const url = `${SITE_URL}/${slug}/`;
     const img = post.featuredImage ? `${SITE_URL}${post.featuredImage}` : undefined;
+    const author = getAuthor(post.author);
     return {
         title: `${post.title} | Starbomedia`,
         description: post.excerpt,
+        authors: [{ name: author.name, url: author.url }],
         alternates: { canonical: url },
         openGraph: {
             title: post.title,
@@ -75,6 +80,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     if (!post) notFound();
 
     const html = readFileSync(path.join(process.cwd(), 'src/content/blog/html', `${slug}.html`), 'utf8');
+    const author = getAuthor(post.author);
 
     const jsonLd = {
         '@context': 'https://schema.org',
@@ -83,7 +89,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         description: post.excerpt,
         datePublished: post.date,
         dateModified: post.modified || post.date,
-        author: { '@type': 'Person', name: 'Peter Štrbo' },
+        author: {
+            '@type': 'Person',
+            name: author.name,
+            jobTitle: author.role,
+            url: author.url,
+            image: `${SITE_URL}${author.photo}`,
+            worksFor: { '@type': 'Organization', name: 'Starbomedia', url: SITE_URL },
+        },
         publisher: {
             '@type': 'Organization',
             name: 'Starbomedia',
@@ -107,7 +120,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                     <h1 className={styles.title}>{post.title}</h1>
                     <div className={styles.meta}>
                         <span className={styles.metaItem}><Calendar size={16} /> {formatDate(post.date)}</span>
-                        <span className={styles.metaItem}><User size={16} /> Peter Štrbo</span>
+                        <span className={styles.metaItem}><User size={16} /> {author.name}</span>
                     </div>
                 </div>
                 {post.featuredImage && (
@@ -127,6 +140,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
             <div className="container">
                 <div className={styles.entry} dangerouslySetInnerHTML={{ __html: html }} />
+
+                <AuthorBox author={author} />
 
                 <div className={styles.footerNav}>
                     <Link href="/blog" className="btn" style={{ background: 'white', border: '1px solid #e2e8f0', color: '#0f172a', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
