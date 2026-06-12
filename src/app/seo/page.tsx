@@ -303,59 +303,59 @@ export default function SeoPage() {
                 <section className={styles.section}>
                     <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Často kladené otázky o SEO</h2>
                     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Za ako dlho uvidím výsledky zo SEO?</div>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Za ako dlho uvidím výsledky zo SEO?</summary>
                             <p className={styles.faqAnswer}>
                                 Pri našich klientoch zvyčajne hovoríme o 4–6 mesiacoch do prvých merateľných zlepšení v organickej návštevnosti.
                                 Závisí to od stavu webu, konkurenčnosti segmentu a rýchlosti implementácie. Technické opravy (indexácia, rýchlosť)
                                 sa prejavia skôr, obsahová a linková stratégia si vyžaduje čas.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Garantujete prvú pozíciu v Google?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Garantujete prvú pozíciu v Google?</summary>
                             <p className={styles.faqAnswer}>
                                 Nie. Nikto, kto to garantuje, nehovorí pravdu — Google používa stovky rankingových faktorov a algoritmus sa neustále
                                 vyvíja. Garantujeme transparentný postup, merateľné výsledky a pravidelný reporting na vyhodnotenie návratnosti.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Ako SEO ovplyvní AI Overviews v Google?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Ako SEO ovplyvní AI Overviews v Google?</summary>
                             <p className={styles.faqAnswer}>
                                 AI Overviews čerpajú z webov, ktoré Google považuje za dôveryhodné zdroje. Originálne, štruktúrované a fakticky presné
                                 informácie zvyšujú šancu na zaradenie do AI odpovede — a tým aj viditeľnosť bez tradičnej pozície v top 10. Generický
                                 obsah bez pridanej hodnoty generatívne výsledky spravidla obchádzajú.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Oplatí sa robiť SEO, aj keď bežia Google Ads?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Oplatí sa robiť SEO, aj keď bežia Google Ads?</summary>
                             <p className={styles.faqAnswer}>
                                 Áno, ideálne súčasne. Google Ads dáva okamžitú návštevnosť a dáta o konverziách, SEO buduje dlhodobý organický kanál.
                                 Kombinácia oboch zvyčajne znižuje celkovú cenu za získanie zákazníka, pretože sa navzájom dopĺňajú a delia sa o dáta.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Čo ak mám na webe veľa starého obsahu?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Čo ak mám na webe veľa starého obsahu?</summary>
                             <p className={styles.faqAnswer}>
                                 Starý, neaktuálny obsah môže aktívne škodiť — Helpful Content Update postihuje weby s veľkým podielom nízkohodnotných
                                 stránok. V audite vyhodnotíme každú stránku: čo aktualizovať, čo zlúčiť a čo odstrániť. Vyčistenie obsahu (content
                                 pruning) býva jedným z najrýchlejších spôsobov, ako zlepšiť viditeľnosť.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Robíte SEO aj pre zahraničné trhy?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Robíte SEO aj pre zahraničné trhy?</summary>
                             <p className={styles.faqAnswer}>
                                 Áno. Máme skúsenosti s medzinárodným SEO vrátane hreflang konfigurácie, lokalizácie obsahu a technickej optimalizácie
                                 pre viaceré jazykové mutácie. Pôsobíme naprieč 13 trhmi strednej a východnej Európy — okrem SK a CZ napríklad aj HU, PL, RO, DE, AT, HR a SI.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Koľko stojí SEO?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Koľko stojí SEO?</summary>
                             <p className={styles.faqAnswer}>
                                 Cena je individuálna a závisí od veľkosti webu, konkurenčnosti segmentu a rozsahu prác. Jednorazový audit pre menší web
                                 začína na stovkách eur; dlhodobá mesačná spolupráca pokrýva technickú optimalizáciu, obsahovú produkciu aj linkbuilding.
                                 Konkrétnu ponuku s väzbou na očakávaný biznisový prínos pripravíme po úvodnej analýze.
                             </p>
-                        </div>
+                        </details>
                     </div>
                 </section>
 

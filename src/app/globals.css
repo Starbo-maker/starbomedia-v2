@@ -196,6 +196,27 @@ p {
   border-radius: 4px;
 }
 
+/* Accessibility: skip-link — neviditeľný, kým naň nepríde fokus z klávesnice */
+.skip-link {
+  position: fixed;
+  top: 14px;
+  left: 16px;
+  z-index: 2000;
+  background: white;
+  color: var(--primary);
+  font-weight: 600;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 /* Accessibility: rešpektuj preferenciu obmedzeného pohybu */
 @media (prefers-reduced-motion: reduce) {
 

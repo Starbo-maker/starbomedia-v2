@@ -368,58 +368,58 @@ export default function FacebookAdsPage() {
                 <section className={styles.section}>
                     <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Často kladené otázky o Meta reklame</h2>
                     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Koľko stojí reklama na Facebooku a Instagrame?</div>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Koľko stojí reklama na Facebooku a Instagrame?</summary>
                             <p className={styles.faqAnswer}>
                                 Cena má dve časti: mediálny rozpočet, ktorý platíte priamo Mete, a odmenu za správu kampaní.
                                 Menšie e-shopy zvyčajne začínajú na 300–500 € mesačne mediálneho rozpočtu, väčšie projekty
                                 pracujú s rozpočtami v tisícoch eur. Presný odhad vrátane očakávanej ceny za konverziu dostanete po bezplatnom audite účtu.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Čo je Conversion API a prečo ho potrebujem?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Čo je Conversion API a prečo ho potrebujem?</summary>
                             <p className={styles.faqAnswer}>
                                 Conversion API (CAPI) je server-side meranie, ktoré posiela konverzné udalosti priamo z vášho
                                 servera do Mety — nie cez prehliadač. Obchádza tým adblockery a Safari ITP, ktoré blokujú
                                 Meta Pixel. Bez CAPI prichádzate o značnú časť konverzných signálov a algoritmus optimalizuje
                                 na neúplných dátach. Po jeho nasadení vidíme spravidla nižšiu cenu za konverziu a lepšiu optimalizáciu.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Prečo mi v Mete klesli reportované konverzie?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Prečo mi v Mete klesli reportované konverzie?</summary>
                             <p className={styles.faqAnswer}>
                                 Meta v poslednom období zúžila atribučné okná a zmenila, čo počíta ako konverziu. Reportované
                                 čísla u mnohých účtov klesli bez akejkoľvek zmeny kampaní. Ak vaše reálne tržby zostali rovnaké,
                                 problém je len v reportingu, nie vo výkone. Práve preto čísla z platformy vždy porovnávame so skutočnými tržbami.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Mám vypnúť atribúciu na zobrazenie (view)?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Mám vypnúť atribúciu na zobrazenie (view)?</summary>
                             <p className={styles.faqAnswer}>
                                 Vo väčšine prípadov odporúčame áno — pri tvorbe kampane prepnúť atribučné okno na samotný
                                 preklik (7-day click). Atribúcia na zobrazenie pripisuje konverziu aj vtedy, keď reklama
                                 používateľovi len prebehla feedom a do 24 hodín nakúpil. Najviac to skresľuje remarketing,
                                 kde kampaň vyzerá výborne, ale reálny prínos môže byť nulový.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Čo je Advantage+ a mám ho používať?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Čo je Advantage+ a mám ho používať?</summary>
                             <p className={styles.faqAnswer}>
                                 Advantage+ nákupné kampane sú AI formát pre e-shopy, ktorý automaticky optimalizuje cielenie,
                                 umiestnenia aj rozpočet. Pre e-shopy s katalógom býva najefektívnejší. Vyžaduje však kvalitný
                                 produktový katalóg, dostatok rôznych kreatív a správne nastavený limit na nových verzus
                                 existujúcich zákazníkov — inak minie väčšinu rozpočtu na remarketing s pekným ROAS, ale nulovým prínosom navyše.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Ako zistím, či moje Meta kampane naozaj fungujú?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Ako zistím, či moje Meta kampane naozaj fungujú?</summary>
                             <p className={styles.faqAnswer}>
                                 Nepozerajte sa len na čísla v Ads Manageri — tie bývajú optimistickejšie ako realita. Porovnajte
                                 reportované konverzie s reálnymi tržbami z e-shopu, skontrolujte si EMQ skóre v Events Manageri
                                 a v stĺpcoch si pozrite pomer prekliku a zobrazenia. Ak máte pochybnosti o reálnom prínose,
                                 najpriamejší test je kanál na 2–4 týždne vypnúť a sledovať, čo sa stane s tržbami.
                             </p>
-                        </div>
+                        </details>
                     </div>
                 </section>
 

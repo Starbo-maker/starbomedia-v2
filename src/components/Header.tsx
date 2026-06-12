@@ -89,23 +89,23 @@ const Header = () => {
                         onMouseEnter={() => setIsServicesOpen(true)}
                         onMouseLeave={() => setIsServicesOpen(false)}
                     >
+                        {/* Disclosure pattern (nie ARIA menu) — bežné odkazy bez menu rolí */}
                         <button
                             type="button"
                             className={`${styles.navLink} ${styles.navTrigger} ${isServiceActive ? styles.navLinkActive : ''}`}
-                            aria-haspopup="true"
                             aria-expanded={isServicesOpen}
+                            aria-controls="sluzby-dropdown"
                             onClick={() => setIsServicesOpen((o) => !o)}
                         >
                             Služby
                             <ChevronDown size={16} className={`${styles.chevron} ${isServicesOpen ? styles.chevronOpen : ''}`} />
                         </button>
 
-                        <div className={`${styles.dropdown} ${isServicesOpen ? styles.dropdownOpen : ''}`} role="menu">
+                        <div id="sluzby-dropdown" className={`${styles.dropdown} ${isServicesOpen ? styles.dropdownOpen : ''}`}>
                             {services.map(({ name, desc, href, icon: Icon }) => (
                                 <Link
                                     key={href}
                                     href={href}
-                                    role="menuitem"
                                     className={`${styles.dropdownItem} ${pathname === href ? styles.dropdownItemActive : ''}`}
                                     onClick={() => setIsServicesOpen(false)}
                                 >
@@ -145,8 +145,12 @@ const Header = () => {
             </div>
 
             {/* Mobile Menu — mimo kapsuly: backdrop-filter na .container by z neho
-                spravil containing block a fixed pozicovanie by sa počítalo voči kapsule */}
-            <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+                spravil containing block a fixed pozicovanie by sa počítalo voči kapsule.
+                inert: zatvorené menu nesmie byť vo fokusovateľnom strome (je len odsunuté transformom) */}
+            <div
+                className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}
+                inert={!isMobileMenuOpen}
+            >
                     <Link href="/" className={styles.mobileLink} onClick={() => setIsMobileMenuOpen(false)}>
                         Domov
                     </Link>

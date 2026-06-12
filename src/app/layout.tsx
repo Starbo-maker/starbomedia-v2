@@ -3,6 +3,7 @@ import { Outfit } from 'next/font/google';
 import GtmProduction from '@/components/GtmProduction';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import WebMcpTools from '@/components/WebMcpTools';
 import './globals.css';
 
 const outfit = Outfit({
@@ -31,9 +32,11 @@ export default function RootLayout({
   return (
     <html lang="sk" className={outfit.variable}>
       <body>
+        <a href="#obsah" className="skip-link">Preskočiť na obsah</a>
         <GtmProduction />
+        <WebMcpTools />
         <Header />
-        <main>{children}</main>
+        <main id="obsah">{children}</main>
         <Footer />
       </body>
     </html>

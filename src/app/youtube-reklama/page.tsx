@@ -139,19 +139,19 @@ export default function YoutubeAdsPage() {
                 <section className={styles.section} style={{ maxWidth: '800px', margin: '0 auto' }}>
                     <h2 style={{ marginBottom: '2rem' }}>Časté otázky</h2>
 
-                    <div className={styles.faqItem}>
-                        <div className={styles.faqQuestion}>Nemám video, viete ho vyrobiť?</div>
+                    <details className={styles.faqItem}>
+                        <summary className={styles.faqQuestion}>Nemám video, viete ho vyrobiť?</summary>
                         <div className={styles.faqAnswer}>
                             Áno. Spolupracujeme s profesionálnymi tvorcami, ktorí vedia natočiť a postrihať reklamný spot. Prípadne vieme vytvoriť jednoduchú animáciu z fotiek (Motion Graphics).
                         </div>
-                    </div>
+                    </details>
 
-                    <div className={styles.faqItem}>
-                        <div className={styles.faqQuestion}>Dá sa z YouTube reklamy priamo predávať?</div>
+                    <details className={styles.faqItem}>
+                        <summary className={styles.faqQuestion}>Dá sa z YouTube reklamy priamo predávať?</summary>
                         <div className={styles.faqAnswer}>
                             Áno, Google zaviedol formát "Video Action Campaigns", kde sa pod videom zobrazujú priamo produkty z vášho e-shopu (cez Merchant Center).
                         </div>
-                    </div>
+                    </details>
                 </section>
 
                 <div className={styles.ctaBox}>

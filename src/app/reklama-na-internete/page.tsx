@@ -310,59 +310,59 @@ export default function ReklamaNaInternetePage() {
                 <section className={styles.section}>
                     <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Často kladené otázky o reklame na internete</h2>
                     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Koľko stojí reklama na internete?</div>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Koľko stojí reklama na internete?</summary>
                             <p className={styles.faqAnswer}>
                                 Cena závisí od kanálu, segmentu a cieľov. Pri Google Ads a Meta Ads sa mediálny rozpočet pohybuje od
                                 niekoľkých stoviek eur mesačne pri menších e-shopoch po desaťtisíce pri väčších projektoch. K tomu sa
                                 pripočítava odmena za správu kampaní. Po bezplatnom audite dostanete konkrétny odhad vrátane očakávanej
                                 návratnosti na základe benchmarkov z vášho segmentu.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Ktorý kanál online reklamy je pre mňa najvhodnejší?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Ktorý kanál online reklamy je pre mňa najvhodnejší?</summary>
                             <p className={styles.faqAnswer}>
                                 Závisí od toho, čo predávate a komu. E-shopy s aktívnym dopytom (ľudia hľadajú váš produkt) zvyčajne
                                 začínajú s Google Ads — Search a Shopping kampaňami. Ak budujete značku alebo predávate impulzívny tovar,
                                 efektívnejšie môžu byť Meta Ads. Pre väčšinu klientov odporúčame kombináciu oboch: Google pokrýva aktívny
                                 dopyt, Meta buduje povedomie a remarketing.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Prečo spolupracovať s agentúrou namiesto toho, aby som si reklamu spravoval sám?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Prečo spolupracovať s agentúrou namiesto toho, aby som si reklamu spravoval sám?</summary>
                             <p className={styles.faqAnswer}>
                                 Nastaviť kampaň vie dnes takmer každý. Vedieť však, prečo GA4 ukazuje iné čísla ako Google Ads, prečo Meta
                                 pripisuje konverzie, ktoré by nastali aj bez reklamy, alebo kedy škálovať rozpočet a kedy zastaviť — to
                                 vyžaduje roky praxe, prístup k benchmarkom z desiatok účtov a hlboké pochopenie atribúcie. Agentúra vám
                                 ušetrí čas pre vlastný biznis a zníži riziko investovania do niečoho, čo reálne nefunguje.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Ako dlho trvá, kým uvidím výsledky?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Ako dlho trvá, kým uvidím výsledky?</summary>
                             <p className={styles.faqAnswer}>
                                 Pri Google Ads prídu prvé prekliky a konverzie zvyčajne v priebehu dní, stabilný výkon po optimalizácii
                                 Smart Biddingu po 2–4 týždňoch. Meta Ads potrebujú obdobie učenia algoritmu, typicky 1–2 týždne na ad set.
                                 SEO je dlhodobá investícia — prvé viditeľné výsledky po 2–3 mesiacoch, plný potenciál po 6–12 mesiacoch.
                                 Vždy záleží na konkurencii, rozpočte a východiskovom stave.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Ako sa meria úspešnosť online reklamy?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Ako sa meria úspešnosť online reklamy?</summary>
                             <p className={styles.faqAnswer}>
                                 Najdôležitejšia je reálna návratnosť investície — koľko eur vám reklama priniesla v tržbách po odpočítaní
                                 nákladov. Nepozeráme len na ROAS z platformy (ten býva nadhodnotený), ale validujeme voči skutočným tržbám
                                 z e-shopu. Sledujeme POAS (zisk z reklamy), cenu za akvizíciu, podiel marketingových nákladov na marži a
                                 trend v čase.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Spravujete kampane aj v zahraničí?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Spravujete kampane aj v zahraničí?</summary>
                             <p className={styles.faqAnswer}>
                                 Áno. Inzerujeme v 13 krajinách regiónu CEE: SK, CZ, HU, PL, RO, DE, AT, HR, SI, IT, FR, BE aj BG. Máme
                                 skúsenosti s lokalizáciou produktových feedov, multi-country PMax štruktúrami a regionálnymi špecifikami
                                 biddingu. Pre klientov expandujúcich do zahraničia pripravujeme aj analýzu trhu a konkurencie v cieľovej krajine.
                             </p>
-                        </div>
+                        </details>
                     </div>
                 </section>
 

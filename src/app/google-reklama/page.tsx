@@ -283,40 +283,40 @@ export default function GoogleAdsPage() {
                 <section className={styles.section}>
                     <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Často kladené otázky o Google reklame</h2>
                     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Koľko stojí Google reklama?</div>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Koľko stojí Google reklama?</summary>
                             <p className={styles.faqAnswer}>
                                 Cena má dve časti: mediálny rozpočet, ktorý ide priamo Googlu, a odmena za správu kampaní. Menšie e-shopy
                                 zvyčajne začínajú na 300–500 € mesačne, väčšie projekty sa pohybujú v tisícoch. Presný odhad dostanete po bezplatnej analýze účtu.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Ako dlho trvá, kým začne prinášať výsledky?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Ako dlho trvá, kým začne prinášať výsledky?</summary>
                             <p className={styles.faqAnswer}>
                                 Prvé prekliky prídu okamžite. Reálna optimalizácia trvá 2–4 týždne, kým Smart Bidding nazbiera dáta;
                                 pri dlhšom rozhodovacom cykle (B2B, prémiové produkty) to môže byť 4–8 týždňov.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Aký je rozdiel medzi Google Ads a SEO?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Aký je rozdiel medzi Google Ads a SEO?</summary>
                             <p className={styles.faqAnswer}>
                                 Google Ads prináša viditeľnosť okamžite (platená pozícia), SEO je dlhodobá investícia do organického rastu.
                                 Najlepšie výsledky zvyčajne prináša ich kombinácia.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Spravujete kampane aj pre zahraničné trhy?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Spravujete kampane aj pre zahraničné trhy?</summary>
                             <p className={styles.faqAnswer}>
                                 Áno. Inzerujeme naprieč regiónom CEE — SK, CZ, HU, PL, RO, DE, AT, HR, SI, IT, FR, BE aj BG — vrátane lokalizácie feedu a znalosti miestnych trhov.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Potrebujem nastavený tracking?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Potrebujem nastavený tracking?</summary>
                             <p className={styles.faqAnswer}>
                                 Áno, je to základ. Skôr než spustíme kampane, chceme meranie, ktoré zachytí aspoň 90 % reálnych tržieb.
                                 Bez toho by sme optimalizovali naslepo.
                             </p>
-                        </div>
+                        </details>
                     </div>
                 </section>
 

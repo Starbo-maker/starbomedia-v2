@@ -300,46 +300,46 @@ export default function SocialMediaPage() {
                 <section className={styles.section}>
                     <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Často kladené otázky o správe sociálnych sietí</h2>
                     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Koľko stojí správa sociálnych sietí?</div>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Koľko stojí správa sociálnych sietí?</summary>
                             <p className={styles.faqAnswer}>
                                 Cena závisí od rozsahu — počtu sietí, formátov, frekvencie publikovania a natáčacích dní.
                                 Po úvodnej konzultácii pripravíme ponuku na mieru presne podľa toho, čo váš biznis potrebuje.
                                 Konzultácia aj ponuka sú nezáväzné.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Ktoré sociálne siete spravujete?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Ktoré sociálne siete spravujete?</summary>
                             <p className={styles.faqAnswer}>
                                 Primárne Instagram, Facebook a TikTok — teda siete, kde krátke videá a pravidelný obsah
                                 prinášajú najväčší organický dosah. Krátke videá pripravujeme aj vo formáte YouTube Shorts.
                                 Mix sietí navrhneme podľa toho, kde je vaša cieľová skupina.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Musíme k vám chodiť na natáčanie?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Musíme k vám chodiť na natáčanie?</summary>
                             <p className={styles.faqAnswer}>
                                 Nie — prídeme my k vám. Natáčame priamo vo vašej prevádzke, predajni alebo firme, kde vzniká
                                 najautentickejší obsah. Počas jedného natáčacieho dňa pripravíme materiál na niekoľko týždňov
                                 dopredu, takže vás natáčanie zdržiava minimálne.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Čo ak nevieme, čo by sme mali na sieťach komunikovať?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Čo ak nevieme, čo by sme mali na sieťach komunikovať?</summary>
                             <p className={styles.faqAnswer}>
                                 Presne na to slúži obsahová stratégia na začiatku spolupráce. Spoznáme váš biznis, zákazníkov
                                 a ciele a navrhneme témy aj formáty, ktoré dávajú zmysel. Témy a scenáre potom pripravujeme my —
                                 vy ich len odsúhlasíte.
                             </p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <div className={styles.faqQuestion}>Dajú sa videá použiť aj do platenej reklamy?</div>
+                        </details>
+                        <details className={styles.faqItem}>
+                            <summary className={styles.faqQuestion}>Dajú sa videá použiť aj do platenej reklamy?</summary>
                             <p className={styles.faqAnswer}>
                                 Áno — a odporúčame to. Krátke videá, ktoré organicky fungujú, bývajú zároveň najvýkonnejšie
                                 reklamné kreatívy. Keďže spravujeme aj Meta a TikTok kampane, vieme obsah a reklamu prepojiť
                                 do jedného systému bez ďalšej réžie na vašej strane.
                             </p>
-                        </div>
+                        </details>
                     </div>
                 </section>
 
