@@ -120,6 +120,7 @@ export default function ComparisonsPage() {
                     </Link>
                 </div>
             </div>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "[{\"@context\": \"https://schema.org\", \"@type\": \"Service\", \"name\": \"Cenov\u00e9 porovn\u00e1va\u010de \u2014 Heureka a produktov\u00e9 feedy\", \"serviceType\": \"Price comparison feed management\", \"description\": \"Zv\u00fd\u0161te predaj cez Heureku, Glami, Favi a \u010fal\u0161ie. XML feed audit, p\u00e1rovanie produktov a biddingov\u00e9 strat\u00e9gie pre e-shopy.\", \"provider\": {\"@id\": \"https://starbomedia.sk/#organization\"}, \"areaServed\": \"SK\", \"url\": \"https://starbomedia.sk/cenove-porovnavace\"}, {\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Domov\", \"item\": \"https://starbomedia.sk\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Slu\u017eby\", \"item\": \"https://starbomedia.sk/reklama-na-internete\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"Cenov\u00e9 porovn\u00e1va\u010de\"}]}]" }} />
         </>
     );
 }
