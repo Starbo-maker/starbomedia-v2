@@ -1,0 +1,264 @@
+<article itemscope itemtype="https://schema.org/Article">
+  <header>
+    <h1 itemprop="headline">WebMCP: ako pripraviť web na AI agentov (a čo sme sa naučili, keď sme to skúsili)</h1>
+    <p><time datetime="2026-06-12" itemprop="datePublished">12. júna 2026</time> · Čas čítania: 13 min</p>
+  </header>
+
+  <nav aria-label="Obsah článku">
+    <strong>Obsah</strong>
+    <ol>
+      <li><a href="#tldr">TL;DR — to podstatné za 60 sekúnd</a></li>
+      <li><a href="#co-je-webmcp">Čo je WebMCP a prečo vznikol</a></li>
+      <li><a href="#ako-funguje">Ako WebMCP funguje</a></li>
+      <li><a href="#pre-firmy">Čo to znamená pre firmy a e-shopy</a></li>
+      <li><a href="#seo-aeo-geo">Kam WebMCP zapadá vedľa SEO, AEO a GEO</a></li>
+      <li><a href="#case-study">Case study: starbomedia.sk na agentic webe</a></li>
+      <li><a href="#ako-zacat">Ako začať: praktický postup</a></li>
+      <li><a href="#limity">Limity a riziká</a></li>
+      <li><a href="#faq">Často kladené otázky</a></li>
+      <li><a href="#zaver">Záver</a></li>
+    </ol>
+  </nav>
+
+  <p>Google na tohtoročnej vývojárskej konferencii I/O vyhlásil éru „agentic webu" — internetu, po ktorom sa nepohybujú len ľudia, ale aj AI agenti konajúci v ich mene. Jedným z pilierov tejto vízie je <strong>WebMCP (Web Model Context Protocol)</strong>: navrhovaný webový štandard, vďaka ktorému web prestáva byť pre agenta len hromadou pixelov na odfotenie a stáva sa sadou nástrojov, ktoré môže priamo zavolať.</p>
+  <p>Znie to abstraktne, preto sme to v Starbomedia urobili po svojom: namiesto čítania cudzích blogov sme WebMCP nasadili na vlastný web. V tomto článku vysvetlíme, čo WebMCP je, ako funguje, čo znamená pre firmy a e-shopy — a podelíme sa o konkrétne skúsenosti, čísla a kód z implementácie, ktorá je podľa dostupných dát pravdepodobne jednou z prvých na Slovensku.</p>
+
+  <h2 id="tldr">TL;DR — to podstatné za 60 sekúnd</h2>
+  <ul>
+    <li><strong>WebMCP</strong> je navrhovaný otvorený webový štandard (spoluautori z Googlu a Microsoftu, diskutovaný vo W3C), ktorý umožňuje webu deklarovať „nástroje" — funkcie, ktoré môže AI agent v prehliadači priamo zavolať namiesto klikania po stránke.</li>
+    <li>Technicky ide o JavaScript API <code>navigator.modelContext</code> a anotácie HTML formulárov. Origin trial beží od <strong>Chrome 149 (jún 2026)</strong>; podporu ohlásil aj Gemini in Chrome.</li>
+    <li>Podľa analýzy publikovanej na freeCodeCamp (sken 111 076 najnavštevovanejších webov) zatiaľ <strong>žiadny veľký web nemá WebMCP v produkcii</strong> — sme na úplnom začiatku adopčnej krivky.</li>
+    <li>WebMCP nenahrádza SEO ani AEO — je to vrchné poschodie pyramídy, ktorá stojí na sémantickom HTML, štruktúrovaných dátach a súboroch ako llms.txt.</li>
+    <li>Na starbomedia.sk sme nasadili 3 WebMCP nástroje (~170 riadkov kódu). Dopad na rýchlosť webu: +1 KB JavaScriptu, Lighthouse skóre bez zmeny. Návod, ako začať, nájdete nižšie.</li>
+  </ul>
+
+  <h2 id="co-je-webmcp">Čo je WebMCP a prečo vznikol</h2>
+  <p>Dnešní AI agenti pracujú s webom prekvapivo neohrabane. Keď agentovi poviete „objednaj mi stôl na piatok", v pozadí sa deje približne toto: agent si „odfotí" stránku, z pixelov a DOM štruktúry háda, čo je tlačidlo a čo formulár, klikne, počká, znova odfotí, znova háda. Funguje to v demách, ale v praxi je to pomalé, drahé na tokeny a krehké — stačí, že sa zmení rozloženie stránky, a agent sa stratí.</p>
+  <p>WebMCP tento model obracia. Namiesto toho, aby agent hádal, <strong>web mu sám povie, čo sa na ňom dá robiť</strong> — formou štruktúrovaných nástrojov s názvom, popisom v prirodzenom jazyku a presnou schémou vstupov. Rezervačný systém deklaruje nástroj „zarezervuj stôl", e-shop „vyhľadaj produkt" či „pridaj do košíka", firemný web „odošli dopyt". Agent potom nevolá pixely, ale funkciu.</p>
+  <p>Nejde pritom o akademické cvičenie. <a href="https://starbomedia.sk/slovnik-pojmov/umela-inteligencia" title="Čo je umelá inteligencia?">Umelá inteligencia</a> sa za posledné dva roky presunula z chatovacích okien do nástrojov, ktoré za používateľa konajú — a prehliadač je logické miesto, kde sa toto konanie stretáva s webmi firiem. Štandardizácia tohto rozhrania môže ovplyvniť, ako budú weby a agenti spolupracovať v najbližších rokoch — a kto pri tom bude určovať pravidlá.</p>
+  <p>Spoluautormi návrhu sú inžinieri Googlu a Microsoftu; verejne je na GitHube od leta 2025 a diskutuje sa vo W3C komunitnej skupine Web Machine Learning ako draft — teda zatiaľ návrh, nie hotový štandard. Na Google I/O 2026 dostal WebMCP hlavné pódium ako súčasť vízie agentic webu — spolu s oznámením, že <a href="https://developer.chrome.com/blog/chrome-at-io26" title="Chrome na Google I/O 2026" target="_blank" rel="noopener noreferrer">Gemini in Chrome bude WebMCP API podporovať</a> a že origin trial štartuje v Chrome 149.</p>
+  <p>Dôležitý kontext: názov sa odvoláva na <strong>Model Context Protocol (MCP)</strong> od Anthropicu, ktorý sa za posledný rok stal de facto štandardom pripájania AI modelov k externým nástrojom. WebMCP prenáša rovnakú myšlienku do prehliadača — o rozdieloch podrobnejšie nižšie. Ak vám pojmy ako <a href="https://starbomedia.sk/slovnik-pojmov/ai-agent" title="Čo je AI agent?">AI agent</a> či <a href="https://starbomedia.sk/slovnik-pojmov/llm" title="Čo je LLM?">LLM</a> ešte splývajú, odporúčame náš slovník pojmov.</p>
+
+  <figure>
+    <img src="/blog/infografika_webmcp_porovnanie.webp" alt="Porovnanie: AI agent hádajúci z pixelov stránky vs. agent volajúci štruktúrované WebMCP nástroje" loading="eager" fetchpriority="high" width="1200" height="678">
+    <figcaption>Bez WebMCP agent háda z vizuálu stránky. S WebMCP volá nástroje, ktoré web sám deklaroval.</figcaption>
+  </figure>
+
+  <h2 id="ako-funguje">Ako WebMCP funguje</h2>
+  <h3>Imperatívne API: navigator.modelContext</h3>
+  <p>Základom je JavaScript API. Web pri načítaní zaregistruje nástroje — každý má názov, popis pre jazykový model a JSON schému vstupov:</p>
+  <pre><code>if ('modelContext' in navigator) {
+  navigator.modelContext.registerTool({
+    name: 'vyhladaj_pojem',
+    description: 'Vyhľadá pojem v slovníku online marketingu a vráti definíciu.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        pojem: { type: 'string', description: 'Napr. ROAS, PNO, CTR' }
+      },
+      required: ['pojem']
+    },
+    async execute({ pojem }) {
+      const vysledok = await najdiVSlovniku(pojem);
+      return { content: [{ type: 'text', text: vysledok }] };
+    }
+  });
+}</code></pre>
+  <p>Agent v prehliadači si vie zoznam nástrojov vypýtať, vybrať vhodný podľa popisu a zavolať ho s validovanými parametrami. Žiadne hádanie, žiadne klikanie naslepo.</p>
+  <p>Všimnite si dve veci. Po prvé, popis nástroja je písaný pre jazykový model — agent podľa neho rozhoduje, kedy nástroj použiť, takže kvalitný popis je pre „AI použiteľnosť" webu tým, čím je dobrý copywriting pre ľudí. Po druhé, schéma vstupov funguje ako kontrakt: agent nemôže poslať nezmyselné parametre a web presne vie, čo dostane. Je to API dizajn — len publikum tentoraz nie je vývojár, ale umelá inteligencia.</p>
+  <h3>Deklaratívne API: anotované formuláre</h3>
+  <p>Pre weby, ktoré nechcú písať JavaScript, návrh počíta aj s jednoduchšou cestou: existujúce HTML formuláre sa dajú označiť anotáciami, ktoré z nich spravia nástroj. Kontaktný formulár či vyhľadávanie tak môžu byť „agent-ready" prakticky bez programovania. Presná podoba anotácií sa ešte v špecifikácii usádza — aj preto je celé API zatiaľ experimentálne.</p>
+  <h3>Čím sa WebMCP líši od MCP</h3>
+  <table>
+    <thead>
+      <tr><th></th><th>MCP (Anthropic)</th><th>WebMCP</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Kde beží</td><td>backend server, samostatný proces</td><td>priamo v prehliadači, v JavaScripte stránky</td></tr>
+      <tr><td>Komunikácia</td><td>JSON-RPC medzi klientom a serverom</td><td>volania v rámci otvorenej stránky</td></tr>
+      <tr><td>Kontext používateľa</td><td>rieši sa autentifikáciou na serveri</td><td>nástroje zdieľajú session prihláseného používateľa</td></tr>
+      <tr><td>Pre koho</td><td>vývojári AI aplikácií a integrácií</td><td>majitelia webov a frontend vývojári</td></tr>
+    </tbody>
+  </table>
+  <p>Práve posledný riadok je podstatný: WebMCP je prvý štandard z tejto rodiny, ktorý mieri na bežné weby — nie na AI infraštruktúru. A keďže nástroje bežia viditeľne na stránke, používateľ vidí, čo agent robí, čo podľa dokumentácie Chrome buduje dôveru v celý proces.</p>
+
+  <h2 id="pre-firmy">Čo to znamená pre firmy a e-shopy</h2>
+  <p>Krátkodobo: nič dramatické. Origin trial je čerstvý a reálni agenti, ktorí by nástroje volali, sa k používateľom ešte len dostávajú. Podľa analýzy na <a href="https://www.freecodecamp.org/news/a-developers-guide-to-webmcp/" title="A Developer's Guide to WebMCP" target="_blank" rel="noopener noreferrer">freeCodeCamp</a> — autor skenoval 111 076 najnavštevovanejších webov sveta — nemal v máji 2026 WebMCP v produkcii ani jeden z nich. Pre porovnanie: robots.txt malo 83 % webov, sitemap 68 %. Sme teda v bode, kde bol kedysi responzívny dizajn či HTTPS — štandard existuje, adopcia je nulová a práve to je príležitosť.</p>
+  <p>Strednodobo sa však hra mení. Google integruje agentov priamo do Chromu, najrozšírenejšieho prehliadača na svete. Ak sa táto integrácia naplní podľa ohlásení, majitelia webov budú riešiť otázku, ktorú si doteraz klásť nemuseli: <strong>keď agent môjho zákazníka príde na môj web, dokáže s ním pracovať?</strong></p>
+  <p>Konkrétne scenáre, ktoré dávajú zmysel už dnes premyslieť:</p>
+  <ul>
+    <li><strong>E-shop:</strong> nástroje „vyhľadaj produkt", „zisti dostupnosť a cenu", „pridaj do košíka". Agent porovnávajúci ponuku pre zákazníka dokončí úlohu na pripravenom webe spoľahlivejšie — a web, s ktorým agent nevie pracovať, z porovnania potichu vypadne.</li>
+    <li><strong>Služby a rezervácie:</strong> „over voľný termín", „vytvor rezerváciu", „odošli dopyt". Menej vypadnutých objednávok z neohrabaného klikania.</li>
+    <li><strong>Obsahové weby:</strong> „vyhľadaj v článkoch", „vráť zhrnutie témy" — čistejšia cesta, ako sa stať zdrojom pre AI odpovede namiesto pasívneho čakania na scraping.</li>
+  </ul>
+  <p><strong>A kto môže pokojne počkať?</strong> Firmy, ktoré ešte nemajú zvládnuté základy — rýchly web, čistý obsah, štruktúrované dáta, funkčné meranie. Tam sa investícia do WebMCP podobá na montáž strešného okna do domu bez strechy. Rovnako neodporúčame experiment firmám, kde by zápisové nástroje (objednávky, rezervácie) museli obchádzať existujúce bezpečnostné procesy — na to je štandard primladý. Ekonomika experimentu je však priateľská: pri jednotkách hodín práce a nulových licenčných nákladoch je vstupná cena nižšia než pri väčšine marketingových testov, ktoré firmy bežne schvaľujú bez mihnutia oka.</p>
+  <p>Poctivá poznámka k výkonnostným číslam: po internete kolujú odhady, o koľko percent sú štruktúrované volania rýchlejšie či spoľahlivejšie než klikanie po obrazovke. Pri ich overovaní sme nenašli oficiálnu metodiku, takže ich v tomto článku nepoužívame. Logika je však priamočiara aj bez čísel — jedno volanie funkcie s validovanými parametrami je menej krokov, menej tokenov a menej miest na chybu než slučka „screenshot → analýza → klik".</p>
+
+  <h2 id="seo-aeo-geo">Kam WebMCP zapadá vedľa SEO, AEO a GEO</h2>
+  <p>V Starbomedia sa na pripravenosť webu na AI éru pozeráme ako na pyramídu — a WebMCP je jej vrchol, nie základ:</p>
+  <ol>
+    <li><strong>Sémantické HTML a čistý obsah</strong> — základňa. Crawlery aj agenti čítajú HTML; neprehľadný kód škodí všetkým vrstvám nad ním.</li>
+    <li><strong>Štruktúrované dáta (schema.org)</strong> — strojovo čitateľný význam: produkty, FAQ, články, definície pojmov.</li>
+    <li><strong>llms.txt</strong> — kurátorovaná mapa webu pre jazykové modely; lacný spôsob, ako AI systémom povedať, čo je na webe podstatné.</li>
+    <li><strong>AEO/GEO optimalizácia obsahu</strong> — formát odpovedí, citovateľnosť, autorita. Písali sme o tom v článkoch <a href="https://starbomedia.sk/geo-vs-seo" title="GEO vs SEO">GEO vs SEO</a> a <a href="https://starbomedia.sk/ai-overviews-kompletny-sprievodca" title="AI Overviews — kompletný sprievodca">AI Overviews — kompletný sprievodca</a>, pojem <a href="https://starbomedia.sk/slovnik-pojmov/aeo" title="Čo je AEO?">AEO</a> máme aj v slovníku.</li>
+    <li><strong>WebMCP</strong> — aktívne nástroje pre agentov, ktorí na web prídu konať, nie len čítať.</li>
+  </ol>
+  <p>Dôležité poradie: ChatGPT, Perplexity ani AI Overviews dnes WebMCP nečítajú — tie kŕmia vrstvy 1 až 4. WebMCP obsluhuje novú kategóriu návštevníka: agenta v prehliadači. Kto preskočí základy a nasadí len „vrchol", stavia strechu bez domu.</p>
+
+  <figure>
+    <img src="/blog/diagram_pyramida_agent_readiness.webp" alt="Pyramída pripravenosti webu na AI: sémantické HTML, štruktúrované dáta, llms.txt, AEO/GEO obsah a na vrchole WebMCP" loading="lazy" width="1200" height="678">
+    <figcaption>Pyramída agent-readiness: WebMCP stojí na základoch, ktoré musia byť hotové skôr.</figcaption>
+  </figure>
+
+  <h2 id="case-study">Case study: ako sme starbomedia.sk pripravili na agentic web</h2>
+  <p>Teóriu sme si chceli osahať v praxi, preto sme v júni 2026 nasadili celý balík na vlastný web. Tu je, čo presne sme spravili a čo z toho vyplynulo.</p>
+  <h3>Tri nástroje, ktoré dávajú zmysel pre agentúrny web</h3>
+  <ol>
+    <li><strong><code>starbomedia_zoznam_sluzieb</code></strong> — vráti zoznam našich služieb s URL a popismi. Najjednoduchší možný nástroj: statické dáta, žiadne riziko.</li>
+    <li><strong><code>starbomedia_vyhladaj_pojem</code></strong> — prehľadá náš <a href="https://starbomedia.sk/slovnik-pojmov" title="Slovník pojmov online marketingu">slovník 116 marketingových pojmov</a> a vráti definíciu s odkazom. Zaujímavý je technicky: dáta slovníka sa načítavajú lazy importom až v momente, keď agent nástroj zavolá. Bežný návštevník nestiahne ani bajt navyše.</li>
+    <li><strong><code>starbomedia_odoslat_dopyt</code></strong> — odošle dopyt cez náš existujúci kontaktný endpoint. Zámerne prechádza tými istými anti-spam vrstvami ako formulár pre ľudí a v popise nástroja má explicitnú podmienku: použiť len so súhlasom používateľa.</li>
+  </ol>
+  <p>Celý komponent má približne 170 riadkov TypeScriptu. Pre porovnanie — autor spomínanej freeCodeCamp analýzy uvádza pri svojej implementácii 146 riadkov. Rádovo teda hovoríme o jednotkách hodín práce, nie o projekte na mesiace.</p>
+  <h3>Čo sme sa naučili</h3>
+  <p><strong>1. Defenzívne programovanie nie je voliteľné.</strong> Špecifikácia sa hýbe — v obehu sú dve podoby registrácie nástrojov (<code>registerTool</code> aj <code>provideContext</code>), a čo platí dnes, nemusí platiť o kvartál. Náš komponent podporuje obe, všetko balí do feature detection a try/catch. V prehliadači bez WebMCP sa jednoducho nič nestane.</p>
+  <p><strong>2. Core Web Vitals nemusia utrpieť — ak na to myslíte.</strong> Najväčšie riziko pre výkon nie je samotné API, ale dáta, s ktorými nástroje pracujú. Slovník pojmov má desiatky kilobajtov; keby sme ho zabalili do hlavného JavaScript bundlu, zaplatil by zaň každý návštevník. Lazy import to rieši. Výsledok po nasadení: <strong>+1 KB gzip v initial JavaScripte, Lighthouse Performance 97/100 pred aj po, kumulatívny layout shift 0</strong> — merané kontrolovaným A/B porovnaním starého a nového buildu.</p>
+  <p><strong>3. Nástroje na zápis si zaslúžia dvojnásobnú opatrnosť.</strong> Nástroj, ktorý odosiela formulár, koná v mene používateľa. Nechali sme ho prejsť všetkými ochranami, ktoré máme pre ľudí (honeypot, časová pasca, overenie e-mailu), a doplnili podmienku súhlasu priamo do popisu nástroja. K bezpečnosti sa ešte vrátime.</p>
+  <p><strong>4. Otestovať sa to dá aj bez čakania na agentov.</strong> Chrome ponúka flag <code>chrome://flags/#enable-webmcp-testing</code> a oficiálne rozšírenie <strong>Model Context Tool Inspector</strong>, ktoré zobrazí registrované nástroje, umožní ich ručne volať a obsahuje aj vstavaného agenta na test v prirodzenom jazyku. Presný postup je v ďalšej kapitole.</p>
+  <blockquote>
+    <p>„Nečakáme, kým sa agentic web stane mainstreamom. Radšej si pravidlá osaháme na vlastnom webe — a klientom potom vieme povedať, čo reálne funguje, nie čo sme čítali v cudzom blogu."</p>
+    <p>— Peter Štrbo, CEO Starbomedia</p>
+  </blockquote>
+  <p>Súčasťou balíka boli aj spodné poschodia pyramídy: <a href="https://starbomedia.sk/llms.txt" title="llms.txt webu starbomedia.sk">llms.txt</a> s kurátorovanou mapou webu, DefinedTerm štruktúrované dáta na slovníku pojmov a séria úprav prístupnosti (sémantické FAQ, čistý focus order). Agent-readiness nie je jeden súbor ani jedno API — je to vlastnosť celého webu.</p>
+
+  <figure>
+    <img src="/blog/screenshot_webmcp_inspector_starbomedia.webp" alt="Tri WebMCP nástroje webu starbomedia.sk zobrazené v rozšírení Model Context Tool Inspector" loading="lazy" width="1200" height="669">
+    <figcaption>Naše tri nástroje v rozšírení Model Context Tool Inspector.</figcaption>
+  </figure>
+
+  <h2 id="ako-zacat">Ako začať: praktický postup pre váš web</h2>
+  <p>Ak chcete WebMCP vyskúšať — či už zo zvedavosti, alebo ako prípravu na agentic web — odporúčame tento postup:</p>
+  <p><strong>Krok 1: Najprv základy.</strong> Skontrolujte sémantiku HTML, štruktúrované dáta a zvážte llms.txt. Bez nich WebMCP nemá na čom stáť. (S auditom pripravenosti webu vieme <a href="https://starbomedia.sk/seo" title="SEO optimalizácia od Starbomedia">pomôcť</a>.)</p>
+  <p><strong>Krok 2: Vyberte 2-3 nízkorizikové nástroje.</strong> Ideálne čisto na čítanie: vyhľadávanie v obsahu, zoznam produktov či služieb, kontrolu dostupnosti. Zápisové akcie (objednávky, formuláre) nechajte na druhú iteráciu.</p>
+  <p><strong>Krok 3: Implementujte defenzívne.</strong> Feature detection (<code>'modelContext' in navigator</code>), podpora oboch podôb registrácie, try/catch, lazy loading väčších dát. Počítajte s tým, že API sa zmení.</p>
+  <p><strong>Krok 4: Otestujte lokálne.</strong></p>
+  <ol>
+    <li>V Chrome zapnite <code>chrome://flags/#enable-webmcp-testing</code> a reštartujte prehliadač.</li>
+    <li>Nainštalujte rozšírenie Model Context Tool Inspector (GoogleChromeLabs).</li>
+    <li>Otvorte svoj web — uvidíte zaregistrované nástroje, ich schémy a môžete ich volať ručne aj cez vstavaného agenta.</li>
+  </ol>
+  <p><strong>Krok 5: Zvážte origin trial.</strong> Chrome od verzie 149 ponúka <a href="https://developer.chrome.com/docs/ai/webmcp" title="WebMCP dokumentácia" target="_blank" rel="noopener noreferrer">oficiálny origin trial</a> — po bezplatnej registrácii domény budú mať nástroje k dispozícii aj reálni používatelia v triale, vrátane pripravovanej integrácie Gemini in Chrome.</p>
+  <p><strong>Krok 6: Merajte dopad na výkon.</strong> Pred nasadením a po ňom si zmerajte Lighthouse/Core Web Vitals. Ako sme ukázali vyššie, pri správnej implementácii by mal byť rozdiel prakticky nulový.</p>
+
+  <h2 id="limity">Limity a riziká: čo treba vedieť, kým sa pustíte do práce</h2>
+  <p><strong>Je to experiment, nie hotový štandard.</strong> API môže zmeniť podobu, origin trial môže skončiť, a kým sa nepridajú ďalšie prehliadače, pokrytie používateľov bude obmedzené. Oficiálne termíny podpory mimo Chromu zatiaľ nikto nepotvrdil; Microsoft Edge sa ako spolunavrhovateľ logicky očakáva medzi prvými. Preto: malé, defenzívne implementácie, žiadne závislosti biznis procesov na WebMCP.</p>
+  <p><strong>Bezpečnosť je otvorená téma.</strong> Tím Chromu <a href="https://www.searchenginejournal.com/webmcp-can-be-used-to-hijack-ai-agents-chrome-warns/578904/" title="WebMCP bezpečnostné upozornenie" target="_blank" rel="noopener noreferrer">sám upozorňuje na riziká</a>: do popisov nástrojov sa dá schovať prompt injection útočiaci na agenta a výstupy nástrojov môžu agenta zavádzať. Praktici navyše upozorňujú, že otázky autentifikácie nástrojov zostávajú v návrhu zatiaľ otvorené. Z toho plynú praktické zásady: začínajte read-only nástrojmi, zápisové akcie chráňte rovnako ako formuláre pre ľudí a do popisov nástrojov píšte len to, čo by ste pokojne ukázali v zdrojovom kóde — pretože presne tam to je.</p>
+  <p><strong>Agenti zatiaľ nevolajú.</strong> Treba povedať na rovinu: autor freeCodeCamp analýzy za 93 dní od nasadenia nezaznamenal jediné agentické volanie svojich nástrojov. Ani my po prvých dňoch neevidujeme nič iné — a vzhľadom na stav rolloutu Gemini in Chrome to ani neprekvapuje. WebMCP dnes nie je zdroj návštevnosti; je to investícia do pripravenosti a učenia sa.</p>
+  <p><strong>Nie je to náhrada SEO.</strong> Klasické vyhľadávanie ani <a href="https://starbomedia.sk/ai-overviews-kompletny-sprievodca" title="AI Overviews — kompletný sprievodca">AI Overviews</a> s WebMCP nepracujú. Rozpočet aj priority patria najprv obsahu, technike a autorite webu — WebMCP je nadstavba pre tých, ktorí majú základy hotové.</p>
+
+  <section id="faq">
+    <h2>Často kladené otázky o WebMCP</h2>
+    <details>
+      <summary>Čo znamená pojem agentic web?</summary>
+      <p>Internet, v ktorom popri ľuďoch aktívne konajú aj AI agenti — vyhľadávajú, porovnávajú, rezervujú a nakupujú v mene používateľov. Google týmto pojmom zastrešil svoje tohtoročné novinky v Chrome vrátane WebMCP, integrácie Gemini a agentických funkcií prehliadača. Pre majiteľov webov znamená agentic web novú otázku: web už nestačí optimalizovať len pre ľudí a vyhľadávače, ale aj pre agentov, ktorí ho používajú ako nástroj.</p>
+    </details>
+    <details>
+      <summary>Čo je WebMCP jednou vetou?</summary>
+      <p>Navrhovaný webový štandard, ktorý umožňuje webu ponúknuť AI agentom v prehliadači štruktúrované nástroje — funkcie s popisom a schémou — namiesto toho, aby agenti hádali z vizuálu stránky, kam kliknúť.</p>
+    </details>
+    <details>
+      <summary>Aký je rozdiel medzi WebMCP a MCP?</summary>
+      <p>MCP (Model Context Protocol od Anthropicu) spája AI aplikácie s nástrojmi cez samostatné servery. WebMCP prenáša rovnaký princíp priamo do prehliadača: nástroje definuje JavaScript stránky, bežia v kontexte otvoreného webu a zdieľajú session používateľa. MCP je pre AI infraštruktúru, WebMCP pre bežné weby.</p>
+    </details>
+    <details>
+      <summary>Potrebujem WebMCP už dnes?</summary>
+      <p>Pre väčšinu firiem nie je urgentný — žiadny veľký web ho zatiaľ nemá v produkcii a agenti nástroje ešte reálne nevolajú. Dáva zmysel ako nízkonákladový experiment (jednotky hodín práce) pre firmy, ktoré chcú byť pripravené skôr, než Gemini in Chrome a ďalší agenti dorazia k bežným používateľom. Základy — sémantika, štruktúrované dáta, llms.txt, AEO — sú dnes dôležitejšie.</p>
+    </details>
+    <details>
+      <summary>Spomalí WebMCP môj web alebo pokazí Core Web Vitals?</summary>
+      <p>Pri správnej implementácii nie. Samotná registrácia nástrojov je malý kus JavaScriptu; kľúčové je nenačítavať veľké dáta do hlavného bundlu (riešením je lazy import). Naša implementácia pridala 1 KB a Lighthouse skóre nezmenila.</p>
+    </details>
+    <details>
+      <summary>Ako si overím, že moje nástroje fungujú?</summary>
+      <p>V Chrome zapnite flag chrome://flags/#enable-webmcp-testing, nainštalujte rozšírenie Model Context Tool Inspector a otvorte svoj web. Rozšírenie zobrazí zaregistrované nástroje a umožní ich volať ručne aj cez testovacieho agenta. Pre reálnych používateľov slúži origin trial od Chrome 149.</p>
+    </details>
+    <details>
+      <summary>Je bezpečné nechať agenta odosielať formuláre na mojom webe?</summary>
+      <p>Len s ochranami. Nástroje konajú v mene prihláseného používateľa, preto zápisové akcie chráňte ako formuláre pre ľudí (anti-spam, validácia, limity), do popisu nástroja pridajte podmienku súhlasu a začnite read-only nástrojmi. Tím Chromu otvorene upozorňuje na riziká prompt injection — opatrnosť nie je paranoja, ale dobrá prax.</p>
+    </details>
+  </section>
+
+  <h2 id="zaver">Záver: malý experiment dnes, výhoda zajtra</h2>
+  <p>WebMCP je dnes presne tým, čím býva každý webový štandard na začiatku: technicky funkčný, prakticky nevyužitý a strategicky zaujímavý. Adopcia je nulová, agenti ešte nevolajú — a práve preto je vstupné okno také lacné. Pár hodín práce, jeden flag v Chrome — a o agentic webe viete z prvej ruky viac než väčšina trhu.</p>
+  <p>My v Starbomedia budeme nástroje na vlastnom webe ďalej rozvíjať a skúsenosti prenášať ku klientom — od <a href="https://starbomedia.sk/ai-studio" title="AI Studio od Starbomedia">AI služieb</a> po prípravu webov na AI vyhľadávanie. Ak chcete vedieť, ako je na agentic web pripravený váš web, <a href="https://starbomedia.sk/kontakt" title="Kontaktujte Starbomedia">ozvite sa nám</a> — radi sa pozrieme na celú pyramídu, nie len na jej špičku.</p>
+</article>
+
+<!--
+<title>WebMCP — ako pripraviť web na AI agentov | Starbomedia</title>
+<meta name="description" content="WebMCP mení weby na nástroje pre AI agentov. Čo je, ako funguje navigator.modelContext a čo sme sa naučili pri nasadení na vlastnom webe starbomedia.sk.">
+<link rel="canonical" href="https://starbomedia.sk/webmcp-ako-pripravit-web-na-ai-agentov">
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Čo znamená pojem agentic web?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Internet, v ktorom popri ľuďoch aktívne konajú aj AI agenti — vyhľadávajú, porovnávajú, rezervujú a nakupujú v mene používateľov. Google týmto pojmom zastrešil svoje tohtoročné novinky v Chrome vrátane WebMCP, integrácie Gemini a agentických funkcií prehliadača. Pre majiteľov webov znamená agentic web novú otázku: web už nestačí optimalizovať len pre ľudí a vyhľadávače, ale aj pre agentov, ktorí ho používajú ako nástroj."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Čo je WebMCP jednou vetou?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Navrhovaný webový štandard, ktorý umožňuje webu ponúknuť AI agentom v prehliadači štruktúrované nástroje — funkcie s popisom a schémou — namiesto toho, aby agenti hádali z vizuálu stránky, kam kliknúť."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Aký je rozdiel medzi WebMCP a MCP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MCP (Model Context Protocol od Anthropicu) spája AI aplikácie s nástrojmi cez samostatné servery. WebMCP prenáša rovnaký princíp priamo do prehliadača: nástroje definuje JavaScript stránky, bežia v kontexte otvoreného webu a zdieľajú session používateľa. MCP je pre AI infraštruktúru, WebMCP pre bežné weby."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Potrebujem WebMCP už dnes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pre väčšinu firiem nie je urgentný — žiadny veľký web ho zatiaľ nemá v produkcii a agenti nástroje ešte reálne nevolajú. Dáva zmysel ako nízkonákladový experiment (jednotky hodín práce) pre firmy, ktoré chcú byť pripravené skôr, než Gemini in Chrome a ďalší agenti dorazia k bežným používateľom. Základy — sémantika, štruktúrované dáta, llms.txt, AEO — sú dnes dôležitejšie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Spomalí WebMCP môj web alebo pokazí Core Web Vitals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pri správnej implementácii nie. Samotná registrácia nástrojov je malý kus JavaScriptu; kľúčové je nenačítavať veľké dáta do hlavného bundlu (riešením je lazy import). Naša implementácia pridala 1 KB a Lighthouse skóre nezmenila."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ako si overím, že moje nástroje fungujú?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "V Chrome zapnite flag chrome://flags/#enable-webmcp-testing, nainštalujte rozšírenie Model Context Tool Inspector a otvorte svoj web. Rozšírenie zobrazí zaregistrované nástroje a umožní ich volať ručne aj cez testovacieho agenta. Pre reálnych používateľov slúži origin trial od Chrome 149."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Je bezpečné nechať agenta odosielať formuláre na mojom webe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Len s ochranami. Nástroje konajú v mene prihláseného používateľa, preto zápisové akcie chráňte ako formuláre pre ľudí (anti-spam, validácia, limity), do popisu nástroja pridajte podmienku súhlasu a začnite read-only nástrojmi. Tím Chromu otvorene upozorňuje na riziká prompt injection — opatrnosť nie je paranoja, ale dobrá prax."
+      }
+    }
+  ]
+}
+</script>

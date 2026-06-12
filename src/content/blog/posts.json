@@ -1,5 +1,17 @@
 [
   {
+    "slug": "webmcp-ako-pripravit-web-na-ai-agentov",
+    "title": "WebMCP: ako pripraviť web na AI agentov (a čo sme sa naučili, keď sme to skúsili)",
+    "date": "2026-06-12T12:30:00+00:00",
+    "modified": "2026-06-12T12:30:00+00:00",
+    "excerpt": "Google ohlásil éru agentic webu a my sme nečakali: WebMCP sme nasadili na vlastný web ako jedni z prvých. Čo je Web Model Context Protocol, ako funguje navigator.modelContext, čo to znamená pre e-shopy — a kompletný postup aj s kódom, meraniami a poctivým zoznamom limitov.",
+    "category": "Digitálny marketing",
+    "featuredImage": "/blog/infografika_webmcp_porovnanie.webp",
+    "featuredW": 1200,
+    "featuredH": 678,
+    "author": "peter-strbo"
+  },
+  {
     "slug": "ecommerce-tracking-2026-bullshit-vs-realita-merania-e-shopov",
     "title": "Ecommerce tracking 2026: Bullshit vs realita merania e-shopov",
     "date": "2026-05-11T12:25:54+00:00",
