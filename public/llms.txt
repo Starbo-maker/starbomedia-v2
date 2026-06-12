@@ -1,0 +1,61 @@
+# Starbomedia
+
+> Starbomedia je slovenská online marketingová agentúra zameraná na výkonnostný marketing pre e-shopy a firmy. Pôsobí od roku 2012, spravuje reklamné rozpočty vyše 10 mil. € ročne naprieč 13 trhmi strednej a východnej Európy (SK, CZ, HU, PL, RO, DE, AT, HR, SI, IT, FR, BE, BG). Služby: Google Ads, Meta Ads, správa sociálnych sietí a tvorba obsahu, SEO, YouTube reklama, cenové porovnávače, webová analytika a AI Studio.
+
+Web je v slovenčine. Meranie výsledkov staviame na reálnych tržbách klienta, nie na číslach z reklamných platforiem.
+
+Kontakt: marketing@starbomedia.sk, +421 940 782 070, Dlhá nad Váhom 446, Slovensko.
+Nezáväzný audit kampaní a konzultácia: https://starbomedia.sk/kontakt
+
+## Služby
+
+- [Reklama na internete — prehľad](https://starbomedia.sk/reklama-na-internete): Výkonnostný marketing meraný na tržbách; rozcestník všetkých služieb.
+- [Google reklama](https://starbomedia.sk/google-reklama): Search, Shopping, Performance Max, Demand Gen; správa Google Ads kampaní.
+- [Facebook a Instagram reklama](https://starbomedia.sk/facebook-reklama): Meta Ads s Conversion API, Advantage+ a dôrazom na kreatívu.
+- [Správa sociálnych sietí a tvorba obsahu](https://starbomedia.sk/sprava-socialnych-sieti): Obsah na kľúč — stratégia, natáčanie u klienta, Reels a TikTok videá, publikovanie, vyhodnotenie.
+- [YouTube reklama](https://starbomedia.sk/youtube-reklama): Videokampane — in-stream, bumper, Shorts.
+- [SEO optimalizácia](https://starbomedia.sk/seo): Technické SEO, obsah a autorita; pripravené aj na AI vyhľadávanie (AEO/GEO).
+- [Cenové porovnávače](https://starbomedia.sk/cenove-porovnavace): Heureka a produktové feedy pre e-shopy.
+- [Webová analytika](https://starbomedia.sk/analyza-webu): GA4, Google Tag Manager, server-side meranie, Consent Mode v2.
+
+## AI Studio
+
+- [AI Studio — prehľad](https://starbomedia.sk/ai-studio): AI služby pre marketing a obsah.
+- [AI produktová fotografia](https://starbomedia.sk/ai-studio/produktova-fotografia): Profesionálne produktové vizuály generované AI.
+- [Marketingové bannery](https://starbomedia.sk/ai-studio/marketing-bannery): AI generované bannery pre kampane.
+- [Product to video](https://starbomedia.sk/ai-studio/product-to-video): Z produktových fotiek krátke videá.
+- [AI influencer a lip sync](https://starbomedia.sk/ai-studio/ai-influencer): Virtuálni ambasádori a lip-sync videá.
+- [AI video prezentácie](https://starbomedia.sk/ai-studio/video-prezentacie): Video prezentácie firiem a produktov.
+- [AI voice boti](https://starbomedia.sk/ai-studio/voice-boti): Hlasoví asistenti pre telefonickú komunikáciu.
+- [Viacjazyčný dabing](https://starbomedia.sk/ai-studio/multilingual-dubbing): Automatický dabing videí do viacerých jazykov.
+- [AI tvorba SEO článkov](https://starbomedia.sk/ai-studio/seo-clanky): Optimalizované články s ľudskou kontrolou.
+- [Hromadné SEO meta a alt texty](https://starbomedia.sk/ai-studio/seo-meta-texty): Meta popisy a alt texty vo veľkom.
+- [VibeCode weby](https://starbomedia.sk/ai-studio/vibecode-weby): Moderné webstránky stavané s AI.
+- [Automatizované reporty](https://starbomedia.sk/ai-studio/report-vizualizacia): Reporting a vizualizácia dát.
+
+## Slovník pojmov
+
+- [Slovník pojmov online marketingu](https://starbomedia.sk/slovnik-pojmov): 116 pojmov z PPC, Google Ads, Meta Ads, metrík, SEO, AI a analytiky — vysvetlené po slovensky.
+- Samostatné definičné stránky majú pojmy vo formáte https://starbomedia.sk/slovnik-pojmov/{pojem}: ppc, cpc, cpm, cpa, cpl, cpv, ctr, roas, roi, pno, konverzia, landing-page, ab-testovanie, klucove-slova, seo, serp, spatny-odkaz, indexacia, umela-inteligencia, llm, prompt, ai-agent, chatbot, aeo, google-analytics-4, google-tag-manager, cookies, ugc, copywriting.
+
+## Blog
+
+- [Blog](https://starbomedia.sk/blog): Články o výkonnostnom marketingu, meraní a AI vo vyhľadávaní.
+- [Prečo ROAS nestačí — POAS odhalí skutočný zisk](https://starbomedia.sk/preco-roas-nestaci-poas-vam-odhali-skutocny-zisk-z-reklamy): Metrika zisku namiesto tržieb.
+- [E-commerce tracking 2026: bullshit vs. realita merania](https://starbomedia.sk/ecommerce-tracking-2026-bullshit-vs-realita-merania-e-shopov): Atribúcia, cookies, server-side tagging.
+- [AI Overviews — kompletný sprievodca](https://starbomedia.sk/ai-overviews-kompletny-sprievodca): Ako AI prehľady menia vyhľadávanie.
+- [Google Ads vs SEO — čo je lepšie pre slovenský biznis](https://starbomedia.sk/google-ads-vs-seo-co-je-lepsie-pre-slovensky-biznis-v-roku-2026): Porovnanie kanálov.
+- [GEO vs SEO](https://starbomedia.sk/geo-vs-seo): Optimalizácia pre generatívne vyhľadávače.
+- [Google Moja Firma — sprievodca lokálnym SEO](https://starbomedia.sk/google-moja-firma-kompletny-sprievodca-lokalnym-seo-v-roku-2026): Lokálne SEO pre prevádzky.
+
+## O firme
+
+- [Tím Starbomedia](https://starbomedia.sk/tim-starbomedia): Kto sme a ako pracujeme.
+- [Prípadové štúdie a referencie](https://starbomedia.sk/referencie-2): Výsledky pre klientov.
+- [Kariéra](https://starbomedia.sk/kariera): Otvorené pozície.
+- [Kontakt](https://starbomedia.sk/kontakt): Nezáväzná konzultácia a audit.
+
+## Optional
+
+- [Sitemap](https://starbomedia.sk/sitemap.xml): Kompletný zoznam URL.
+- [Ochrana osobných údajov](https://starbomedia.sk/ochrana-osobnych-udajov): GDPR informácie.
