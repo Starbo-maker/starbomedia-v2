@@ -120,6 +120,24 @@ export default function Home() {
               <h3 className={styles.cardTitle}>Export do zahraničia</h3>
               <p className={styles.cardDesc}>Expandujte do CZ, HU, RO. Lokalizácia kampaní a podpora.</p>
             </div>
+
+            {/* Sociálne siete a obsah — nová služba */}
+            <div className={`${styles.bentoCard} ${styles.span12}`} style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.25rem', flex: '1 1 420px' }}>
+                <div className={styles.cardIcon} style={{ color: '#d946ef', flexShrink: 0 }}><Video size={28} /></div>
+                <div>
+                  <span style={{ display: 'inline-block', background: '#fdf4ff', color: '#d946ef', border: '1px solid #f5d0fe', borderRadius: '50px', padding: '0.15rem 0.7rem', fontSize: '0.75rem', fontWeight: 700, marginBottom: '0.5rem' }}>NOVÁ SLUŽBA</span>
+                  <h3 className={styles.cardTitle}>Sociálne siete a tvorba obsahu</h3>
+                  <p className={styles.cardDesc} style={{ marginBottom: 0 }}>
+                    Správa profilov na kľúč — stratégia, natáčanie priamo u vás, Reels a TikTok videá,
+                    publikovanie aj mesačné vyhodnotenie.
+                  </p>
+                </div>
+              </div>
+              <Link href="/sprava-socialnych-sieti" className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', whiteSpace: 'nowrap' }}>
+                Zistiť viac <ArrowRight size={16} />
+              </Link>
+            </div>
           </div>
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <Link href="/reklama-na-internete" className="btn btn-secondary" style={{ padding: '0.9rem 2.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>

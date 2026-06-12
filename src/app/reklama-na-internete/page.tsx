@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import {
     Search, Share2, TrendingUp, Youtube, BarChart3, ShoppingBag,
-    ShieldCheck, Activity, Scale, GitCompare, Globe,
+    ShieldCheck, Activity, Scale, GitCompare, Globe, Clapperboard,
     Store, MapPin, Building2, ArrowRight, CheckCircle, Sparkles
 } from 'lucide-react';
 import styles from '../service.module.css';
@@ -182,6 +182,18 @@ export default function ReklamaNaInternetePage() {
                             </p>
                             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', color: '#8b5cf6', fontWeight: 600, fontSize: '0.9rem' }}>
                                 Prejsť na cenové porovnávače <ArrowRight size={16} />
+                            </span>
+                        </Link>
+                        {/* Správa sociálnych sietí a tvorba obsahu */}
+                        <Link href="/sprava-socialnych-sieti" className={styles.card} style={{ display: 'block', color: 'inherit', textDecoration: 'none' }}>
+                            <Clapperboard className={styles.cardIcon} style={{ color: '#8b5cf6' }} />
+                            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Správa sociálnych sietí a obsah</h3>
+                            <p className={styles.text} style={{ fontSize: '0.92rem', marginBottom: '1rem' }}>
+                                Organický doplnok platenej reklamy. Stratégia, natáčanie priamo u vás, Reels a TikTok videá,
+                                príspevky aj publikovanie — obsah, ktorý buduje značku a slúži aj ako kreatíva do kampaní.
+                            </p>
+                            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', color: '#8b5cf6', fontWeight: 600, fontSize: '0.9rem' }}>
+                                Prejsť na sociálne siete <ArrowRight size={16} />
                             </span>
                         </Link>
                     </div>

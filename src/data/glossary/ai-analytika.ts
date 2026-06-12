@@ -372,6 +372,7 @@ export const aiAnalytikaTerms: GlossaryTerm[] = [
         },
         related: ['kreativa', 'influencer-marketing', 'engagement'],
         links: [
+            { label: 'Správa sociálnych sietí a tvorba obsahu — naša služba', href: '/sprava-socialnych-sieti' },
             { label: 'Facebook reklama — naša služba', href: '/facebook-reklama' },
         ],
     },

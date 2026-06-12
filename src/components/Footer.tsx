@@ -30,6 +30,7 @@ const Footer = () => {
                         <li><Link href="/reklama-na-internete">Reklama na internete</Link></li>
                         <li><Link href="/google-reklama">Google reklama</Link></li>
                         <li><Link href="/facebook-reklama">Facebook reklama</Link></li>
+                        <li><Link href="/sprava-socialnych-sieti">Správa sociálnych sietí</Link></li>
                         <li><Link href="/seo">SEO optimalizácia</Link></li>
                         <li><Link href="/youtube-reklama">YouTube reklama</Link></li>
                         <li><Link href="/cenove-porovnavace">Cenové porovnávače</Link></li>
