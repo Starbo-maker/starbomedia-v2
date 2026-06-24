@@ -1,0 +1,564 @@
+<article class="ucp-article" itemscope itemtype="https://schema.org/Article">
+  <header>
+    <p><time datetime="2026-03-20" itemprop="datePublished">Publikované: 20. marca 2026</time> · <time datetime="2026-06-08" itemprop="dateModified">Aktualizované: 8. júna 2026</time> · Čas čítania: 21 min</p>
+  </header>
+
+  <nav aria-label="Obsah článku">
+    <strong>Obsah</strong>
+    <ol>
+      <li><a href="#tldr">TL;DR – Kľúčové body</a></li>
+      <li><a href="#co-je-google-merchant-center">Čo je Google Merchant Center a prečo je základ vašich shopping kampaní</a></li>
+      <li><a href="#anatomia-produktoveho-feedu">Anatómia produktového feedu – povinné a voliteľné atribúty</a></li>
+      <li><a href="#optimalizacia-produktovych-nazvov">Optimalizácia produktových názvov (title) vo feede</a></li>
+      <li><a href="#ai-a-automatizacia-descriptions">AI a automatizácia product description vo feede</a></li>
+      <li><a href="#conversational-attributes">Conversational attributes – nové AI atribúty (2026)</a></li>
+      <li><a href="#custom-labels">Custom labels – tajná zbraň pre štruktúru kampaní</a></li>
+      <li><a href="#nakupne-ceny-a-sledovanie-marze">Nákupné ceny a sledovanie marže v Google Ads</a></li>
+      <li><a href="#caste-chyby-v-merchant-center">Časté chyby v Merchant Center a ako ich riešiť</a></li>
+      <li><a href="#pokrocile-strategie-2026">Pokročilé stratégie pre rok 2026</a></li>
+      <li><a href="#neriskujte-zavislost">Neriskujte závislosť na jednom kanáli</a></li>
+      <li><a href="#faq">Často kladené otázky</a></li>
+    </ol>
+  </nav>
+
+  <p>Ak prevádzkujete e-shop a inzerujete cez Google Shopping, váš produktový feed je najdôležitejšia vec, ktorú väčšina inzerentov ignoruje. Nie je to bidovacia stratégia. Nie je to rozpočet. Je to kvalita dát, ktoré o svojich produktoch posielate do Google Merchant Center.</p>
+
+  <p>V Starbomedia sa optimalizácii shopping feedov venujeme systematicky – a vidíme, aký obrovský rozdiel dokáže spraviť dobre nastavený feed. <strong>U nášho klienta murat.sk</strong> sme úpravou produktových názvov vo feede získali vyššiu relevanciu shopping reklám nielen podľa typu produktu, ale aj podľa výrobcu. A to bol len začiatok.</p>
+
+  <p>V tomto sprievodcovi vám ukážeme všetko, čo potrebujete vedieť o optimalizácii Google Merchant Center a produktového feedu v roku 2026 – od základov až po pokročilé stratégie s AI a sledovaním marže.</p>
+
+  <aside class="article-update">
+    <p><strong>Aktualizované 8. júna 2026:</strong> Doplnili sme novú kapitolu o <strong>conversational attributes</strong> – šiestich nových AI atribútoch produktového feedu, ktoré Google predstavil na Google Marketing Live <strong>20. mája 2026</strong> – a o novom reporte <strong>AI Performance Insights</strong>. Sekciu o feede v ére AI asistentov sme rozšírili o AI Mode vo vyhľadávaní.</p>
+  </aside>
+
+  <h2 id="tldr">TL;DR – Kľúčové body</h2>
+
+  <ul>
+    <li><strong>Product title je kráľ</strong> – optimalizované názvy produktov majú najväčší vplyv na CTR zo všetkých zmien vo feede. Správna štruktúra (Brand + Typ + Atribúty) dokáže zvýšiť impression share o 40–60 %.</li>
+    <li><strong>AI mení pravidlá hry</strong> – v roku 2026 je feed „DNA" pre Gemini, AI Overviews aj ChatGPT Shopping. Kompletnosť dát rozhoduje o viditeľnosti.</li>
+    <li><strong>Conversational attributes menia feed na rozhovor s AI</strong> – Google na Google Marketing Live (20. mája 2026) pridal 6 nových voliteľných atribútov (otázky a odpovede, popularita, vzťahy medzi produktmi a ďalšie) priamo pre AI Mode a Gemini. Sú voliteľné a neovplyvňujú schválenie produktov.</li>
+    <li><strong>Custom labels = škálovanie kampaní</strong> – 5 custom labels vám umožní segmentovať kampane podľa marže, sezónnosti, výkonu alebo ceny.</li>
+    <li><strong>COGS vo feede odomyká sledovanie marže</strong> – namiesto ROAS môžete optimalizovať na skutočný zisk (POAS) na úrovni jednotlivých objednávok.</li>
+    <li><strong>Merchant Center prešiel veľkými zmenami</strong> – migrácia na nové API, multi-channel zmeny, PMax dominancia a nové policy požiadavky.</li>
+    <li><strong>Free listings sú nevyužitá príležitosť</strong> – vaše produkty sa môžu zobrazovať organicky na Google Search, Maps, YouTube aj Images bez platenia za klik.</li>
+  </ul>
+
+  <h2 id="co-je-google-merchant-center">Čo je Google Merchant Center a prečo je základ vašich shopping kampaní</h2>
+
+  <p>Google Merchant Center je bezplatný nástroj, cez ktorý nahráte a spravujete produktové dáta vášho e-shopu. Tieto dáta potom Google používa na zobrazovanie vašich produktov v Shopping reklamách, bezplatných výpisoch (free listings), na Google Maps, YouTube a v ďalších formátoch.</p>
+
+  <p>Zjednodušene povedané – Merchant Center je váš „regál" v Google (alebo ako ho poznáte pod slovenským názvom Google Nákupy). A produktový feed je zoznam toho, čo na tom regáli leží, aj s popiskami a cenovkami.</p>
+
+  <p>Bez kvalitného feedu v Merchant Center nemôžete:</p>
+  <ul>
+    <li>Spúšťať Shopping kampane ani Performance Max kampane s product feedom</li>
+    <li>Zobrazovať produkty v bezplatných organických výpisoch</li>
+    <li>Využívať AI-powered funkcie ako Product Studio alebo automatické odporúčania</li>
+  </ul>
+
+  <h3>Merchant Center Next – čo sa zmenilo</h3>
+
+  <p>Google postupne migroval všetkých používateľov na Merchant Center Next – prepracované rozhranie s jednoduchšou navigáciou a novými funkciami. Kľúčové zmeny v roku 2026:</p>
+
+  <ul>
+    <li><strong>Multi-channel produkty:</strong> Od marca 2026 sa online atribúty produktov stávajú defaultnými. Ak predávate rovnaký produkt online aj v kamennej predajni a potrebujete rôzne hodnoty (napr. odlišnú cenu), musíte vytvoriť dva samostatné produkty s rôznymi ID.</li>
+    <li><strong>Nové API:</strong> Staré Content API for Shopping sa definitívne ukončí 18. augusta 2026. Merchant API je jeho nástupca s lepšou architektúrou a výkonom.</li>
+    <li><strong>Product Studio:</strong> Nové AI sub-API (v ALPHA fáze) na generovanie a optimalizáciu product titles a descriptions pomocou generatívnej AI.</li>
+    <li><strong>Scenario Planner:</strong> Nástroj umožňujúci testovať rozpočty a získať odhady ROI bez potreby kódovania.</li>
+  </ul>
+
+  <h3>Prepojenie Merchant Center s Google Ads</h3>
+
+  <p>Merchant Center a Google Ads sú neoddeliteľní partneri. Feed z Merchant Center je zdrojom dát pre:</p>
+  <ul>
+    <li><strong>Performance Max kampane</strong> – v roku 2026 jednoznačne dominantný formát pre shopping reklamy. Klasické Shopping kampane sa čoraz viac obmedzujú a Google tlačí inzerentov smerom k PMax.</li>
+    <li><strong>Štandardné Shopping kampane</strong> – stále existujú, ale ich podiel klesá. Mnohí inzerenti ich používajú už len ako doplnok k PMax.</li>
+    <li><strong>Free listings</strong> (organické produktové výpisy)</li>
+    <li><strong>Dynamic remarketing</strong> (dynamické bannerové reklamy s produktmi)</li>
+  </ul>
+
+  <p>Kvalita vášho feedu priamo ovplyvňuje, na aké vyhľadávacie dotazy sa vaše produkty zobrazia, aká bude ich pozícia a koľko zaplatíte za klik. Nie je to preháňanie – dobre optimalizovaný feed s keyword-rich titlemi a kompletými atribútmi dokáže podľa viacerých zdrojov zvýšiť impression share o 40–60 % bez zmeny bidov.</p>
+
+  <h2 id="anatomia-produktoveho-feedu">Anatómia produktového feedu – povinné a voliteľné atribúty</h2>
+
+  <p>Produktový feed je štruktúrovaný súbor (najčastejšie XML alebo Google Sheets), ktorý obsahuje informácie o každom produkte vo vašom e-shope. Google rozdeľuje atribúty na povinné a voliteľné – ale práve tie voliteľné často robia najväčší rozdiel.</p>
+
+  <h3>Povinné atribúty</h3>
+
+  <p>Bez týchto atribútov Google váš produkt jednoducho nezobrazí:</p>
+
+  <table>
+    <thead>
+      <tr><th>Atribút</th><th>Popis</th><th>Príklad</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>id</code></td><td>Unikátny identifikátor produktu</td><td>SKU-12345</td></tr>
+      <tr><td><code>title</code></td><td>Názov produktu (max 150 znakov)</td><td>Schneider Electric Merten M-Smart rámeček 1-násobný biely</td></tr>
+      <tr><td><code>description</code></td><td>Popis produktu (max 5 000 znakov)</td><td>Jednoduchý rámeček pre zásuvky a vypínače...</td></tr>
+      <tr><td><code>link</code></td><td>URL produktovej stránky</td><td>https://murat.sk/produkt/...</td></tr>
+      <tr><td><code>image_link</code></td><td>URL hlavného obrázka</td><td>https://murat.sk/images/...</td></tr>
+      <tr><td><code>price</code></td><td>Cena s menou</td><td>3.49 EUR</td></tr>
+      <tr><td><code>availability</code></td><td>Dostupnosť</td><td>in stock / out of stock / preorder</td></tr>
+      <tr><td><code>brand</code></td><td>Značka výrobcu</td><td>Schneider Electric</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Voliteľné atribúty, ktoré robia rozdiel</h3>
+
+  <p>Tu sa láme chlieb. Tieto atribúty nie sú povinné, ale výrazne ovplyvňujú výkon vašich kampaní:</p>
+
+  <ul>
+    <li><strong><code>gtin</code></strong> (EAN kód) – pomáha Google presne identifikovať produkt a priradiť ho k správnym vyhľadávaniam. Pre značkové produkty je prakticky nevyhnutný.</li>
+    <li><strong><code>product_type</code></strong> – vaša vlastná kategorizácia produktov. Google ju používa na lepšie pochopenie, čo predávate.</li>
+    <li><strong><code>custom_label_0</code> až <code>custom_label_4</code></strong> – 5 voľne definovateľných štítkov pre segmentáciu kampaní (viac v samostatnej kapitole).</li>
+    <li><strong><code>cost_of_goods_sold</code></strong> – nákupná cena produktu. Odomyká reporting marže priamo v Google Ads.</li>
+    <li><strong><code>sale_price</code></strong> + <strong><code>sale_price_effective_date</code></strong> – akciová cena so správnym časovým rozsahom.</li>
+    <li><strong><code>additional_image_link</code></strong> – ďalšie obrázky produktu (až 10 ďalších).</li>
+    <li><strong><code>product_detail</code></strong> – špecifické technické parametre produktu.</li>
+  </ul>
+
+  <p>V Starbomedia sme zistili, že systematické dopĺňanie voliteľných atribútov je jedným z najrýchlejších spôsobov, ako zlepšiť výkon shopping kampaní bez zvyšovania rozpočtu.</p>
+
+  <h2 id="optimalizacia-produktovych-nazvov">Optimalizácia produktových názvov (title) vo feede</h2>
+
+  <p>Ak máte čas len na jednu vec, optimalizujte product titles. Je to zmena s najväčším dopadom na výkon vašich shopping kampaní.</p>
+
+  <h3>Prečo sú titles také dôležité</h3>
+
+  <p>Google používa product title ako hlavný signál na to, aby určil, pri akom vyhľadávaní sa váš produkt zobrazí. Na rozdiel od textových reklám, pri shopping reklamách neexistujú kľúčové slová, na ktoré bidujete – Google ich odvodzuje z vášho feedu. A title je pritom najsilnejší atribút.</p>
+
+  <h3>Štruktúra ideálneho product title</h3>
+
+  <p>Osvedčená štruktúra, ktorá funguje naprieč kategóriami:</p>
+
+  <p><strong>Brand + Typ produktu + Kľúčové atribúty (veľkosť/farba/materiál/model)</strong></p>
+
+  <p>Príklady:</p>
+  <ul>
+    <li><strong>Pred:</strong> „Rámeček biely" (príliš vágne)</li>
+    <li><strong>Po:</strong> „Schneider Electric Merten M-Smart rámeček 1-násobný biely" (presné a relevantné)</li>
+  </ul>
+  <ul>
+    <li><strong>Pred:</strong> „Kábel 3x2.5" (chýba brand, typ)</li>
+    <li><strong>Po:</strong> „CYKY-J 3x2,5 silový kábel Draka Kabely 100m" (kompletné)</li>
+  </ul>
+
+  <p>Dôležité pravidlá:</p>
+  <ul>
+    <li><strong>Front-load kľúčové slová</strong> – Google zobrazuje len cca 70 znakov z titlu. Najdôležitejšie slová dávajte na začiatok.</li>
+    <li><strong>Používajte jazyk zákazníkov</strong> – ak zákazníci hľadajú „zásuvka", nepoužívajte „elektrický výstup". Pozrite si search term reporty vo vašom Google Ads účte.</li>
+    <li><strong>Nepoužívajte propagačný text</strong> – slová ako „najlepší", „najlacnejší", „doprava zadarmo" v titlech porušujú Google politiky a vedú k zamietnutiu produktov.</li>
+    <li><strong>Symboly pre čitateľnosť</strong> – podľa analýzy 70 % product titleov obsahuje symbol (pipe |, pomlčka –, čiarka) na oddelenie atribútov.</li>
+  </ul>
+
+  <h3>Zakomponovanie výrobcu a typu produktu</h3>
+
+  <p>U nášho klienta murat.sk sme do titleov systematicky pridali názvy výrobcov. Výsledok? Vyššiu relevanciu shopping reklám – produkty sa začali zobrazovať nielen na generické dotazy (napr. „rámeček na vypínač"), ale aj na dotazy obsahujúce názov výrobcu (napr. „Schneider Electric rámeček").</p>
+
+  <p>Pre e-shopy s veľkým katalógom odporúčame:</p>
+  <ol>
+    <li><strong>Začnite s TOP 50 produktmi</strong> podľa tržieb – prepíšte ich titles manuálne</li>
+    <li><strong>Feed rules pre zvyšok</strong> – v Merchant Center nastavte automatické pravidlá, ktoré spoja brand + product_type + farbu + veľkosť do jedného titlu</li>
+    <li><strong>Search term report ako zdroj</strong> – pravidelne kontrolujte, na aké dotazy sa vaše produkty zobrazujú, a podľa toho iterujte titles</li>
+  </ol>
+
+  <figure>
+    <img src="/blog/optimalizacia-google-merchant-center-a-shopping-feedu-2026/diagram_title_optimalizacia.webp" alt="Porovnanie optimalizovaného a neoptimalizovaného produktového názvu vo feede s Google Shopping reklamou" loading="lazy" width="1200" height="675">
+    <figcaption>Príklad pred a po optimalizácii product title</figcaption>
+  </figure>
+
+  <h2 id="ai-a-automatizacia-descriptions">AI a automatizácia product description vo feede</h2>
+
+  <p>Rok 2026 priniesol zásadný posun – produktový feed už nie je len „technický súbor" pre Merchant Center. Je to primárny spôsob, akým komunikujete s Google AI. A quality description je súčasťou tejto komunikácie.</p>
+
+  <h3>Prečo Google potrebuje kvalitné popisy</h3>
+
+  <p>Google používa product descriptions na:</p>
+  <ul>
+    <li><strong>Lepšie pochopenie kontextu</strong> produktu (nad rámec toho, čo vyplýva z titlu)</li>
+    <li><strong>Priradenie k long-tail vyhľadávaniam</strong> – detailný popis zachytáva špecifické dotazy</li>
+    <li><strong>AI Overviews a Gemini</strong> – tieto systémy čerpajú z opisu produktu pri generovaní odporúčaní</li>
+    <li><strong>Free listings</strong> – dobre napísaný popis zlepšuje ranking v organických produktových výpisoch</li>
+  </ul>
+
+  <p>Mnohé e-shopy majú v description buď prázdne pole, alebo generický text skopírovaný od výrobcu. To je premrhaná príležitosť.</p>
+
+  <h3>Ako využiť AI na dopĺňanie descriptions</h3>
+
+  <p>V Starbomedia automatizovane pomocou AI dopĺňame description vo feede, vďaka čomu Google Ads získava väčší kontext o produktoch. Funguje to tak:</p>
+
+  <ol>
+    <li><strong>Vstupné dáta</strong> – AI nástroj dostane product title, kategóriu, technické parametre a existujúce atribúty</li>
+    <li><strong>Generovanie</strong> – na základe týchto dát vytvorí unikátny, informatívny popis v slovenčine</li>
+    <li><strong>Kontrola kvality</strong> – vygenerované texty kontrolujeme pred nasadením do feedu</li>
+    <li><strong>Iterácia</strong> – na základe výkonu (CTR, konverzie) texty priebežne vylepšujeme</li>
+  </ol>
+
+  <p>Google sám ponúka nástroj <strong>FeedGen</strong> – open-source riešenie na optimalizáciu shopping feedov pomocou generatívnej AI. Umožňuje automatizovane surfacovať quality issues a vyplniť chýbajúce atribúty. A nové <strong>Product Studio</strong> (zatiaľ v ALPHA) sľubuje generovanie a optimalizáciu titles aj descriptions priamo v Merchant Center.</p>
+
+  <p>Dôležité upozornenie: AI je výborný asistent, nie autopilot. Vygenerované texty vždy kontrolujte – najmä pri produktoch v regulovaných kategóriách (zdravie, bezpečnosť, elektroinštalácia). Ľudský dohľad zostáva nevyhnutný pre zachovanie brand voice a policy compliance.</p>
+
+  <p>Viac o tom, ako Google pracuje s AI pri reklamách a odporúčaniach, nájdete v <a href="https://support.google.com/merchants/answer/7052112" title="Google Merchant Center Help – Product data specification" target="_blank" rel="noopener noreferrer">dokumentácii Google Merchant Center Help</a>.</p>
+
+  <h2 id="conversational-attributes">Conversational attributes – nové AI atribúty z Google Marketing Live 2026</h2>
+
+  <p>Toto je najdôležitejšia novinka, ktorá vo feede pribudla od jari 2026. Na <strong>Google Marketing Live 20. mája 2026</strong> Google predstavil <strong>conversational attributes</strong> – šesť nových voliteľných atribútov produktového feedu, navrhnutých priamo pre AI vyhľadávanie. Slovami Google majú obchodníkom pomôcť „aktualizovať produktové popisy tak, aby zodpovedali konverzačnejšiemu spôsobu, akým ľudia dnes vyhľadávajú".</p>
+
+  <p>Predstavte si to takto. Keď sa zákazník v AI Mode vo vyhľadávaní alebo v Gemini opýta „má tento vrták v balení batériu?" alebo „aký je váš najpredávanejší stan pre dve osoby?", Google hľadá odpoveď práve v týchto štruktúrovaných atribútoch. Ak ich nemáte vyplnené, AI si odpoveď domyslí z popisu – alebo ju neposkytne vôbec. V oboch prípadoch strácate kontrolu nad tým, čo sa o vašom produkte povie.</p>
+
+  <p>Štyri veci, ktoré treba vedieť hneď na úvod:</p>
+  <ul>
+    <li><strong>Sú úplne voliteľné a neovplyvňujú schválenie produktov.</strong> Ak v atribúte spravíte chybu, Google ho jednoducho ignoruje – produkt nezamietne. Riziko nasadenia je teda nulové.</li>
+    <li><strong>Nasadzujú sa cez supplemental feed</strong> (doplnkový zdroj dát – TSV, XML alebo Google Sheet) alebo cez <strong>Merchant API.</strong> Hlavný feed prepisovať nemusíte.</li>
+    <li><strong>Nie je potrebné duplikovať dáta</strong>, ktoré už máte v atribútoch <code>description</code>, <code>product_highlight</code> alebo <code>product_detail</code>.</li>
+    <li><strong>Rolujú sa globálne</strong> – takže ich na rozdiel od reportu AI Performance Insights (viac o ňom nižšie) viete vyplniť aj na slovenskom a českom feede už teraz.</li>
+  </ul>
+
+  <h3>Šesť conversational atribútov v prehľade</h3>
+
+  <table>
+    <thead>
+      <tr><th>Atribút</th><th>Čo robí</th><th>Limit</th><th>Priorita</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>question_and_answer</code></td><td>Vopred pripravené otázky a odpovede o produkte, ktoré vie AI odcitovať</td><td>až 30 párov, 10 000 znakov spolu</td><td><strong>Najvyššia</strong></td></tr>
+      <tr><td><code>popularity_rank</code></td><td>Percentil popularity produktu (0–100) pre dotazy typu „najpredávanejší"</td><td>desatinné číslo 0,0–100,0</td><td>Vysoká</td></tr>
+      <tr><td><code>variant_option</code></td><td>Vlastnosti variantu nad rámec štandardných (úložisko, šírka, rám...)</td><td>až 30 párov</td><td>Vysoká</td></tr>
+      <tr><td><code>item_group_title</code></td><td>Spoločný názov pre skupinu variantov jedného produktu</td><td>max 150 znakov</td><td>Vysoká</td></tr>
+      <tr><td><code>related_product</code></td><td>Vzťahy medzi produktmi (príslušenstvo, náhrada, „často kupované spolu")</td><td>až 30 vzťahov</td><td>Stredná</td></tr>
+      <tr><td><code>document_link</code></td><td>Odkazy na PDF (manuály, návody, špecifikácie)</td><td>až 5 PDF, 50 MB/súbor</td><td>Podľa kategórie</td></tr>
+    </tbody>
+  </table>
+
+  <figure>
+    <img src="/blog/optimalizacia-google-merchant-center-a-shopping-feedu-2026/infografika_conversational_attributes.webp" alt="Infografika šiestich conversational attributes v Google Merchant Center pre AI Mode a Gemini – question_and_answer, popularity_rank, variant_option, item_group_title, related_product, document_link" loading="lazy" width="1200" height="675">
+    <figcaption>Šesť conversational attributes pre AI vyhľadávanie (Google Marketing Live, máj 2026)</figcaption>
+  </figure>
+
+  <h3>Ktoré atribúty nasadiť ako prvé</h3>
+
+  <p>Nie všetkých šesť má rovnakú návratnosť. Na základe toho, ako AI Mode pracuje s dátami, odporúčame toto poradie:</p>
+
+  <p><strong>1. <code>question_and_answer</code> – začnite tu.</strong> Atribút s najvyšším pákovým efektom. Najlepšie na ňom je, že obsah už väčšinou máte – stačí vytiahnuť FAQ z produktových stránok, časté otázky zo zákazníckej podpory alebo z chatu. Príklad pre vŕtačku: otázka „Je v balení batéria?" → odpoveď „Nie, ide o holé telo náradia. Kompatibilné s 20V MAX systémom batérií." Túto odpoveď vie AI odcitovať priamo do svojej odpovede zákazníkovi.</p>
+
+  <p><strong>2. <code>popularity_rank</code> – najlacnejšie na výpočet.</strong> AI nemá ako zistiť, čo je váš bestseller, ak mu to nepoviete. Percentil si definujete sami (napríklad podľa predajov za posledných 30 dní): 95,5 znamená top 4,5 % katalógu, 12,3 dlhý chvost. Odomyká dotazy typu „aký je váš najobľúbenejší...". Hodnotu udržiavajte aktuálnu, ideálne ju prepočítavajte aspoň raz týždenne.</p>
+
+  <p><strong>3. <code>variant_option</code> + <code>item_group_title</code> – nevyhnutné pre katalógy s variantmi.</strong> Doteraz museli AI systémy rozdiely medzi variantmi odvodzovať z názvov produktov. Teraz im ich poviete štruktúrovane (napríklad <code>display:6,1in, memory:256GB, color:moonstone</code>). <code>item_group_title</code> zasa dáva všetkým variantom jedného produktu spoločný „dáždnikový" názov, aby ich AI vedela zoskupiť.</p>
+
+  <p><strong>4. <code>related_product</code> – vysoká hodnota, vyššia údržba.</strong> Deklarujete ním vzťahy medzi produktmi. Google podporuje šesť typov: <code>accessory</code> (príslušenstvo), <code>required_part</code> (nutná súčasť), <code>often_bought_with</code> (často kupované spolu), <code>substitute</code> (náhrada), <code>part_of_set</code> (časť setu) a <code>different_brand</code>. AI to využije na návrhy „kúpte spolu" alebo „namiesto toho". Produkty identifikujete cez GTIN alebo offer ID.</p>
+
+  <p><strong>5. <code>document_link</code> – podľa kategórie.</strong> Zásadný pre elektroniku, spotrebiče, náradie a DIY, kde zákazníci riešia konkrétne parametre. Pre módu či bytové doplnky má nižšiu prioritu. Výhoda: AI vie odpovedať na detailné otázky priamo z vášho manuálu, bez toho, aby ho musela osobitne crawlovať.</p>
+
+  <p>Týchto šesť atribútov je súčasťou širšej skupiny. Google vo svojom komunitnom sprievodcovi uvádza <strong>osem feed atribútov, ktoré priamo ovplyvňujú AI Overviews</strong> – okrem nových conversational atribútov sem patrí aj osvedčený <code>product_highlight</code> (4–6 krátkych benefitov produktu) a <code>product_detail</code> (štruktúrované technické parametre). Ak ste tieto dva ešte nevyužili, sú dobrým štartom ešte pred conversational atribútmi.</p>
+
+  <blockquote>
+    <p><strong>Poznámka z praxe:</strong> Conversational attributes sú nové (máj 2026), takže zatiaľ neexistujú dlhodobé dáta o ich reálnom dopade na predaj. My v Starbomedia k nim pristupujeme rovnako ako ku každej feed zmene – nasadzujeme postupne, začíname atribútom <code>question_and_answer</code> na TOP produktoch a meriame, čo sa deje. Logika je však priamočiara: čím viac štruktúrovaného kontextu Google dáte, tým menej si AI o vašom produkte domýšľa.</p>
+  </blockquote>
+
+  <h3>AI Performance Insights – nový report (zatiaľ nie pre SK)</h3>
+
+  <p>Spolu s conversational atribútmi Google na Google Marketing Live oznámil aj <strong>AI Performance Insights</strong> – nový report priamo v Merchant Center. Má vám ukázať, „ako si vaša značka vedie na AI plochách, porovnaním vášho share of voice voči podobným značkám".</p>
+
+  <p>Report sa skladá zo štyroch častí:</p>
+  <ul>
+    <li><strong>Share of voice</strong> – váš podiel hlasu v AI odpovediach v porovnaní s podobnými konkurentmi</li>
+    <li><strong>Shopping funnel</strong> – výkon naprieč fázami discovery → evaluation → purchase</li>
+    <li><strong>Product term insights</strong> – populárne vyhľadávacie výrazy a váš podiel pri nich</li>
+    <li><strong>Product attributes insights</strong> – skóre kompletnosti atribútov vášho feedu</li>
+  </ul>
+
+  <p><strong>Buďme úprimní k dostupnosti:</strong> AI Performance Insights sa podľa Google rozbieha najskôr v <strong>Austrálii, Kanade, Indii, na Novom Zélande a v USA</strong> – „v najbližších mesiacoch". Pre slovenský a český trh teda zatiaľ <strong>dostupný nie je</strong> a Google neoznámil presný dátum rozšírenia. Conversational attributes ako také sa však rolujú globálne, takže ich vyplniť môžete už teraz – len report o ich výkone u nás ešte chvíľu neuvidíte.</p>
+
+  <h2 id="custom-labels">Custom labels – tajná zbraň pre štruktúru kampaní</h2>
+
+  <p>Custom labels sú jedným z najmenej využívaných a zároveň najsilnejších nástrojov v Merchant Center. Ak vaše kampane nevyužívajú custom labels, pravdepodobne zbytočne míňate rozpočet na nízkomaržové produkty.</p>
+
+  <h3>Čo sú custom labels a ako ich nastaviť</h3>
+
+  <p>Google Merchant Center ponúka 5 custom labels (<code>custom_label_0</code> až <code>custom_label_4</code>). Každý label môže obsahovať ľubovoľný text – je to vaša vlastná taxonomia na tagovanie produktov podľa akéhokoľvek kritéria.</p>
+
+  <p>Na rozdiel od povinných atribútov, custom labels nemajú predpísaný formát. Môžete v nich mať čokoľvek – od „bestseller" po „sezóna_leto_2026" alebo „margin_high".</p>
+
+  <p>Custom labels sú pre nás kľúčové pri štruktúre kampaní a ich škálovaní. V praxi ich najčastejšie používame takto:</p>
+
+  <table>
+    <thead>
+      <tr><th>Label</th><th>Účel</th><th>Príklady hodnôt</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>custom_label_0</code></td><td>Maržový tier</td><td>high_margin, medium_margin, low_margin</td></tr>
+      <tr><td><code>custom_label_1</code></td><td>Sezónnosť</td><td>evergreen, spring, summer, winter, christmas</td></tr>
+      <tr><td><code>custom_label_2</code></td><td>Výkonnosť</td><td>bestseller, average, underperformer, new</td></tr>
+      <tr><td><code>custom_label_3</code></td><td>Cenové pásmo</td><td>under_10, 10_to_50, 50_to_100, over_100</td></tr>
+      <tr><td><code>custom_label_4</code></td><td>Promo status</td><td>full_price, on_sale, clearance</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Stratégie pre škálovanie kampaní pomocou labels</h3>
+
+  <p>Keď máte custom labels nastavené, otvárajú sa vám možnosti, ktoré bez nich jednoducho nemáte:</p>
+
+  <p><strong>1. Segmentácia Performance Max kampaní podľa marže</strong></p>
+  <ul>
+    <li>Vytvorte samostatné asset skupiny pre high-margin a low-margin produkty</li>
+    <li>Na high-margin produkty nastavte agresívnejší bidding a vyšší rozpočet</li>
+    <li>Low-margin produkty buď obmedzíte, alebo im nastavíte prísnejší ROAS target</li>
+  </ul>
+
+  <p><strong>2. Sezónne kampane</strong></p>
+  <ul>
+    <li>Produkty označené ako „christmas" alebo „summer" aktivujte/deaktivujte podľa sezóny jedným kliknutím</li>
+    <li>Nemusíte manuálne prechádzať katalóg</li>
+  </ul>
+
+  <p><strong>3. Testovanie nových produktov</strong></p>
+  <ul>
+    <li>Label „new" na čerstvo pridané produkty → samostatná kampaň s discovery rozpočtom</li>
+    <li>Po 30 dňoch vyhodnotíte a preradíte do správneho výkonnostného tieru</li>
+  </ul>
+
+  <p><strong>4. Výpredaje a akcie</strong></p>
+  <ul>
+    <li>Produkty s labelom „clearance" → agresívnejší bidding pre rýchlejší predaj</li>
+    <li>Kombinácia s <code>sale_price</code> atribútom pre zobrazenie zľavového badge</li>
+  </ul>
+
+  <h2 id="nakupne-ceny-a-sledovanie-marze">Nákupné ceny a sledovanie marže v Google Ads</h2>
+
+  <p>Väčšina e-shopov optimalizuje kampane na ROAS (Return on Ad Spend). Problém? ROAS nehovorí nič o skutočnom zisku. Produkt s ROAS 500 % a maržou 5 % vám zarába menej ako produkt s ROAS 300 % a maržou 40 %.</p>
+
+  <p>Riešenie existuje priamo v Merchant Center – a prekvapivo málo inzerentov ho využíva.</p>
+
+  <h3>Nastavenie cost_of_goods_sold atribútu</h3>
+
+  <p>Atribút <code>cost_of_goods_sold</code> umožňuje pridať nákupnú cenu ku každému produktu vo feede. Musí byť zadaný ako peňažná hodnota (napr. „5.20 EUR"), nie ako percento.</p>
+
+  <p>Najjednoduchší spôsob implementácie:</p>
+  <ol>
+    <li><strong>Supplemental feed</strong> – vytvorte Google Sheet s dvoma stĺpcami: <code>id</code> a <code>cost_of_goods_sold</code></li>
+    <li><strong>Export z ERP</strong> – väčšina e-shopových systémov a ERP riešení dokáže tieto dáta exportovať</li>
+    <li><strong>Pridanie do Merchant Center</strong> – nahrajte ako supplemental feed, ktorý doplní váš hlavný feed</li>
+  </ol>
+
+  <p>Vďaka vyplneniu nákupných cien v Google Ads môžete sledovať údaje o marži jednotlivých objednávok, nielen ich hodnote. To je zásadná zmena v tom, ako sa na výkon kampaní pozerať.</p>
+
+  <h3>Reporting marže na úrovni objednávok</h3>
+
+  <p>Po nasadení COGS dát a implementácii cart data reportingu v GTAG získate v Google Ads nové metriky:</p>
+
+  <ul>
+    <li><strong>Gross profit</strong> – hrubý zisk po odpočítaní nákupnej ceny</li>
+    <li><strong>Product gross profit</strong> – zisk na úrovni jednotlivých produktov</li>
+    <li><strong>COGS metriky</strong> – náklady na predaný tovar</li>
+  </ul>
+
+  <p>Tieto metriky vám umožnia prejsť z ROAS na <a href="https://starbomedia.sk/preco-roas-nestaci-poas-vam-odhali-skutocny-zisk-z-reklamy/" title="Prečo ROAS nestačí – POAS vám odhalí skutočný zisk z reklamy">POAS (Profit on Ad Spend)</a> – čo je optimalizácia na skutočný zisk, nie len na obrat. O tom, prečo ROAS nestačí a ako POAS funguje, sme písali v samostatnom článku.</p>
+
+  <h3>Tri úrovne margin trackingu</h3>
+
+  <p>Na základe našich skúseností odporúčame postupný prístup:</p>
+
+  <table>
+    <thead>
+      <tr><th>Úroveň</th><th>Čo implementovať</th><th>Pre koho</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Basic</strong></td><td>Custom labels s margin tiermi (high/medium/low)</td><td>Každý e-shop</td></tr>
+      <tr><td><strong>Intermediate</strong></td><td>COGS v feede + cart data reporting v GTAG</td><td>E-shopy s 500+ produktmi</td></tr>
+      <tr><td><strong>Advanced</strong></td><td>Custom margin tracking s dedicated pixel</td><td>Veľké e-shopy s komplexnou maržovou štruktúrou</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="caste-chyby-v-merchant-center">Časté chyby v Merchant Center a ako ich riešiť</h2>
+
+  <p>Aj ten najlepšie optimalizovaný feed je zbytočný, ak sú vaše produkty zamietnuté. Tu sú najčastejšie problémy, s ktorými sa stretávame.</p>
+
+  <h3>Najčastejšie zamietnutia produktov</h3>
+
+  <ol>
+    <li><strong>Chýbajúce alebo nesprávne identifikátory</strong> – chýbajúci GTIN/EAN pre značkové produkty je jeden z najčastejších dôvodov zamietnutia.</li>
+    <li><strong>Nesúlad ceny</strong> – cena vo feede sa nezhoduje s cenou na landing page. Google to aktívne kontroluje.</li>
+    <li><strong>Nedostupný produkt</strong> – feed hovorí „in stock", ale produkt nie je na stránke dostupný.</li>
+    <li><strong>Nedostatočná kvalita obrázkov</strong> – príliš malé obrázky, obrázky s vodoznakom alebo propagačným textom.</li>
+    <li><strong>Porušenie policy</strong> – propagačný text v titlech, zavádzajúce informácie, zakázané kategórie.</li>
+    <li><strong>Chýbajúce povinné atribúty</strong> – neúplný feed s chýbajúcou cenou, dostupnosťou alebo odkazom.</li>
+  </ol>
+
+  <h3>Nové bolesti roka 2026</h3>
+
+  <p>Okrem klasických problémov sa v roku 2026 objavili špecifické výzvy, na ktoré narazíte:</p>
+
+  <ul>
+    <li><strong>AI Overviews / Gemini mismatch</strong> – produkt sa zobrazí v AI odpovedi, ale nie v platených reklamách (alebo naopak). Dôvod je väčšinou nesúlad medzi feedom a tým, čo Google AI extrahuje z vašej produktovej stránky. Riešenie: zabezpečte konzistenciu dát medzi feedom a webom.</li>
+    <li><strong>Problémy s local inventory po multi-channel zmene</strong> – od marca 2026 platí nové spracovanie multi-channel produktov. Ak predávate online aj offline, musíte mať samostatné ID pre každý kanál. Mnohé e-shopy na to neboli pripravené a prišli o zobrazovanie lokálneho inventára.</li>
+    <li><strong>Policy zmena pre predplatné (recurring billing)</strong> – od marca 2026 sa sprísňujú pravidlá pre produkty s opakovanou fakturáciou. Ak predávate predplatné služby alebo produkty, skontrolujte si aktuálne požiadavky.</li>
+    <li><strong>Rastúce požiadavky na video assety</strong> – PMax kampane výrazne uprednostňujú kampane s videom. Bez videa Google generuje automatické video assety z vašich obrázkov – a kvalita je väčšinou podpriemerná.</li>
+  </ul>
+
+  <h3>Diagnostika a oprava feedu</h3>
+
+  <p>Merchant Center poskytuje detailnú diagnostiku v sekcii <strong>Products → Diagnostics</strong>. Odporúčame:</p>
+
+  <ul>
+    <li><strong>Denná kontrola</strong> zamietnutých produktov, minimálne pre TOP produkty</li>
+    <li><strong>Nastavenie notifikácií</strong> v Merchant Center na okamžité upozornenie pri problémoch</li>
+    <li><strong>Automatizované monitorovanie</strong> – ak spravujete viacero účtov, investujte do feed monitorovacieho nástroja</li>
+    <li><strong>Feed rules</strong> na automatickú opravu opakujúcich sa problémov</li>
+  </ul>
+
+  <p><strong>Poučenie z februára 2026:</strong> V období od 4. do 21. februára 2026 zažil Merchant Center 17-dňový výpadok feed funkcionalít, ktorý zasiahol tisíce retailerov. Nebola to katastrofa, ale bola to nepríjemná skúsenosť – najmä pre obchodníkov silne závislých na jednom kanáli. Tí, ktorí mali diverzifikované zdroje tržieb, situáciu zvládli bez väčších problémov. Poučenie: nepodceňujte viackanálovú distribúciu.</p>
+
+  <h2 id="pokrocile-strategie-2026">Pokročilé stratégie pre rok 2026</h2>
+
+  <h3>Novinky v Merchant Center Next</h3>
+
+  <p>Rok 2026 priniesol niekoľko zmien, ktoré menia spôsob práce s Merchant Center:</p>
+
+  <ul>
+    <li><strong>Migrácia na Merchant API</strong> – ak vaše riešenie stále používa Content API for Shopping, máte čas do 18. augusta 2026 na migráciu. Nové API má lepšiu architektúru, error handling a výkon.</li>
+    <li><strong>Product Studio (ALPHA)</strong> – generatívna AI na tvorbu a optimalizáciu titleov a descriptions priamo v Merchant Center. Zatiaľ v alfa verzii a buďme úprimní – výsledky sú zatiaľ priemerné. Pre generovanie produktových obrázkov väčšina e-shopov stále dosahuje lepšie výsledky s vlastnými fotkami, Canvou alebo Midjourney. Sledujte vývoj, ale nespoliehajte sa na to ako na hlavné riešenie.</li>
+    <li><strong>Marketing Content Usage</strong> – nová funkcia, ktorá automaticky opt-uje merchantov do programu, v ktorom Google extrahuje promočný obsah z marketingových emailov na zvýšenie viditeľnosti.</li>
+    <li><strong>Text Guidelines</strong> – možnosť určiť, ako AI-generované textové assety reprezentujú jazyk a tón vašej značky.</li>
+  </ul>
+
+  <h3>Performance Max – dominantný formát 2026</h3>
+
+  <p>Povedzme si to priamo: v roku 2026 je Performance Max primárny (a pre väčšinu e-shopov jediný relevantný) formát pre shopping reklamy. Klasické Shopping kampane stále existujú, ale Google ich aktívne obmedzuje a presúva inzerentov na PMax. Ak ešte prevádzkujete len štandardné Shopping kampane, je čas prejsť.</p>
+
+  <p>Prečo je feed pre PMax ešte dôležitejší ako pre klasický Shopping:</p>
+
+  <ul>
+    <li><strong>PMax = multi-formát</strong> – vaše produkty sa zobrazujú nielen v Shopping výsledkoch, ale aj na YouTube, Discover, Gmaile a Display sieti. Kvalita feedu ovplyvňuje všetky tieto placements.</li>
+    <li><strong>Value-based bidding</strong> – s COGS dátami môže Google optimalizovať na profit, nie len na konverznú hodnotu. To je obrovská výhoda oproti plochému ROAS cieľu.</li>
+    <li><strong>Asset skupiny podľa custom labels</strong> – segmentujte produkty do rôznych asset skupín pre lepšiu kontrolu nad tým, ktoré produkty dostávajú aký rozpočet.</li>
+    <li><strong>Rastúce požiadavky na video assety</strong> – PMax čoraz viac preferuje kampane s video assetmi. Ak video nedodáte, Google si ho vygeneruje automaticky – a výsledok býva... diskutabilný. Investícia do krátkych produktových videí (aj jednoduchých) sa v roku 2026 začína výrazne vyplácať.</li>
+  </ul>
+
+  <p>O revolúcii v Google reklamách pomocou AI sme písali aj v článku o <a href="https://starbomedia.sk/ai-max-pre-vyhladavanie-revolucia-v-google-reklamach-ktora-cita-myslienky-vasich-zakaznikov/" title="AI Max pre vyhľadávanie – revolúcia v Google reklamách">AI Max pre vyhľadávanie</a>, kde vysvetľujeme, ako AI mení spôsob, akým Google priraduje reklamy k vyhľadávaniam.</p>
+
+  <h3>Free listings a ich potenciál</h3>
+
+  <p>Free listings sú jednou z najmenej využívaných funkcií Merchant Center. Vaše produkty sa môžu zobrazovať organicky – bez platenia za klik – na Google Search, Maps, YouTube, Google Images a Google Lens.</p>
+
+  <p>Prečo ich využiť:</p>
+  <ul>
+    <li>Google Shopping zachytáva približne tretinu retailových vyhľadávaní</li>
+    <li>Shopping výpisy generujú 2–3-krát viac revenue per session ako štandardné organické výsledky</li>
+    <li>Lokálny inventár prináša priemerne 16 % viac impresií v organických shopping ponukách</li>
+    <li>Optimalizácia Store Quality (rýchlosť doručenia, return policies, platobné možnosti) môže priniesť Top Quality Store badge</li>
+  </ul>
+
+  <p>Pre maximalizáciu výkonu free listings odporúčame:</p>
+  <ul>
+    <li>Kompletný feed so všetkými dostupnými atribútmi</li>
+    <li>Kvalitné produktové recenzie</li>
+    <li>Presné informácie o dodaní a vrátení tovaru</li>
+    <li>Pravidelný feed refresh (ideálne niekoľkokrát denne)</li>
+  </ul>
+
+  <p>Súvisiaci koncept je aj <a href="https://starbomedia.sk/universal-commerce-protocol-ucp-od-google-co-to-znamena-pre-seo-a-e-commerce-v-roku-2026/" title="Universal Commerce Protocol (UCP) od Google">Universal Commerce Protocol (UCP)</a>, o ktorom sme písali v samostatnom článku – nový štandard od Google, ktorý ešte viac prepája organickú a platenú viditeľnosť produktov.</p>
+
+  <h3>Feed v ére AI asistentov</h3>
+
+  <p>V roku 2026 váš produktový feed nekomunikuje len s Google Merchant Center. Čoraz viac slúži ako zdroj dát pre AI asistentov:</p>
+
+  <ul>
+    <li><strong>AI Mode vo vyhľadávaní Google</strong> – nová plocha, ktorá filtruje produkty priamo podľa štruktúrovaných atribútov</li>
+    <li><strong>Google Gemini</strong> a <strong>AI Overviews</strong> čerpajú z feedu pri generovaní produktových odporúčaní</li>
+    <li><strong>ChatGPT Shopping</strong> má vlastnú Product Feed Specification, ktorá ide nad rámec požiadaviek Merchant Center</li>
+    <li><strong>Google Lens</strong> využíva obrázky a dáta z feedu pri vizuálnom vyhľadávaní</li>
+  </ul>
+
+  <p>Práve <strong>AI Mode</strong> mení nároky na feed najviac. Na rozdiel od klasického vyhľadávania filtruje produkty priamo podľa štruktúrovaných atribútov: <code>color</code>, <code>size</code>, <code>material</code>, <code>pattern</code>, <code>age_group</code> a <code>gender</code>. Ak tieto polia necháte prázdne, váš produkt z AI filtrovania jednoducho vypadne. Rovnako kľúčový je správny <strong>GTIN</strong> – je to jeden z najsilnejších signálov, podľa ktorých AI Mode zoskupuje ponuky viacerých predajcov do jedného produktového klastra. Chybný, chýbajúci alebo vymyslený GTIN vás z tohto klastra vyradí.</p>
+
+  <p>Aj pri dostupnosti platí, že AI ocení presnosť. Namiesto holého <code>in stock</code> / <code>out of stock</code> pomáhajú presnejšie stavy ako <code>max_handling_time</code> (maximálny čas spracovania objednávky) či <code>availability_date</code> pri produktoch na objednávku.</p>
+
+  <p>Na túto vrstvu potom nadväzujú <strong>conversational attributes</strong> (samostatná kapitola vyššie), ktoré AI dávajú odpovede na konkrétne otázky zákazníkov. O tom, ako AI Overviews menia celé vyhľadávanie a čo to znamená pre viditeľnosť e-shopov, sme písali v <a href="https://starbomedia.sk/ai-overviews-kompletny-sprievodca/" title="AI Overviews – kompletný sprievodca">kompletnom sprievodcovi po AI Overviews</a>.</p>
+
+  <p>Obchody, ktoré majú kompletné a presné dáta vo feede, majú výrazne vyššiu šancu byť odporúčané AI systémami. Každý chýbajúci atribút je potenciálna strata predaja – AI systémy ho jednoducho označia ako „neznámy" a odporučia konkurenta s lepšími dátami.</p>
+
+  <figure>
+    <img src="/blog/optimalizacia-google-merchant-center-a-shopping-feedu-2026/infografika_feed_ekosystem_2026.webp" alt="Infografika zobrazujúca ekosystém produktového feedu v roku 2026" loading="lazy" width="1200" height="675">
+    <figcaption>Ekosystém produktového feedu v roku 2026</figcaption>
+  </figure>
+
+  <h2 id="neriskujte-zavislost">Neriskujte závislosť na jednom kanáli</h2>
+
+  <p>Toto je pravdepodobne najdôležitejšia rada v celom článku. Seriózne e-shopy v roku 2026 limitujú podiel Google Shopping na <strong>35–45 % celkových tržieb</strong>. Nie preto, že by Shopping nefungoval – funguje výborne. Ale závislosť na jednom kanáli je podnikateľské riziko, ktoré si nemôžete dovoliť.</p>
+
+  <p>Dôvody sú pragmatické:</p>
+  <ul>
+    <li><strong>Výpadky sa dejú</strong> – februárový 17-dňový incident ukázal, že ani Google nie je imúnny voči technickým problémom. Ak máte 70 % tržieb z jedného kanálu a ten kanál vypadne, máte existenčný problém.</li>
+    <li><strong>Policy zmeny prichádzajú bez varovania</strong> – Google pravidelne mení pravidlá a produkty sa zamietajú zo dňa na deň. Diverzifikovaný e-shop to prežije, závislý nie.</li>
+    <li><strong>Bidding volatilita</strong> – CPC v Shopping kampaniach kolíše podľa sezóny, konkurencie a algoritmických zmien. Viacero kanálov vám dáva vyjednávaciu silu.</li>
+    <li><strong>AI mení distribúciu kliknutí</strong> – s rastúcim podielom AI Overviews a zero-click odpovedí sa mení, koľko používateľov sa vôbec preklikne na Shopping výsledky.</li>
+  </ul>
+
+  <p>Kam diverzifikovať:</p>
+  <ul>
+    <li><strong>Heureka / Pricemania</strong> – na slovenskom trhu stále relevantné porovnávače</li>
+    <li><strong>Meta Shopping</strong> – Facebook a Instagram Shops s katalógom</li>
+    <li><strong>Email marketing</strong> – vlastný kanál, na ktorom nie ste závislí od platformy</li>
+    <li><strong>SEO a organická návštevnosť</strong> – dlhodobá investícia s najnižšími nákladmi na akvizíciu</li>
+    <li><strong>Marketplace (Amazon, Allegro)</strong> – ak to pre vašu kategóriu dáva zmysel</li>
+  </ul>
+
+  <p>Optimalizujte Google Shopping feed naplno – ale <strong>nikdy z neho nerobte jediný pilier</strong> vášho e-commerce biznisu.</p>
+
+  <section id="faq">
+    <h2>Často kladené otázky</h2>
+
+    <details>
+      <summary>Je Google Merchant Center zadarmo?</summary>
+      <p>Áno, vytvorenie účtu a zobrazovanie produktov v bezplatných výpisoch je úplne zadarmo. Platíte len za kliknutia na Shopping reklamy cez Google Ads.</p>
+    </details>
+
+    <details>
+      <summary>Ako často by som mal aktualizovať feed?</summary>
+      <p>Minimálne raz denne. Pre e-shopy s často sa meniacimi cenami alebo dostupnosťou odporúčame aktualizáciu niekoľkokrát denne. High-velocity produkty by mali mať sync interval 15–30 minút.</p>
+    </details>
+
+    <details>
+      <summary>Koľko znakov môže mať product title?</summary>
+      <p>Google povoluje max 150 znakov, ale v shopping reklamách sa zobrazuje len cca 70 znakov. Front-loadujte najdôležitejšie kľúčové slová.</p>
+    </details>
+
+    <details>
+      <summary>Čo sú custom labels a koľko ich môžem mať?</summary>
+      <p>Custom labels (custom_label_0 až custom_label_4) sú voliteľné atribúty, do ktorých si môžete zapísať akúkoľvek hodnotu. Máte k dispozícii 5 labelov, čo dáva obrovskú flexibilitu pri segmentácii kampaní.</p>
+    </details>
+
+    <details>
+      <summary>Oplatí sa vyplniť cost_of_goods_sold?</summary>
+      <p>Jednoznačne áno. Umožňuje to sledovanie skutočného zisku (nie len obratu) priamo v Google Ads a optimalizáciu kampaní na profit. Je to jeden z najrýchlejších spôsobov, ako zlepšiť ziskovosť kampaní.</p>
+    </details>
+
+    <details>
+      <summary>Aký je rozdiel medzi ROAS a POAS?</summary>
+      <p>ROAS (Return on Ad Spend) meria pomer obratu k nákladom na reklamu. POAS (Profit on Ad Spend) meria pomer skutočného zisku k nákladom. POAS je presnejšia metrika, pretože zohľadňuje maržu produktov.</p>
+    </details>
+
+    <details>
+      <summary>Čo robiť, keď sú produkty zamietnuté?</summary>
+      <p>Skontrolujte sekciu Products → Diagnostics v Merchant Center. Najčastejšie dôvody sú: chýbajúce GTIN, nesúlad ceny medzi feedom a webom, nedostupné produkty, alebo porušenie obsahových politík.</p>
+    </details>
+
+    <details>
+      <summary>Čo sú conversational attributes a oplatí sa ich vyplniť?</summary>
+      <p>Conversational attributes je šesť nových voliteľných atribútov feedu, ktoré Google predstavil na Google Marketing Live v máji 2026: <code>question_and_answer</code>, <code>popularity_rank</code>, <code>variant_option</code>, <code>item_group_title</code>, <code>related_product</code> a <code>document_link</code>. Slúžia na to, aby AI plochy ako AI Mode a Gemini vedeli o vašich produktoch odpovedať na konkrétne otázky zákazníkov. Sú voliteľné, neovplyvňujú schválenie produktov a nasadzujú sa cez doplnkový feed alebo Merchant API. Začať odporúčame atribútom <code>question_and_answer</code> – obsah preň väčšinou už máte v produktových FAQ.</p>
+    </details>
+
+    <details>
+      <summary>Sú nové AI atribúty a report AI Performance Insights dostupné na Slovensku?</summary>
+      <p>Conversational attributes sa rolujú globálne, takže ich viete vyplniť aj na slovenskom a českom feede. Report AI Performance Insights sa však spočiatku spúšťa len v Austrálii, Kanade, Indii, na Novom Zélande a v USA – pre SK a CZ zatiaľ dostupný nie je a Google neoznámil presný dátum rozšírenia.</p>
+    </details>
+
+    <details>
+      <summary>Funguje Google Shopping aj pre malé e-shopy?</summary>
+      <p>Áno. Vďaka free listings sa vaše produkty môžu zobrazovať organicky bez akéhokoľvek reklamného rozpočtu. A pre platené kampane nie je minimálny rozpočet – začať môžete aj s menšou sumou.</p>
+    </details>
+  </section>
+
+  <p><em>Ak si nie ste istí, ako na optimalizáciu feedu vo vašom e-shope, <a href="https://starbomedia.sk" title="Starbomedia – digitálna agentúra">ozvite sa nám</a>. V Starbomedia sa systematicky venujeme vylepšovaniu shopping feedov – je to základ úspešných shopping kampaní.</em></p>
+
+</article>
