@@ -1,0 +1,377 @@
+<article class="ucp-article" itemscope itemtype="https://schema.org/Article">
+  <header>
+    <p><time datetime="2026-07-01" itemprop="datePublished">1. júla 2026</time> · Čas čítania: 15 min</p>
+  </header>
+
+  <nav aria-label="Obsah článku">
+    <strong>Obsah</strong>
+    <ol>
+      <li><a href="#tldr">TL;DR – Kľúčové body článku</a></li>
+      <li><a href="#co-je-quality-score">Čo je Quality Score v Google Ads</a></li>
+      <li><a href="#preco-je-dolezity">Prečo je Quality Score dôležitý aj v roku 2026</a></li>
+      <li><a href="#ako-skontrolovat">Ako skontrolovať a sledovať Quality Score</a></li>
+      <li><a href="#ako-zlepsit">7 overených spôsobov, ako zlepšiť Quality Score</a></li>
+      <li><a href="#najcastejsie-chyby">Najčastejšie chyby, ktoré znižujú Quality Score</a></li>
+      <li><a href="#nove-funkcie-2026">Quality Score a nové funkcie Google Ads v roku 2026</a></li>
+      <li><a href="#faq">Často kladené otázky</a></li>
+    </ol>
+  </nav>
+
+  <p>Ak spravujete Google Ads kampane alebo investujete do PPC reklamy, pravdepodobne ste sa stretli s pojmom Quality Score. Možno ste si všimli, že sa o ňom v posledných rokoch hovorí menej. Automatizácia, Smart Bidding a AI Max kampane prevzali veľkú časť optimalizácie. Znamená to, že Quality Score môžete ignorovať?</p>
+
+  <p>Nie. A v tomto článku vám ukážeme prečo.</p>
+
+  <p>V Starbo Media denne pracujeme s Google Ads účtami rôznych klientov. Aj keď automatizácia uľahčila mnohé procesy, skóre kvality zostáva jednou z metrík, ktoré nám pomáhajú udržiavať náklady na optimálnej úrovni. Túto metriku si sťahujeme automatizovane do Google Sheets a máme nastavené alerty, ktoré nás okamžite upozornia na pokles. Práve vďaka tomu dokážeme reagovať skôr, než nízke QS začne „žrať" rozpočet.</p>
+
+  <section id="tldr">
+    <h2>TL;DR – Kľúčové body článku</h2>
+    <ul>
+      <li><strong>Quality Score</strong> je diagnostický nástroj Google Ads na škále 1–10. Hodnotí kvalitu reklám na úrovni kľúčového slova.</li>
+      <li>Skladá sa z <strong>troch komponentov:</strong> expected CTR, ad relevance a landing page experience.</li>
+      <li>Google explicitne uvádza, že QS nie je priamy vstup do aukcie – ale Ad Rank počíta s tými istými faktormi.</li>
+      <li><strong>QS pod 5 vás stojí peniaze:</strong> QS 1 znamená až +400 % prirážku na CPC. QS 8–10 naopak prináša zľavu až 50 %.</li>
+      <li>V roku 2026 QS stráca niečo z diagnostickej hodnoty v automation-heavy účtoch, ale <strong>základné princípy zostávajú rovnaké</strong>.</li>
+      <li>Odporúčaný cieľ: <strong>QS 7/10</strong> pre non-brand kľúčové slová.</li>
+      <li>Automatizované sledovanie QS (sheets + alerty) vám ušetrí čas a peniaze.</li>
+    </ul>
+  </section>
+
+  <section id="co-je-quality-score">
+    <h2>Čo je Quality Score v Google Ads</h2>
+
+    <p>Quality Score je hodnotenie Google na škále 1 až 10, ktoré priraďuje každému kľúčovému slovu vo vašom Search účte. Jednotka je najhoršie skóre, desiatka najlepšie.</p>
+
+    <p>Dôležité je pochopiť, čo Quality Score <strong>je</strong> a čo <strong>nie je</strong>:</p>
+
+    <ul>
+      <li><strong>Je</strong> diagnostický nástroj – ukazuje, ako si vaše reklamy stoja v porovnaní s ostatnými inzerentmi.</li>
+      <li><strong>Nie je</strong> KPI, ktoré by ste mali optimalizovať za každú cenu.</li>
+      <li><strong>Nie je</strong> priamy vstup do aukcie (to Google potvrdil oficiálne).</li>
+    </ul>
+
+    <p>Ako to ale potom funguje? Google v aukcii stále hodnotí expected CTR, ad relevance a landing page experience – čo sú presne tie isté faktory, z ktorých sa Quality Score skladá. Ide teda o ten istý „recept", len podávaný v inej forme.</p>
+
+    <p>Ako to výstižne zhrnul Frederick Vallaeys, CEO Optmyzr: <em>„Quality Score isn't a cosmetic metric. It's the economic engine."</em></p>
+
+    <h3>Tri hlavné komponenty Quality Score</h3>
+
+    <p><strong>1. Expected Click-Through Rate (eCTR)</strong></p>
+
+    <p>Google odhaduje, aká je pravdepodobnosť, že používateľ klikne na vašu reklamu. Tento odhad vychádza z historických dát a porovnania s konkurenciou pre daný vyhľadávací dopyt.</p>
+
+    <p><strong>2. Ad Relevance (relevantnosť reklamy)</strong></p>
+
+    <p>Hodnotí, nakoľko váš reklamný text zodpovedá vyhľadávaciemu dopytu. Ak niekto hľadá „kancelárske stoličky" a vaša reklama propaguje „nábytok do obývačky", ad relevance bude nízka.</p>
+
+    <p><strong>3. Landing Page Experience (kvalita cieľovej stránky)</strong></p>
+
+    <p>Posudzuje, aká užitočná a relevantná je stránka, na ktorú používateľ po kliknutí príde. Google hodnotí rýchlosť načítania, mobilnú prístupnosť, relevantnosť obsahu aj celkovú navigáciu.</p>
+
+    <p>Každý z týchto komponentov je hodnotený ako <strong>Below Average</strong>, <strong>Average</strong> alebo <strong>Above Average</strong>. Google potom z kombinácie týchto hodnotení vypočíta celkové skóre 1–10.</p>
+
+    <h3>Ako Google počíta Quality Score</h3>
+
+    <p>Presný vzorec Google nezverejňuje, ale na základe mnohých analýz vieme, že:</p>
+
+    <ul>
+      <li><strong>eCTR má najväčšiu váhu</strong> – ak je váš CTR výrazne lepší ako konkurenčný priemer, QS bude vyššie.</li>
+      <li><strong>Landing Page Experience naberal na dôležitosti</strong> – najmä s príchodom AI Max, kde Google aktívne využíva obsah landing page ako signál pre matching.</li>
+      <li><strong>Ad Relevance má najmenšiu váhu</strong>, ale stále je dôležitá – predovšetkým ako indikátor správnej štruktúry ad groups.</li>
+    </ul>
+
+    <p>Zaujímavosťou je, že Google počíta QS odlišne pre rôzne regióny. Ak cielite na viaceré krajiny, Quality Score sa môže líšiť pre rovnaké kľúčové slovo v závislosti od lokality.</p>
+  </section>
+
+  <section id="preco-je-dolezity">
+    <h2>Prečo je Quality Score dôležitý aj v roku 2026</h2>
+
+    <p>Rok 2026 priniesol do Google Ads ďalšiu vlnu automatizácie. AI Max kampane sú dostupné globálne, Performance Max podľa niektorých odhadov tvorí až 62 % všetkých Google ad klikov a Smart Bidding využíva Gemini 3 s 11 novými kontextovými signálmi. V takejto ére sa logicky pýtate: má ešte zmysel sledovať Quality Score?</p>
+
+    <h3>Vplyv na cenu za klik (CPC)</h3>
+
+    <p>Tu sú čísla, ktoré hovoria jasne:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Quality Score</th>
+          <th>Vplyv na CPC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>10</td><td>−50 % (zľava)</td></tr>
+        <tr><td>8–9</td><td>−30 až −50 %</td></tr>
+        <tr><td>7</td><td>Základ (neutrálne)</td></tr>
+        <tr><td>6</td><td>+0 až +25 %</td></tr>
+        <tr><td>5</td><td>Baseline</td></tr>
+        <tr><td>4</td><td>+25 %</td></tr>
+        <tr><td>3</td><td>+67 %</td></tr>
+        <tr><td>2</td><td>+150 %</td></tr>
+        <tr><td>1</td><td>+400 %</td></tr>
+      </tbody>
+    </table>
+
+    <p>Preložme to do reálnych čísel. Ak je priemerný CPC vo vašom odvetví 2 €:</p>
+
+    <ul>
+      <li>Pri QS 8–10 platíte <strong>1 až 1,40 €</strong> za klik.</li>
+      <li>Pri QS 3 platíte <strong>3,34 €</strong> za klik.</li>
+      <li>Pri QS 1 platíte <strong>10 €</strong> za klik – päťnásobok oproti inzerentom s vysokým QS.</li>
+    </ul>
+
+    <p>V praxi to znamená, že dva inzerenti s rovnakým rozpočtom, ale rôznym Quality Score, získajú dramaticky odlišný počet klikov a konverzií. Podľa dostupných dát reklamy s QS 9–10 dosahujú CTR okolo 27 % a priemernú cenu za konverziu ~10 $. Reklamy s QS 1–2 majú CTR len 2 % a konverzia stojí ~35 $.</p>
+
+    <h3>Vplyv na Ad Rank a pozíciu reklamy</h3>
+
+    <p>Ad Rank určuje, či sa vaša reklama zobrazí a na akej pozícii. Vzorec je v zásade:</p>
+
+    <p><strong>Ad Rank = Bid × Quality (eCTR, ad relevance, landing page experience) + ďalšie faktory</strong></p>
+
+    <p>To znamená, že inzerent s vyšším Quality Score a nižším bidom môže prekonať konkurenta s vyšším bidom, ale nižšou kvalitou. Presne na tento princíp bol Quality Score navrhnutý – aby aukcia nebola len o tom, kto zaplatí najviac, ale kto ponúkne najrelevantnejšiu reklamu.</p>
+
+    <p>Ako to potvrdil Mark Irvine zo SearchLab: <em>„Quality Score is still the same equal factor in ad rank and ad rank still matters if you want to show up at the top."</em></p>
+
+    <h3>Quality Score vs. Smart Bidding – prečo nie je jedno alebo druhé</h3>
+
+    <p>Toto je kľúčový bod, ktorý mnohí PPC špecialisti prehliadajú.</p>
+
+    <p><strong>Smart Bidding</strong> optimalizuje <strong>bidy</strong> – rozhoduje, koľko ponúknuť za konkrétnu aukciu na základe konverzných signálov.</p>
+
+    <p><strong>Quality Score</strong> ovplyvňuje <strong>cenu</strong> – určuje, koľko za ten bid skutočne zaplatíte.</p>
+
+    <p>Tieto dva mechanizmy nie sú v konflikte. Fungujú ako dve strany tej istej mince. Smart Bidding vám pomôže ponúknuť správnu sumu. Quality Score zabezpečí, že za tú sumu dostanete čo najlepšiu pozíciu.</p>
+
+    <p>Bežný scenár v roku 2026: máte broad match kľúčové slovo s QS 2–3, ale konvertuje dobre a ROAS je zdravý. Znamená to, že QS je zbytočné? Nie – znamená to len, že Smart Bidding kompenzuje nízke QS vyšším bidom. Platíte viac za každý klik, ako by ste museli.</p>
+
+    <p>V Starbo Media si uvedomujeme tento vzťah veľmi dobre. Aj keď Smart Bidding robí veľkú časť práce, optimalizácia Quality Score nám umožňuje získať rovnaký výkon za nižšie náklady. A to je v konečnom dôsledku to, na čom záleží – nie výška bidu, ale <a href="https://starbomedia.sk/preco-roas-nestaci-poas-vam-odhali-skutocny-zisk-z-reklamy/" title="POAS vs ROAS – skutočný zisk z reklamy">efektivita vynaložených prostriedkov a skutočný zisk z reklamy</a>.</p>
+  </section>
+
+  <section id="ako-skontrolovat">
+    <h2>Ako skontrolovať a sledovať Quality Score</h2>
+
+    <h3>Kde nájdete Quality Score v Google Ads</h3>
+
+    <p>Quality Score nie je predvolene zobrazený v reportoch. Musíte si ho pridať manuálne:</p>
+
+    <ol>
+      <li>Otvorte svoj Google Ads účet.</li>
+      <li>Prejdite na <strong>Audiences, keywords and content → Search keywords</strong>.</li>
+      <li>Kliknite na <strong>Columns → Modify columns</strong>.</li>
+      <li>Rozbaľte sekciu <strong>Quality Score</strong>.</li>
+      <li>Pridajte stĺpce: Quality Score, Expected CTR, Ad Relevance, Landing Page Experience.</li>
+      <li>Pre historické dáta pridajte aj: Quality Score (hist.), Expected CTR (hist.), Ad Relevance (hist.), Landing Page Experience (hist.).</li>
+    </ol>
+
+    <p>Historické stĺpce vám ukážu, ako sa QS menilo v čase, čo je neoceniteľné pre identifikáciu trendov a dopadu zmien, ktoré ste urobili.</p>
+
+    <h3>Automatizované sledovanie a alerty – náš prístup</h3>
+
+    <p>Manuálna kontrola QS v Google Ads rozhraní je časovo náročná a ľahko sa na ňu zabudne. V Starbo Media sme preto vytvorili automatizovaný workflow:</p>
+
+    <ol>
+      <li><strong>Automatický export do Google Sheets</strong> – dáta o Quality Score sťahujeme pravidelne do tabuliek. To nám umožňuje sledovať trendy a porovnávať výkon naprieč klientmi.</li>
+      <li><strong>Alerty na nízke QS</strong> – máme nastavené upozornenia, ktoré nás informujú, keď QS kľúčového slova klesne pod definovanú hranicu (typicky pod 5).</li>
+      <li><strong>Pravidelný audit</strong> – na základe alertov a dát v sheets robíme cielené optimalizácie, nie plošné zmeny.</li>
+    </ol>
+
+    <p>Tento prístup nám umožňuje byť proaktívni. Namiesto toho, aby sme reagovali na zvýšené CPC (kedy už problém existuje týždne), zachytíme pokles QS včas a zasiahneme.</p>
+
+    <figure>
+      <img src="/blog/google-ads-quality-score-2026/schema_qs_monitoring_workflow.webp" alt="Schéma automatizovaného workflow sledovania Quality Score: export z Google Ads do Google Sheets, nastavenie alertov a pravidelný audit" loading="lazy" width="1200" height="675">
+      <figcaption>Automatizovaný workflow sledovania Quality Score v Starbo Media</figcaption>
+    </figure>
+  </section>
+
+  <section id="ako-zlepsit">
+    <h2>7 overených spôsobov, ako zlepšiť Quality Score</h2>
+
+    <h3>1. Optimalizácia relevantnosti reklám</h3>
+
+    <p>Relevantnosť reklamy je najjednoduchší komponent na zlepšenie. Ide o zabezpečenie toho, aby váš reklamný text priamo zodpovedal kľúčovým slovám v ad group.</p>
+
+    <p><strong>Prakticky:</strong></p>
+    <ul>
+      <li>Zahrňte primárne kľúčové slovo do nadpisu reklamy (headline 1 alebo 2).</li>
+      <li>Používajte jazyk, ktorý zodpovedá hľadanému výrazu – nie generické frázy.</li>
+      <li>Ak ad group obsahuje príliš rôznorodé kľúčové slová, rozdeľte ju.</li>
+    </ul>
+
+    <h3>2. Zlepšenie CTR (Expected Click-Through Rate)</h3>
+
+    <p>Expected CTR má najväčšiu váhu v QS. Tu je niekoľko overených taktík:</p>
+
+    <ul>
+      <li><strong>Silné CTA (Call to Action)</strong> – „Objednajte dnes", „Získajte bezplatnú konzultáciu" je lepšie ako „Viac informácií".</li>
+      <li><strong>Vyzdvihnite USP</strong> – čo vás odlišuje od konkurencie? Uveďte to v headline.</li>
+      <li><strong>Používajte čísla a konkrétne benefity</strong> – „Ušetrite 30 %" je presvedčivejšie ako „Výhodné ceny".</li>
+      <li><strong>Testujte RSA varianty</strong> – vytvorte viacero headlinov a descriptions, nechajte Google optimalizovať.</li>
+    </ul>
+
+    <h3>3. Optimalizácia Landing Page Experience</h3>
+
+    <p>Toto je komponent, ktorý v posledných rokoch naberá na dôležitosti. S príchodom AI Max Google aktívne využíva obsah landing page ako signál.</p>
+
+    <p><strong>Kľúčové faktory:</strong></p>
+    <ul>
+      <li><strong>Rýchlosť načítania pod 3 sekundy</strong> – pomaly sa načítajúca stránka zabíja QS aj konverzie.</li>
+      <li><strong>Mobile-first dizajn</strong> – väčšina klikov prichádza z mobilov.</li>
+      <li><strong>Relevantný obsah</strong> – ak reklama sľubuje „letné šaty za 29 €", landing page musí zobrazovať letné šaty za 29 €, nie celý katalóg.</li>
+      <li><strong>Jasná navigácia a CTA</strong> – používateľ musí okamžite vedieť, čo má robiť.</li>
+      <li><strong>Konzistencia messaging</strong> – text reklamy a text landing page musia hovoriť rovnakým jazykom.</li>
+    </ul>
+
+    <h3>4. Správna štruktúra reklamných skupín</h3>
+
+    <p>Štruktúra účtu priamo ovplyvňuje ad relevance. Čím tematickejšie sú vaše ad groups, tým ľahšie napíšete relevantné reklamy.</p>
+
+    <p><strong>Odporúčania:</strong></p>
+    <ul>
+      <li>Tematicky zamerané ad groups s 5–15 príbuznými kľúčovými slovami.</li>
+      <li>Každá ad group by mala mať vlastné reklamy prispôsobené danej téme.</li>
+      <li>Vyhnite sa „mega" ad groups s desiatkami nesúvisiacich kľúčových slov.</li>
+    </ul>
+
+    <h3>5. Využitie RSA a ad extensions</h3>
+
+    <p>Responsive Search Ads (RSA) a rozšírenia reklám (sitelinks, callouts, structured snippets) nepriamo zlepšujú Quality Score:</p>
+
+    <ul>
+      <li>Google predpovedá, či vaše rozšírenia zvýšia CTR – a tento výpočet sa premieta do Ad Rank.</li>
+      <li>RSA umožňujú Google testovať kombinácie nadpisov a popisov pre maximálny CTR.</li>
+      <li>Sitelinks, callouts a structured snippets zvyšujú vizuálnu veľkosť reklamy a tým aj CTR.</li>
+    </ul>
+
+    <p><strong>Tip:</strong> V roku 2026 je ideálne mať minimálne 15 headlinov a 4 descriptions v RSA. Využite AI Max Text Guidelines na definovanie pravidiel pre AI-generované varianty.</p>
+
+    <h3>6. Práca s negatívnymi kľúčovými slovami</h3>
+
+    <p>Negatívne kľúčové slová sú jedným z najefektívnejších nástrojov na zlepšenie QS, predovšetkým eCTR a ad relevance.</p>
+
+    <p><strong>Prečo fungujú:</strong></p>
+    <ul>
+      <li>Filtrujú nerelevantné vyhľadávania, ktoré by znížili CTR.</li>
+      <li>Zabraňujú zobrazeniu vašej reklamy ľuďom, ktorí nehľadajú to, čo ponúkate.</li>
+      <li>Zlepšujú celkovú relevanciu vášho traffic.</li>
+    </ul>
+
+    <p><strong>Praktický workflow:</strong></p>
+    <ul>
+      <li>Revidujte search terms report minimálne <strong>1× týždenne</strong>.</li>
+      <li>Pridávajte negatívne kľúčové slová na úrovni kampane aj ad group.</li>
+      <li>Vytvorte si zdieľané zoznamy negatívnych kľúčových slov pre opakujúce sa témy.</li>
+    </ul>
+
+    <h3>7. Pravidelný audit a údržba účtu</h3>
+
+    <p>Quality Score nie je „set and forget" metrika. Vyžaduje pravidelnú pozornosť.</p>
+
+    <p><strong>Odporúčaný audit cyklus:</strong></p>
+    <ul>
+      <li><strong>Týždenne:</strong> Kontrola search terms, pridávanie negatívnych kľúčových slov.</li>
+      <li><strong>Mesačne:</strong> Revízia QS trendov, identifikácia kľúčových slov s klesajúcim QS.</li>
+      <li><strong>Kvartálne:</strong> Hĺbkový audit štruktúry účtu, landing pages a celkovej ad relevance.</li>
+    </ul>
+
+    <p>V Starbo Media práve preto máme automatizované alerty. Nemusíme čakať na mesačný audit – systém nás upozorní okamžite, keď niečo nie je v poriadku.</p>
+  </section>
+
+  <section id="najcastejsie-chyby">
+    <h2>Najčastejšie chyby, ktoré znižujú Quality Score</h2>
+
+    <p><strong>1. Generické reklamné texty pre rôzne kľúčové slová</strong></p>
+    <p>Ak máte jednu reklamu pre 50 rôznych kľúčových slov, ad relevance bude nízka pre väčšinu z nich.</p>
+
+    <p><strong>2. Ignorovanie landing page</strong></p>
+    <p>Mnohí inzerenti investujú do reklám, ale odkazujú na homepage alebo generickú stránku namiesto dedicated landing page.</p>
+
+    <p><strong>3. Nepravidelná kontrola search terms</strong></p>
+    <p>Bez pravidelnej revízie search terms reportu sa vám do kampaní vlúdia nerelevantné vyhľadávania, ktoré znížia CTR a ad relevance.</p>
+
+    <p><strong>4. Príliš široké kľúčové slová bez negatívnych</strong></p>
+    <p>Broad match bez adekvátneho zoznamu negatívnych kľúčových slov je recept na nízke QS.</p>
+
+    <p><strong>5. Pomalá alebo nefunkčná landing page na mobile</strong></p>
+    <p>Google v roku 2026 hodnotí mobilnú skúsenosť ešte prísnejšie. Ak sa vaša stránka nenačíta do 3 sekúnd, platíte zbytočnú prirážku.</p>
+
+    <p><strong>6. Zamieňanie Ad Strength s Quality Score</strong></p>
+    <p>Ad Strength a Quality Score sú dve rôzne metriky. Ad Strength hodnotí, či váš RSA nasleduje best practices (počet headlinov, rozmanitosť), ale nemá žiaden vplyv na výkon v aukcii. Quality Score áno.</p>
+  </section>
+
+  <section id="nove-funkcie-2026">
+    <h2>Quality Score a nové funkcie Google Ads v roku 2026</h2>
+
+    <h3>AI Max kampane a Quality Score</h3>
+
+    <p><a href="https://starbomedia.sk/ai-max-pre-vyhladavanie-revolucia-v-google-reklamach-ktora-cita-myslienky-vasich-zakaznikov/" title="AI Max pre vyhľadávanie – revolúcia v Google reklamách">AI Max kampane</a>, dostupné od januára 2026, predstavujú keyword-free prístup k Search reklamám. Systém poháňaný Gemini 3 automaticky generuje reklamy, vyberá match types a spravuje negatívne kľúčové slová.</p>
+
+    <p>Čo to znamená pre Quality Score? V AI Max kampaniach sa Quality Score zobrazuje menej konzistentne, pretože systém pracuje na úrovni signálov, nie jednotlivých kľúčových slov. Ale princípy zostávajú rovnaké:</p>
+
+    <ul>
+      <li><strong>Kvalita landing page</strong> je ešte dôležitejšia – Google ju aktívne používa ako signál pre matching queries.</li>
+      <li><strong>Relevantnosť obsahu</strong> stránky ovplyvňuje, pre aké vyhľadávania sa vaše reklamy zobrazujú.</li>
+      <li><strong>Rýchlosť a UX</strong> stránky majú priamy dopad na výkon.</li>
+    </ul>
+
+    <h3>Smart Bidding s Gemini 3</h3>
+
+    <p>Smart Bidding v roku 2026 podľa dostupných informácií využíva 11 nových kontextových signálov, vrátane analýzy sentimentu landing page a parafrázovania queries pre lepšie porozumenie intent. High-volume účty dosahujú tROAS ciele o 6–9 % bližšie oproti roku 2024.</p>
+
+    <p>To neznamená, že Quality Score je irelevantný. Práve naopak – lepšia kvalita reklám a landing pages pomáha Smart Bidding algoritmom pracovať efektívnejšie.</p>
+
+    <h3>AI Overviews a reklamy</h3>
+
+    <p>Kampane využívajúce AI Max sú oprávnené zobrazovať sa v AI Overviews – AI generovaných odpovediach na vrchu SERPu. Ak máte <a href="https://starbomedia.sk/ai-overviews-kompletny-sprievodca/" title="AI Overviews – kompletný sprievodca">záujem o viac informácií o AI Overviews</a>, napísali sme o nich podrobného sprievodcu.</p>
+
+    <h3>Dôležitosť ľudského dohľadu</h3>
+
+    <p>Napriek rastúcej automatizácii dáta ukazujú, že účty, ktoré úplne odstránili manuálny dohľad, zaznamenali pokles revenue o 14 %. Podľa niektorých údajov je optimálny prístup kombinácia automatizácie s pravidelným ľudským auditom – presne to, čo robíme v Starbo Media s naším systémom automatizovaných alertov.</p>
+
+    <p>Je to podobný princíp ako pri <a href="https://starbomedia.sk/preco-je-dolezite-sledovat-google-ads-konverzie-podla-casu/" title="Prečo je dôležité sledovať Google Ads konverzie podľa času">sledovaní konverzií podľa času</a> – automatizácia vám ušetrí čas, ale interpretácia dát a strategické rozhodnutia stále vyžadujú ľudský úsudok.</p>
+
+    <figure>
+      <img src="/blog/google-ads-quality-score-2026/diagram_qs_smart_bidding_ai_max.webp" alt="Diagram znázorňujúci vzťah medzi Quality Score, Smart Bidding a AI Max v Google Ads v roku 2026" loading="lazy" width="1200" height="675">
+      <figcaption>Vzťah medzi Quality Score, Smart Bidding a AI Max v roku 2026</figcaption>
+    </figure>
+  </section>
+
+  <section id="faq">
+    <h2>Často kladené otázky</h2>
+
+    <details>
+      <summary>Aké je dobré Quality Score?</summary>
+      <p>Pre non-brand kľúčové slová je odporúčané skóre 7/10. Brandové kľúčové slová by mali dosahovať 9–10. Ak máte QS pod 5, vaše CPC je výrazne vyššie a mali by ste začať optimalizovať.</p>
+    </details>
+
+    <details>
+      <summary>Ako často sa Quality Score aktualizuje?</summary>
+      <p>Quality Score sa neaktualizuje v reálnom čase. Je to agregovaný odhad založený primárne na historickej exact match performance. V praxi sa zmeny prejavia v priebehu dní až týždňov po implementácii optimalizácií.</p>
+    </details>
+
+    <details>
+      <summary>Má Quality Score vplyv na Performance Max kampane?</summary>
+      <p>Quality Score je metrika špecifická pre Search kampane. V Performance Max sa nezobrazuje. Avšak princípy kvality reklám a landing pages platia univerzálne – Google hodnotí kvalitu aj v PMax, len iným spôsobom.</p>
+    </details>
+
+    <details>
+      <summary>Čo robiť, ak mám QS 1–3?</summary>
+      <p>Skontrolujte všetky tri komponenty (eCTR, Ad Relevance, Landing Page Experience) a identifikujte, ktorý je „Below Average". Začnite tým najhorším. Najčastejšie pomáha reorganizácia ad groups a vytvorenie relevantnejších reklám.</p>
+    </details>
+
+    <details>
+      <summary>Oplatí sa optimalizovať QS, keď používam Smart Bidding?</summary>
+      <p>Áno. Smart Bidding optimalizuje bidy, nie kvalitu reklám. Vyššie QS znamená nižšiu cenu za rovnakú pozíciu. Smart Bidding potom môže dosahovať vaše ciele s nižšími nákladmi.</p>
+    </details>
+
+    <details>
+      <summary>Ako Quality Score ovplyvňuje cenu za klik?</summary>
+      <p>QS 8–10 môže znížiť CPC až o 50 %. Naopak, QS 1 zvyšuje CPC až o 400 %. Rozdiel medzi QS 3 a QS 8 môže byť v praxi aj niekoľkonásobný.</p>
+    </details>
+
+    <details>
+      <summary>Existuje Quality Score pre display alebo video reklamy?</summary>
+      <p>Nie, Quality Score je exkluzívne pre Search kampane. Pre Display a Video kampane Google používa iné metriky kvality.</p>
+    </details>
+  </section>
+
+  <p><em>Zdroje: <a href="https://support.google.com/google-ads/answer/6167118?hl=en" title="About Quality Score - Google Ads Help" target="_blank" rel="noopener noreferrer">Google Ads Help</a>, <a href="https://www.optmyzr.com/blog/google-ads-quality-score/" title="Quality Score in 2026 - Optmyzr" target="_blank" rel="noopener noreferrer">Optmyzr</a>, <a href="https://www.wordstream.com/blog/ws/2021/07/19/does-quality-score-still-matter" title="Does Quality Score Still Matter - WordStream" target="_blank" rel="noopener noreferrer">WordStream</a>, <a href="https://www.yellowjackmedia.com/google-ads-in-2026-how-ai-max-performance-max-and-smart-bidding-are-changing-ppc-forever/" title="Google Ads in 2026 - Yellow Jack Media" target="_blank" rel="noopener noreferrer">Yellow Jack Media</a></em></p>
+</article>
