@@ -1,0 +1,405 @@
+<article class="ucp-article" itemscope itemtype="https://schema.org/Article">
+  <header>
+    <p><time datetime="2026-06-24" itemprop="datePublished">24. júna 2026</time> · Čas čítania: 18 min</p>
+  </header>
+
+  <nav aria-label="Obsah článku">
+    <strong>Obsah</strong>
+    <ol>
+      <li><a href="#tldr">TL;DR – ktorý model na čo</a></li>
+      <li><a href="#co-je-nano-banana-pro-co-je-gpt-image-2">Čo je Nano Banana Pro a čo je GPT Image 2</a></li>
+      <li><a href="#ako-sme-modely-testovali">Ako sme modely testovali</a></li>
+      <li><a href="#porovnanie-1-konzistencia">Porovnanie 1: Konzistencia produktu z referencie</a></li>
+      <li><a href="#porovnanie-2-texty">Porovnanie 2: Texty a typografia</a></li>
+      <li><a href="#porovnanie-3-fotorealizmus">Porovnanie 3: Fotorealizmus a dôveryhodnosť scény</a></li>
+      <li><a href="#porovnanie-4-rychlost-cena">Porovnanie 4: Rýchlosť, cena a dostupnosť</a></li>
+      <li><a href="#use-casy-z-praxe">Konkrétne use casy z agentúrnej praxe</a></li>
+      <li><a href="#limity-modelov">Limity oboch modelov (úprimne)</a></li>
+      <li><a href="#hromadna-produkcia">Hromadná produkcia kreatív z feedu</a></li>
+      <li><a href="#kedy-pouzit-ktory-model">Kedy použiť ktorý model – rozhodovacia tabuľka</a></li>
+      <li><a href="#ako-zacat">Ako začať: praktické tipy pre marketérov</a></li>
+      <li><a href="#zaver">Záver: AI image generatory ako nová ekonomika produkcie kreatív</a></li>
+      <li><a href="#faq">Často kladené otázky</a></li>
+    </ol>
+  </nav>
+
+  <p>V apríli 2026 vyšiel <strong>GPT Image 2</strong> od OpenAI a postavil sa proti <strong>Gemini Nano Banana Pro</strong> od Googlu, ktorý dovtedy platil za najsilnejšiu produkčnú voľbu v AI generovaní obrázkov. Pre marketérov, e-shop majiteľov a agentúry to znamená jediné: voľba modelu na produkčné kreatívy už nie je samozrejmá. My v Starbomedia sme oba modely testovali side-by-side na reálnych klientskych projektoch a v tomto článku zdieľame, čo nám fungovalo, kde každý z modelov sklamal a podľa čoho sa rozhodujeme, ktorý použiť na ktorý use case.</p>
+
+  <h2 id="tldr">TL;DR – ktorý model na čo</h2>
+
+  <ul>
+    <li><strong>GPT Image 2</strong> je presnejší v textoch a typografii (~99 % character accuracy v LM Arena testoch). Voľba pre obaly s claims, plagáty, infografiky a banner ady s CTA textom.</li>
+    <li><strong>Nano Banana Pro (Gemini 3 Pro Image)</strong> je silnejší v multi-reference konzistencii (až 14 referenčných obrázkov) a v edite existujúcich fotiek. Voľba pre produktové hero shoty, lifestyle scény a Photoshop workflow cez Adobe Firefly.</li>
+    <li><strong>Generačná rýchlosť:</strong> GPT Image 2 ~3 s vs. Nano Banana Pro 10–15 s. GPT Image 2 vyhráva na rýchlosti.</li>
+    <li><strong>Cena:</strong> GPT Image 2 cca $0,053 za 1024×1024 medium quality, Nano Banana Pro cca $0,134 za 1K/2K. Closer pri 4K (vs $0,24).</li>
+    <li><strong>Z našej praxe:</strong> ani jeden model sa nezaobíde bez iterácií. Použiteľnosť závisí od kvalitne nastaveného „brainu" (prompt systému + brand DNA), nie iba od modelu samotného.</li>
+    <li><strong>Závery:</strong> namiesto „ktorý je lepší" sa pýtame „ktorý vie čo". V agentúrnej praxi používame oba podľa use casu.</li>
+  </ul>
+
+  <h2 id="co-je-nano-banana-pro-co-je-gpt-image-2">Čo je Nano Banana Pro a čo je GPT Image 2</h2>
+
+  <p>Skôr ako sa dostaneme k testom, treba si urobiť poriadok v názvosloví – obe značky používajú zmätočné označenia.</p>
+
+  <h3>Nano Banana, Nano Banana Pro a Nano Banana 2 – tri rôzne veci</h3>
+
+  <p>Pôvodný model <strong>Nano Banana</strong> bola interná prezývka pre <strong>Gemini 2.5 Flash Image</strong> (august 2025). V novembri 2025 prišiel Google s premium variantom <strong>Nano Banana Pro</strong>, ktorý je oficiálne <strong>Gemini 3 Pro Image</strong> – väčší reasoning model postavený nad Gemini 3 Pro architektúrou. Krátko nato vyšiel aj <strong>Nano Banana 2</strong> (Gemini 3.1 Flash Image, codename GEMPIX2) – consumer-friendly, rýchlejšia a lacnejšia verzia.</p>
+
+  <p>V tomto článku sa primárne venujeme porovnaniu <strong>GPT Image 2 vs Nano Banana Pro</strong>, pretože ide o dvoch najsilnejších „premium" hráčov pre produkčné kreatívy. Nano Banana 2 ale spomenieme tam, kde má zmysel – napríklad pri hromadnej generácii z feedu, kde sa cena a rýchlosť stávajú kritické.</p>
+
+  <h3>GPT Image 2: nový hráč s reasoning vrstvou</h3>
+
+  <p>OpenAI vydal <a href="https://developers.openai.com/api/docs/models/gpt-image-2" title="GPT Image 2 model docs" target="_blank" rel="noopener noreferrer">GPT Image 2</a> oficiálne <strong>21. apríla 2026</strong> vo webovom rozhraní ChatGPT, API verzia bola sprístupnená developerom začiatkom mája 2026. Model beží na backbonej GPT-5.4 a OpenAI ho označuje ako prvý pokus integrovať „O-series reasoning" priamo do generatívneho image modelu – znamená to, že pred samotným renderom plánuje kompozíciu, kontroluje konzistenciu a self-reviewuje výstup.</p>
+
+  <p>Natívne podporuje <strong>rozlíšenia až do 2K</strong> (2048 px), 4K je v beta režime. Z našich testov je výrazne najsilnejší v textoch a typografii – LM Arena testeri uvádzajú <strong>~99 % character-level accuracy</strong> naprieč skriptmi (Latin, čínština, japončina, korejčina, hindčina, bengálčina). 12 hodín po launchi viedol LMArena Image leaderboard s Elo skóre 1 512.</p>
+
+  <h3>Nano Banana Pro: production-ready od novembra 2025</h3>
+
+  <p>Google DeepMind oficiálne <a href="https://blog.google/innovation-and-ai/products/nano-banana-pro/" title="Nano Banana Pro – Google official announcement" target="_blank" rel="noopener noreferrer">uvoľnil Nano Banana Pro 20. novembra 2025</a>. Model beží na Gemini 3 Pro a podporuje natívne 1K, 2K aj 4K rozlíšenie. Jeho najsilnejšou stránkou je <strong>multi-reference konzistencia</strong> – v jednom generačnom cykle si môžete uploadnuť až <strong>14 referenčných obrázkov</strong> a model zachová konzistenciu až 5 ľudí v scéne.</p>
+
+  <p>Druhý unikátny benefit je <strong>integrácia s Google Search</strong>. Model dokáže overovať fakty a generovať grafické výstupy s aktuálnymi reálnymi dátami (napríklad počasné mapy, výsledky športových zápasov, recent eventy). Pre infografiky a edukačný obsah je to praktická výhoda, ktorú GPT Image 2 nemá.</p>
+
+  <p>Nano Banana Pro je dostupný cez <strong>Gemini app, Google Ads, Workspace (Slides, Vids), Gemini API, AI Studio, Vertex AI</strong>, a od novembra 2025 aj cez <strong>Adobe Firefly a Photoshop</strong> ako súčasť Generative Fill funkcionality. Ak ste v Adobe ekosystéme, model si pravdepodobne ani nemusíte aktívne hľadať – je tam, kde už pracujete.</p>
+
+  <h2 id="ako-sme-modely-testovali">Ako sme modely testovali</h2>
+
+  <p>Naša metodika nebola laboratórna. Testovali sme oba modely <strong>na reálnych klientskych zadaniach</strong>, kde sme paralelne s tradičnou produkciou (alebo namiesto nej) generovali kreatívy a posudzovali ich použiteľnosť pre platené kampane na Google Ads, Meta Ads, prípadne pre on-page produktové fotky e-shopu.</p>
+
+  <p>Klienti, na ktorých sme testovali:</p>
+
+  <ul>
+    <li><strong>Výživové doplnky</strong> – produktové fotky s výrazným textom na obale, claims, infografiky</li>
+    <li><strong>Masážne lehátka (Fabulo)</strong> – produktové close-upy aj lifestyle scény s človekom</li>
+    <li><strong>Bicykle (Profibikers)</strong> – produkt v outdoor scéne, dynamické zábery</li>
+    <li><strong>Záhradný nábytok (Jurhan)</strong> – exteriérové lifestyle scény</li>
+    <li><strong>Bežecká obuv (bezeckepotreby.sk)</strong> – štúdiové aj akčné zábery</li>
+  </ul>
+
+  <p>Pri každom teste sme oba modely promptovali rovnakou inštrukciou a referenčnou fotografiou produktu. Hodnotili sme štyri parametre: konzistencia produktu vs. referencia, kvalita textu na obraze, fotorealizmus scény a celkovú použiteľnosť pre klienta bez ďalšieho retuše.</p>
+
+  <p>Ďalej v článku rozoberáme každú z týchto kategórií zvlášť.</p>
+
+  <h2 id="porovnanie-1-konzistencia">Porovnanie 1: Konzistencia produktu z referencie</h2>
+
+  <p>Pre marketéra je kľúčová otázka jednoduchá: <strong>dokáže model umiestniť môj reálny produkt do novej scény tak, aby produkt vyzeral tak, ako vyzerá v skutočnosti?</strong></p>
+
+  <p>V tomto teste oba modely odviedli pri správnom promptovaní solídnu prácu. <strong>Nano Banana Pro má technicky silnejší multi-reference systém</strong> – môžete mu uploadnuť až 14 referenčných obrázkov produktu (napríklad z rôznych uhlov), čo pomáha pri komplexnejších tvaroch. GPT Image 2 zatiaľ nezverejnil oficiálny limit pre multi-reference, v praxi sme ale dostávali kvalitné výstupy aj zo 2–3 referencií.</p>
+
+  <p>Z našej praxe vyplýva, že <strong>konzistencia farieb, tvaru a brand markings je u oboch modelov dobrá pri prvom použití na cca 70–80 %</strong>. Zvyšných 20–30 % vyžaduje 1–2 cielené iterácie („zachovaj label vľavo nezmenený", „nemeň pomer výška/šírka fľaše"). Ani jeden model nevyrobí presnú kópiu produktu s 100 % spoľahlivosťou na prvý šup. Komunita to potvrdzuje – Instagram tím @curiousrefuge napríklad uvádza, že GPT Image 2 je silnejší v konzistencii postáv (charakter consistency cez batch), zatiaľ čo Nano Banana 2 robí lepšie environments a backgrounds.</p>
+
+  <blockquote>
+    <p><strong>„Pri Silwerových doplnkoch sme sa najprv chytili na fotorealizmus Nano Banana Pro, ale keď sme začali robiť obaly s claims, vrátili sme sa ku GPT Image 2. Dnes nepoužívame jeden model – používame oba. Otázka nie je 'ktorý je lepší', ale 'ktorý vie čo'."</strong></p>
+    <p>— Peter Štrbo, CEO Starbomedia</p>
+  </blockquote>
+
+  <h2 id="porovnanie-2-texty">Porovnanie 2: Texty a typografia</h2>
+
+  <p>Toto je zďaleka najjasnejšia kategória. <strong>GPT Image 2 jednoznačne vyhráva v renderingu textu</strong> – či už ide o krátky CTA na banneri, claim na obale výživového doplnku alebo viacjazyčný plagát.</p>
+
+  <p>Konkrétne čísla z LM Arena benchmarkov (porovnanie z apríla 2026):</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Use case textu</th>
+        <th>GPT Image 2</th>
+        <th>Nano Banana Pro</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>UI tlačidlá, labels</td><td>5/5</td><td>4/5</td></tr>
+      <tr><td>Krátke titulky, slogany</td><td>5/5</td><td>5/5</td></tr>
+      <tr><td>Obal produktu (packaging)</td><td>5/5</td><td>4/5</td></tr>
+      <tr><td>Dlhý paragraf v infografike</td><td>4/5</td><td>5/5</td></tr>
+    </tbody>
+  </table>
+
+  <p>Čo to znamená v praxi:</p>
+
+  <ul>
+    <li><strong>GPT Image 2 zvláda 99 % character-level accuracy</strong> v krátkych a stredných textoch v latinke, ale aj v čínštine, japončine, korejčine, hindčine, bengálčine a arabčine. Pre slovenský trh (diakritika) sme nezistili problémy s háčikmi a dĺžňami v krátkych textoch (do 8–10 slov).</li>
+    <li><strong>Nano Banana Pro je ~94 % accuracy</strong> – stále veľmi dobrý, ale pri obaloch s viacerými textovými prvkami (názov produktu + claim + množstvo + složenie) sme videli viac iterácií, kým sa text vyrenderoval bez zámen.</li>
+    <li><strong>Nano Banana 2 (Flash) je ~92 % a podľa Apiyi testov dokonca lepší v čínštine</strong> než Pro – pre niektoré ázijské skripty teda treba zvážiť Flash variant.</li>
+  </ul>
+
+  <p>Pre infografiky s dlhými paragrafmi je situácia rozdelená. GPT Image 2 zvláda vysokú hustotu krátkych textových prvkov (lettering density), Nano Banana Pro je naopak stabilnejší pri zarovnávaní dlhších odsekov. V našej praxi pri infografikách o ingredienciách a benefits výživových doplnkov sme videli vyrovnané výsledky, s miernou prevahou GPT Image 2 pre marketingovo orientované infografiky.</p>
+
+  <figure>
+    <img src="/blog/nano-banana-pro-vs-gpt-image-2/infografika-porovnanie-modelov-kategorie.webp" alt="Porovnanie kategórií – ktorý AI model je silnejší v textoch, fotorealizme, rýchlosti a multi-reference" loading="lazy" width="1200" height="675">
+    <figcaption>Porovnanie hlavných kategórií medzi GPT Image 2 a Nano Banana Pro.</figcaption>
+  </figure>
+
+  <h2 id="porovnanie-3-fotorealizmus">Porovnanie 3: Fotorealizmus a dôveryhodnosť scény</h2>
+
+  <p>Tu je verdikt rozdelenejší a závisí od typu scény.</p>
+
+  <p>V starších testoch (december 2025, kedy ešte existoval iba GPT Image 1.5) <strong>prevažne vyhrával Nano Banana Pro</strong> – produkčné blogy ako trypablo.com to vystihli vetou „Nano Banana generuje fotku, akú by ste očakávali z telefónu, zatiaľ čo GPT outputuje typický telltale AI-generated look". To zodpovedá aj našej skúsenosti – pri pôvodných modeloch dávalo Gemini autentickejší fotorealizmus pri produktových hero shotoch.</p>
+
+  <p>S <strong>GPT Image 2 (apríl 2026) sa hra zmenila</strong>. Decrypt.co testovalo oba modely cez 7 kategórií a GPT Image 2 vyhral 4 z nich, vrátane realistických scén s reálnymi ľuďmi. TechRadar uzavrel, že „Nano Banana 2 robí obrázky, ktoré vyzerajú skvele, ale ChatGPT 2.0 robí obrázky, ktoré sa javia reálne". Naopak Pollo AI uvádza, že <strong>GPT Image 2 vyhráva na structural control a text rendering, Nano Banana 2 wins na photorealism a generation speed</strong>.</p>
+
+  <p>Z našej skúsenosti pri produktových fotkách:</p>
+
+  <ul>
+    <li><strong>Nano Banana Pro je stále o niečo lepší pri dôveryhodnom stvárnení produktu samotného</strong> – textúry, materiál, odlesky na masážnych lehátkach (Fabulo) alebo na bežeckej obuvi (bezeckepotreby.sk) vyzerajú prirodzenejšie</li>
+    <li><strong>GPT Image 2 je silnejší v scénach a kompozíciách s ľuďmi</strong> – outdoor scéna s bicyklom a cyklistom, lifestyle záhradný nábytok s rodinou</li>
+    <li><strong>Voľba teda nezávisí od „ktorý je realistickejší", ale od „čo je hlavný subjekt"</strong>: produkt → Nano Banana Pro, scéna alebo človek s produktom → GPT Image 2</li>
+  </ul>
+
+  <p>Treba dodať, že komunita je skutočne rozdelená. Reddit thread r/ChatGPT a r/Bard z apríla 2026 ukazujú zhruba 50/50 rozdelenie hlasov u praktikov, ktorí porovnávali ten istý prompt. PCMag v máji 2026 publikoval titulok „I Like ChatGPT's New AI Image Generator, But Nano Banana Pro Still Wins" – aj editori bránia každý svoj model. Náš odporúčací rámec preto neformulujeme ako „použite X, Y je horší", ale ako tabuľku „ktorý use case → ktorý model".</p>
+
+  <h2 id="porovnanie-4-rychlost-cena">Porovnanie 4: Rýchlosť, cena a dostupnosť</h2>
+
+  <p>Tu má GPT Image 2 jednoznačnú prevahu v rýchlosti, ale stratégia ceny záleží od objemu generácií.</p>
+
+  <h3>Generačná rýchlosť</h3>
+
+  <ul>
+    <li><strong>GPT Image 2 (instant mode):</strong> ~3 sekundy per generácia</li>
+    <li><strong>GPT Image 2 (thinking mode):</strong> 15–60 sekúnd, podľa zložitosti</li>
+    <li><strong>GPT Image 2 cez ChatGPT Plus UI:</strong> 30–60 sekúnd (UI bottleneck, nie modelu)</li>
+    <li><strong>Nano Banana Pro:</strong> 10–15 sekúnd, rátané ako defaultný režim</li>
+    <li><strong>Nano Banana 2 (Flash):</strong> 4–6 sekúnd</li>
+  </ul>
+
+  <p>Prakticky to znamená: ak generujete cez API a máte 100 produktov, ktoré chcete vidieť každý v 5 variantoch (500 generácií), GPT Image 2 v instant móde to zvládne za ~25 minút, Nano Banana Pro za ~85–125 minút. Pri Nano Banana 2 dokonca len ~30–50 minút – preto je Flash variant atraktívny pre bulk produkciu z feedu.</p>
+
+  <h3>Cena</h3>
+
+  <table>
+    <thead>
+      <tr><th>Model</th><th>Cena per image (typicky)</th><th>Poznámka</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>GPT Image 2 (medium 1024×1024)</td><td>~$0,053</td><td>Standard quality</td></tr>
+      <tr><td>GPT Image 2 (high 1024×1024)</td><td>~$0,211</td><td>Production-ready</td></tr>
+      <tr><td>Nano Banana Pro (1K / 2K)</td><td>$0,134</td><td>Standard route</td></tr>
+      <tr><td>Nano Banana Pro (4K)</td><td>$0,24</td><td>Print-ready</td></tr>
+      <tr><td>Nano Banana 2 (2K)</td><td>$0,101</td><td>Flash, lacnejšia alternatíva</td></tr>
+      <tr><td>Nano Banana 2 (0,5K)</td><td>$0,045</td><td>Pre A/B testy</td></tr>
+    </tbody>
+  </table>
+
+  <p>V tokenoch: GPT Image 2 účtuje $8 za milión input tokenov a $30 za milión output tokenov. Nano Banana Pro $2 / $12 za milión. Pri batch / flex režime má Google 50 % zľavu pre non-real-time spracovanie, čo je atraktívne pre overnight produkciu kreatív z feedu.</p>
+
+  <p>Pri reálnom mesačnom rozpočte slovenského e-shopu, ktorý generuje povedzme 1 000 unikátnych vizuálov mesačne (200 produktov × 5 variantov) sú náklady na samotné API:</p>
+
+  <ul>
+    <li>GPT Image 2 medium: ~$53 mesačne</li>
+    <li>Nano Banana Pro 2K: ~$134 mesačne</li>
+    <li>Nano Banana 2 (Flash) 2K: ~$101 mesačne</li>
+  </ul>
+
+  <p>Tieto čísla pokrývajú iba samotnú generáciu – nezahŕňajú prompt engineering, QA proces, prípadný postretuš a integráciu do CMS/Meta Ads/Google Ads. V agentúrnej praxi je čistý API náklad zvyčajne 10–25 % celkovej hodiny strávenej nad jedným kampaňovým balíkom.</p>
+
+  <h3>Dostupnosť a integrácie</h3>
+
+  <table>
+    <thead>
+      <tr><th>Platforma</th><th>GPT Image 2</th><th>Nano Banana Pro</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Web UI</td><td>ChatGPT (Plus, Pro, Enterprise)</td><td>Gemini app</td></tr>
+      <tr><td>API</td><td>OpenAI API (od mája 2026)</td><td>Gemini API, Vertex AI, AI Studio</td></tr>
+      <tr><td>Cloud platform</td><td>Azure OpenAI Service (postupne)</td><td>Google Cloud (Vertex AI)</td></tr>
+      <tr><td>Adobe Firefly / Photoshop</td><td>Áno (cez OpenAI partner)</td><td>Áno (natívne, vrátane Generative Fill)</td></tr>
+      <tr><td>Google Workspace</td><td>–</td><td>Slides, Vids, Gemini app, NotebookLM</td></tr>
+      <tr><td>Google Ads</td><td>–</td><td>Áno (Asset Studio)</td></tr>
+      <tr><td>Watermarking</td><td>Nie verejne deklarované</td><td>SynthID + viditeľný Gemini sparkle (pre free/Pro tier)</td></tr>
+    </tbody>
+  </table>
+
+  <p>Ak intenzívne pracujete v Adobe stacku, Nano Banana Pro je jednoznačne pohodlnejší – sedí priamo v Photoshope. Ak váš tím už používa OpenAI API pre LLM workflowy, GPT Image 2 sa dá pridať do existujúcej infraštruktúry s minimálnou novou setup-time.</p>
+
+  <h2 id="use-casy-z-praxe">Konkrétne use casy z agentúrnej praxe</h2>
+
+  <p>Tu sa dostávame k tomu, čo žiaden generický benchmark neukáže – ako modely fungujú na <strong>reálnych segmentoch a kreatívnych zadaniach</strong>.</p>
+
+  <h3>Use case 1: Výživové doplnky (obal s claims)</h3>
+
+  <p>Obal výživového doplnku má typicky 4–6 textových vrstiev: názov produktu, gramáž, kľúčový claim („Imunita +"), zoznam aktívnych látok, branding. Pre marketingovú reklamu (Meta carousel, Google PMax) potrebujeme verziu obalu, ktorá zachová identitu, ale je vyrenderovaná v atraktívnej scéne (rozsypané kapsuly, ruka držiaca fľašu, lifestyle stôl).</p>
+
+  <p><strong>V tomto use case sme jednoznačne preferovali GPT Image 2.</strong> Texty na obale boli pri ňom čitateľné a presné na prvý alebo druhý pokus. Pri Nano Banana Pro sme sa často zasekli pri 3–4 iteráciách, kým sa text vyrenderoval bez chyby alebo zámeny písmen.</p>
+
+  <h3>Use case 2: Masážne lehátka (Fabulo)</h3>
+
+  <p>Pri masážnych lehátkach je dominantný subjekt <strong>produkt sám o sebe</strong> – chrómové detaily, kožené čalúnenie, mechanické súčasti. Marketingovo potrebujeme produkt v štúdiovom svetle aj v lifestyle scéne (terapeut + klient).</p>
+
+  <p><strong>Nano Banana Pro nám dával lepšie štúdiové hero shoty</strong> – produkt vyzeral „nakúpiteľnejšie", textúry sú prirodzenejšie. Pre lifestyle scény s človekom (terapeut pri lehátku) sme striedavo používali oba modely a častejšie končili pri GPT Image 2 kvôli realistickejšiemu výrazu tváre a ruky.</p>
+
+  <h3>Use case 3: Bicykle (Profibikers)</h3>
+
+  <p>Pre bicykle sme generovali outdoor lifestyle scény (cyklista na ceste, bicykel opretý o stenu pri kaviarni, hero shot v štúdiovej kompozícii).</p>
+
+  <p><strong>Tu sme videli rozdelenie:</strong> štúdiové hero shoty s presným bikom (naozaj náš model) sa lepšie darili Nano Banane Pro, najmä keď išlo o detail rámu a komponentov. Lifestyle s cyklistom a outdoor backgroundom (les, mesto) bolo silnejšie u GPT Image 2 – kompozícia, hĺbka scény, spolupôsobenie pozadia s produktom pôsobilo prirodzenejšie.</p>
+
+  <h3>Use case 4: Záhradný nábytok (Jurhan)</h3>
+
+  <p>Záhradný nábytok je čisto lifestyle kategória – takmer nikdy nie je hlavným subjektom samotná stolička. Vždy je to <strong>scéna</strong>: terasa, slnečné ráno, rodina pri káve.</p>
+
+  <p><strong>GPT Image 2 vyhral väčšinu testov</strong> v tejto kategórii. Lifestyle scenes s ľuďmi a kompozičná hĺbka boli pri ňom prirodzenejšie. Nano Banana Pro občas „zovrel" ľudí v scéne príliš plasticky, čo pri produktovej fotke nábytku nepôsobí dôveryhodne.</p>
+
+  <h3>Use case 5: Bežecká obuv (bezeckepotreby.sk)</h3>
+
+  <p>Beh + obuv = mix produktovej a akčnej fotky. Štúdiové zábery (top-down composition s topánkou na neutrálnom pozadí) sme robili oboma modelmi s podobnými výsledkami. Akčné scény (bežec na trati, detail topánky pri kontakte so zemou) sme primárne robili cez GPT Image 2 kvôli silnejšej kompozícii ľudského pohybu.</p>
+
+  <figure>
+    <img src="/blog/nano-banana-pro-vs-gpt-image-2/decision-matrix-ktory-ai-model.webp" alt="Rozhodovacia matica – ktorý AI model použiť na ktorý use case v marketingu" loading="lazy" width="1080" height="1080">
+    <figcaption>Rozhodovacia matica pre marketérov – kedy použiť ktorý model.</figcaption>
+  </figure>
+
+  <h2 id="limity-modelov">Limity oboch modelov (úprimne)</h2>
+
+  <p>Žiaden z týchto modelov nie je svätý grál produktovej fotografie. Tu sú obmedzenia, ktoré sme narazili a ktoré stoja za úprimné pomenovanie pred tým, ako sa rozhodnete prejsť na AI workflow.</p>
+
+  <h3>1. Ploché výstupy bez upraviteľných vrstiev</h3>
+
+  <p>Tak GPT Image 2, ako aj Nano Banana Pro produkujú <strong>flat PNG/JPEG výstupy</strong>. Nedostanete PSD súbor s oddelenými vrstvami pre produkt, pozadie, text. Ak potrebujete v post-processingu meniť pozadie nezávisle od subjektu (typický workflow v dizajn štúdiu), iterujete znova celú generáciu, alebo si pomáhate Photoshopom + maskou.</p>
+
+  <p>Kým nepríde nástroj, ktorý dokáže rozložiť AI generovaný obraz do upraviteľných vrstiev, <strong>iterácie sú nevyhnutnou súčasťou workflow</strong>. Pri jednom finálnom vizuáli pre brand kampaň počítajte realisticky s 3–8 iteráciami, kým bude akceptovateľný.</p>
+
+  <h3>2. Estetika nedosahuje úroveň profesionálneho dizajnéra</h3>
+
+  <p>Toto je dôležité pomenovať: AI generované vizuály sú <strong>použiteľné, ale zriedka „wow"</strong>. Profi dizajnér s dobrým fotografom vytvorí vizuál, ktorý nesie rukopis a má dušu. AI model dáva priemerne dobrý výstup veľmi rýchlo a v hromadných množstvách – to je iný value proposition.</p>
+
+  <p><strong>Pre väčšinu paid kampaní je to dostatočne dobré</strong>, najmä keď meriame podľa CTR a CR, nie podľa dizajnérskych awardov. Pre brand kampaň s vysokým reach a long-term brand equity by sme stále neopustili tradičný creative process. AI je doplnok, nie 1:1 náhrada.</p>
+
+  <h3>3. Iterácie sú nevyhnutné aj pri dobrom promptovaní</h3>
+
+  <p>Ani jeden z modelov <strong>negeneruje použiteľný výstup na prvý pokus</strong> s 100 % spoľahlivosťou. Aj pri dôkladne pripravenom prompte (s brand farbami, kompozíciou, lighting špecifikáciami) sa nám stávalo, že prvé 2–3 generácie sme zahodili. Cieľom prompt engineeringu nie je vyrobiť výstup na prvý šup, ale <strong>dostať sa do akceptovateľnej kvality za 3–5 iterácií namiesto 15</strong>.</p>
+
+  <p>GPT Image 2 v tomto má novú výhodu – konverzačné editovanie. Po prvej generácii môžete povedať „presuň subjekt o tretinu vľavo" alebo „sprav osvetlenie kontrastnejším" a model si pamätá kontext. Pri Nano Banane Pro dostávame podobnú schopnosť cez Adobe Firefly, ktorý cez Generative Fill vie s modelom „debatovať" cez selekcie a textové prompty.</p>
+
+  <h3>4. Content policy a fyzická konzistencia</h3>
+
+  <p>GPT Image 2 má prísnejšiu content policy než open-source alternatívy – odmieta niektoré prompty (predovšetkým violence, NSFW, niektoré medzinárodné značky). Pre B2C marketing to obyčajne nie je problém, ale ak pracujete v alkoholovom segmente alebo s akýmikoľvek edge-case prompts, počítajte s občasným odmietnutím.</p>
+
+  <p>Fyzické rezonovanie – objekty s presnou geometriou (Rubikova kocka, origami, presné odrazové povrchy) – je u oboch modelov stále slabé. Vizuálne presvedčivé, ale fyzicky nereálne. Pre presnú technickú dokumentáciu produktu zostáva tradičná fotografia spoľahlivejšia.</p>
+
+  <h2 id="hromadna-produkcia">Hromadná produkcia kreatív z feedu (case story)</h2>
+
+  <p>Toto je oblasť, kde AI image generátory <strong>začínajú dávať reálnu agentúrnu hodnotu nad rámec single-creative produkcie</strong>.</p>
+
+  <p>S vybranými klientmi v Starbomedia testujeme koncept, kde namiesto manuálnej generácie kreatív vyrábame <strong>„brain"</strong> – štruktúrovaný systém promptov + brand DNA + scenárové templeity – ktorý sa potom <strong>automaticky aplikuje na celý produktový feed</strong>. Workflow vyzerá takto:</p>
+
+  <ol>
+    <li><strong>Brand DNA dokument</strong> – farby, typografia, „mood", referenčné fotky štýlu, produktové archetypy</li>
+    <li><strong>Scénový bank</strong> – 8–12 lifestyle scén, ktoré sedia značke (kuchyňa, terasa, štúdio, outdoor…)</li>
+    <li><strong>Produktový feed</strong> – CSV alebo Google Merchant feed s URL produktovej fotky</li>
+    <li><strong>Generačná pipeline</strong> – API volania na GPT Image 2 alebo Nano Banana Pro / Nano Banana 2, ktoré pre každý produkt × scénu vygenerujú produktový vizuál</li>
+    <li><strong>QA filtra</strong> – manuálna kontrola batch-em, akceptácia / re-generácia</li>
+    <li><strong>Distribúcia</strong> – priamo do Meta Ads catalog, Google Merchant Center, on-page galerie</li>
+  </ol>
+
+  <p>Z našej praxe pre stredne veľký e-shop (300 produktov × 4 scény = 1 200 vizuálov) dodáme klientovi celý kreatívny set za <strong>2–4 dni</strong> namiesto 4–6 týždňov tradičného photoshootu.</p>
+
+  <p><strong>Ekonomika tohto workflow</strong> funguje takto. API náklad pri Nano Banana 2 (Flash) na 1 200 generácií v 2K rozlíšení vyjde na cca $121. Pri GPT Image 2 medium quality cca $64. Pri tradičnom photoshoot náklad je v ráde tisíc eur (závisí od kategórie a počtu modelov v scéne) – AI workflow šetrí v bežných prípadoch <strong>5–10× oproti tradičnému štúdiovému foteniu</strong>, ak hovoríme čisto o produkčnom náklade. K tomu treba pripočítať náklady agentúry na prompt engineering, brand DNA setup a QA – ale tie sú úplne iný cost driver ako profesionálny fotograf + model + štúdio + ateliér.</p>
+
+  <p>Klienti, s ktorými už hromadnú generáciu testujeme, dostávajú vizuály, ktoré sú často <strong>lepšie a použiteľnejšie</strong> ako predošlé katalógové fotky – nie pretože sú esteticky dokonalejšie, ale pretože <strong>ich je dosť</strong> a vedia ich variovať podľa publika, sezóny a platformy bez nového photoshootu.</p>
+
+  <h2 id="kedy-pouzit-ktory-model">Kedy použiť ktorý model – rozhodovacia tabuľka</h2>
+
+  <p>Toto je naša interná tabuľka, ktorou sa riadime pri začiatku každého kampaňového projektu:</p>
+
+  <table>
+    <thead>
+      <tr><th>Use case</th><th>Náš odporúčaný model</th><th>Prečo</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Obal výživového doplnku s claims</td><td><strong>GPT Image 2</strong></td><td>Presnejší rendering textu na obale</td></tr>
+      <tr><td>Plagát s nadpisom + CTA</td><td><strong>GPT Image 2</strong></td><td>UI-style text + 5/5 v krátkych titulkoch</td></tr>
+      <tr><td>Banner ad s CTA tlačidlom</td><td><strong>GPT Image 2</strong></td><td>„Shop Now", „20 % zľava" čisto vyrenderovaný</td></tr>
+      <tr><td>Infografika (dlhšie texty + grafy)</td><td><strong>Nano Banana Pro</strong></td><td>Stabilnejší pri dlhých paragrafoch, integrácia s Google Search pre fakty</td></tr>
+      <tr><td>Produktové hero shot (sólo produkt)</td><td><strong>Nano Banana Pro</strong></td><td>Lepší fotorealizmus textúr a materiálov</td></tr>
+      <tr><td>Lifestyle scéna s ľuďmi</td><td><strong>GPT Image 2</strong></td><td>Prirodzenejšie výrazy, kompozícia</td></tr>
+      <tr><td>Editing existujúcej fotografie</td><td><strong>Nano Banana Pro</strong> (cez Photoshop / Firefly)</td><td>Generative Fill workflow</td></tr>
+      <tr><td>Multi-reference workflow (3+ obrázkov)</td><td><strong>Nano Banana Pro</strong></td><td>Až 14 referenčných obrázkov</td></tr>
+      <tr><td>Bulk produkcia z feedu</td><td><strong>Nano Banana 2</strong> alebo <strong>GPT Image 2 medium</strong></td><td>Rýchlosť (4–6 s) a cena ($0,05–0,10)</td></tr>
+      <tr><td>Multilingual marketing (CJK, hindčina, arabčina)</td><td><strong>GPT Image 2</strong></td><td>99 % accuracy naprieč skriptmi</td></tr>
+      <tr><td>Reklama vyžadujúca aktuálne dáta</td><td><strong>Nano Banana Pro</strong></td><td>Google Search ako tool – fact verification</td></tr>
+      <tr><td>B2B vizuály bez watermarku</td><td><strong>GPT Image 2</strong></td><td>Pri Nano Banane Pro je viditeľný Gemini sparkle (free/Pro tier)</td></tr>
+    </tbody>
+  </table>
+
+  <p>Pre každý finálny kampaňový balík preto dnes typicky používame <strong>kombináciu oboch modelov</strong> – GPT Image 2 pre packaging a banner ady s textom, Nano Banana Pro pre product hero shoty cez Adobe Firefly. Nano Banana 2 (Flash) zapájame, keď potrebujeme rýchle bulk variácie.</p>
+
+  <h2 id="ako-zacat">Ako začať: praktické tipy pre marketérov</h2>
+
+  <p>Ak túto technológiu chcete začať používať, naša krátka cesta vedie cez tri kroky.</p>
+
+  <h3>1. Pripravte si brand DNA dokument</h3>
+
+  <p>AI modely sú dobré len natoľko, nakoľko dobre im viete vysvetliť, ako má vyzerať váš brand. Pred prvou generáciou si pripravte:</p>
+
+  <ul>
+    <li><strong>Farebnú paletu</strong> – HEX kódy primárnych a sekundárnych farieb</li>
+    <li><strong>Typografiu</strong> – charakter písma (modernistické, serif, hand-drawn…)</li>
+    <li><strong>Mood board</strong> – 5–10 referenčných obrázkov scén a fotiek, ktoré reprezentujú váš štýl</li>
+    <li><strong>Produktové archetypy</strong> – typický uhol, lighting, kompozícia</li>
+    <li><strong>Zoznam zákazov (don't list)</strong> – čo sa v brand vizuáloch neobjavuje (napr. „nikdy chrómové detaily", „nikdy ľudia s telefónom v ruke")</li>
+  </ul>
+
+  <p>Tento dokument potom pribaľujete do každého promptu ako kontext.</p>
+
+  <h3>2. Otestujte oba modely paralelne</h3>
+
+  <p>Nepoužívajte jeden model len preto, že ho už používate. <strong>Generujte rovnaký prompt cez GPT Image 2 aj Nano Banana Pro</strong> a porovnajte výstupy. Trvá to 30 sekúnd a často budete prekvapení. Pri citlivých kampaniach robíme tento test ako interný pre-flight check pred tým, ako vôbec spustíme produkčnú generáciu.</p>
+
+  <h3>3. Zarátajte si iterácie do nákladu</h3>
+
+  <p>Ak plánujete kreatívny rozpočet, <strong>nepočítajte 1 generácia = 1 výstup</strong>. Realistický pomer je 3–8 iterácií na 1 finálny vizuál v produkčnej kvalite. Pri 100 vizuáloch to znamená 300–800 generácií, ktoré treba zarátať do API nákladu aj do interného času na QA.</p>
+
+  <p>Zaujíma vás, ako prepojiť toto s vašou existujúcou Google Ads alebo Meta Ads stratégiou? V Starbomedia robíme audity celých kampaní – od conversion trackingu cez bid stratégie až po kreatívnu produkciu. Ozvite sa nám a prejdeme váš workflow spolu.</p>
+
+  <h2 id="zaver">Záver: AI image generatory ako nová ekonomika produkcie kreatív</h2>
+
+  <p>GPT Image 2 a Nano Banana Pro nie sú dvaja rivali, kde jeden vyhrá a druhý padne. Sú to <strong>dva komplementárne nástroje</strong>, ktoré dnes spolu tvoria základ moderného agentúrneho workflow pre produkciu marketingových vizuálov. Otázka „ktorý je lepší" je v skutočnosti zle položená – správna otázka je „ktorý vie čo a kedy ho použiť".</p>
+
+  <p>Z našej skúsenosti naprieč klientmi v rôznych segmentoch (výživové doplnky, masážne lehátka, bicykle, záhradný nábytok, bežecká obuv) sme prešli od „skúšame AI obrázky" k „bez AI obrázkov nevieme servisovať klienta hromadnou kreatívnou produkciou". Limity stále existujú – ploché výstupy bez vrstiev, iterácie, estetický gap voči profi dizajnérovi. Ale pomer <strong>rýchlosti a hromadnej použiteľnosti voči nákladu</strong> robí z týchto modelov novú vrstvu agentúrnych nástrojov, nie experiment.</p>
+
+  <p>Náš sub-text tohto článku je preto jednoduchý. Pre vás ako marketéra alebo e-shop majiteľa nie je dôležité dnes „už raz" vyriešiť, či ide o AI alebo nie. Dôležité je naučiť sa, <strong>ako sa tieto modely stanú súčasťou vášho workflow</strong> – a kedy si vy a váš tím sami siahnete po jednom alebo druhom modeli pre konkrétnu úlohu. Vyhrávajú tí, ktorí sa nepýtajú „je AI dobré?", ale „kedy ktorý model".</p>
+
+  <p>Pre kontext odporúčame aj naše ďalšie články o AI v digitálnom marketingu: o súboji <a href="https://starbomedia.sk/gemini-vs-gpt-4-suboj-titanov-umelej-inteligencie/" title="Gemini vs GPT-4 – Súboj titánov umelej inteligencie">Gemini vs GPT-4</a> (širší pohľad na LLM modely tých istých dvoch hráčov), o vplyve <a href="https://starbomedia.sk/ai-overviews-kompletny-sprievodca/" title="AI Overviews – kompletný sprievodca">AI Overviews na SEO</a> a o <a href="https://starbomedia.sk/ai-max-pre-vyhladavanie-revolucia-v-google-reklamach-ktora-cita-myslienky-vasich-zakaznikov/" title="AI Max pre vyhľadávanie – revolúcia v Google reklamách">AI Max v Google reklamách</a>, ktorý kreatívny obsah z týchto modelov môžu priamo využívať.</p>
+
+  <section id="faq">
+    <h2>Často kladené otázky</h2>
+
+    <details>
+      <summary>Čo je rozdiel medzi Nano Banana Pro a Nano Banana 2?</summary>
+      <p><strong>Nano Banana Pro</strong> je premium model postavený nad Gemini 3 Pro architektúrou – väčší reasoning model s vyššou kvalitou a stabilitou pre produkčné kreatívy. <strong>Nano Banana 2</strong> je rýchlejšia consumer verzia (Gemini 3.1 Flash Image), ktorá generuje 3–5× rýchlejšie a stojí cca o tretinu menej, ale dosahuje len ~95 % kvality Pro modelu. V agentúrnej praxi voláme: Pro pre finálne vizuály, Banana 2 pre bulk a A/B testovanie.</p>
+    </details>
+
+    <details>
+      <summary>Ktorý model je celkovo presnejší pri textoch?</summary>
+      <p>GPT Image 2 dosahuje v LM Arena testoch <strong>~99 % character-level accuracy</strong>, Nano Banana Pro ~94 %. Pre obaly s claims, plagáty, banner ady s CTA copy a krátke nadpisy je GPT Image 2 jednoznačnou voľbou. Pri dlhších paragrafoch v infografike sa rozdiel zmenšuje a Nano Banana Pro je niekedy stabilnejší.</p>
+    </details>
+
+    <details>
+      <summary>Zvládajú modely slovenčinu s diakritikou?</summary>
+      <p>Pri krátkych textoch (do 8–10 slov) sme v slovenčine s diakritikou nezistili problémy ani u GPT Image 2 ani u Nano Banana Pro. Pri dlhších paragrafoch sa občas vyskytujú zámeny, ktoré treba opraviť cez iteráciu. Tip: ak je text vágne kritický pre brand (napríklad claim na obale doplnku), pre istotu pošlite do modelu rovno aj reference obrázok s presným textom v takej istej typografii.</p>
+    </details>
+
+    <details>
+      <summary>Koľko stojí mesačná generácia 1 000 vizuálov?</summary>
+      <p>Iba samotné API náklady: GPT Image 2 medium ~$53, Nano Banana Pro 2K ~$134, Nano Banana 2 (Flash) 2K ~$101. K tomu treba pripočítať čas tímu na prompt engineering, QA a integráciu do vašich systémov, ktorý je obyčajne dominantnou časťou celkového nákladu agentúrnej produkcie.</p>
+    </details>
+
+    <details>
+      <summary>Môžem AI vizuály použiť v platených kampaniach?</summary>
+      <p>Áno, tak GPT Image 2 ako aj Nano Banana Pro umožňujú komerčné použitie výstupov. Pri Nano Banana Pro Google poskytuje <strong>copyright indemnification</strong> a všetky výstupy obsahujú neviditeľný <strong>SynthID watermark</strong>. Pri free/Pro Gemini tier je viditeľný Gemini sparkle watermark – pre B2B vizuály bez watermarku potrebujete Ultra tier alebo prácu cez API. GPT Image 2 watermark policy zatiaľ nie je verejne deklarovaná, odporúčame skontrolovať aktuálne licenčné podmienky.</p>
+    </details>
+
+    <details>
+      <summary>Nahradí AI fotografov a dizajnérov?</summary>
+      <p>V krátkom horizonte nie. Pre brand kampaň s vysokým reach a dlhodobou brand equity zostáva tradičný kreatívny process s fotografom a dizajnérom kvalitatívne lepší. Čo sa mení je <strong>mid-funnel a bulk produkcia kreatív</strong> – paid social, performance kampane, on-page produktové fotky pre stredne veľký e-shop. V týchto vrstvách sa AI workflow stáva dominantným štandardom a fotografi/dizajnéri sa presúvajú smerom k vyšším funkciám: brand strategy, art direction, finalizácia signature kampaní.</p>
+    </details>
+
+    <details>
+      <summary>Aký je odporúčaný workflow pre malý e-shop, ktorý ešte nemá AI workflow?</summary>
+      <p>Začnite s 30-dňovým testom. Vyberte si 10 produktov, vygenerujte pre každý 3–4 varianty cez GPT Image 2 alebo Nano Banana Pro a porovnajte ich performance v reklame s vašimi súčasnými fotkami. Sledujte CTR a CR, nie estetický dojem. Ak sa AI vizuály vyrovnajú alebo prekonajú existujúce v aspoň 50 % testov, máte case na rozšírenie workflow. V Starbomedia túto fázu nazývame „pre-flight" – nikdy nezačíname full bulk produkcia pred validáciou dát.</p>
+    </details>
+
+    <details>
+      <summary>Ktorý model si mám vybrať, ak musím začať len s jedným?</summary>
+      <p>Ak váš primárny use case sú <strong>paid social ady, banner ady a packaging</strong> s textom: <strong>GPT Image 2</strong>. Ak sú to <strong>produktové hero shoty, lifestyle scény a editing existujúcich fotiek</strong>: <strong>Nano Banana Pro</strong>, najmä ak už používate Adobe stack. Ak ste v rozpočtovo náročnom workflow a chcete <strong>maximum cost-efficiency</strong>: pozrite sa na <strong>Nano Banana 2</strong> (Flash variant).</p>
+    </details>
+  </section>
+</article>
