@@ -16,7 +16,7 @@ const cennik = [
     { sluzba: 'Google Ads + Meta Ads spolu', cena: 'od 600 € / mes.', detail: 'Najčastejšia kombinácia pre e-shopy — jeden tím, spoločná atribúcia a rozpočtová stratégia.', href: '/reklama-na-internete' },
     { sluzba: 'SEO', cena: 'od 400 € / mes.', detail: 'Technické SEO, obsah, interné prelinkovanie, GEO (viditeľnosť v AI odpovediach).', href: '/seo' },
     { sluzba: 'Heureka a cenové porovnávače', cena: 'od 150 € / mes.', detail: 'Doplnok k správe kampaní — feedy, bidding, dostupnosť produktov.', href: '/cenove-porovnavace' },
-    { sluzba: 'Nastavenie merania konverzií', cena: 'od 300 € jednorazovo', detail: 'GA4, server-side tagging, Enhanced Conversions — základ, bez ktorého sa neoptimalizuje.', href: '/analyza-webu' },
+    { sluzba: 'Nastavenie merania konverzií', cena: 'od 400 € jednorazovo', detail: 'GA4, server-side tagging, Enhanced Conversions — základ, bez ktorého sa neoptimalizuje.', href: '/analyza-webu' },
     { sluzba: 'Vstupný audit účtu', cena: 'zdarma', detail: 'Nezáväzná analýza histórie účtu: kadiaľ utekajú peniaze a aký je potenciál.', href: '/kontakt' },
 ];
 
