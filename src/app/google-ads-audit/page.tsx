@@ -7,8 +7,8 @@ import {
 import styles from '../service.module.css';
 
 export const metadata = {
-    title: 'Google Ads audit — 74-bodová kontrola účtu zdarma | Starbomedia',
-    description: 'Nezávislý Google Ads audit: 74 kontrolných bodov v 9 oblastiach — meranie, premrhaný spend, štruktúra, PMax, bidding. Vstupný audit zdarma, výstup v ľudskej reči.',
+    title: 'Google Ads audit — 74-bodová kontrola účtu | Starbomedia',
+    description: 'Nezávislý Google Ads audit: 74 kontrolných bodov v 9 oblastiach — meranie, premrhaný spend, štruktúra, PMax, bidding. Od 250 € podľa veľkosti účtu; pri následnej spolupráci ho odpočítame z prvej faktúry.',
 };
 
 const oblasti = [
@@ -32,11 +32,11 @@ const nalezy = [
 ];
 
 const faq = [
-    { q: 'Koľko audit stojí a ako dlho trvá?', a: 'Vstupný audit je zdarma a bez záväzkov — je to náš spôsob, ako ukázať, ako pracujeme. Výstup máte typicky do 3 – 5 pracovných dní od pridelenia prístupu.' },
+    { q: 'Koľko audit stojí a ako dlho trvá?', a: 'Cena začína na 250 € a závisí od veľkosti účtu (spend, počet kampaní a trhov) — dohodneme ju vopred, žiadne prekvapenia. Ak sa po audite rozhodnete pre spoluprácu s nami, sumu auditu odpočítame z prvej faktúry — audit tak máte efektívne zdarma. Výstup dostanete do 3 – 5 pracovných dní.' },
     { q: 'Aký prístup k účtu potrebujete?', a: 'Stačí prístup na čítanie (read-only) do Google Ads, ideálne aj do GA4. Nič v účte nemeníme — audit je čisto analytický.' },
     { q: 'Čo presne dostanem na konci?', a: 'Zoznam konkrétnych nálezov zoradených podľa dopadu na peniaze: čo uniká, prečo a ako to opraviť. V ľudskej reči, nie 40 strán exportov. Súčasťou je aj odhad potenciálu účtu.' },
     { q: 'Môj účet spravuje iná agentúra. Je to problém?', a: 'Nie — nezávislá kontrola je bežná prax, presne ako druhý názor u lekára. Audit robíme diskrétne a výstup patrí vám. Ak agentúra pracuje dobre, povieme vám to tiež.' },
-    { q: 'V čom je zdarma audit iný ako platený?', a: 'Vstupný audit pokrýva všetkých 9 oblastí do hĺbky potrebnej na rozhodnutie, čo ďalej. Ak potrebujete forenznú hĺbku (napr. multi-market účty s históriou rokov), rozsah si dohodneme individuálne.' },
+    { q: 'Prečo audit nerobíte zadarmo?', a: 'Lebo poctivý audit je niekoľko dní práce senior špecialistu — a „audity zdarma“ na trhu bývajú v skutočnosti predajný formulár. Náš audit má za úlohu nájsť hlavné nedostatky s reálnym dopadom na peniaze, nie vyrábať zoznam kozmetických pripomienok. Férová poistka: pri následnej spolupráci ho máte zdarma, lebo sa odpočíta z prvej faktúry.' },
     { q: 'Čo ak audit nič nenájde?', a: 'Stáva sa to — a povieme vám to na rovinu. Dobre spravovaný účet je dobrá správa; nebudeme vymýšľať problémy, aby sme predali službu.' },
 ];
 
@@ -46,11 +46,11 @@ const jsonLd = [
         '@type': 'Service',
         name: 'Google Ads audit',
         serviceType: 'Google Ads account audit',
-        description: 'Nezávislý audit Google Ads účtu: 74 kontrolných bodov v 9 oblastiach — meranie konverzií, premrhaný spend, štruktúra, kľúčové slová, Quality Score, PMax, bidding a nastavenia. Vstupný audit zdarma.',
+        description: 'Nezávislý audit Google Ads účtu: 74 kontrolných bodov v 9 oblastiach — meranie konverzií, premrhaný spend, štruktúra, kľúčové slová, Quality Score, PMax, bidding a nastavenia. Od 250 € podľa veľkosti účtu, pri následnej spolupráci zdarma.',
         provider: { '@id': 'https://starbomedia.sk/#organization' },
         areaServed: 'SK',
         url: 'https://starbomedia.sk/google-ads-audit',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Vstupný audit zdarma' },
+        offers: { '@type': 'Offer', price: '250', priceCurrency: 'EUR', description: 'Od 250 € podľa veľkosti účtu; pri následnej spolupráci odpočítané z prvej faktúry' },
     },
     {
         '@context': 'https://schema.org',
@@ -81,16 +81,16 @@ export default function AuditPage() {
                     <div className={styles.headerContent}>
                         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#ecfdf5', padding: '0.3rem 0.8rem', borderRadius: '50px', marginBottom: '1.5rem', border: '1px solid #d1fae5' }}>
                             <ShieldCheck size={16} color="#10b981" />
-                            <span style={{ color: '#10b981', fontWeight: 600, fontSize: '0.85rem' }}>VSTUPNÝ AUDIT ZDARMA</span>
+                            <span style={{ color: '#10b981', fontWeight: 600, fontSize: '0.85rem' }}>PRI NÁSLEDNEJ SPOLUPRÁCI ZDARMA</span>
                         </div>
                         <h1 className={styles.title}>Google Ads audit: 74-bodová kontrola, ktorá nájde, kadiaľ utekajú peniaze.</h1>
                         <p className={styles.subtitle}>
                             Nezávislá kontrola účtu v 9 oblastiach — od merania konverzií cez premrhaný spend až po PMax a bidding.
-                            Vstupný audit je zdarma, výstup dostanete do 3 – 5 dní v ľudskej reči: čo uniká, koľko a ako to opraviť.
+                            Cena od 250 € podľa veľkosti účtu — a ak sa následne stanete naším klientom, audit vám odpočítame z prvej faktúry. Výstup do 3 – 5 dní v ľudskej reči: hlavné nedostatky s dopadom na peniaze, nie mikromanažment.
                         </p>
                         <div style={{ marginTop: '2rem' }}>
                             <Link href="/kontakt" className="btn btn-primary" style={{ background: '#10b981', boxShadow: '0 4px 14px 0 rgba(16, 185, 129, 0.4)' }}>
-                                Chcem audit zdarma
+                                Objednať audit
                             </Link>
                         </div>
                     </div>
@@ -193,10 +193,10 @@ export default function AuditPage() {
                 <section className={styles.section} style={{ textAlign: 'center', padding: '3rem 0' }}>
                     <h2 style={{ fontSize: '1.8rem', marginBottom: '0.75rem' }}>Zistite, kadiaľ vám utekajú peniaze</h2>
                     <p className={styles.text} style={{ maxWidth: '38rem', margin: '0 auto 1.5rem' }}>
-                        Vstupný audit je zdarma a bez záväzkov. Ak je účet v poriadku, povieme vám to.
+                        Audit od 250 € podľa veľkosti účtu — pri následnej spolupráci vám ho odpočítame z prvej faktúry. Ak je účet v poriadku, povieme vám to.
                         Ak nie, dostanete konkrétny zoznam, čo opraviť — u nás alebo kdekoľvek inde.
                     </p>
-                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#10b981' }}>Získať audit zdarma</Link>
+                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#10b981' }}>Objednať audit</Link>
                     <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#64748b' }}>
                         Ceny ostatných služieb nájdete v <Link href="/cennik" style={{ color: '#10b981', fontWeight: 600 }}>cenníku</Link>.
                     </p>

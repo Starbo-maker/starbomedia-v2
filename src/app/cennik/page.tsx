@@ -7,7 +7,7 @@ import styles from '../service.module.css';
 
 export const metadata = {
     title: 'Cenník — koľko stojí správa reklamy a SEO | Starbomedia',
-    description: 'Transparentný cenník: správa Google Ads od 350 €, Meta Ads od 350 €, SEO od 400 € mesačne. Vstupný audit zdarma. Konkrétne pásma, žiadne „cena na vyžiadanie".',
+    description: 'Transparentný cenník: správa Google Ads od 350 €, Meta Ads od 350 €, SEO od 400 € mesačne. Google Ads audit od 250 € (pri spolupráci zdarma). Konkrétne pásma, žiadne „cena na vyžiadanie".',
 };
 
 const cennik = [
@@ -17,11 +17,11 @@ const cennik = [
     { sluzba: 'SEO', cena: 'od 400 € / mes.', detail: 'Technické SEO, obsah, interné prelinkovanie, GEO (viditeľnosť v AI odpovediach).', href: '/seo' },
     { sluzba: 'Heureka a cenové porovnávače', cena: 'od 150 € / mes.', detail: 'Doplnok k správe kampaní — feedy, bidding, dostupnosť produktov.', href: '/cenove-porovnavace' },
     { sluzba: 'Nastavenie merania konverzií', cena: 'od 400 € jednorazovo', detail: 'GA4, server-side tagging, Enhanced Conversions — základ, bez ktorého sa neoptimalizuje.', href: '/analyza-webu' },
-    { sluzba: 'Vstupný audit účtu', cena: 'zdarma', detail: 'Nezáväzná analýza histórie účtu: kadiaľ utekajú peniaze a aký je potenciál.', href: '/kontakt' },
+    { sluzba: 'Google Ads audit (74 bodov)', cena: 'od 250 €', detail: 'Podľa veľkosti účtu. Nájde hlavné nedostatky s dopadom na peniaze — pri následnej spolupráci ho odpočítame z prvej faktúry.', href: '/google-ads-audit' },
 ];
 
 const faq = [
-    { q: 'Prečo uvádzate ceny „od"?', a: 'Lebo náročnosť správy sa líši: účet s jedným trhom a stovkami produktov je iná práca než účet s ôsmimi trhmi a desaťtisícmi produktov. Pásmo „od" je reálna spodná hranica, presnú cenu dostanete po bezplatnom audite — spolu s rozsahom práce, ktorý za ňu dostanete.' },
+    { q: 'Prečo uvádzate ceny „od"?', a: 'Lebo náročnosť správy sa líši: účet s jedným trhom a stovkami produktov je iná práca než účet s ôsmimi trhmi a desaťtisícmi produktov. Pásmo „od" je reálna spodná hranica, presnú cenu dostanete po vstupnom audite — spolu s rozsahom práce, ktorý za ňu dostanete.' },
     { q: 'Je fixná odmena alebo percento z rozpočtu výhodnejšie?', a: 'Do približne 3 000 € mesačného rozpočtu je pre klienta zvyčajne férovejší fix. Pri väčších rozpočtoch dáva zmysel 10 – 15 % z médií, lebo náročnosť správy rastie s objemom. Modely nad 25 % považujeme za predražené.' },
     { q: 'Viažete zmluvou?', a: 'Nie. Spolupráca je bez dlhodobej viazanosti s mesačnou výpovednou lehotou. Držíme si klientov výsledkami, nie zmluvami.' },
     { q: 'Komu patrí reklamný účet?', a: 'Vždy vám. Účty zakladáme na vašu firmu a pri prípadnom odchode vám zostáva účet, história aj dáta. Považujeme to za samozrejmosť — a odporúčame si to overiť u každej agentúry.' },
@@ -78,11 +78,11 @@ export default function CennikPage() {
                         <h1 className={styles.title}>Koľko stojí spolupráca so Starbomedia?</h1>
                         <p className={styles.subtitle}>
                             Žiadne „cena na vyžiadanie". Správa Google Ads od 350 €, Meta Ads od 350 €, SEO od 400 € mesačne —
-                            a vstupný audit vždy zdarma. Nižšie nájdete kompletné pásma aj to, čo za ne reálne dostanete.
+                            a vstupný audit, ktorý sa vám pri spolupráci odpočíta z prvej faktúry. Nižšie nájdete kompletné pásma aj to, čo za ne reálne dostanete.
                         </p>
                         <div style={{ marginTop: '2rem' }}>
                             <Link href="/kontakt" className="btn btn-primary" style={{ background: '#8b5cf6', boxShadow: '0 4px 14px 0 rgba(139, 92, 246, 0.4)' }}>
-                                Chcem audit zdarma
+                                Chcem vstupný audit
                             </Link>
                         </div>
                     </div>
@@ -102,7 +102,7 @@ export default function CennikPage() {
                 <section className={styles.section} style={{ padding: '2rem 0' }}>
                     <h2 style={{ fontSize: '2.2rem', marginBottom: '0.75rem' }}>Cenník služieb</h2>
                     <p className={styles.text} style={{ marginBottom: '2rem', maxWidth: '46rem' }}>
-                        Ceny sú spodné hranice pásiem — presnú ponuku dostanete po bezplatnom audite spolu s rozsahom práce.
+                        Ceny sú spodné hranice pásiem — presnú ponuku dostanete po vstupnom audite spolu s rozsahom práce.
                         Mediálny rozpočet (kredit pre Google/Meta) je samostatná platba priamo platformám.
                     </p>
                     <div style={{ overflowX: 'auto' }}>
@@ -201,10 +201,10 @@ export default function CennikPage() {
                 <section className={styles.section} style={{ textAlign: 'center', padding: '3rem 0' }}>
                     <h2 style={{ fontSize: '1.8rem', marginBottom: '0.75rem' }}>Chcete presnú cenu pre váš biznis?</h2>
                     <p className={styles.text} style={{ maxWidth: '38rem', margin: '0 auto 1.5rem' }}>
-                        Pošlite nám prístup alebo web — v bezplatnom audite vám povieme, kadiaľ utekajú peniaze,
+                        Pošlite nám prístup alebo web — vo vstupnom audite vám povieme, kadiaľ utekajú peniaze,
                         aký rozpočet dáva zmysel a koľko by stála správa u nás.
                     </p>
-                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#8b5cf6' }}>Získať audit zdarma</Link>
+                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#8b5cf6' }}>Objednať vstupný audit</Link>
                 </section>
             </div>
 

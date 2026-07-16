@@ -20,7 +20,7 @@ const services = [
     { name: 'SEO optimalizácia', desc: 'Organická viditeľnosť', href: '/seo', icon: TrendingUp },
     { name: 'Cenové porovnávače', desc: 'Heureka a produktové feedy', href: '/cenove-porovnavace', icon: ShoppingBag },
     { name: 'Webová analytika', desc: 'GA4, GTM, server-side meranie', href: '/analyza-webu', icon: BarChart3 },
-    { name: 'Google Ads audit', desc: '74-bodová kontrola účtu zdarma', href: '/google-ads-audit', icon: Search },
+    { name: 'Google Ads audit', desc: '74-bodová kontrola účtu', href: '/google-ads-audit', icon: Search },
 ];
 
 const Header = () => {
