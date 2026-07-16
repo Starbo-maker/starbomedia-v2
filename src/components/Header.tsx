@@ -55,6 +55,7 @@ const Header = () => {
     const navLinks = [
         { name: 'Domov', href: '/' },
         { name: 'AI Studio', href: '/ai-studio' },
+        { name: 'Cenník', href: '/cennik' },
         { name: 'Referencie', href: '/referencie-2' },
         { name: 'O nás', href: '/tim-starbomedia' },
         { name: 'Blog', href: '/blog' },
