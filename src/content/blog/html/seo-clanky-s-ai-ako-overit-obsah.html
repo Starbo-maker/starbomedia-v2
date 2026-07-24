@@ -1,0 +1,362 @@
+<article class="ucp-article" itemscope="" itemtype="https://schema.org/Article">
+
+  <header>
+    <p class="article-meta">
+      <time itemprop="datePublished" datetime="2026-07-23">23. júla 2026</time>
+      · ~17 min čítania    </p>
+  </header>
+
+  <nav aria-label="Obsah článku">
+<h2>Obsah článku</h2>
+<ol>
+<li><a href="#tldr">TL;DR</a></li>
+<li><a href="#co-google-hovori">Čo Google o AI obsahu naozaj hovorí</a></li>
+<li><a href="#overovanie-cisel">Prečo je overovanie čísel dôležitejšie než štýl</a></li>
+<li><a href="#ai-detektory">AI detektory: prečo je optimalizácia na ne slepá ulička</a></li>
+<li><a href="#co-prezradza-ai">Čo v texte naozaj prezrádza AI</a></li>
+<li><a href="#redakcny-proces">Redakčný proces, ktorý používame my</a></li>
+<li><a href="#co-si-odniest">Čo si z toho odniesť</a></li>
+<li><a href="#faq">Často kladené otázky</a></li>
+</ol>
+</nav>
+
+  <div itemprop="articleBody">
+<p class="lead"><strong>Google netrestá obsah za to, že vznikol s pomocou AI. Trestá obsah, ktorý vznikol s malou snahou a bez pridanej hodnoty pre čitateľa.</strong> To sú dve odlišné veci a rozdiel medzi nimi nerobí nástroj, ktorým píšete, ale kontrola, ktorou text prejde predtým, než ho zverejníte.</p>
+
+  <p>Tento článok je o tej kontrole. Nie o tom, ako napísať SEO články rýchlejšie, ale o tom, ako si overiť, že to, čo ste napísali, je pravda.</p>
+
+  
+
+  <h2 id="tldr">TL;DR</h2>
+
+  <ul>
+    <li><strong>Google AI obsah nepenalizuje.</strong> Vo svojej dokumentácii to hovorí priamo. Porušením je generovanie množstva stránok bez pridanej hodnoty, čo sa volá scaled content abuse a platí rovnako pre text od človeka aj od modelu.</li>
+    <li><strong>V smerniciach pre hodnotiteľov kvality je AI uvedená v jednom rade s kopírovaním a parafrázovaním.</strong> Rozhodujúce je spojenie „s malou alebo žiadnou snahou", nie pôvod textu.</li>
+    <li><strong>Najväčšie riziko AI obsahu nie je štýl, ale čísla.</strong> Model preberie štatistiku z jedného zdroja, ktorý ju sám odniekiaľ prevzal, a napíše ju s rovnakou istotou ako overený fakt.</li>
+    <li><strong>Optimalizácia na AI detektory je slepá ulička.</strong> V nezávislom teste 14 nástrojov nebol ani jeden spoľahlivý na ľudskom aj AI texte súčasne. Recenzovaná štúdia zo Stanfordu ukázala, že detektory označili za AI približne 61 % ľudských esejí od nerodilých hovorcov angličtiny.</li>
+    <li><strong>Pre slovenčinu je to ešte horšie.</strong> Benchmark bratislavského Kempelen Institute ukazuje, že detekcia sa musí robiť priamo v jazyku, preklad do angličtiny zvyšuje falošné poplachy, a pre slovenčinu chýbajú dáta.</li>
+    <li><strong>Čo funguje:</strong> overovanie čísel z viacerých nezávislých zdrojov, redakčná kontrola s auditnou stopou a ochota časť obsahu zahodiť.</li>
+  </ul>
+
+  
+
+  <figure>
+<img src="/blog/seo-clanky-s-ai-ako-overit-obsah/co-google-penalizuje.webp" alt="Porovnanie – Google nepenalizuje AI pôvod obsahu, ale nízku snahu a chýbajúcu pridanú hodnotu" loading="lazy" width="1200" height="675">
+<figcaption>Rozhodujúca nie je otázka, čím bol text napísaný, ale s akou snahou a s akou hodnotou pre čitateľa.</figcaption>
+</figure>
+
+<h2 id="co-google-hovori">Čo Google o AI obsahu naozaj hovorí</h2>
+
+  <p>Okolo tejto otázky koluje viac mýtov než pri väčšine SEO tém. Dobrá správa je, že odpoveď netreba odhadovať. Google ju má napísanú vo vlastnej dokumentácii.</p>
+
+  <p>V dokumente <a href="https://developers.google.com/search/docs/fundamentals/using-gen-ai-content" title="Google Search's Guidance on Generative AI Content" target="_blank" rel="noopener noreferrer">Google Search's Guidance on Generative AI Content</a> sa nikde nepíše, že obsah vytvorený s pomocou AI je penalizovaný. Píše sa tam niečo iné: <em>„using generative AI tools or other similar tools to generate many pages without adding value for users may violate Google's spam policy on scaled content abuse"</em>. Teda porušením je generovanie mnohých stránok bez pridanej hodnoty pre používateľa.</p>
+
+  <p>Všimnite si, čo v tej vete robí prácu. Nie „generative AI tools". Ale „many pages without adding value".</p>
+
+  <h3 id="scaled-content-abuse">Scaled content abuse a koho sa naozaj týka</h3>
+
+  <p>Scaled content abuse je vytváranie veľkého množstva stránok primárne na manipuláciu poradia vo vyhľadávaní. Podstatné je, že sa <strong>rovnako vzťahuje na obsah písaný človekom, modelom aj kombináciou oboch</strong>. Nie je to pravidlo namierené proti AI, hoci sa tak často interpretuje.</p>
+
+  <p>Samotný objem porušením nie je. Programatické SEO, e-shopové katalógy či lokálne vstupné stránky môžu legitímne existovať v tisíckach, ak prinášajú reálnu úžitkovosť, presné dáta a odlíšený obsah. Porušenie vzniká až kombináciou troch vecí naraz: objem, zámer manipulovať poradie a nízka hodnota pre čitateľa.</p>
+
+  <p>Google k tomu v dokumentácii pridáva odporúčanie, ktoré sa v diskusiách takmer nespomína: <em>„Sharing information about how a piece of content was created can help give your readers more context."</em> Teda transparentnosť o tom, ako obsah vznikol, je odporúčaná, nie riskantná.</p>
+
+  <p>Pozor ale na rozsah. Pre organické vyhľadávanie ide o odporúčanie, nie povinnosť. Prísnejšie pravidlo platí v <strong>Google Merchant Center</strong>, kde je to podľa <a href="https://support.google.com/merchants/answer/14743464" title="Google Merchant Center Help – AI-generated content" target="_blank" rel="noopener noreferrer">jeho vlastnej dokumentácie</a> povinnosť. AI generované obrázky musia niesť metadáta <code>IPTC DigitalSourceType</code> s hodnotou <code>TrainedAlgorithmicMedia</code>, a pri AI generovaných názvoch a popisoch sa musí použiť samostatný štruktúrovaný atribút <code>structured_title</code>, resp. <code>structured_description</code>, s poľom <code>digital_source_type</code>. Týka sa to produktových feedov, nie blogových článkov.</p>
+
+  <h3 id="hodnotitelia-kvality">Ako AI obsah posudzujú hodnotitelia kvality</h3>
+
+  <p>Google zamestnáva ľudských hodnotiteľov kvality, ktorí podľa rozsiahlych smerníc posudzujú vzorky výsledkov. Ich hodnotenia neovplyvňujú poradie priamo, ale slúžia ako spätná väzba pri vývoji algoritmov. A práve tam sa AI obsah spomína explicitne.</p>
+
+  <p>Aktuálne smernice uvádzajú, že najnižšie hodnotenie <em>Lowest</em> platí, keď je hlavný obsah stránky <em>„copied, paraphrased, embedded, auto or AI generated, or reposted from other sources with little to no effort"</em> a neprináša pridanú hodnotu.</p>
+
+  <p>Prečítajte si ten zoznam ešte raz. <strong>Skopírované, parafrázované, vložené, automaticky alebo AI generované, prevzaté odinakiaľ.</strong> AI je tam jedna položka z piatich, všetky sú cestou k tomu istému: obsah vytvorený s malou snahou. Rozhodujúca je koncovka vety, nie jej stred.</p>
+
+  <p>Smernice zároveň rozlišujú hodnotenie <em>Low</em> od <em>Lowest</em>. Prvé znamená minimálnu kurátorskú snahu, druhé prakticky žiadnu. Rozdiel medzi nimi je presne to, čo robí redakčná práca.</p>
+
+  <blockquote>
+    <p><strong>Poznámka k presnosti:</strong> presné znenie sekcie potvrdzuje viacero nezávislých rozborov, ale konkrétnu verziu a mesiac vydania sme nedokázali doložiť z primárneho zdroja. Preto tu neuvádzame dátum. Vecný obsah pravidla je konzistentný naprieč zdrojmi, atribúcia verzie nie.</p>
+  </blockquote>
+
+  <h3 id="ai-overviews">Čo sa zmenilo s AI Overviews</h3>
+
+  <p>V priebehu roka 2026 Google explicitne rozšíril svoje spam politiky aj na generatívne odpovede vo vyhľadávaní, teda na AI Overviews a AI Mode. Nešlo o nové pravidlá, ale o výslovné potvrdenie, že tie existujúce, vrátane scaled content abuse, platia aj pre AI vrstvu vyhľadávania.</p>
+
+  <p>Prakticky to znamená, že snaha zaplaviť index obsahom kvôli tomu, aby vás citovali AI odpovede, spadá pod tie isté politiky ako klasický spam. Ak vás zaujíma, ako sa na viditeľnosť v AI odpovediach dá pracovať poctivo, rozobrali sme to v článku <a href="/geo-vs-seo" title="GEO vs SEO 2026: ako optimalizovať obsah pre AI vyhľadávanie">GEO vs SEO 2026</a> a v <a href="/ai-overviews-kompletny-sprievodca" title="AI Overviews – kompletný sprievodca">kompletnom sprievodcovi AI Overviews</a>.</p>
+
+  <p>Doložené udalosti roka 2026 sú dve: core update, ktorý bežal od 21. mája do 2. júna, a spam update potvrdený 24. júna.</p>
+
+  <h3 id="jedno-cislo">Jedno číslo, ktoré Google naozaj zverejnil</h3>
+
+  <p>Google takmer nikdy nepublikuje, koľko webov konkrétny update zasiahol. Percentá, ktoré nájdete v SEO článkoch, sú odhady zo sledovacích nástrojov tretích strán, nie oficiálne dáta.</p>
+
+  <p>Jedna z mála výnimiek je marec 2024. Vtedy Google pri predstavení zmien odhadol, že znížia množstvo nekvalitného a neoriginálneho obsahu vo výsledkoch približne o <strong>40 %</strong>. V aprílovom pokračovaní toto číslo upresnil na zhruba <strong>45 %</strong>. Sú to odhady dopadu na kvalitu výsledkov, nie na počet zasiahnutých domén, a tak ich treba aj čítať. Ako Google k podobným zásahom pristupuje dlhodobo, sme rozobrali v <a href="/google-core-update-2024-prirucka" title="Google Core Update 2024 – príručka">príručke ku Google Core Update</a>.</p>
+
+  <h2 id="overovanie-cisel">Prečo je overovanie čísel dôležitejšie než štýl</h2>
+
+  <p>Keď sa hovorí o rizikách AI obsahu, debata sa takmer vždy stočí na štýl. Znie to umelo? Spozná to čitateľ? Prejde to detektorom?</p>
+
+  <p>Podľa nás je to zlá otázka. Štylistický problém čitateľa nanajvýš znudí. <strong>Faktický problém vás môže stáť dôveryhodnosť</strong> a v regulovaných témach aj viac.</p>
+
+  <p>Jazykový model neoznačuje neisté tvrdenia. Napíše štatistiku, ktorú videl v jednom blogu, s presne rovnakou istotou ako údaj z oficiálnej štatistickej ročenky. Rozdiel medzi nimi nevidí a ani ho vidieť nemôže, lebo pracuje s pravdepodobnosťou slov, nie s dôveryhodnosťou zdrojov.</p>
+
+  <h3 id="primarny-zdroj">Primárny zdroj verzus agregátor</h3>
+
+  <p>Toto je v praxi najčastejší zdroj chýb a stojí za to ho pomenovať presne.</p>
+
+  <p><strong>Primárny zdroj</strong> je ten, kto údaj vytvoril. Štatistický úrad, autori štúdie, oficiálna dokumentácia výrobcu, výročná správa.</p>
+
+  <p><strong>Agregátor</strong> je ten, kto ho prevzal a preformuloval. Trhový report, ktorý cituje iný report. Blog, ktorý cituje ten report. Ďalší blog, ktorý cituje ten blog.</p>
+
+  <p>Pri každom preskoku sa niečo stratí. Zmizne metodika, zmizne poznámka pod čiarou o tom, čo presne bolo merané, a ostane holé číslo, ktoré vyzerá tvrdšie, než v skutočnosti je. U nás sa toto stalo pri trhovom odhade od agregátora trhových reportov. Prebrali sme ho ako fakt a museli sme ho spätne opravovať. Odvtedy máme v procese pravidlo, že tieto agregátory sú z overovania vyradené a čísla hľadáme u primárnych zdrojov.</p>
+
+  <h3 id="overenie-v-praxi">Ako vyzerá overenie v praxi</h3>
+
+  <p>Nemusíme chodiť ďaleko po príklad. Stačí sa pozrieť na to, čo sa stalo počas písania tohto článku.</p>
+
+  <p>V rešerši sme narazili na sériu čísel o dopade jedného z updatov: zasiahol vraj 55 % sledovaných domén, AI obsahové farmy stratili 60 až 80 % návštevnosti, weby s neredigovanými AI stránkami klesli o 50 až 80 %. Čísla boli konkrétne, opakovalo ich niekoľko zdrojov nezávisle od seba a do článku by sa hodili takmer dokonale.</p>
+
+  <p>Poslali sme ich na nezávislé overenie. Výsledok bol nepríjemný: všetky tie čísla pochádzali z LinkedIn príspevkov SEO konzultantov a z blogov nástrojov. Žiadny primárny zdroj. A pri hľadaní sa ukázala ešte väčšia vec, než sme čakali. <strong>Nepodarilo sa doložiť ani to, že daný update vôbec prebehol.</strong> Doložené sú pre rok 2026 iné termíny, ktoré sme uviedli vyššie.</p>
+
+  <p>Keby sme tie čísla použili, článok o kontrole kvality AI obsahu by obsahoval tri neoveriteľné štatistiky a jednu udalosť, ktorá sa možno nestala. Preto v tomto článku nie sú.</p>
+
+  <figure>
+    <img src="/blog/seo-clanky-s-ai-ako-overit-obsah/overenie-cisel-priebeh.webp"
+         alt="Schéma overovania čísel – z rešerše prešlo do článku menej tvrdení, než sa našlo"
+         loading="lazy" width="1200" height="675">
+    <figcaption>Overovanie čísel v praxi: časť tvrdení z rešerše sa do článku nedostane.</figcaption>
+  </figure>
+
+  <h2 id="ai-detektory">AI detektory: prečo je optimalizácia na ne slepá ulička</h2>
+
+  <p>Tu máme jasný názor a nebudeme ho vyvažovať. <strong>Optimalizovať text na to, aby prešiel AI detektorom, je strata času a často priamo poškodenie článku.</strong> Tu je prečo.</p>
+
+  <h3 id="nezavisle-testy">Čo hovoria nezávislé testy</h3>
+
+  <p>Rozdiel medzi tým, čo o svojej presnosti tvrdia výrobcovia detektorov, a tým, čo ukazujú nezávislé testy, je veľký.</p>
+
+  <p>Weber-Wulff a kolektív v roku 2023 otestovali 14 nástrojov na detekciu AI textu. Spoľahlivosť pri rozpoznávaní AI textu sa u nich pohybovala <strong>od 56 do 88 %</strong> a pri ľudskom texte od 78 do 98 %. Kľúčové je, že <strong>ani jeden nástroj nebol spoľahlivý na oboch typoch textu súčasne</strong> – čo je presne to, čo by ste od použiteľného detektora potrebovali. Výrobcovia pritom vo vlastných meraniach uvádzajú hodnoty nad 99 %. Tie merania si robia sami a nezávislá replikácia k nim spravidla chýba.</p>
+
+  <p>Ešte výrečnejšie sú falošné poplachy. Recenzovaná štúdia stanfordského tímu (Liang a kol., 2023), publikovaná v časopise Patterns (Cell Press), testovala sedem detektorov na esejach písaných ľuďmi, ktorých materinským jazykom nebola angličtina. Detektory ich označili za AI v priemere približne v <strong>61 %</strong> prípadov. Jeden z nich označil za AI dokonca 97,8 % týchto ľudských textov. A pri zhruba pätine esejí sa zhodne pomýlilo všetkých sedem naraz.</p>
+
+  <p>Zopakujme, čo to znamená. Nešlo o AI texty. Boli to eseje napísané ľuďmi. Ich jediným previnením bolo, že angličtina nebola ich prvý jazyk.</p>
+
+  <p>Novšie recenzované práce z rokov 2024 až 2026 tento vzorec potvrdzujú a rozširujú aj na dialekty a neformálny štýl. Niektorí výrobcovia tvrdia, že ich súčasné nástroje už touto zaujatosťou netrpia, ale ide o ich vlastné merania.</p>
+
+  <h3 id="male-jazyky">Ako sú na tom malé jazyky vrátane slovenčiny</h3>
+
+  <p>Ak vás napadlo, že ak majú detektory problém s nerodilými hovorcami angličtiny, so slovenčinou to nebude lepšie, máte pravdu. A nemusíme to odhadovať.</p>
+
+  <p>Výskumníci <strong>Dominik Macko a Jakub Kopal z Kempelen Institute of Intelligent Technologies v Bratislave</strong> publikovali v septembri 2025 benchmark <a href="https://arxiv.org/abs/2509.26051" title="CEAID: Benchmark of Multilingual Machine-Generated Text Detection Methods for Central European Languages" target="_blank" rel="noopener noreferrer">CEAID</a>, ktorý testuje metódy detekcie strojovo generovaného textu v siedmich stredoeurópskych jazykoch. <strong>Slovenčina je medzi nimi.</strong></p>
+
+  <p>Tri zistenia z tejto práce stoja za pozornosť.</p>
+
+  <p>Po prvé, prekladať text do angličtiny kvôli detekcii nefunguje. Autori to formulujú priamo: strojovo preložený text vykazuje vyššiu mieru falošných poplachov než pôvodný ľudský text, a detekcia sa preto musí robiť priamo v danom jazyku. Ak teda niekto testuje slovenský článok tak, že ho preloží a hodí do anglického detektora, dostane systematicky skreslený výsledok.</p>
+
+  <p>Po druhé, pre slovenčinu jednoducho chýbajú dáta. Slovenčina a slovinčina nemali dosť vzoriek na to, aby sa dali použiť na trénovanie, a slúžili len na testovanie.</p>
+
+  <p>Po tretie, výkon sa dramaticky líši podľa typu detektora. Doladené modely dosiahli priemerne okolo 0,96 AUC ROC, štatistické metódy okolo 0,79 a predtrénované detektory okolo 0,65. Bežne dostupné AI nástroje na detekciu pritom patria skôr do tých slabších kategórií a na slovenčinu doladené takmer určite nie sú.</p>
+
+  <p>Zhrnuté: keď vám bežný detektor vyhlási o slovenskom článku vysoké AI skóre, nepovedal vám nič, na čom sa dá stavať.</p>
+
+  <h3 id="co-robit-namiesto">Čo robiť namiesto toho</h3>
+
+  <p>Máme na to interné pravidlo a považujeme ho za jedno z najdôležitejších v celom procese. Pri redakčnej úprave textu je <strong>zakázané</strong> robiť čokoľvek, čo by text zhoršilo, aj keby to znížilo skóre v detektore. Konkrétne:</p>
+
+  <ul>
+    <li>nevkladať preklepy ani gramatické chyby, „aby to znelo ľudsky"</li>
+    <li>neodstraňovať plošne interpunkciu, ktorá v texte patrí</li>
+    <li>nerozbíjať logickú štruktúru len preto, že „AI robí štruktúru"</li>
+    <li>nenahrádzať presné slová horšími synonymami</li>
+  </ul>
+
+  <p>Test každej úpravy znie: zlepší to zrozumiteľnosť pre reálneho čitateľa? Ak nie, úprava sa nerobí. Skóre detektora nie je cieľ, lebo cieľom je čitateľ a Google hodnotí užitočnosť, nie pôvod.</p>
+
+  <h2 id="co-prezradza-ai">Čo v texte naozaj prezrádza AI</h2>
+
+  <p>Detektor teda nie. Čo teda? Podľa našej skúsenosti tri veci, a všetky tri sa dajú opraviť redakčne.</p>
+
+  <p><strong>Vata a prechodové frázy.</strong> „V dnešnej dobe", „je dôležité poznamenať", „poďme sa spoločne pozrieť". Tieto spojenia nenesú informáciu, len vypĺňajú priestor. Riešenie je jednoduché: vypustiť bez náhrady. Ak veta po odstránení úvodnej frázy stále dáva zmysel, tá fráza tam nemala byť.</p>
+
+  <p><strong>Príklady vytvorené zo vzduchu.</strong> Toto je zákernejšie, lebo vyzerá ako konkrétnosť. Veta „napríklad e-shop s oblečením môže vďaka lepšej štruktúre výrazne zvýšiť predaje" vyzerá ako doklad tvrdenia, ale nie je ním. Žiadny konkrétny e-shop za ňou nestojí.</p>
+
+  <p>My na to používame jednu otázku, ktorú si klademe pri každom príklade v článku: <strong>je naviazaný na konkrétne číslo z rešerše alebo na reálnu skúsenosť, alebo som si ho vymyslel?</strong> Ak podklad neexistuje, príklad sa vypúšťa. Nikdy sa nedopĺňa vymyslené číslo, lebo tým by sme štylistický problém vymenili za faktický, čo je horší obchod.</p>
+
+  <p><strong>Monotónny rytmus a rovnaká šablóna.</strong> Model má tendenciu písať vety podobnej dĺžky za sebou a dávať každej sekcii rovnakú stavbu: nadpis, dve vety, tri odrážky. Opäť. A znova. Väčšina čitateľov to nepomenuje, ale pozornosť im pri takom rytme opadá rýchlejšie. Striedanie dĺžky viet a formy sekcií je bežná redaktorská práca, ktorá text zlepší bez ohľadu na to, kto ho písal.</p>
+
+  <p>K tomu ešte jedna vec, ktorá s AI nesúvisí priamo, ale s dôveryhodnosťou áno: <strong>záver, ktorý len zhŕňa a nepridáva nič nové.</strong> Ak posledná sekcia článku iba opakuje to, čo už bolo povedané, znamená to, že autor nemal názor. A práve názor je to, čo AI z definície nemá.</p>
+
+  <figure>
+    <img src="/blog/seo-clanky-s-ai-ako-overit-obsah/redakcna-kontrola.webp"
+         alt="Redakčná kontrola textu pred publikovaním"
+         loading="lazy" width="1200" height="675">
+    <figcaption>To, čo robí rozdiel, nie je nástroj na písanie, ale redakčná kontrola pred publikovaním.</figcaption>
+  </figure>
+
+  <h2 id="redakcny-proces">Redakčný proces, ktorý používame my</h2>
+
+  <p>Aby to nebola len teória, tu je, ako to riešime v praxi.</p>
+
+  <p>Na tvorbu odborných článkov používame vlastný viackrokový proces, cez ktorý zatiaľ prešlo <strong>32 článkov pre šesť značiek</strong>, vrátane tohto. Zaujímavé na ňom nie je to, že píše. Zaujímavé je, že <strong>zo šestnástich krokov ich šesť nepíše nič, iba kontroluje</strong>, a niektoré z nich obsah zahadzujú.</p>
+
+  <h3 id="sest-krokov">Šesť krokov, ktoré nič nepíšu</h3>
+
+  <p><strong>Overenie čísel druhým modelom.</strong> Každé kvantitatívne tvrdenie ide na nezávislé overenie cez iný model so živým vyhľadávaním, pričom agregátory trhových reportov sú z vyhľadávania vyfiltrované. Ak sa zdroje rozchádzajú o viac ako polovicu, tvrdenie sa nesmie použiť ako jedno číslo a ide do textu ako rozsah s vysvetlením metodiky. Ak ho nepotvrdí nikto, nejde tam vôbec. Presne tento krok vyhodil z tohto článku tri čísla.</p>
+
+  <p><strong>Externá kritika hotového draftu.</strong> Model, ktorý článok napísal, nevidí do vlastných slabín. Vlastné hyperboly a predikcie napísané ako istoty si spoľahlivo odsúhlasí. Preto hotový text posudzuje druhý model s inou tréningovou bázou.</p>
+
+  <p><strong>Ľudský filter nad tou kritikou.</strong> A tu je dôležitý detail, ktorý sa ľahko prehliadne. Verdikt externého modelu sa <strong>nedá aplikovať naslepo</strong>. Z našich meraní má na štylistických pripomienkach zhruba 30 až 40 % falošných poplachov, často preto, že mieria mimo reálie stredoeurópskeho B2B obsahu. Každá pripomienka sa preto označuje ako prijatá, čiastočne prijatá alebo zamietnutá, a zamietnutie sa zdôvodňuje.</p>
+
+  <p><strong>Kontrola EEAT a odbornej presnosti.</strong> Overenie, že tvrdenia v texte skutočne zodpovedajú zdrojom v rešerši, a nie tomu, čo si model pamätá.</p>
+
+  <p><strong>Redakčný pass proti vate a vymysleným príkladom.</strong> Ten, ktorý sme popísali vyššie, aj s explicitným zákazom kaziť text kvôli detektorom.</p>
+
+  <p><strong>Šéfredaktorská kontrola čitateľnosti.</strong> Dĺžka viet, hustota nadpisov, striedanie formy.</p>
+
+  <h3 id="auditna-stopa">Auditná stopa</h3>
+
+  <p>Po každom článku ostáva kompletná dokumentácia: keyword brief, poznámky z rešerše s adresou a dátumom pri každom zdroji, cross-check log, hodnotenie EEAT, validačný report s rozhodnutiami o falošných poplachoch a záznam redakčných úprav.</p>
+
+  <p>Znie to ako byrokracia. V praxi je to tá najužitočnejšia časť. Keď sa niekto po pol roku spýta, odkiaľ je v článku konkrétne číslo, odpoveď je dohľadateľná za minútu. Bez toho záznamu by ste ju hľadali hodiny a často by ste ju nenašli vôbec.</p>
+
+  <p>Mimochodom, tento článok má takú stopu tiež. Preto vieme povedať, koľko presne tvrdení z neho vypadlo a prečo.</p>
+
+  <h2 id="co-si-odniest">Čo si z toho odniesť</h2>
+
+  <p>Ak si máte z celého textu zapamätať jednu vec, nech je to táto: <strong>rýchlosť písania prestala byť úzkym hrdlom, takže optimalizovať ju ďalej nemá zmysel.</strong> Úzkym hrdlom je dôvera v to, čo ste napísali.</p>
+
+  <p>Technická SEO optimalizácia článku je dnes tá ľahšia časť práce. Štruktúru nadpisov, meta dáta aj interné odkazy zvládne ktokoľvek za pár minút a model za pár sekúnd. Práve preto o poradí čoraz menej rozhoduje ona a čoraz viac to, či váš text hovorí pravdu.</p>
+
+  <p>Z toho vyplýva niekoľko konkrétnych odporúčaní.</p>
+
+  <p><strong>Prestaňte riešiť, či text pôsobí ako AI, a začnite riešiť, či je pravdivý.</strong> Prvé Google nezaujíma a detektory to aj tak nevedia spoľahlivo posúdiť, obzvlášť v slovenčine. Druhé rozhoduje o tom, či vám čitateľ uverí aj nabudúce.</p>
+
+  <p><strong>Zaveďte si pravidlo pre čísla.</strong> Nemusí byť zložité. Stačí, že žiadna štatistika nejde do textu na základe jedného zdroja a že viete rozlíšiť toho, kto údaj vytvoril, od toho, kto ho iba prevzal.</p>
+
+  <p><strong>Rátajte s tým, že časť obsahu zahodíte.</strong> Ak vám z rešerše prejde do článku všetko, čo ste našli, kontrola neprebehla. My považujeme za dobrý signál, keď niečo vypadne.</p>
+
+  <p><strong>Buďte ochotní mať názor.</strong> Vyvažujúci text bez postoja je bezpečný a zabudnuteľný. Zároveň je to presne to, čo model produkuje, keď ho necháte na pokoji.</p>
+
+  <p>A ešte jedna vec, ktorá sa dá povedať len úprimne. Tento článok napísala AI a prešiel procesom, ktorý popisuje. Vypadli z neho tri čísla, jedna udalosť a jedna nesprávna domnienka o slovenčine, a jedno tvrdenie o pravidlách Google sme museli spresniť. Práve preto ho podľa našich kritérií považujeme za dôveryhodnejší než text, pri ktorom by sme len deklarovali, že AI sa nepoužila, a nič by sme tým nedoložili.</p>
+
+  <p>Podobne otvorene sme sa na svoju oblasť pozreli aj v článku o tom, <a href="/ecommerce-tracking-2026-bullshit-vs-realita-merania-e-shopov" title="E-commerce tracking 2026 – bullshit vs. realita merania e-shopov">čo z merania e-shopov je realita a čo bullshit</a>.</p>
+
+  <section id="faq">
+    <h2>Často kladené otázky</h2>
+
+    <details>
+      <summary>Penalizuje Google obsah písaný umelou inteligenciou?</summary>
+      <p>Nie. Google vo svojej dokumentácii uvádza, že problémom je generovanie množstva stránok bez pridanej hodnoty pre používateľa, čo sa označuje ako scaled content abuse. Toto pravidlo platí rovnako pre obsah od človeka aj od modelu. Rozhodujúca je hodnota a snaha, nie nástroj.</p>
+    </details>
+
+    <details>
+      <summary>Musím označiť, že článok vznikol s pomocou AI?</summary>
+      <p>Pre organické vyhľadávanie to Google nevyžaduje, len odporúča. V dokumentácii uvádza, že informácia o tom, ako obsah vznikol, môže dať čitateľom užitočný kontext. Povinnosť platí v Google Merchant Center: AI generované obrázky tam musia niesť metadáta IPTC DigitalSourceType s hodnotou TrainedAlgorithmicMedia a AI generované názvy a popisy sa musia uviesť cez štruktúrované atribúty structured_title a structured_description. Týka sa to však produktových feedov, nie blogových článkov.</p>
+    </details>
+
+    <details>
+      <summary>Oplatí sa kontrolovať články AI detektorom?</summary>
+      <p>Podľa nás nie, obzvlášť v slovenčine. V nezávislom teste 14 nástrojov nebol ani jeden spoľahlivý na ľudskom aj AI texte súčasne. Recenzovaná štúdia zo Stanfordu zase ukázala, že detektory označili za AI približne 61 % ľudských esejí od nerodilých hovorcov angličtiny. Bratislavský benchmark CEAID k tomu dodáva, že detekcia sa musí robiť priamo v danom jazyku a že pre slovenčinu chýbajú dáta. Užitočnejšie je investovať ten čas do overenia faktov.</p>
+    </details>
+
+    <details>
+      <summary>Ako spoznám, že je zdroj dôveryhodný?</summary>
+      <p>Položte si otázku, či daný zdroj údaj vytvoril, alebo ho iba prevzal. Štatistický úrad, autori štúdie a oficiálna dokumentácia sú primárne zdroje. Trhový report citujúci iný report alebo blog citujúci blog sú agregátory. Pri každom prevzatí sa stráca metodika a ostáva holé číslo, ktoré pôsobí presnejšie, než v skutočnosti je.</p>
+    </details>
+
+    <details>
+      <summary>Koľko zdrojov potrebujem na jednu štatistiku?</summary>
+      <p>Minimálne dva nezávislé. Ak sa výrazne rozchádzajú, do textu patrí rozsah aj s vysvetlením, prečo sa líšia, nie jedno vybrané číslo. Ak tvrdenie nepotvrdí žiadny nezávislý zdroj, do článku nepatrí vôbec.</p>
+    </details>
+
+    <details>
+      <summary>Znamená to, že AI na obsah radšej nepoužívať?</summary>
+      <p>Nie. Znamená to, že samotné generovanie je najjednoduchšia časť práce a najmenej rozhoduje o výsledku. Rozhoduje kontrola, ktorá príde po ňom, a ochota časť textu zahodiť. Bez nej dostanete rýchlo veľa obsahu, ktorému sa nedá veriť.</p>
+    </details>
+  </section>
+  </div>
+
+</article>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "SEO články s AI: ako si overiť, že obsah naozaj obstojí",
+    "description": "Google nepenalizuje AI obsah, ale nekvalitný áno. Ako overovať čísla, čo naozaj hovoria smernice a prečo je optimalizácia na AI detektory slepá ulička.",
+    "datePublished": "2026-07-23",
+    "dateModified": "2026-07-23",
+    "inLanguage": "sk",
+    "author": [
+      { "@type": "Organization", "name": "Starbomedia", "url": "https://starbomedia.sk" },
+      { "@type": "Person", "name": "Peter Štrbo", "jobTitle": "CEO a stratég", "url": "https://starbomedia.sk/tim-starbomedia", "knowsAbout": ["SEO", "AI obsah", "generatívna AI v marketingu", "E-E-A-T", "GEO"] }
+    ],
+    "publisher": { "@type": "Organization", "name": "Starbomedia", "logo": { "@type": "ImageObject", "url": "https://starbomedia.sk/logo.png" } },
+    "image": { "@type": "ImageObject", "url": "https://starbomedia.sk/blog/seo-clanky-s-ai-ako-overit-obsah/hero-overovanie-tvrdeni.webp", "width": 1200, "height": 675 },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://starbomedia.sk/seo-clanky-s-ai-ako-overit-obsah" },
+    "keywords": "seo články, ai obsah, ai detektor, kontrola kvality obsahu, scaled content abuse, E-E-A-T"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Penalizuje Google obsah písaný umelou inteligenciou?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nie. Google vo svojej dokumentácii uvádza, že problémom je generovanie množstva stránok bez pridanej hodnoty pre používateľa, čo sa označuje ako scaled content abuse. Toto pravidlo platí rovnako pre obsah od človeka aj od modelu. Rozhodujúca je hodnota a snaha, nie nástroj."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Musím označiť, že článok vznikol s pomocou AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pre organické vyhľadávanie to Google nevyžaduje, len odporúča. V dokumentácii uvádza, že informácia o tom, ako obsah vznikol, môže dať čitateľom užitočný kontext. Povinnosť platí v Google Merchant Center: AI generované obrázky tam musia niesť metadáta IPTC DigitalSourceType s hodnotou TrainedAlgorithmicMedia a AI generované názvy a popisy sa musia uviesť cez štruktúrované atribúty structured_title a structured_description. Týka sa to však produktových feedov, nie blogových článkov."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Oplatí sa kontrolovať články AI detektorom?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Podľa nás nie, obzvlášť v slovenčine. V nezávislom teste 14 nástrojov nebol ani jeden spoľahlivý na ľudskom aj AI texte súčasne. Recenzovaná štúdia zo Stanfordu zase ukázala, že detektory označili za AI približne 61 % ľudských esejí od nerodilých hovorcov angličtiny. Bratislavský benchmark CEAID k tomu dodáva, že detekcia sa musí robiť priamo v danom jazyku a že pre slovenčinu chýbajú dáta. Užitočnejšie je investovať ten čas do overenia faktov."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ako spoznám, že je zdroj dôveryhodný?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Položte si otázku, či daný zdroj údaj vytvoril, alebo ho iba prevzal. Štatistický úrad, autori štúdie a oficiálna dokumentácia sú primárne zdroje. Trhový report citujúci iný report alebo blog citujúci blog sú agregátory. Pri každom prevzatí sa stráca metodika a ostáva holé číslo, ktoré pôsobí presnejšie, než v skutočnosti je."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Koľko zdrojov potrebujem na jednu štatistiku?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Minimálne dva nezávislé. Ak sa výrazne rozchádzajú, do textu patrí rozsah aj s vysvetlením, prečo sa líšia, nie jedno vybrané číslo. Ak tvrdenie nepotvrdí žiadny nezávislý zdroj, do článku nepatrí vôbec."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Znamená to, že AI na obsah radšej nepoužívať?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nie. Znamená to, že samotné generovanie je najjednoduchšia časť práce a najmenej rozhoduje o výsledku. Rozhoduje kontrola, ktorá príde po ňom, a ochota časť textu zahodiť. Bez nej dostanete rýchlo veľa obsahu, ktorému sa nedá veriť."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Domov", "item": "https://starbomedia.sk/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://starbomedia.sk/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "SEO články s AI: ako si overiť, že obsah naozaj obstojí" }
+    ]
+  }
+]
+</script>
