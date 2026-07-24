@@ -12,6 +12,54 @@
     "featuredH": 675
   },
   {
+    "author": "peter-strbo",
+    "category": "PPC reklama",
+    "date": "2026-07-21T10:00:00+00:00",
+    "modified": "2026-07-21T10:00:00+00:00",
+    "slug": "freelancer-vs-agentura-google-ads",
+    "title": "Freelancer, agentúra alebo in-house na Google Ads: čo si vybrať (2026)",
+    "excerpt": "Férové porovnanie freelancera, agentúry a in-house na správu Google Ads: ceny na SK v 2026, zastupiteľnosť, špecializácie a návod, ako sa rozhodnúť podľa situácie.",
+    "featuredImage": "/blog/freelancer-vs-agentura-google-ads/hero-freelancer-agentura.webp",
+    "featuredW": 1200,
+    "featuredH": 675
+  },
+  {
+    "author": "peter-strbo",
+    "category": "PPC reklama",
+    "date": "2026-07-21T09:00:00+00:00",
+    "modified": "2026-07-21T09:00:00+00:00",
+    "slug": "pno-roas-benchmarky-pre-eshopy-2026",
+    "title": "PNO a ROAS benchmarky pre e-shopy: aké číslo je naozaj dobré (2026)",
+    "excerpt": "Aké PNO a ROAS je dobré pre e-shop? Break-even ROAS = 1 ÷ marža, realistické pásma pre 2026, benchmarky podľa kategórie a návod, ako si nastaviť vlastný cieľ.",
+    "featuredImage": "/blog/pno-roas-benchmarky-pre-eshopy-2026/hero-pno-roas.webp",
+    "featuredW": 1200,
+    "featuredH": 675
+  },
+  {
+    "author": "peter-strbo",
+    "category": "PPC reklama",
+    "date": "2026-07-17T11:00:00+00:00",
+    "modified": "2026-07-17T12:30:00+00:00",
+    "slug": "expanzia-eshopu-do-zahranicia-ppc-cee-2026",
+    "title": "Expanzia e-shopu do Maďarska, Rumunska a CEE: čo čakať od PPC a ktorý trh zvoliť",
+    "excerpt": "Ktorý trh zvoliť ako prvý pri expanzii e-shopu, prečo blízke Česko nie je najľahšie a kde má nová značka rýchlejší nábeh. Checklist expanzie, dobierka a porovnávače.",
+    "featuredImage": "/blog/expanzia-eshopu-do-zahranicia-ppc-cee-2026/hero-cee-expanzia.webp",
+    "featuredW": 1200,
+    "featuredH": 675
+  },
+  {
+    "author": "peter-strbo",
+    "category": "PPC reklama",
+    "date": "2026-07-17T09:00:00+00:00",
+    "modified": "2026-07-17T09:00:00+00:00",
+    "slug": "ako-vybrat-ppc-agenturu-checklist-2026",
+    "title": "Ako vybrať PPC agentúru v 2026: checklist, červené vlajky a otázky, ktoré položte",
+    "excerpt": "Ako vybrať PPC alebo marketingovú agentúru: 15 otázok so správnou odpoveďou, červené vlajky vs. zelené signály, modely odmeňovania a čo si overiť v zmluve – z reálnych auditov účtov.",
+    "featuredImage": "/blog/ako-vybrat-ppc-agenturu-checklist-2026/hero-vyber-ppc-agentury.webp",
+    "featuredW": 1200,
+    "featuredH": 675
+  },
+  {
     "slug": "kolko-stoji-google-ads-reklama-na-slovensku-2026",
     "title": "Koľko stojí Google Ads reklama na Slovensku v 2026? Reálne dáta z 23 miliónov €",
     "date": "2026-07-16T10:00:00+00:00",
