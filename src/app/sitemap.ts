@@ -17,6 +17,8 @@ const STATIC_PATHS = [
     'seo',
     'cenove-porovnavace',
     'analyza-webu',
+    'cennik',
+    'google-ads-audit',
     'ai-studio',
     'ai-studio/produktova-fotografia',
     'ai-studio/marketing-bannery',
@@ -44,7 +46,7 @@ function priorityFor(p: string): number {
     if (p === '') return 1;
     if (['google-reklama', 'facebook-reklama', 'sprava-socialnych-sieti', 'seo', 'reklama-na-internete', 'ai-studio', 'blog'].includes(p)) return 0.9;
     if (p.startsWith('ai-studio/')) return 0.8;
-    if (['kontakt', 'referencie-2', 'cenove-porovnavace', 'youtube-reklama', 'analyza-webu', 'slovnik-pojmov'].includes(p)) return 0.7;
+    if (['kontakt', 'referencie-2', 'cenove-porovnavace', 'youtube-reklama', 'analyza-webu', 'slovnik-pojmov', 'cennik', 'google-ads-audit'].includes(p)) return 0.7;
     return 0.5;
 }
 
