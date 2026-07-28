@@ -1,0 +1,332 @@
+<article class="ucp-article" itemscope="" itemtype="https://schema.org/Article">
+
+  <header>
+    <p class="article-meta">
+      <time itemprop="datePublished" datetime="2026-07-28">28. júla 2026</time>
+      · ~14 min čítania    </p>
+  </header>
+
+  <nav aria-label="Obsah článku">
+<h2>Obsah článku</h2>
+<ol>
+<li><a href="#tldr">TL;DR</a></li>
+<li><a href="#testovane-modely">Ktoré modely sme testovali</a></li>
+<li><a href="#metodika">Ako sme testovali: 102 AI obrázkov, 20 disciplín, 4 modely</a></li>
+<li><a href="#ai-fotky-produktov">AI fotky produktov</a></li>
+<li><a href="#slovensky-text">Slovenský text v obrázkoch</a></li>
+<li><a href="#ai-fotky-ludi">AI fotky ľudí</a></li>
+<li><a href="#vizualy-pre-blog">Vizuály pre blog a web</a></li>
+<li><a href="#profily-modelov">Profily modelov</a></li>
+<li><a href="#ktory-vybrat">Ktorý AI generátor obrázkov vybrať</a></li>
+<li><a href="#na-co-si-dat-pozor">Na čo si dať pozor</a></li>
+<li><a href="#co-si-odniest">Čo si z testu odniesť</a></li>
+<li><a href="#faq">Často kladené otázky</a></li>
+</ol>
+</nav>
+
+  <div itemprop="articleBody">
+<p class="lead"><strong>Zobrali sme štyri najsilnejšie obrazové AI modely leta 2026 a nechali sme ich vygenerovať 102 obrázkov v 20 disciplínach – od packshotov cez slovenské bannery až po portréty. Vyhral Nano Banana 2 od Googlu: v našom teste získal 4,88 boda z 5 a zároveň bol najlacnejší.</strong> Jednoznačný víťaz pre každú úlohu ale neexistuje – a dva zo štyroch modelov by sme na produktové fotky klientom nepustili.</p>
+
+  <p>V Starbomedia generujeme AI vizuály pre klientov denne: produktové scény pre e-shopy, podklady pre bannery, fotky na weby. Preto sa nám oplatí vedieť presne, ktorý model na čo stačí – nie z marketingových stránok výrobcov, ale z vlastných meraní. Tento článok je pokračovaním nášho jarného porovnania <a href="https://starbomedia.sk/nano-banana-pro-vs-gpt-image-2" title="Nano Banana Pro vs GPT Image 2">Nano Banana Pro vs GPT Image 2</a>. Odvtedy vyšli tri nové modely, tak sme test rozšírili a sprísnili.</p>
+
+  <p>Všetky obrázky v článku sú priamo z testu, bez retuše. Pri každom porovnaní vidíte výstupy všetkých štyroch modelov vedľa seba, aby ste si verdikt vedeli overiť vlastnými očami.</p>
+
+  <h2 id="tldr">TL;DR</h2>
+
+  <ul>
+    <li><strong>Celkové poradie v našom teste (škála 1 – 5): Nano Banana 2 4,88 · GPT Image 2 4,40 · Seedream 5.0 Pro 4,32 · Grok Image 4,11.</strong> Nano Banana 2 vyhral alebo sa delil o prvé miesto v 15 z 20 disciplín – a na platforme, kde sme testovali, je zároveň najlacnejší.</li>
+    <li><strong>Slovenskú diakritiku v obrázkoch zvládajú tri zo štyroch modelov.</strong> Nano Banana 2, GPT Image 2 aj Grok vyrenderovali „Zľava 30 % na ľahkú bežeckú obuv“ bezchybne. Seedream zlyhal v oboch pokusoch („Žláva“, „łahkú“, „Nakupovató“).</li>
+    <li><strong>Na produktové úpravy s referenčnou fotkou (výmena pozadia, séria scén) vyšli v našom teste najvernejšie Nano Banana 2 a Seedream.</strong> Grok deformoval proporcie produktu, GPT Image 2 skončil v produktových disciplínach za vedúcou dvojicou.</li>
+    <li><strong>Text na etikete produktu zachovali všetky štyri modely.</strong> Pred rokom to nevedel spoľahlivo žiadny.</li>
+    <li><strong>Pozor na cudzie brandy:</strong> modely do lifestylových kompozícií samovoľne dokresľujú logá známych značiek. Do promptov patrí „no brand logos“.</li>
+  </ul>
+
+  <h2 id="testovane-modely">Ktoré modely sme testovali</h2>
+
+  <p>Do testu sme zaradili štyri aktuálne vlajkové modely – všetky vyšli v priebehu posledného polroka:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Model</th><th>Výrobca</th><th>Vydanie</th><th>Cena v našom teste (kredity Higgsfield, 2K)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Nano Banana 2</strong> (Gemini 3.1 Flash Image)</td><td>Google</td><td>26. 2. 2026</td><td>2</td></tr>
+      <tr><td><strong>Grok Image</strong></td><td>xAI</td><td>28. 1. 2026 (API)</td><td>2</td></tr>
+      <tr><td><strong>Seedream 5.0 Pro</strong></td><td>ByteDance</td><td>8. 7. 2026</td><td>3</td></tr>
+      <tr><td><strong>GPT Image 2</strong></td><td>OpenAI</td><td>21. 4. 2026</td><td>7 (kvalita high)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Nano Banana 2 je nástupca modelu Nano Banana Pro a Google ho <a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-nano-banana-2/" title="Build with Nano Banana 2" target="_blank" rel="noopener noreferrer">oficiálne volá Gemini 3.1 Flash Image</a> – dostupný je všetkým používateľom Gemini. GPT Image 2 je prvý obrazový model OpenAI, ktorý pred generovaním „rozmýšľa“ – a podľa <a href="https://techcrunch.com/2026/04/21/chatgpts-new-images-2-0-model-is-surprisingly-good-at-generating-text/" title="TechCrunch o ChatGPT Images 2.0" target="_blank" rel="noopener noreferrer">TechCrunchu</a> prekvapil hlavne renderovaním textu. Seedream 5.0 Pro je čerstvá vlajková loď ByteDance s dôrazom na presné editovanie a <a href="https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro" title="ByteDance Seed: Introducing Seedream 5.0 Pro" target="_blank" rel="noopener noreferrer">oficiálnou podporou vyše desiatich jazykov</a> – slovenčina medzi nimi nie je, čo sa v teste ukázalo ako podstatný detail. Grok Image beží na vlastnom engine Aurora od xAI.</p>
+
+  <p>Testovali sme cez platformu Higgsfield, kde bežia všetky štyri modely za jednotné kreditové ceny – vďaka tomu vieme porovnať nielen kvalitu, ale aj náklady. Ceny sa medzi platformami líšia (napríklad Seedream 5.0 Pro stojí na fal.ai 0,0675 dolára za obrázok, na Replicate 0,045 až 0,09 dolára podľa rozlíšenia), pomery však zostávajú podobné: GPT Image 2 je konzistentne najdrahší, Nano Banana 2 patrí k najlacnejším.</p>
+
+  <h2 id="metodika">Ako sme testovali: 102 AI obrázkov, 20 disciplín, 4 modely</h2>
+
+  <p>Metodika v skratke, nech viete, čomu veríte:</p>
+
+  <ul>
+    <li><strong>20 testovacích disciplín</strong> v piatich kategóriách: produktová práca s referenčnou fotkou, lifestyle fotografia, vizuály pre blog a web, slovenský text v obrázku a špeciálne schopnosti (presné počty objektov, brand paleta, 4K detail).</li>
+    <li><strong>Identický prompt a identický pomer strán</strong> pre všetky štyri modely v každej disciplíne. Žiadne ladenie promptu pre konkrétny model.</li>
+    <li><strong>Kritické disciplíny bežali dvakrát</strong> (packshot, produkt v rukách, výmena pozadia, etiketa, portrét, slovenský banner), aby jeden náhodne vydarený či pokazený pokus neskreslil verdikt. Spolu 102 obrázkov za 365 kreditov.</li>
+    <li><strong>Reálne produkty namiesto cvičných:</strong> skladací masážny stôl z fabulo.sk, masážny olej s textovou etiketou a bežecká obuv z bezeckepotreby.sk – teda presne ten typ zadaní, ktoré riešime pre klientov.</li>
+    <li>Každý obrázok sme hodnotili v šiestich kritériách (fotorealizmus, vernosť produktu, text, anatómia, dodržanie promptu, použiteľnosť) na škále 1 – 5.</li>
+  </ul>
+
+  <p>Jedno priznanie: 20 disciplín nepokryje všetko. Netestovali sme napríklad generovanie ilustrácií v jednotnom štýle naprieč desiatkami obrázkov ani úpravy fotiek ľudí. Test sme stavali okolo úloh, ktoré reálne fakturujeme.</p>
+
+  <h2 id="ai-fotky-produktov">AI fotky produktov: kde už ušetríte za fotografa a kde ešte nie</h2>
+
+  <p>Najdôležitejšia kategória pre každý e-shop. Dali sme modelom referenčnú fotku produktu a chceli sme packshot na štúdiovom pozadí, lifestylovú scénu, makro detail, výmenu pozadia a sériu scén s identickým produktom.</p>
+
+  <figure>
+    <img src="/blog/nano-banana-2-velky-test-ai-generatorov-obrazkov/packshot-4-modely.webp" alt="Porovnanie AI packshotu masážneho stola zo štyroch modelov: Seedream, Nano Banana 2, GPT Image 2 a Grok" loading="lazy" width="1566" height="1264">
+    <figcaption>Packshot podľa referenčnej fotky. Všimnite si deformované proporcie u Groka (vpravo dole).</figcaption>
+  </figure>
+
+  <p>Packshot zvládli všetky modely prekvapivo dobre – tvar, farba čalúnenia aj drevená konštrukcia sedeli u troch zo štyroch. Rozdiely sa ukázali v detailoch: Grok deformoval proporcie a perspektívu stola, GPT Image 2 mierne posunul farbu.</p>
+
+  <p>Skutočný rozdiel prišiel pri <strong>vsadení produktu do nového prostredia</strong>. Najprv sme to zadali doslovne: „produkt nechaj pixel po pixeli nezmenený, vymeň len pozadie“. Modely poslúchli – a presne v tom bol problém. Výstupy vyzerali ako koláž: štúdiovo nasvietený stôl nalepený do miestnosti s úplne iným svetlom. Verné áno, predajné nie.</p>
+
+  <p>Tak sme zadanie preformulovali: „zasaď stôl do miestnosti ako jej prirodzenú súčasť – ambientné svetlo, kontaktné tiene, odlesky prostredia – a dizajn zachovaj verný referencii“. Rozdiel je zásadný:</p>
+
+  <figure>
+    <img src="/blog/nano-banana-2-velky-test-ai-generatorov-obrazkov/background-swap-4-modely.webp" alt="Prirodzené vsadenie masážneho stola do interiéru kliniky štyrmi AI modelmi s ambientným svetlom a tieňmi" loading="lazy" width="1566" height="1264">
+    <figcaption>Prirodzené zasadenie do prostredia – rovnaký prompt, štyri modely. Najvernejšie produkt držia Seedream a Nano Banana 2.</figcaption>
+  </figure>
+
+  <p>Pri tomto zadaní zvládli Nano Banana 2 a Seedream oboje naraz: teplé svetlo scény na čalúnení, tiene na podlahe a pritom verný produkt vrátane oceľových lán a opierok. GPT Image 2 a Grok nasvietili scénu tiež pekne – rozdiely sa ukázali až v detailoch samotného produktu. Pridané prvky prostredia (koberec, dekorácie) sme pritom nehodnotili ako chybu: tie do lifestylovej scény patria. Sledovali sme výhradne, či sa zmenil produkt.</p>
+
+  <p>Prečo na vernosti tak trváme: keď generujete sériu scén pre kampaň, zákazník musí na každom vizuáli vidieť ten istý produkt, ktorý mu príde v balíku. Model, ktorý produkt „vylepšuje“, je pre túto úlohu nepoužiteľný bez ohľadu na to, ako pekne kreslí.</p>
+
+  <p>Tretí test, ktorý nás zaujímal najviac: <strong>text na etikete</strong>. Fľaše masážneho oleja s nápisom „SPORTS MASSAGE OIL RECOVERY“ a logom výrobcu sme nechali vsadiť do reklamnej scény. Etiketu zachovali čitateľnú všetky štyri modely – GPT Image 2 mierne zmenil tvar fľaše, Grok zmenšil proporcie menšej fľaše, ale text a logo prežili všade. Keď sme rovnakú úlohu skúšali pred rokom s vtedajšou generáciou modelov, etikety končili ako rozmazaná kaša.</p>
+
+  <figure>
+    <img src="/blog/nano-banana-2-velky-test-ai-generatorov-obrazkov/etiketa-4-modely.webp" alt="Zachovanie textu na etikete masážneho oleja pri generovaní reklamnej scény štyrmi AI modelmi" loading="lazy" width="1566" height="2044">
+    <figcaption>Etiketa „SPORTS MASSAGE OIL RECOVERY“ prežila u všetkých štyroch modelov čitateľná.</figcaption>
+  </figure>
+
+  <p><strong>Verdikt za produktovú prácu: Nano Banana 2 (5,0) tesne pred Seedreamom (4,86), s odstupom GPT Image 2 (4,14) a Grok (3,79).</strong></p>
+
+  <h2 id="slovensky-text">Slovenský text v obrázkoch: prelomový rok</h2>
+
+  <p>Toto je disciplína, ktorú v zahraničných testoch nenájdete – a pre slovenský marketing je kľúčová. Roky platilo, že AI banner so slovenským textom skončí ako „Zlava“ alebo „Nakupovat“ a grafik text aj tak lepí ručne.</p>
+
+  <p>Zadali sme banner s textom <strong>„Zľava 30 % na ľahkú bežeckú obuv“</strong> a tlačidlom <strong>„Nakupovať“</strong> – teda ľ, ž, ú, ť a percentá v jednej vete. Každý model dva pokusy.</p>
+
+  <figure>
+    <img src="/blog/nano-banana-2-velky-test-ai-generatorov-obrazkov/sk-banner-4-modely.webp" alt="Test slovenskej diakritiky v AI banneroch: Zľava 30 % na ľahkú bežeckú obuv v štyroch modeloch" loading="lazy" width="1566" height="1654">
+    <figcaption>Banner so slovenským textom. Tri modely bezchybne, Seedream (vľavo hore) s chybami v každom slove s diakritikou.</figcaption>
+  </figure>
+
+  <p>Výsledok nás prekvapil: <strong>Nano Banana 2, GPT Image 2 aj Grok napísali celý text bezchybne v oboch pokusoch.</strong> Vrátane správneho tlačidla „Nakupovať“ a typograficky čistého „30 %“. Grok si k tomu sám vymyslel prečiarknutú pôvodnú cenu – čo sme nežiadali, ale banneru to neublížilo.</p>
+
+  <p>Seedream 5.0 Pro zlyhal v oboch pokusoch: „Žláva 30 % na łahkú bežeckú obuv“ s poľským ł a tlačidlom „Nakupovató“. Pri typografickom plagáte zasa napísal „šetří“ – po česky. Nie je to náhoda: ByteDance oficiálne uvádza podporu čínštiny, angličtiny a „vyše desiatich bežných svetových jazykov“ – slovenčina v zozname nie je. Model kreslí krásne, ale slovenský text mu zatiaľ nezverujte.</p>
+
+  <figure>
+    <img src="/blog/nano-banana-2-velky-test-ai-generatorov-obrazkov/diakritika-detail.webp" alt="Detail chybnej slovenskej diakritiky u Seedreamu (Žláva, łahkú) vedľa správneho textu z Nano Banana 2" loading="lazy" width="1566" height="404">
+    <figcaption>Detail: Seedream „Žláva 30 % na łahkú“ vs Nano Banana 2 „Zľava 30 % na ľahkú“.</figcaption>
+  </figure>
+
+  <p>Podobne dopadla infografika so štyrmi krokmi („Návštevnosť, Konverzia, Retencia, Lojalita“): Nano Banana 2 ju vyrenderoval bez jedinej chyby vrátane drobného textu, GPT Image 2 a Grok s drobnými preklepmi v malom písme, Seedream skomolil už nadpis.</p>
+
+  <p>Prakticky to znamená: krátke texty do bannerov a jednoduchých infografík dnes viete generovať priamo, bez postprodukcie. Pri dlhších textoch stále odporúčame kontrolu každého slova – a dátové grafiky s číslami radšej kreslíme deterministicky, nie obrazovým modelom.</p>
+
+  <h2 id="ai-fotky-ludi">AI fotky ľudí: portréty a ruky prestali strašiť</h2>
+
+  <p>Druhá historicky problémová oblasť. Testovali sme prirodzený kancelársky portrét (bez retušového „AI looku“), dvoch bežcov v pohybe a – zámerne – zaväzovanie šnúrok na bežeckej topánke, čo je kombinácia rúk, prstov a produktu, na ktorej modely tradične horeli.</p>
+
+  <figure>
+    <img src="/blog/nano-banana-2-velky-test-ai-generatorov-obrazkov/portret-4-modely.webp" alt="Porovnanie fotorealistických AI portrétov zo štyroch modelov bez retušového vzhľadu" loading="lazy" width="1566" height="2044">
+    <figcaption>Kancelársky portrét podľa identického promptu. Bez „AI looku“ naprieč modelmi.</figcaption>
+  </figure>
+
+  <p>Portréty z Nano Banana 2 a Seedreamu pôsobili v našom teste ako bežná editorial fotografia – prirodzená pleť, neuhladené vlasy, uveriteľné pracovné prostredie. GPT Image 2 pleť mierne vyhladzuje smerom k stockovej fotke, Grok pridáva kontrast. Ale žiadny z výstupov by ste v nákupnom košíku firemného webu nespoznali ako AI.</p>
+
+  <p>Zaväzovanie šnúrok dopadlo podobne: Nano Banana 2 a Seedream vykreslili anatomicky správne ruky aj verný produkt vrátane loga výrobcu. U Groka bola podrážka topánky prehnane masívna a póza strnulá.</p>
+
+  <figure>
+    <img src="/blog/nano-banana-2-velky-test-ai-generatorov-obrazkov/ruky-obuv-4-modely.webp" alt="Test anatómie rúk: bežec si zaväzuje šnúrky na bežeckej topánke podľa referenčnej fotky, štyri AI modely" loading="lazy" width="1566" height="2044">
+    <figcaption>Ruky + produkt: historicky najťažšia kombinácia. Dnes u väčšiny modelov bez chýb.</figcaption>
+  </figure>
+
+  <p>Jeden nález, ktorý by sme bez testu netipovali: pri flat-lay kompozícii bežeckej výbavy si Nano Banana 2 <strong>samovoľne dokreslil logo lululemon na tričko a Grok logo Nike na topánky</strong>. Žiadny brand v prompte nebol. Pre komerčné použitie je to právne riziko, preto do promptov od tohto testu píšeme explicitne „no brand logos“.</p>
+
+  <h2 id="vizualy-pre-blog">Vizuály pre blog a web</h2>
+
+  <p>Pre náš vlastný blog a weby klientov sme testovali hero obrázky k článkom, konceptuálne 3D ilustrácie a fotky s negatívnym priestorom na headline.</p>
+
+  <p>Tu sa poradie premiešalo. Fotorealistický blog hero vyhral prekvapivo Seedream – jeho výstup vyzeral najviac ako reálna redakčná fotografia. Nano Banana 2 ako jediný presne dodržal zadanie „osoba v pravej tretine, dve tretiny prázdnej steny na text“ – čo je presne to, čo web dizajnér potrebuje. GPT Image 2 kraľoval štylizovaným kompozíciám a brand paletám: keď sme zadali presné firemné farby, trafil ich najvernejšie zo všetkých.</p>
+
+  <figure>
+    <img src="/blog/nano-banana-2-velky-test-ai-generatorov-obrazkov/blog-hero-4-modely.webp" alt="Porovnanie AI hero obrázkov pre blogový článok o PPC reklame zo štyroch modelov" loading="lazy" width="1566" height="972">
+    <figcaption>Blog hero na tému PPC. Rovnaký prompt, štyri interpretácie.</figcaption>
+  </figure>
+
+  <h2 id="profily-modelov">Profily modelov: komu čo sadlo</h2>
+
+  <h3>Nano Banana 2: nový default (a čo sa zmenilo od Nano Banana Pro)</h3>
+
+  <p>V jarnom teste sme písali, že Nano Banana Pro je najuniverzálnejší model na trhu. Nano Banana 2 tú pozíciu prevzal a pridal rýchlosť: vyhral produktovú prácu, slovenský text aj lifestyle a v žiadnej z 20 disciplín neskončil pod 4 body. K tomu je pri 2K rozlíšení najlacnejší z testovanej štvorice a spolu s GPT Image 2 ako jediné dva ponúkajú aj 4K výstup. Ak máte generovať jeden typ obrázka a nechcete nič riešiť, toto je odpoveď. Slabina? Občas ignoruje pokyn „bez čitateľného textu“ a do scény text dokreslí – a tá príhoda s lululemon logom.</p>
+
+  <h3>GPT Image 2: najlepší na štylizované kompozície, ale drahý</h3>
+
+  <p>Bezchybná slovenčina, najčistejšie flat-lay kompozície, najpresnejšie brand palety a špičkový 4K detail. Lenže v našom teste stál 3,5-násobok Nano Banana 2 a v produktových disciplínach s referenčnou fotkou skončil za dvojicou Nano Banana 2 a Seedream. Používame ho tam, kde sa štylizácia cení: kampaňové vizuály, palety, kompozície.</p>
+
+  <h3>Seedream 5.0 Pro: špička na produkt, katastrofa na slovenčinu</h3>
+
+  <p>Najčerstvejší model testu a v produktovej práci dýchal Nano Banane na chrbát – vernosť produktu a fotorealizmus má vynikajúce. Portréty generuje možno najprirodzenejšie zo všetkých. Ale slovenská diakritika je preňho zatiaľ neprekonaná prekážka, takže bannery, infografiky a čokoľvek s textom uňho neprichádza do úvahy. Ak robíte len produktové scény bez textu, je to plnohodnotná (a o tretinu lacnejšia) alternatíva ku GPT.</p>
+
+  <h3>Grok Image: solídny univerzál s limitmi</h3>
+
+  <p>Grok nás prekvapil slovenčinou (bezchybnou) a potešil cenou (2 kredity). Zradili ho proporcie – produkty deformuje častejšie ako ostatní – a infraštruktúra: pri hromadnom generovaní sme narazili na limit zhruba dvoch súbežných úloh, čo ho pre produkčné pipeline diskvalifikuje. Použiteľný na jednotlivé bannery a sociálne siete, na systematickú prácu zatiaľ nie.</p>
+
+  <h2 id="ktory-vybrat">Ktorý AI generátor obrázkov vybrať: odporúčania podľa použitia</h2>
+
+  <p>Celkové skóre je pekné číslo, ale rozhodujete sa podľa konkrétnej úlohy. Takto to vidíme po teste my:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Úloha</th><th>Prvá voľba</th><th>Záloha</th><th>Poznámka</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Produktové scény s referenčnou fotkou</td><td>Nano Banana 2</td><td>Seedream 5.0 Pro</td><td>v našom teste najvernejšia dvojica</td></tr>
+      <tr><td>Výmena pozadia, konzistentná séria</td><td>Nano Banana 2</td><td>Seedream 5.0 Pro</td><td>najstabilnejšia vernosť naprieč pokusmi</td></tr>
+      <tr><td>Bannery so slovenským textom</td><td>Nano Banana 2</td><td>GPT Image 2</td><td>Seedream nikdy</td></tr>
+      <tr><td>Infografiky so slovenským textom</td><td>Nano Banana 2</td><td>GPT Image 2</td><td>čísla a dáta radšej deterministicky</td></tr>
+      <tr><td>Flat-lay a štylizované kompozície</td><td>GPT Image 2</td><td>Nano Banana 2</td><td>vždy „no brand logos“</td></tr>
+      <tr><td>Presné brand farby</td><td>GPT Image 2</td><td>Grok / Nano Banana 2</td><td>–</td></tr>
+      <tr><td>Portréty a ľudia</td><td>Nano Banana 2</td><td>Seedream 5.0 Pro</td><td>GPT vyhladzuje pleť</td></tr>
+      <tr><td>Blog hero a web vizuály</td><td>Nano Banana 2</td><td>Seedream 5.0 Pro</td><td>NB2 jediný drží copy space</td></tr>
+      <tr><td>4K výstupy do tlače</td><td>Nano Banana 2</td><td>GPT Image 2</td><td>kvalita vyrovnaná, NB2 lacnejší</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Ešte jedna poznámka k nákladom, lebo tá otázka padne vždy: celý test – 102 obrázkov vo vysokej kvalite – stál 365 kreditov, čo sú pri bežných cenách platforiem jednotky eur. Fotograf to nenahradí všade (a pri hero produktoch by sme to ani neodporúčali), ale ekonomika obsahu sa tým mení zásadne. Viac o tom, ako AI vizuály a obsah kontrolujeme, než ich pustíme do sveta, sme písali v článku o <a href="https://starbomedia.sk/seo-clanky-s-ai-ako-overit-obsah" title="SEO články s AI: ako si overiť, že obsah naozaj obstojí">kontrole kvality AI obsahu</a>.</p>
+
+  <h2 id="na-co-si-dat-pozor">Na čo si dať pozor, kým začnete generovať</h2>
+
+  <ol>
+    <li><strong>Cudzie logá.</strong> Modely dokresľujú známe brandy samy od seba. Do každého promptu: „no brand logos, no trademarks“.</li>
+    <li><strong>Prompt rozhoduje o koláži vs fotke.</strong> Ak chcete produkt prirodzene v prostredí, nepíšte „nechaj produkt nezmenený, vymeň pozadie“ – dostanete vystrihnutú koláž so štúdiovým svetlom. Pýtajte si „zasaď produkt do scény s jej svetlom a tieňmi, dizajn zachovaj verný“.</li>
+    <li><strong>Drift produktu.</strong> Pri úpravách vždy porovnajte výstup s referenčnou fotkou detail po detaile – tvar, farby, proporcie, doplnky. V našom teste žiadny model negarantoval stopercentnú vernosť na každý pokus a odchýlky bývajú nenápadné.</li>
+    <li><strong>Dlhší text kontrolujte slovo po slove.</strong> Krátke headliny sú dnes spoľahlivé, v drobnom texte infografík sa preklepy stále objavujú – aj u víťaza testu sme na to narazili pri drobnom písme.</li>
+    <li><strong>Dáta do grafík negenerujte.</strong> Obrazový model si hodnoty v tabuľke či grafe vymyslí tak, aby „vyzerali dobre“. Grafy kreslite z reálnych dát, AI nechajte ilustrácie.</li>
+    <li><strong>Označovanie AI obrázkov.</strong> Pre blogové články zatiaľ povinnosť neexistuje, v Google Merchant Center však AI generované obrázky produktov musia niesť IPTC metadáta DigitalSourceType. Detaily sme rozobrali v <a href="https://starbomedia.sk/seo-clanky-s-ai-ako-overit-obsah" title="SEO články s AI">článku o AI obsahu</a>.</li>
+    <li><strong>AI Overviews menia aj vyhľadávanie obrázkových tém.</strong> Na dopyt „nano banana 2 test“ sa na Slovensku zobrazuje AI Overview – ak píšete o AI nástrojoch, počítajte s tým pri štruktúre obsahu. Ako na to, sme zhrnuli v <a href="https://starbomedia.sk/ai-overviews-kompletny-sprievodca" title="AI Overviews – kompletný sprievodca">sprievodcovi AI Overviews</a>.</li>
+  </ol>
+
+  <h2 id="co-si-odniest">Čo si z testu odniesť</h2>
+
+  <p>Pred rokom bola otázka „dá sa to použiť?“. Dnes je otázka „ktorý model na ktorú úlohu?“ – a keďže nové generácie modelov pribúdajú každých pár mesiacov, plánujeme tento test priebežne opakovať. Momentálny stav: Nano Banana 2 ako default na všetko, GPT Image 2 na štylizáciu a palety, Seedream na produkt bez textu, Grok na jednotlivé bannery. A všetky štyri s ľudskou kontrolou na konci – tá sa z procesu nevytratila, len sa posunula z „oprav to“ na „schváľ to“.</p>
+
+  <p>Ak chcete AI vizuály vyskúšať vo svojom e-shope, začnite malým testom na pár produktoch a porovnajte výsledky s reálnymi fotkami. A ak si tú cestu nechcete prešliapavať sami, presne s týmto pomáhame v rámci nášho <a href="https://starbomedia.sk/ai-studio" title="AI Studio od Starbomedia">AI Studia</a>.</p>
+
+  <section id="faq">
+    <h2>Často kladené otázky</h2>
+
+    <details>
+      <summary>Ktorý AI generátor obrázkov je najlepší v roku 2026?</summary>
+      <p>V našom teste 102 obrázkov v 20 disciplínach vyhral Nano Banana 2 (Gemini 3.1 Flash Image) od Googlu so skóre 4,88 z 5 – pred GPT Image 2 (4,40), Seedream 5.0 Pro (4,32) a Grok Image (4,11). Univerzálny víťaz ale neznamená víťaz v každej disciplíne: na štylizované kompozície a presné brand farby bol najlepší GPT Image 2.</p>
+    </details>
+
+    <details>
+      <summary>Zvládne AI slovenskú diakritiku v obrázkoch?</summary>
+      <p>Áno, tri zo štyroch testovaných modelov – Nano Banana 2, GPT Image 2 a Grok – vyrenderovali text „Zľava 30 % na ľahkú bežeckú obuv“ bezchybne v oboch pokusoch. Seedream 5.0 Pro slovenčinu nezvláda („Žláva“, „Nakupovató“), čo zodpovedá aj oficiálnej dokumentácii ByteDance, kde slovenčina medzi podporovanými jazykmi nefiguruje.</p>
+    </details>
+
+    <details>
+      <summary>Koľko stojí vygenerovanie AI obrázka?</summary>
+      <p>V našom teste na platforme Higgsfield stál jeden 2K obrázok 2 kredity pri Nano Banana 2 a Groku, 3 pri Seedreame a 7 pri GPT Image 2 v najvyššej kvalite. Na priamych API sa ceny pohybujú v centoch: Seedream 5.0 Pro napríklad od 0,045 dolára za obrázok na Replicate. Celý náš test so 102 obrázkami vyšiel na 365 kreditov.</p>
+    </details>
+
+    <details>
+      <summary>Dajú sa AI obrázky použiť na produktové fotky e-shopu?</summary>
+      <p>Áno, ale len s modelmi, ktoré produkt pri úprave nemenia – v našom teste to boli Nano Banana 2 a Seedream 5.0 Pro. Postup, ktorý používame: reálna fotka produktu ako referencia, generovanie scény okolo nej a manuálna kontrola vernosti (tvar, farba, logo, etiketa) pred nasadením. Hero fotky vlajkových produktov stále odporúčame fotiť.</p>
+    </details>
+
+    <details>
+      <summary>Aké AI nástroje na generovanie obrázkov sa oplatia e-shopu?</summary>
+      <p>Ak generujete občas, stačí Gemini (Nano Banana 2 je v ňom dostupný zadarmo) alebo ChatGPT. Pri systematickej produkcii sa oplatí platforma s prístupom k viacerým modelom (my používame Higgsfield) alebo priame API – vyberáte potom model podľa úlohy, nie podľa toho, kde máte predplatné.</p>
+    </details>
+
+    <details>
+      <summary>Musím AI generované obrázky označovať?</summary>
+      <p>Pri blogových a marketingových vizuáloch zatiaľ všeobecná povinnosť neexistuje. Výnimkou je Google Merchant Center: AI generované produktové obrázky vo feede musia niesť IPTC metadáta DigitalSourceType s hodnotou TrainedAlgorithmicMedia. Pre poctivosť voči publiku AI pôvod obrázkov uvádzame – aj v tomto článku.</p>
+    </details>
+  </section>
+
+  </div>
+</article>
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ktorý AI generátor obrázkov je najlepší v roku 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "V našom teste 102 obrázkov v 20 disciplínach vyhral Nano Banana 2 (Gemini 3.1 Flash Image) od Googlu so skóre 4,88 z 5 – pred GPT Image 2 (4,40), Seedream 5.0 Pro (4,32) a Grok Image (4,11). Univerzálny víťaz ale neznamená víťaz v každej disciplíne: na štylizované kompozície a presné brand farby bol najlepší GPT Image 2."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Zvládne AI slovenskú diakritiku v obrázkoch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno, tri zo štyroch testovaných modelov – Nano Banana 2, GPT Image 2 a Grok – vyrenderovali text „Zľava 30 % na ľahkú bežeckú obuv“ bezchybne v oboch pokusoch. Seedream 5.0 Pro slovenčinu nezvláda („Žláva“, „Nakupovató“), čo zodpovedá aj oficiálnej dokumentácii ByteDance, kde slovenčina medzi podporovanými jazykmi nefiguruje."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Koľko stojí vygenerovanie AI obrázka?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "V našom teste na platforme Higgsfield stál jeden 2K obrázok 2 kredity pri Nano Banana 2 a Groku, 3 pri Seedreame a 7 pri GPT Image 2 v najvyššej kvalite. Na priamych API sa ceny pohybujú v centoch: Seedream 5.0 Pro napríklad od 0,045 dolára za obrázok na Replicate. Celý náš test so 102 obrázkami vyšiel na 365 kreditov."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dajú sa AI obrázky použiť na produktové fotky e-shopu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno, ale len s modelmi, ktoré produkt pri úprave nemenia – v našom teste to boli Nano Banana 2 a Seedream 5.0 Pro. Postup, ktorý používame: reálna fotka produktu ako referencia, generovanie scény okolo nej a manuálna kontrola vernosti (tvar, farba, logo, etiketa) pred nasadením. Hero fotky vlajkových produktov stále odporúčame fotiť."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Aké AI nástroje na generovanie obrázkov sa oplatia e-shopu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ak generujete občas, stačí Gemini (Nano Banana 2 je v ňom dostupný zadarmo) alebo ChatGPT. Pri systematickej produkcii sa oplatí platforma s prístupom k viacerým modelom alebo priame API – model potom vyberáte podľa úlohy, nie podľa toho, kde máte predplatné."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Musím AI generované obrázky označovať?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pri blogových a marketingových vizuáloch zatiaľ všeobecná povinnosť neexistuje. Výnimkou je Google Merchant Center: AI generované produktové obrázky vo feede musia niesť IPTC metadáta DigitalSourceType s hodnotou TrainedAlgorithmicMedia. Pre poctivosť voči publiku AI pôvod obrázkov uvádzame."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Domov", "item": "https://starbomedia.sk/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://starbomedia.sk/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Nano Banana 2 vs GPT Image 2, Seedream 5.0 a Grok: veľký test AI generátorov obrázkov" }
+    ]
+  }
+]
+</script>
