@@ -53,9 +53,12 @@ export default function ContactPage() {
                                         <MapPin size={24} color="#8b5cf6" />
                                     </div>
                                     <div>
-                                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Sídlo</p>
-                                        <p style={{ fontSize: '1.1rem', fontWeight: 600 }}>Dlhá nad Váhom 446</p>
+                                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Kancelária</p>
+                                        <p style={{ fontSize: '1.1rem', fontWeight: 600 }}>Dlhá nad Váhom 268</p>
                                         <p style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}>927 05 Dlhá nad Váhom</p>
+                                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.6rem' }}>
+                                            Sídlo spoločnosti: Dlhá nad Váhom 446
+                                        </p>
                                     </div>
                                 </div>
                             </div>

@@ -35,6 +35,7 @@ const STATIC_PATHS = [
     'slovnik-pojmov',
     'referencie-2',
     'tim-starbomedia',
+    'preco-starbomedia',
     'kariera',
     'kariera-marketing-staz',
     'kariera-ppc-specialista',
@@ -46,7 +47,7 @@ function priorityFor(p: string): number {
     if (p === '') return 1;
     if (['google-reklama', 'facebook-reklama', 'sprava-socialnych-sieti', 'seo', 'reklama-na-internete', 'ai-studio', 'blog'].includes(p)) return 0.9;
     if (p.startsWith('ai-studio/')) return 0.8;
-    if (['kontakt', 'referencie-2', 'cenove-porovnavace', 'youtube-reklama', 'analyza-webu', 'slovnik-pojmov', 'cennik', 'google-ads-audit'].includes(p)) return 0.7;
+    if (['kontakt', 'referencie-2', 'preco-starbomedia', 'cenove-porovnavace', 'youtube-reklama', 'analyza-webu', 'slovnik-pojmov', 'cennik', 'google-ads-audit'].includes(p)) return 0.7;
     return 0.5;
 }
 

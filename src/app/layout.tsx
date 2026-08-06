@@ -36,11 +36,19 @@ const orgJsonLd = [
     logo: { '@type': 'ImageObject', url: 'https://starbomedia.sk/logo.png' },
     email: 'marketing@starbomedia.sk',
     telephone: '+421940782070',
+    // Adresa kancelárie — musí sedieť s Google Business Profile kvôli párovaniu entity.
+    // Sídlo podľa OR (Dlhá nad Váhom 446) je v GDPR a na kontaktnej stránke.
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Dlhá nad Váhom 446',
+      streetAddress: 'Dlhá nad Váhom 268',
+      postalCode: '927 05',
+      addressLocality: 'Dlhá nad Váhom',
       addressCountry: 'SK',
     },
+    foundingDate: '2012',
+    areaServed: ['SK', 'CZ', 'HU', 'PL', 'RO', 'DE', 'AT', 'HR', 'SI', 'IT', 'FR', 'BE', 'BG'].map(
+      (c) => ({ '@type': 'Country', identifier: c }),
+    ),
     sameAs: [
       'https://www.facebook.com/starbomedia',
       'https://www.linkedin.com/company/starbomedia/',

@@ -42,6 +42,7 @@ const Footer = () => {
                     <h3>Spoločnosť</h3>
                     <ul className={styles.linkList}>
                         <li><Link href="/tim-starbomedia">O nás</Link></li>
+                        <li><Link href="/preco-starbomedia">Prečo Starbomedia</Link></li>
                         <li><Link href="/kariera">Kariéra</Link></li>
                         <li><Link href="/referencie-2">Prípadové štúdie</Link></li>
                         <li><Link href="/slovnik-pojmov">Slovník pojmov</Link></li>
@@ -62,7 +63,7 @@ const Footer = () => {
                         </p>
                         <p>
                             <span className={styles.contactLabel}>Adresa</span>
-                            <span>Dlhá nad Váhom 446</span>
+                            <span>Dlhá nad Váhom 268</span>
                         </p>
                     </div>
                 </div>

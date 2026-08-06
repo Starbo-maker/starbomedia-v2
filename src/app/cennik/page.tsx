@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 const cennik = [
-    { sluzba: 'Google Ads — správa kampaní', cena: 'od 350 € / mes.', detail: 'Search, PMax, Shopping, remarketing. Pri rozpočte nad ~3 000 € prechádzame na 10 – 15 % z rozpočtu.', href: '/google-reklama' },
+    { sluzba: 'Google Ads — správa kampaní', cena: 'od 350 € / mes.', detail: 'Search, PMax, Shopping, remarketing. Finálna výška závisí od časovej náročnosti, množstva meetingov a komunikácie a veľkosti projektu.', href: '/google-reklama' },
     { sluzba: 'Meta Ads (Facebook + Instagram)', cena: 'od 350 € / mes.', detail: 'Kampane, kreatívny testing, Advantage+, CAPI meranie.', href: '/facebook-reklama' },
     { sluzba: 'Google Ads + Meta Ads spolu', cena: 'od 600 € / mes.', detail: 'Najčastejšia kombinácia pre e-shopy — jeden tím, spoločná atribúcia a rozpočtová stratégia.', href: '/reklama-na-internete' },
     { sluzba: 'SEO', cena: 'od 400 € / mes.', detail: 'Technické SEO, obsah, interné prelinkovanie, GEO (viditeľnosť v AI odpovediach).', href: '/seo' },
@@ -22,7 +22,7 @@ const cennik = [
 
 const faq = [
     { q: 'Prečo uvádzate ceny „od"?', a: 'Lebo náročnosť správy sa líši: účet s jedným trhom a stovkami produktov je iná práca než účet s ôsmimi trhmi a desaťtisícmi produktov. Pásmo „od" je reálna spodná hranica, presnú cenu dostanete po vstupnom audite — spolu s rozsahom práce, ktorý za ňu dostanete.' },
-    { q: 'Je fixná odmena alebo percento z rozpočtu výhodnejšie?', a: 'Do približne 3 000 € mesačného rozpočtu je pre klienta zvyčajne férovejší fix. Pri väčších rozpočtoch dáva zmysel 10 – 15 % z médií, lebo náročnosť správy rastie s objemom. Modely nad 25 % považujeme za predražené.' },
+    { q: 'Od čoho závisí finálna cena správy?', a: 'Od časovej náročnosti účtu, množstva meetingov a komunikácie a celkovej veľkosti projektu. Účet s jedným trhom a stovkami produktov je iná práca než účet s viacerými trhmi, väčším sortimentom a intenzívnejšou komunikáciou. Presnú sumu preto dohodneme po vstupnom audite.' },
     { q: 'Viažete zmluvou?', a: 'Nie. Spolupráca je bez dlhodobej viazanosti s mesačnou výpovednou lehotou. Držíme si klientov výsledkami, nie zmluvami.' },
     { q: 'Komu patrí reklamný účet?', a: 'Vždy vám. Účty zakladáme na vašu firmu a pri prípadnom odchode vám zostáva účet, história aj dáta. Považujeme to za samozrejmosť — a odporúčame si to overiť u každej agentúry.' },
     { q: 'Čo ak sa kampaniam nedarí?', a: 'Prvé 2 – 3 mesiace sú o stabilizácii merania a optimalizácii. Ak sa ani potom nedarí plniť dohodnuté ciele, povieme vám to na rovinu aj s dôvodmi — vrátane scenára, že reklama pre váš biznis nie je správny kanál.' },
@@ -178,7 +178,7 @@ export default function CennikPage() {
                         <li className={styles.featureItem}><CheckCircle size={18} color="#10b981" /> Žiadna viazanosť — mesačná výpovedná lehota.</li>
                         <li className={styles.featureItem}><CheckCircle size={18} color="#10b981" /> Reklamné účty aj dáta patria vždy vám.</li>
                         <li className={styles.featureItem}><CheckCircle size={18} color="#10b981" /> Ak reklama pre váš biznis nedáva zmysel, povieme vám to už na audite.</li>
-                        <li className={styles.featureItem}><CheckCircle size={18} color="#10b981" /> Percentuálne modely nad 25 % z rozpočtu považujeme za predražené — aj u konkurencie.</li>
+                        <li className={styles.featureItem}><CheckCircle size={18} color="#10b981" /> Cenu staviame na reálnej náročnosti — na čase, komunikácii a veľkosti projektu, nie na percente z vášho rozpočtu.</li>
                     </ul>
                 </section>
 
