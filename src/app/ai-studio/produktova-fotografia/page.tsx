@@ -38,7 +38,7 @@ function BeforeAfterFigure({
 
 export const metadata = {
     title: 'AI produktová fotografia | Starbomedia',
-    description: 'Z jednej fotky produktu vytvoríme desiatky reklamných scén so stredoeurópskymi modelkami. Odstránenie pozadia, 100 % vernosť produktu a 1 200 vizuálov za 2 až 4 dni.',
+    description: 'Z jednej fotky produktu vytvoríme desiatky reklamných scén – lifestyle zábery, výmena pozadia a 100 % vernosť značky aj etikety. 1 200 vizuálov za 2 až 4 dni.',
 };
 
 export default function AiProductPhotoPage() {
@@ -51,8 +51,8 @@ export default function AiProductPhotoPage() {
                         <div className={styles.badge}>AI foto štúdio</div>
                         <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>AI produktová fotografia</h1>
                         <p className={styles.subtitle}>
-                            Z jedinej fotky produktu vytvoríme desiatky profesionálnych scén – lifestyle so stredoeurópskou
-                            modelkou, hero shoty aj social kreatívy v hotových reklamných formátoch. Bez drahého fotenia
+                            Z jedinej fotky produktu vytvoríme desiatky profesionálnych scén – lifestyle zábery,
+                            hero shoty aj social kreatívy v hotových reklamných formátoch. Bez drahého fotenia
                             a týždňov čakania.
                         </p>
                         <div style={{ marginTop: '2rem' }}>
@@ -68,7 +68,7 @@ export default function AiProductPhotoPage() {
                             <div className={styles.orbCore} />
 
                             <div className={`${styles.floatingCard} ${styles.fc1}`}>
-                                <Camera size={20} color="#6366f1" /> Stredoeurópske modelky
+                                <Camera size={20} color="#6366f1" /> Produkt v reálnom použití
                             </div>
                             <div className={`${styles.floatingCard} ${styles.fc2}`}>
                                 <Sparkles size={20} color="#ec4899" /> 100 % vernosť produktu
@@ -94,7 +94,7 @@ export default function AiProductPhotoPage() {
                                     <CheckCircle size={20} color="#10b981" /> Odstránenie a výmena pozadia
                                 </li>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 500 }}>
-                                    <CheckCircle size={20} color="#10b981" /> Stredoeurópske modelky a slovenský kontext
+                                    <CheckCircle size={20} color="#10b981" /> Lifestyle scény s modelom aj bez neho
                                 </li>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 500 }}>
                                     <CheckCircle size={20} color="#10b981" /> 100 % vernosť produktu – značka a etiketa sa nezmenia
