@@ -1,6 +1,40 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Camera, CheckCircle, Zap, Image as ImageIcon, Sparkles } from 'lucide-react';
 import styles from '../../ai-studio.module.css';
+
+const IMG = '/ai-studio/produktova-fotografia';
+
+function BeforeAfterFigure({
+    po,
+    pred,
+    altPo,
+    altPred,
+    aspectRatio = '4 / 3',
+}: {
+    po: string;
+    pred: string;
+    altPo: string;
+    altPred: string;
+    aspectRatio?: string;
+}) {
+    return (
+        <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', aspectRatio }}>
+            <Image src={`${IMG}/${po}`} alt={altPo} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 500px" />
+            <span style={{ position: 'absolute', top: '12px', right: '12px', background: 'var(--ai-gradient, linear-gradient(135deg, #6366f1, #ec4899))', color: 'white', fontSize: '0.75rem', fontWeight: 700, padding: '0.3rem 0.8rem', borderRadius: '20px', letterSpacing: '0.05em' }}>
+                PO
+            </span>
+            <div style={{ position: 'absolute', left: '12px', bottom: '12px', width: '28%', minWidth: '90px', borderRadius: '10px', overflow: 'hidden', border: '3px solid white', boxShadow: '0 4px 12px rgba(0,0,0,0.25)', background: 'white' }}>
+                <div style={{ position: 'relative', aspectRatio: '1 / 1' }}>
+                    <Image src={`${IMG}/${pred}`} alt={altPred} fill style={{ objectFit: 'contain', background: 'white' }} sizes="150px" />
+                </div>
+                <span style={{ position: 'absolute', top: '6px', left: '6px', background: '#0f172a', color: 'white', fontSize: '0.65rem', fontWeight: 700, padding: '0.15rem 0.5rem', borderRadius: '12px', letterSpacing: '0.05em' }}>
+                    PRED
+                </span>
+            </div>
+        </div>
+    );
+}
 
 export const metadata = {
     title: 'AI produktová fotografia | Starbomedia',
@@ -17,7 +51,7 @@ export default function AiProductPhotoPage() {
                         <div className={styles.badge}>AI foto štúdio</div>
                         <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>AI produktová fotografia</h1>
                         <p className={styles.subtitle}>
-                            Z jedinej fotky produktu vytvoríme desiatky profesionálnych scén — lifestyle so stredoeurópskou
+                            Z jedinej fotky produktu vytvoríme desiatky profesionálnych scén – lifestyle so stredoeurópskou
                             modelkou, hero shoty aj social kreatívy v hotových reklamných formátoch. Bez drahého fotenia
                             a týždňov čakania.
                         </p>
@@ -51,9 +85,9 @@ export default function AiProductPhotoPage() {
                             <ImageIcon size={48} color="#6366f1" style={{ marginBottom: '1.5rem' }} />
                             <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Scény šité na váš produkt</h2>
                             <p style={{ color: '#64748b', lineHeight: '1.6', marginBottom: '2rem' }}>
-                                Náš nástroj Product Scene Generator v7 automaticky odstráni pozadie, prečíta značku aj etiketu
-                                a navrhne scény na mieru danému produktu — žiadne generické presety. Výstupom sú reklamné vizuály
-                                pripravené priamo do feedu aj do stories.
+                                Z jednej fotky vášho produktu pripravíme celú sadu vizuálov – rôzne scény, uhly aj varianty,
+                                všetko v jednotnom štýle naprieč celým katalógom. Hotové vizuály nasadíte na produktový detail
+                                v e-shope aj do inzercie – od feedu po stories.
                             </p>
                             <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 500 }}>
@@ -63,16 +97,96 @@ export default function AiProductPhotoPage() {
                                     <CheckCircle size={20} color="#10b981" /> Stredoeurópske modelky a slovenský kontext
                                 </li>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 500 }}>
-                                    <CheckCircle size={20} color="#10b981" /> 100 % vernosť produktu — značka a etiketa sa nezmenia
+                                    <CheckCircle size={20} color="#10b981" /> 100 % vernosť produktu – značka a etiketa sa nezmenia
                                 </li>
                             </ul>
                         </div>
-                        <div style={{ background: '#f1f5f9', borderRadius: '16px', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            {/* Placeholder for demo image */}
-                            <span style={{ color: '#94a3b8', fontWeight: 600 }}>Ukážka pred / po</span>
+                        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                            <BeforeAfterFigure
+                                po="stol-po-lifestyle.jpg"
+                                pred="stol-pred.jpg"
+                                altPo="AI lifestyle scéna – masážny stôl Fabulo UNO v presvetlenom interiéri"
+                                altPred="Pôvodná produktová fotka masážneho stola Fabulo UNO"
+                                aspectRatio="16 / 10"
+                            />
+                            <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '0.8rem', textAlign: 'center' }}>
+                                Z e-shopového packshotu lifestyle scéna – produkt sa nezmenil ani o milimeter.
+                            </p>
                         </div>
                     </div>
                 </div>
+
+                <section style={{ marginTop: '6rem' }}>
+                    <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 3rem' }}>
+                        <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>Ukážky pred / po</h2>
+                        <p style={{ color: '#64748b', lineHeight: '1.6' }}>
+                            Reálne výstupy z našej produkcie. Malá fotka vľavo dole je vždy pôvodný podklad
+                            z e-shopu – veľký vizuál je hotová AI scéna.
+                        </p>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))', gap: '2rem' }}>
+                        <div>
+                            <BeforeAfterFigure
+                                po="stol-po-swap.jpg"
+                                pred="stol-pred.jpg"
+                                altPo="Masážny stôl Fabulo UNO s vymeneným pozadím – masérska miestnosť"
+                                altPred="Pôvodná produktová fotka masážneho stola"
+                            />
+                            <p style={{ fontWeight: 600, marginTop: '0.8rem' }}>Výmena pozadia</p>
+                            <p style={{ color: '#64748b', fontSize: '0.9rem' }}>Packshot vsadený do reálneho prostredia – tvar, farba aj detaily produktu zostávajú verné originálu.</p>
+                        </div>
+                        <div>
+                            <BeforeAfterFigure
+                                po="obuv-po.jpg"
+                                pred="obuv-pred.jpg"
+                                altPo="Bežec zaväzujúci si bežeckú obuv Hoka na lesnom chodníku – AI scéna"
+                                altPred="Pôvodná produktová fotka bežeckej obuvi Hoka"
+                            />
+                            <p style={{ fontWeight: 600, marginTop: '0.8rem' }}>Produkt v použití</p>
+                            <p style={{ color: '#64748b', fontSize: '0.9rem' }}>Z bočného packshotu scéna s modelom v pohybe – vrátane verného loga a farieb obuvi.</p>
+                        </div>
+                        <div>
+                            <BeforeAfterFigure
+                                po="olej-po.jpg"
+                                pred="olej-pred.jpg"
+                                altPo="Masážny olej Verana vo wellness scéne s eukalyptom a sviečkou – AI scéna"
+                                altPred="Pôvodná produktová fotka masážneho oleja Verana"
+                            />
+                            <p style={{ fontWeight: 600, marginTop: '0.8rem' }}>Verná etiketa</p>
+                            <p style={{ color: '#64748b', fontSize: '0.9rem' }}>Aj text a logo na obale zostávajú čitateľné a nezmenené – kritické pre kozmetiku a doplnky.</p>
+                        </div>
+                    </div>
+
+                    <div className={styles.demoContainer} style={{ marginTop: '4rem', maxWidth: 'none' }}>
+                        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                            <h3 style={{ fontSize: '1.6rem', marginBottom: '0.5rem' }}>Tri scény z jednej fotky</h3>
+                            <p style={{ color: '#64748b' }}>
+                                Tenisky Bugatti pre e-shop Robel.sk – z jediného packshotu tri rôzne lifestyle scény pripravené do reklám.
+                            </p>
+                        </div>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))', gap: '1.5rem', alignItems: 'stretch' }}>
+                            <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', background: 'white', border: '1px solid #e2e8f0' }}>
+                                <div style={{ position: 'relative', height: '100%', minHeight: '260px' }}>
+                                    <Image src={`${IMG}/bugatti-pred.jpg`} alt="Pôvodná produktová fotka tenisiek Bugatti z e-shopu Robel.sk" fill style={{ objectFit: 'contain', background: 'white', padding: '1rem' }} sizes="(max-width: 768px) 100vw, 300px" />
+                                </div>
+                                <span style={{ position: 'absolute', top: '12px', left: '12px', background: '#0f172a', color: 'white', fontSize: '0.75rem', fontWeight: 700, padding: '0.3rem 0.8rem', borderRadius: '20px', letterSpacing: '0.05em' }}>PRED</span>
+                            </div>
+                            {[
+                                { src: 'bugatti-po-1.jpg', alt: 'Tenisky Bugatti v chôdzi na dláždenej ulici – AI scéna 1' },
+                                { src: 'bugatti-po-2.jpg', alt: 'Tenisky Bugatti na schodoch pred kaviarňou – AI scéna 2' },
+                                { src: 'bugatti-po-3.jpg', alt: 'Tenisky Bugatti na drevenej terase – AI scéna 3' },
+                            ].map((v, i) => (
+                                <div key={v.src} style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', aspectRatio: '3 / 4' }}>
+                                    <Image src={`${IMG}/${v.src}`} alt={v.alt} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 300px" />
+                                    <span style={{ position: 'absolute', top: '12px', right: '12px', background: 'var(--ai-gradient, linear-gradient(135deg, #6366f1, #ec4899))', color: 'white', fontSize: '0.75rem', fontWeight: 700, padding: '0.3rem 0.8rem', borderRadius: '20px', letterSpacing: '0.05em' }}>
+                                        PO {i + 1}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
 
                 <div className={styles.grid} style={{ marginTop: '5rem' }}>
                     <div className={styles.card}>
@@ -83,7 +197,7 @@ export default function AiProductPhotoPage() {
                     <div className={styles.card}>
                         <Camera className={styles.cardIcon} />
                         <h3 className={styles.cardTitle}>Konzistencia</h3>
-                        <p className={styles.cardDesc}>Jednotný vizuálny štýl naprieč celým katalógom — ideálne pre e-shopy s veľkým počtom produktov.</p>
+                        <p className={styles.cardDesc}>Jednotný vizuálny štýl naprieč celým katalógom – ideálne pre e-shopy s veľkým počtom produktov.</p>
                     </div>
                 </div>
             </div>
