@@ -1,0 +1,368 @@
+<article class="ucp-article" itemscope itemtype="https://schema.org/Article">
+
+  <header>
+    <h1 itemprop="headline">ChatGPT Ads návod: ako si založiť účet a spustiť prvú kampaň zo Slovenska</h1>
+    <p class="article-meta">
+      <time itemprop="datePublished" datetime="2026-09-01">1. septembra 2026</time>
+      · ~13 min čítania    </p>
+  </header>
+
+  <nav aria-label="Obsah článku">
+<h2>Obsah článku</h2>
+<ol>
+<li><a href="#tl-dr">TL;DR</a></li>
+<li><a href="#ako-inzerovat-v-chatgpt-co-potrebujete-pred-startom">Ako inzerovať v ChatGPT: čo potrebujete pred štartom</a></li>
+<li><a href="#zalozenie-chatgpt-ads-uctu-krok-za-krokom">Založenie ChatGPT Ads účtu krok za krokom</a></li>
+<li><a href="#nastavenie-prvej-kampane-v-chatgpt-ads-3-kroky">Nastavenie prvej kampane v ChatGPT Ads (3 kroky)</a></li>
+<li><a href="#kolko-stoji-reklama-v-chatgpt-co-vieme-z-realneho-uctu">Koľko stojí reklama v ChatGPT: čo vieme z reálneho účtu</a></li>
+<li><a href="#meranie-konverzii-v-chatgpt-ads">Meranie konverzií v ChatGPT Ads</a></li>
+<li><a href="#co-v-ehp-zatial-nefunguje-a-na-co-si-dat-pozor">Čo v EHP zatiaľ nefunguje – a na čo si dať pozor</a></li>
+<li><a href="#nas-pohlad-odporucany-prvy-setup-pre-slovensku-firmu">Náš pohľad: odporúčaný prvý setup pre slovenskú firmu</a></li>
+<li><a href="#faq">Často kladené otázky</a></li>
+</ol>
+</nav>
+
+<p>OpenAI otvoril 31. augusta 2026 beta self-service prístup do Ads Managera pre inzerentov vo všetkých 31 európskych trhoch. My v Starbomedia sme si účet založili v deň otvorenia – a tento návod píšeme priamo z neho. Všetky screenshoty, čísla aj citácie rozhrania pochádzajú z nášho reálneho slovenského účtu, nie z amerických blogov ani z tlačových správ.</p>
+<p>To je dôležité povedať hneď na začiatku, lebo väčšina „návodov na ChatGPT Ads", ktoré nájdete, je písaná pre americký trh. Európska verzia sa líši v podstatných veciach: v obmedzeniach cielenia, v mene, v tom, čo je predvolene zapnuté. Tu je to, čo vás čaká, keď sa prihlásite zo Slovenska.</p>
+<p>Ak vám chýba kontext – čo ChatGPT Ads sú, komu sa zobrazujú a pre koho dávajú zmysel – začnite naším článkom <a href="https://starbomedia.sk/chatgpt-ads-stredna-europa-slovensko" title="ChatGPT Ads na Slovensku a v strednej Európe">ChatGPT Ads na Slovensku a v strednej Európe</a>. Tento text nadväzuje tam, kde ten končí: pri praktickom nastavení.</p>
+<figure>
+<img src="/blog/chatgpt-ads-navod/hero-chatgpt-ads-navod.webp" alt="ChatGPT Ads návod – nastavenie prvej kampane zo Slovenska" loading="eager" fetchpriority="high" width="1200" height="675">
+<figcaption>Self-service ChatGPT Ads je od 31. augusta 2026 otvorený aj slovenským firmám.</figcaption>
+</figure>
+
+<figure>
+<img src="/blog/chatgpt-ads-navod/screenshot-prehlad.webp" alt="Slovenské rozhranie ChatGPT Ads Managera – Prehľad účtu" loading="lazy" width="1400" height="588">
+<figcaption>Slovenské rozhranie ChatGPT Ads Managera – Prehľad účtu</figcaption>
+</figure>
+
+<h2 id="tl-dr">TL;DR</h2>
+<ul>
+<li><strong>Účet si založíte na <a href="https://ads.openai.com" title="ads.openai.com" target="_blank" rel="noopener noreferrer">ads.openai.com</a></strong> – od 31. 8. 2026 aj ako firma registrovaná na Slovensku. Rozhranie je od prvého dňa kompletne po slovensky („Správca reklám", beta).</li>
+<li><strong>Bez fakturácie sa nič nespustí.</strong> Kampaň aj reklamu vyskladáte, ale účet zobrazuje „Reklamy sa nebudú zobrazovať, kým nedokončíte nastavenie účtu."</li>
+<li><strong>Rozpočet:</strong> denný, predvyplnených 65 €. Systém akceptoval aj 15 € – s automatickým stropom 2× denne a 7× za týždeň (pri 15 € teda max 30 € za deň a 105 € za 7 dní).</li>
+<li><strong>CPC:</strong> pri manuálnom biddingu na slovenskú kampaň nám systém označil 1 € ako „Nemusí sa doručiť" a 1,95 € ako „Silné doručovanie". Prvý reálny cenový signál pre SK trh.</li>
+<li><strong>V EHP zatiaľ nefungujú vlastné publiká</strong> – rozhranie to píše natvrdo: personalizované reklamy u nás nie sú dostupné, cielenie je kontextové.</li>
+<li><strong>Pozor na predvolené AI Prispôsobenie textu</strong> – generuje preložené verzie vašich reklám bez vášho schválenia.</li>
+<li><strong>Formáty:</strong> nadpis max 50 znakov, popis max 100 znakov, obrázok štvorec min. 256 × 256 px.</li>
+</ul>
+
+<h2 id="ako-inzerovat-v-chatgpt-co-potrebujete-pred-startom">Ako inzerovať v ChatGPT: čo potrebujete pred štartom</h2>
+<p>Skôr než sa pustíte do klikania, tri veci, ktoré rozhodnú, či má registrácia zmysel:</p>
+<p><strong>1. Vaša kategória musí prejsť policy kontrolou.</strong> Self-service je otvorený inzerentom v schválených kategóriách a každá reklama prechádza kontrolou pravidiel. Citlivé segmenty – zdravie, duševné zdravie, politika – reklamy zatiaľ nemajú vôbec. Ak podnikáte vo výživových doplnkoch alebo zdravotníctve, počítajte s obmedzeniami skôr, než investujete čas do príprav.</p>
+<p><strong>2. Publikum sú používatelia tarify Free a Go.</strong> Platiaci používatelia ChatGPT (Plus, Pro, Business) reklamy nevidia. Detailne sme to rozobrali v <a href="https://starbomedia.sk/chatgpt-ads-stredna-europa-slovensko" title="prvom článku o ChatGPT Ads">prvom článku o ChatGPT Ads</a> – v skratke: oslovujete širokú spotrebiteľskú základňu, nie platiacich power-userov.</p>
+<p><strong>3. Cielenie bude kontextové, nie behaviorálne.</strong> Toto je najväčší rozdiel oproti Meta či Google a rozhranie vám ho pripomenie samo. Pri každom kroku, kde by ste v iných systémoch siahali po publikách, uvidíte infobox:</p>
+<blockquote><p>„Vlastné publiká nie sú podporované v kampaniach zacielených na lokality v EHP alebo vo Švajčiarsku, kde zatiaľ nie sú dostupné personalizované reklamy."</p></blockquote>
+<p>Prakticky: vaše zoznamy e-mailov a telefónnych čísel si do účtu síce nahráte (sekcia Publiká to umožňuje, v surovej aj hashovanej podobe), ale na slovenskú kampaň ich zatiaľ nepoužijete. Reklama sa páruje na tému živej konverzácie – a práve preto bude rozhodovať, ako presne viete opísať, pri akých témach je váš produkt relevantný. K tomu sa dostaneme pri kontextových tipoch.</p>
+
+<h2 id="zalozenie-chatgpt-ads-uctu-krok-za-krokom">Založenie ChatGPT Ads účtu krok za krokom</h2>
+<p>Registrácia beží na <a href="https://ads.openai.com" title="ads.openai.com" target="_blank" rel="noopener noreferrer">ads.openai.com</a> a viaže sa na OpenAI konto. Po vytvorení účtu vás privíta „Správca reklám" s označením Beta – a hneď prvé prekvapenie: <strong>celé rozhranie je po slovensky.</strong> Nie strojovo dolámané, ale použiteľne preložené – od navigácie cez formuláre až po chybové hlášky. Občas z beta verzie vykukne angličtina (stĺpce tabuľky kampaní ako Spend či Impressions), ale všetko podstatné je lokalizované.</p>
+<p>Štruktúra účtu je jednoduchá – päť položiek v ľavom menu:</p>
+<ul>
+<li><strong>Prehľad</strong> – úlohy na dokončenie a trend výkonnosti (výdavky, zobrazenia, kliknutia, CPC)</li>
+<li><strong>Kampane</strong> – tri úrovne: kampane → reklamné skupiny → reklamy; k tomu hromadné nahranie pre viac položiek naraz</li>
+<li><strong>Nástroje</strong> – Konverzie, Kanály (produktové feedy), História zmien, Publiká</li>
+<li><strong>Fakturácia</strong> – prehľad, aktivita, dokumenty, nastavenia</li>
+<li><strong>Nastavenia</strong> – účet a používatelia</li>
+</ul>
+<p>Ak ste zvyknutí na Google Ads alebo Meta Business Suite, je to výrazne jednoduchší svet. Žiadne desiatky typov kampaní, žiadne vnorené menu na tri úrovne. Beta má rozsah funkcií zhruba ako Google Ads vo svojich začiatkoch – na prvý test nám to stačilo.</p>
+<h3>Fakturácia: brána, cez ktorú musíte prejsť</h3>
+<p>Prvá úloha, ktorú vám Prehľad zobrazí, je označená „Povinné": <strong>Dokončiť nastavenie fakturácie.</strong> A účet to myslí vážne – kým fakturáciu nedokončíte, v hornej časti každej obrazovky svieti žltý banner:</p>
+<blockquote><p>„Reklamy sa nebudú zobrazovať, kým nedokončíte nastavenie účtu. Nastavte fakturáciu, ak chcete začať zobrazovať reklamy."</p></blockquote>
+<p>Kampaň, reklamnú skupinu aj reklamu si pritom môžete vyskladať celé – systém vás nezastaví, len reklama zostane v stave „Neobsluhuje". To je mimochodom užitočné: celý setup si pripravíte a doladíte v pokoji, a fakturáciou ho odomknete, až keď ste rozhodnutí míňať.</p>
+
+<h2 id="nastavenie-prvej-kampane-v-chatgpt-ads-3-kroky">Nastavenie prvej kampane v ChatGPT Ads (3 kroky)</h2>
+<p>Tlačidlo Vytvoriť spúšťa sprievodcu s tromi krokmi: <strong>Vytvoriť kampaň → Vytvoriť reklamnú skupinu a reklamy → Kontrola.</strong> Prejdime ich tak, ako ich uvidíte.</p>
+<figure>
+<img src="/blog/chatgpt-ads-navod/screenshot-kampan-krok1.webp" alt="Prvý krok sprievodcu novou kampaňou – cieľ, lokality, rozpočet" loading="lazy" width="1350" height="1410">
+<figcaption>Prvý krok sprievodcu novou kampaňou – cieľ, lokality, rozpočet</figcaption>
+</figure>
+<h3>Krok 1: Kampaň – cieľ, lokality, rozpočet</h3>
+<p><strong>Typ kampane</strong> je Štandardná – zatiaľ jediná ponúkaná možnosť v našom účte.</p>
+<p><strong>Cieľ</strong> určuje, ako budete platiť a aké formáty môžete použiť – rozhranie to formuluje presne: „Cieľ kampane určuje, ako ponúkate ceny v reklamnej aukcii a aké formáty reklám môžete propagovať." My sme zvolili Kliknutia; k dispozícii je aj optimalizácia na konverzie, tá však predpokladá, že máte nastavené meranie (viď nižšie).</p>
+<p><strong>Konverzná udalosť</strong> je voliteľná – aj kampaň na kliknutia si môže priradiť konverziu na sledovanie výsledkov.</p>
+<p><strong>Lokality</strong> fungujú ako v každom PPC systéme: zahrnuté a vylúčené. Slovensko sme pridali jedným kliknutím – všetkých 27 štátov EÚ je v ponuke. Kampaň sa zobrazí len používateľom vo vybraných lokalitách.</p>
+<p><strong>Vhodné platformy</strong> – iOS aplikácia, Android aplikácia a web. Predvolené sú všetky tri a na začiatok niet dôvodu to meniť; rozdeliť platformy má zmysel, až keď budete mať dáta o rozdielnom výkone.</p>
+<p><strong>Parametre dopytu vstupnej stránky</strong> ocení každý, kto rieši meranie: do URL si viete automaticky pridávať šablónové hodnoty {campaign_id}, {ad_group_id}, {ad_id}, {ad_account_id} a {oppref}. Bez toho by ste v analytike videli len anonymnú návštevu – takto si kliknutia spárujete s konkrétnou kampaňou a reklamou. Nastavte hneď pri prvej kampani; je to jedna z vecí, ktorú pri novom kanáli nechcete riešiť spätne. Prečo je poriadok v meraní dôležitejší než samotný kanál, sme rozpísali v článku <a href="https://starbomedia.sk/ecommerce-tracking-2026-bullshit-vs-realita-merania-e-shopov/" title="E-commerce tracking 2026">E-commerce tracking 2026</a>.</p>
+<p><strong>Rozpočet</strong> je denný a systém nám predvyplnil 65 €. To nie je minimum – prepísali sme ho na 15 € a formulár ho prijal bez protestu, len upozornil na mechaniku stropov:</p>
+<blockquote><p>„Toto je priemerná suma, ktorú ste ochotní minúť za deň. Vaše maximálne denné výdavky sú €30.00 a maximálne výdavky za sedem dní sú €105.00."</p></blockquote>
+<p>Inými slovami: denný rozpočet je priemer, v jednotlivý deň systém smie minúť až dvojnásobok, ale za sedem dní nikdy neprekročí sedemnásobok. Rovnakú logiku poznáte z Google Ads (tam je mesačný strop) – tu je okno týždňové, čo je pre kontrolu výdavkov o čosi prísnejšie. Tvrdý spodný limit rozpočtu sme v účte nenašli; pre porovnanie, pri indickom spustení OpenAI uviedol denné minimum 725 ₹, teda zhruba 7,60 $ – minimá sa očividne líšia trh od trhu.</p>
+<p><strong>Prispôsobenie textu</strong> – a tu spozornejte. Prepínač s ikonou AI je <strong>predvolene zapnutý</strong> a jeho popis stojí za doslovnú citáciu:</p>
+<blockquote><p>„AI automaticky generuje prispôsobené a preložené verzie nadpisov a opisov vašej reklamy, ktoré sa môžu zobraziť bez toho, aby ste si ich skontrolovali alebo schválili."</p></blockquote>
+<p>Bez toho, aby ste si ich skontrolovali alebo schválili. Pre inzerenta s voľným rozpočtom na experimenty fajn – systém otestuje varianty, ktoré by vám nenapadli. Ale ak máte prísny brand voice, právne citlivé formulácie alebo jednoducho chcete vedieť, čo presne vaša značka hovorí, prepínač vypnite. My sme ho pre prvý test vypli: pri kanáli, kde ešte nepoznáme správanie systému, chceme mať kontrolu nad každým znakom.</p>
+<h3>Krok 2: Reklamná skupina – bidding a prvý reálny cenový signál pre Slovensko</h3>
+<p>Reklamná skupina nesie stratégiu ponúk. Na výber sú dve:</p>
+<ul>
+<li><strong>Maximalizovať výsledky</strong> (predvolená) – „Automaticky upravíme vašu ponuku, aby ste za svoj rozpočet získali čo najviac výsledkov." Obdoba smart biddingu; systém rozhoduje sám.</li>
+<li><strong>Manuálne: maximálne CPC</strong> – nastavíte strop, ktorý ste ochotní zaplatiť za kliknutie.</li>
+</ul>
+<p>Zvolili sme manuálne CPC – nie preto, že by automatika bola zlá, ale preto, že pri novom kanáli chceme vidieť, čo sa deje. A práve tu prišiel najcennejší moment celého testu. Formulár totiž ponuku vyhodnocuje v reálnom čase voči aukcii:</p>
+<figure>
+<img src="/blog/chatgpt-ads-navod/screenshot-cpc-signal.webp" alt="CPC signalizácia v ChatGPT Ads – 1 € nestačí, 1,95 € je konkurencieschopné" loading="lazy" width="1380" height="680">
+<figcaption>CPC signalizácia v ChatGPT Ads – 1 € nestačí, 1,95 € je konkurencieschopné</figcaption>
+</figure>
+<ul>
+<li>Pri <strong>1 €</strong> sa zobrazilo červené varovanie: „Nemusí sa doručiť – Vaša ponuka môže byť príliš nízka na spoľahlivé doručovanie."</li>
+<li>Pri <strong>1,95 €</strong> sa indikátor prepol na zelené „Silné doručovanie – Vaša ponuka je pre túto reklamnú skupinu pravdepodobne konkurencieschopná."</li>
+</ul>
+<p>Je to prvý cenový údaj zo slovenského inventára, ktorý máme z prvej ruky – a naznačuje, že systém odhaduje konkurencieschopnú ponuku pre slovenskú kampaň niekde pod 2 €. Nejde o garantovanú cenu za klik, ale o odhad sily ponuky v aukcii. Dve poctivé výhrady: je to odhad aukcie pred spustením, nie odpočet z reálnych kliknutí, a platí pre našu kombináciu (cieľ Kliknutia, lokalita Slovensko, B2B služby). Skutočné CPC ukáže až bežiaca kampaň. Ale oproti číslam „3–5 $", ktoré kolujú po amerických blogoch, je to výrazne prívetivejší štart.</p>
+<p><strong>Kontextové tipy</strong> sú nenápadné textové pole, ktoré považujeme za strategicky najdôležitejšie miesto celého nastavenia. Rozhranie ho opisuje takto: „Opíšte konverzácie, témy alebo kľúčové slová, pri ktorých môžu byť vaše produkty alebo služby relevantné. Tieto indície usmerňujú priraďovanie, no nie sú pravidlami presného zacielenia."</p>
+<p>Prečítajte si to ešte raz: indície, nie pravidlá. Nefunguje to ako kľúčové slová v Search kampani – skôr napovedáte systému, pri akých témach konverzácií má vašu reklamu zvažovať. Keďže vlastné publiká v EHP nefungujú, je toto pole spolu s kreatívou jediný nástroj, ktorým relevanciu ovplyvníte. Odporúčame venovať mu viac než dve slová: opíšte situácie, v ktorých váš zákazník reálne rieši to, čo predávate.</p>
+<h3>Krok 3: Reklama, kontrola a publikovanie</h3>
+<p>Samotná reklama má štyri prvky – cieľovú URL, nadpis, popis a obrázok:</p>
+<ul>
+<li><strong>Nadpis: max 50 znakov.</strong> Náš 33-znakový „Marketing, ktorý platí vaše účty." prešiel, no formulár aj tak upozornil: „Text môže byť v niektorých umiestneniach skrátený." Nosnú myšlienku dajte na začiatok.</li>
+<li><strong>Popis: max 100 znakov.</strong> Menej než polovica tweetu – na rozvláčnosť nie je priestor.</li>
+<li><strong>Obrázok: PNG alebo JPG, štvorcový, minimálne 256 × 256 px.</strong> Jeden obrázok, žiadne karusely ani videá.</li>
+</ul>
+<p>Vpravo pri formulári sa v reálnom čase skladá náhľad: logo, názov firmy, štítok „Reklama", nadpis, popis. Presne takto vyzerá sponzorované umiestnenie pod odpoveďou ChatGPT.</p>
+<figure>
+<img src="/blog/chatgpt-ads-navod/screenshot-reklama-nahlad.webp" alt="Náhľad reklamy v ChatGPT Ads Manageri" loading="lazy" width="1400" height="852">
+<figcaption>Náhľad reklamy v ChatGPT Ads Manageri</figcaption>
+</figure>
+<p>Krok Kontrola zobrazí zhrnutie celej kampane na jednej obrazovke – cieľ, lokality, platformy, rozpočet, max. CPC, reklamy. Publikovaním zároveň potvrdzujete súhlas so Zmluvnými podmienkami reklamného nástroja. Po publikovaní ide reklama do policy kontroly; bez dokončenej fakturácie zostáva v stave „Neobsluhuje".</p>
+<p>Celý proces od prázdneho účtu po vyskladanú kampaň nám trval zhruba pätnásť minút – bez fakturácie a policy kontroly, ktoré prídu potom. Nie je to reklamný slogan, ale dôsledok jednoduchosti systému: tri kroky, jeden formát, žiadna džungľa nastavení.</p>
+
+<h2 id="kolko-stoji-reklama-v-chatgpt-co-vieme-z-realneho-uctu">Koľko stojí reklama v ChatGPT: čo vieme z reálneho účtu</h2>
+<p>Zhrňme cenové fakty, ktoré máme z prvej ruky – a oddeľme ich od dohadov:</p>
+<div style="overflow-x:auto"><table>
+<thead><tr><th>Položka</th><th>Hodnota</th><th>Zdroj</th></tr></thead>
+<tbody>
+<tr><td>Predvolený denný rozpočet</td><td>65 €</td><td>náš účet</td></tr>
+<tr><td>Najnižší rozpočet, ktorý sme úspešne zadali</td><td>15 €</td><td>náš účet</td></tr>
+<tr><td>Strop výdavkov</td><td>2× denný rozpočet/deň, 7× za 7 dní</td><td>text rozhrania</td></tr>
+<tr><td>CPC „príliš nízke" (SK, Kliknutia)</td><td>1 €</td><td>signál formulára</td></tr>
+<tr><td>CPC „konkurencieschopné" (SK, Kliknutia)</td><td>1,95 €</td><td>signál formulára</td></tr>
+<tr><td>Mena účtu</td><td>EUR</td><td>náš účet</td></tr>
+</tbody>
+</table></div>
+<p>Čo z prvej ruky nevieme: reálne CPC po spustení, CPM hodnoty a objem slovenského inventára. Kampaň spúšťame a čísla do článku doplníme, keď budú z prevádzky – nie skôr. Sumy z amerických prehľadov (CPC 3–5 $) berte ako iný trh s inou konkurenciou; signály z nášho formulára naznačujú, že slovenská aukcia štartuje nižšie.</p>
+
+<h2 id="meranie-konverzii-v-chatgpt-ads">Meranie konverzií v ChatGPT Ads</h2>
+<p>Sekcia Nástroje → Konverzie vedie štvorkrokovým procesom:</p>
+<ol>
+<li><strong>Vytvoriť zdroj údajov</strong> – odkiaľ budú konverzie prichádzať</li>
+<li><strong>Vytvoriť konverznú udalosť</strong> – čo sa má počítať (nákup, registrácia...)</li>
+<li><strong>Implementovať a zaznamenať udalosť</strong> – nasadenie do webu</li>
+<li><strong>Prepojiť udalosť s kampaňou</strong> – od tohto momentu vie kampaň optimalizovať na konverzie</li>
+</ol>
+<p>K dispozícii sú taby Zdroj údajov, Konverzné udalosti a Tok udalostí – ten posledný slúži na kontrolu, či udalosti reálne prichádzajú. Bez konverzií viete kampaň spustiť na kliknutia, ale hodnotiť nový kanál len cez CTR je cesta k zlým rozhodnutiam. Naša pozícia je rovnaká ako pri každom novom kanáli: najprv meranie, potom rozpočet.</p>
+<h3>Produktové feedy pre e-shopy: sekcia Kanály</h3>
+<p>Pre e-shopy je v Nástrojoch pripravená sekcia Kanály – produktové katalógy. Feed pripojíte tromi spôsobmi:</p>
+<ul>
+<li><strong>Nahratie CSV alebo TXT</strong> – „ideálne na začiatok alebo občasné manuálne aktualizácie"</li>
+<li><strong>Hostovaná URL adresa</strong> – katalóg dostupný na HTTPS adrese, obdoba feedu pre Google Merchant Center</li>
+<li><strong>Pripojenie SFTP</strong> – pre technické tímy s automatizovaným nahrávaním</li>
+</ul>
+<p>Rozhranie dodáva: „Vaše položky budú vhodné len pre reklamy." Produktový katalóg v ChatGPT teda zatiaľ neznamená organické nákupné výsledky – je to palivo pre reklamné formáty. Ak spravujete feedy pre Google, tento svet už poznáte; príprava kvalitného feedu je rovnaká disciplína. Pre e-shopy predávajúce vo viacerých krajinách CEE to zapadá do rovnakej logiky, akú riešime pri <a href="https://starbomedia.sk/expanzia-eshopu-do-zahranicia-ppc-cee-2026" title="expanzii e-shopov do zahraničia">expanzii e-shopov do zahraničia</a>.</p>
+
+<h2 id="co-v-ehp-zatial-nefunguje-a-na-co-si-dat-pozor">Čo v EHP zatiaľ nefunguje – a na čo si dať pozor</h2>
+<p>Aby ste neboli prekvapení, prehľad obmedzení, na ktoré pri nastavovaní zo Slovenska narazíte:</p>
+<ul>
+<li><strong>Vlastné publiká sa nedajú použiť</strong> na kampane cielené do EHP a Švajčiarska. Zoznamy si nahráte, ale kampaň ich neprijme. Súvisí to s tým, že personalizované reklamy v EÚ zatiaľ nebežia – cielenie je čisto kontextové.</li>
+<li><strong>AI Prispôsobenie textu je predvolene zapnuté</strong> a generuje aj preložené verzie bez vášho schválenia. Skontrolujte prepínač pri každej novej kampani.</li>
+<li><strong>Beta znamená beta.</strong> Miestami anglické stĺpce, občasné čakanie na načítanie – a hlavne: čo platí dnes, môže byť o mesiac inak. Tento článok budeme aktualizovať; dátum poslednej revízie nájdete pod nadpisom.</li>
+<li><strong>Policy kontrola je čierna skrinka.</strong> Zoznam schválených kategórií OpenAI nezverejnil; dozviete sa to až po registrácii. Ďalší dôvod založiť si účet skôr, než kanál reálne potrebujete.</li>
+</ul>
+
+<h2 id="nas-pohlad-odporucany-prvy-setup-pre-slovensku-firmu">Náš pohľad: odporúčaný prvý setup pre slovenskú firmu</h2>
+<p>Ak by sme mali celý návod zhustiť do jedného odporúčaného štartu, vyzeral by takto:</p>
+<ol>
+<li><strong>Založte účet a prejdite policy kontrolou</strong> – aj keď ešte nechcete míňať. Účet nič nestojí a zistíte, či je vaša kategória schválená.</li>
+<li><strong>Dokončite fakturáciu</strong>, inak všetko ostatné zostane cvičením nasucho.</li>
+<li><strong>Nastavte konverzie a URL parametre</strong> pred prvým eurom – nový kanál bez merania je strieľanie naslepo.</li>
+<li><strong>Štartujte s denným rozpočtom 15–30 €</strong> a manuálnym CPC okolo 2 € – v pásme, ktoré systém označuje ako konkurencieschopné. Automatiku pustite k rozpočtu, až keď uvidíte prvé reálne čísla.</li>
+<li><strong>Investujte čas do kontextových tipov a kreatívy.</strong> V systéme bez publík je relevancia voči téme konverzácie všetko.</li>
+<li><strong>Vypnite AI prispôsobenie textu</strong>, kým si neoveríte, ako sa systém správa k vašej značke.</li>
+<li><strong>Držte očakávania na uzde.</strong> Slovenský inventár je neznáma – prvé týždne sú test, nie výkonnostný kanál. Ako ChatGPT Ads zapadajú do širšieho AI marketingu, riešime aj v článku <a href="https://starbomedia.sk/geo-vs-seo/" title="GEO vs SEO">GEO vs SEO</a>.</li>
+</ol>
+<p>Reklamný biznis ChatGPT podľa OpenAI dosiahol miliardu dolárov v ročnom run rate a self-service sa otvára trh za trhom. Nie je dôvod panikáriť ani prelievať rozpočty – ale je dobrý dôvod mať účet, prejdenú policy kontrolu a otestovaný setup skôr, než kanál budete reálne potrebovať – vlastné benchmarky sa nedajú dobehnúť cez noc. Ak chcete kanál otestovať s niekým, kto už v účte bol, <a href="https://starbomedia.sk/kontakt" title="ozvite sa nám">ozvite sa nám</a>.</p>
+
+<section id="faq">
+<h2>Často kladené otázky</h2>
+<details>
+<summary>Ako si založím ChatGPT Ads účet zo Slovenska?</summary>
+<p>Na ads.openai.com cez OpenAI konto. Od 31. augusta 2026 je beta self-service Ads Manager otvorený aj firmám registrovaným na Slovensku – rozhranie je kompletne v slovenčine. Podmienkou zobrazovania reklám je dokončená fakturácia a prejdenie policy kontroly.</p>
+</details>
+<details>
+<summary>Aký je minimálny rozpočet pre ChatGPT Ads?</summary>
+<p>Oficiálne minimum pre európske účty OpenAI nezverejnil. V našom účte bol predvyplnený denný rozpočet 65 €, systém však bez problémov akceptoval aj 15 €. Skutočné denné výdavky môžu dosiahnuť dvojnásobok denného rozpočtu, za sedem dní maximálne sedemnásobok.</p>
+</details>
+<details>
+<summary>Koľko stojí kliknutie v ChatGPT Ads na Slovensku?</summary>
+<p>Reálne CPC ukáže až bežiaca kampaň. Formulár manuálneho biddingu nám pri slovenskej kampani s cieľom Kliknutia označil ponuku 1 € ako pravdepodobne nedostatočnú a 1,95 € ako konkurencieschopnú – systémový odhad teda štartuje pod 2 €, výrazne nižšie než čísla z amerických prehľadov.</p>
+</details>
+<details>
+<summary>Dá sa v ChatGPT Ads cieliť na vlastné publiká?</summary>
+<p>V kampaniach cielených na EHP a Švajčiarsko zatiaľ nie. Rozhranie uvádza, že vlastné publiká nie sú podporované, kým nie sú dostupné personalizované reklamy. Zoznamy e-mailov a telefónnych čísel si do účtu nahráte, ale slovenská kampaň ich nevyužije – cielenie je kontextové.</p>
+</details>
+<details>
+<summary>Aké formáty reklamy ChatGPT Ads podporujú?</summary>
+<p>Jeden formát: nadpis do 50 znakov, popis do 100 znakov a štvorcový obrázok PNG/JPG s minimálnym rozmerom 256 × 256 px. Reklama sa zobrazuje pod odpoveďou ChatGPT s označením „Reklama" pri názve inzerenta.</p>
+</details>
+<details>
+<summary>Funguje v ChatGPT Ads meranie konverzií?</summary>
+<p>Áno, cez sekciu Nástroje → Konverzie: vytvoríte zdroj údajov, konverznú udalosť, implementujete ju na web a prepojíte s kampaňou. Kampane potom môžu optimalizovať na konverzie namiesto kliknutí.</p>
+</details>
+<details>
+<summary>Môže v ChatGPT inzerovať e-shop s produktovým katalógom?</summary>
+<p>Áno. Sekcia Kanály umožňuje pripojiť produktový feed cez CSV/TXT súbor, hostovanú URL adresu alebo SFTP. Položky slúžia výhradne pre reklamy – nejde o organické nákupné výsledky.</p>
+</details>
+<details>
+<summary>Potrebujem na ChatGPT Ads agentúru?</summary>
+<p>Nie. Od 31. augusta 2026 si účet aj kampaň nastavíte sami. Agentúra dáva zmysel rovnako ako pri iných kanáloch – keď chcete preskočiť učiacu krivku, prepojiť kanál s meraním a vyhodnocovaním, alebo nemáte kapacitu systém sledovať.</p>
+</details>
+</section>
+<hr>
+<p><small>Zdroje: vlastný účet ChatGPT Ads Manager (Starbo Media, september 2026 – všetky citácie rozhrania a čísla), <a href="https://digiday.com/media-buying/openais-chatgpt-ads-business-hits-1-billion-run-rate-as-europe-gets-self-serve-access/" title="Digiday – OpenAI's ChatGPT ads business hits $1 billion run rate as Europe gets self-serve access" target="_blank" rel="noopener noreferrer">Digiday – OpenAI's ChatGPT ads business hits $1 billion run rate as Europe gets self-serve access</a> (31. 8. 2026), <a href="https://openai.com/index/chatgpt-ads-expands-across-europe/" title="OpenAI – ChatGPT Ads expands across Europe" target="_blank" rel="noopener noreferrer">OpenAI – ChatGPT Ads expands across Europe</a> (18. 8. 2026), <a href="https://help.openai.com/en/articles/20001047-ads-in-chatgpt" title="OpenAI Help – Ads in ChatGPT" target="_blank" rel="noopener noreferrer">OpenAI Help – Ads in ChatGPT</a> (priebežne aktualizované). Stav k 1. 9. 2026; platforma je v bete – detaily si overte priamo v účte.</small></p>
+
+<!-- Meta tagy pre CMS (vložiť do <head>) -->
+<!--
+<meta name="description" content="Založili sme si slovenský ChatGPT Ads účet v deň otvorenia. Návod krok za krokom: rozhranie, rozpočty, CPC signály, konverzie a čo v EHP zatiaľ nefunguje.">
+<title>ChatGPT Ads návod 2026: účet a prvá kampaň zo Slovenska</title>
+<link rel="canonical" href="https://starbomedia.sk/chatgpt-ads-navod">
+-->
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ChatGPT Ads návod: ako si založiť účet a spustiť prvú kampaň zo Slovenska",
+    "description": "Založili sme si slovenský ChatGPT Ads účet v deň otvorenia. Návod krok za krokom: rozhranie, rozpočty, CPC signály, konverzie a čo v EHP zatiaľ nefunguje.",
+    "datePublished": "2026-09-01",
+    "dateModified": "2026-09-01",
+    "inLanguage": "sk",
+    "author": [
+      {
+        "@type": "Organization",
+        "name": "Starbomedia",
+        "url": "https://starbomedia.sk"
+      },
+      {
+        "@type": "Person",
+        "name": "Peter Štrbo",
+        "jobTitle": "CEO Starbomedia",
+        "knowsAbout": [
+          "ChatGPT Ads",
+          "PPC",
+          "Google Ads",
+          "AI marketing"
+        ]
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Starbomedia",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://starbomedia.sk/logo.png"
+      }
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://starbomedia.sk/blog/chatgpt-ads-navod/hero-chatgpt-ads-navod.webp",
+      "width": 1200,
+      "height": 675
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://starbomedia.sk/chatgpt-ads-navod"
+    },
+    "keywords": "chatgpt ads návod, ako inzerovať v chatgpt, chatgpt ads účet, chatgpt ads cena, chatgpt reklama"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ako si založím ChatGPT Ads účet zo Slovenska?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Na ads.openai.com cez OpenAI konto. Od 31. augusta 2026 je beta self-service Ads Manager otvorený aj firmám registrovaným na Slovensku – rozhranie je kompletne v slovenčine. Podmienkou zobrazovania reklám je dokončená fakturácia a prejdenie policy kontroly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Aký je minimálny rozpočet pre ChatGPT Ads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oficiálne minimum pre európske účty OpenAI nezverejnil. V našom účte bol predvyplnený denný rozpočet 65 €, systém však bez problémov akceptoval aj 15 €. Skutočné denné výdavky môžu dosiahnuť dvojnásobok denného rozpočtu, za sedem dní maximálne sedemnásobok."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Koľko stojí kliknutie v ChatGPT Ads na Slovensku?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reálne CPC ukáže až bežiaca kampaň. Formulár manuálneho biddingu nám pri slovenskej kampani s cieľom Kliknutia označil ponuku 1 € ako pravdepodobne nedostatočnú a 1,95 € ako konkurencieschopnú – systémový odhad teda štartuje pod 2 €, výrazne nižšie než čísla z amerických prehľadov."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dá sa v ChatGPT Ads cieliť na vlastné publiká?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "V kampaniach cielených na EHP a Švajčiarsko zatiaľ nie. Rozhranie uvádza, že vlastné publiká nie sú podporované, kým nie sú dostupné personalizované reklamy. Zoznamy e-mailov a telefónnych čísel si do účtu nahráte, ale slovenská kampaň ich nevyužije – cielenie je kontextové."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Aké formáty reklamy ChatGPT Ads podporujú?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Jeden formát: nadpis do 50 znakov, popis do 100 znakov a štvorcový obrázok PNG/JPG s minimálnym rozmerom 256 × 256 px. Reklama sa zobrazuje pod odpoveďou ChatGPT s označením „Reklama\" pri názve inzerenta."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Funguje v ChatGPT Ads meranie konverzií?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno, cez sekciu Nástroje → Konverzie: vytvoríte zdroj údajov, konverznú udalosť, implementujete ju na web a prepojíte s kampaňou. Kampane potom môžu optimalizovať na konverzie namiesto kliknutí."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Môže v ChatGPT inzerovať e-shop s produktovým katalógom?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno. Sekcia Kanály umožňuje pripojiť produktový feed cez CSV/TXT súbor, hostovanú URL adresu alebo SFTP. Položky slúžia výhradne pre reklamy – nejde o organické nákupné výsledky."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Potrebujem na ChatGPT Ads agentúru?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nie. Od 31. augusta 2026 si účet aj kampaň nastavíte sami. Agentúra dáva zmysel rovnako ako pri iných kanáloch – keď chcete preskočiť učiacu krivku, prepojiť kanál s meraním a vyhodnocovaním, alebo nemáte kapacitu systém sledovať."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Domov",
+        "item": "https://starbomedia.sk/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://starbomedia.sk/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "ChatGPT Ads návod: ako si založiť účet a spustiť prvú kampaň zo Slovenska"
+      }
+    ]
+  }
+]
+</script>
+</article>
