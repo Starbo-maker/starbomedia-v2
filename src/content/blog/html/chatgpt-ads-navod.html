@@ -39,7 +39,7 @@
 <ul>
 <li><strong>Účet si založíte na <a href="https://ads.openai.com" title="ads.openai.com" target="_blank" rel="noopener noreferrer">ads.openai.com</a></strong> – od 31. 8. 2026 aj ako firma registrovaná na Slovensku. Rozhranie je od prvého dňa kompletne po slovensky („Správca reklám", beta).</li>
 <li><strong>Bez fakturácie sa nič nespustí.</strong> Kampaň aj reklamu vyskladáte, ale účet zobrazuje „Reklamy sa nebudú zobrazovať, kým nedokončíte nastavenie účtu."</li>
-<li><strong>Rozpočet:</strong> denný, predvyplnených 65 €. Systém akceptoval aj 15 € – s automatickým stropom 2× denne a 7× za týždeň (pri 15 € teda max 30 € za deň a 105 € za 7 dní).</li>
+<li><strong>Rozpočet:</strong> denný, predvyplnených 65 €, tvrdé minimum 15 € (pri 14 € formulár zahlási minimálny limit). Stropy: 2× denne a 7× za týždeň (pri 15 € teda max 30 € za deň a 105 € za 7 dní).</li>
 <li><strong>CPC:</strong> pri manuálnom biddingu na slovenskú kampaň nám systém označil 1 € ako „Nemusí sa doručiť" a 1,95 € ako „Silné doručovanie". Prvý reálny cenový signál pre SK trh.</li>
 <li><strong>V EHP zatiaľ nefungujú vlastné publiká</strong> – rozhranie to píše natvrdo: personalizované reklamy u nás nie sú dostupné, cielenie je kontextové.</li>
 <li><strong>Pozor na predvolené AI Prispôsobenie textu</strong> – generuje preložené verzie vašich reklám bez vášho schválenia.</li>
@@ -83,9 +83,9 @@
 <p><strong>Lokality</strong> fungujú ako v každom PPC systéme: zahrnuté a vylúčené. Slovensko sme pridali jedným kliknutím – všetkých 27 štátov EÚ je v ponuke. Kampaň sa zobrazí len používateľom vo vybraných lokalitách.</p>
 <p><strong>Vhodné platformy</strong> – iOS aplikácia, Android aplikácia a web. Predvolené sú všetky tri a na začiatok niet dôvodu to meniť; rozdeliť platformy má zmysel, až keď budete mať dáta o rozdielnom výkone.</p>
 <p><strong>Parametre dopytu vstupnej stránky</strong> ocení každý, kto rieši meranie: do URL si viete automaticky pridávať šablónové hodnoty {campaign_id}, {ad_group_id}, {ad_id}, {ad_account_id} a {oppref}. Bez toho by ste v analytike videli len anonymnú návštevu – takto si kliknutia spárujete s konkrétnou kampaňou a reklamou. Nastavte hneď pri prvej kampani; je to jedna z vecí, ktorú pri novom kanáli nechcete riešiť spätne. Prečo je poriadok v meraní dôležitejší než samotný kanál, sme rozpísali v článku <a href="https://starbomedia.sk/ecommerce-tracking-2026-bullshit-vs-realita-merania-e-shopov/" title="E-commerce tracking 2026">E-commerce tracking 2026</a>.</p>
-<p><strong>Rozpočet</strong> je denný a systém nám predvyplnil 65 €. To nie je minimum – prepísali sme ho na 15 € a formulár ho prijal bez protestu, len upozornil na mechaniku stropov:</p>
+<p><strong>Rozpočet</strong> je denný a systém nám predvyplnil 65 €. Minimum je 15 € – pri pokuse zadať 14 € formulár zahlási, že minimálny limit je 15 €. Pri 15 € už prejde a upozorní len na mechaniku stropov:</p>
 <blockquote><p>„Toto je priemerná suma, ktorú ste ochotní minúť za deň. Vaše maximálne denné výdavky sú €30.00 a maximálne výdavky za sedem dní sú €105.00."</p></blockquote>
-<p>Inými slovami: denný rozpočet je priemer, v jednotlivý deň systém smie minúť až dvojnásobok, ale za sedem dní nikdy neprekročí sedemnásobok. Rovnakú logiku poznáte z Google Ads (tam je mesačný strop) – tu je okno týždňové, čo je pre kontrolu výdavkov o čosi prísnejšie. Tvrdý spodný limit rozpočtu sme v účte nenašli; pre porovnanie, pri indickom spustení OpenAI uviedol denné minimum 725 ₹, teda zhruba 7,60 $ – minimá sa očividne líšia trh od trhu.</p>
+<p>Inými slovami: denný rozpočet je priemer, v jednotlivý deň systém smie minúť až dvojnásobok, ale za sedem dní nikdy neprekročí sedemnásobok. Rovnakú logiku poznáte z Google Ads (tam je mesačný strop) – tu je okno týždňové, čo je pre kontrolu výdavkov o čosi prísnejšie. Minimum pre slovenský účet je teda 15 € na deň; pre porovnanie, pri indickom spustení OpenAI uviedol denné minimum 725 ₹, teda zhruba 7,60 $ – minimá sa líšia trh od trhu. Tvrdé minimum má aj pole maximálnej CPC ponuky – formulár pod ním zobrazí minimálny limit rovnako ako pri rozpočte.</p>
 <p><strong>Prispôsobenie textu</strong> – a tu spozornejte. Prepínač s ikonou AI je <strong>predvolene zapnutý</strong> a jeho popis stojí za doslovnú citáciu:</p>
 <blockquote><p>„AI automaticky generuje prispôsobené a preložené verzie nadpisov a opisov vašej reklamy, ktoré sa môžu zobraziť bez toho, aby ste si ich skontrolovali alebo schválili."</p></blockquote>
 <p>Bez toho, aby ste si ich skontrolovali alebo schválili. Pre inzerenta s voľným rozpočtom na experimenty fajn – systém otestuje varianty, ktoré by vám nenapadli. Ale ak máte prísny brand voice, právne citlivé formulácie alebo jednoducho chcete vedieť, čo presne vaša značka hovorí, prepínač vypnite. My sme ho pre prvý test vypli: pri kanáli, kde ešte nepoznáme správanie systému, chceme mať kontrolu nad každým znakom.</p>
@@ -128,7 +128,7 @@
 <thead><tr><th>Položka</th><th>Hodnota</th><th>Zdroj</th></tr></thead>
 <tbody>
 <tr><td>Predvolený denný rozpočet</td><td>65 €</td><td>náš účet</td></tr>
-<tr><td>Najnižší rozpočet, ktorý sme úspešne zadali</td><td>15 €</td><td>náš účet</td></tr>
+<tr><td>Minimálny denný rozpočet (14 € formulár odmietne)</td><td>15 €</td><td>náš účet</td></tr>
 <tr><td>Strop výdavkov</td><td>2× denný rozpočet/deň, 7× za 7 dní</td><td>text rozhrania</td></tr>
 <tr><td>CPC „príliš nízke" (SK, Kliknutia)</td><td>1 €</td><td>signál formulára</td></tr>
 <tr><td>CPC „konkurencieschopné" (SK, Kliknutia)</td><td>1,95 €</td><td>signál formulára</td></tr>
@@ -185,7 +185,7 @@
 </details>
 <details>
 <summary>Aký je minimálny rozpočet pre ChatGPT Ads?</summary>
-<p>Oficiálne minimum pre európske účty OpenAI nezverejnil. V našom účte bol predvyplnený denný rozpočet 65 €, systém však bez problémov akceptoval aj 15 €. Skutočné denné výdavky môžu dosiahnuť dvojnásobok denného rozpočtu, za sedem dní maximálne sedemnásobok.</p>
+<p>Pre slovenský účet je minimálny denný rozpočet 15 € – pri nižšej sume formulár zahlási minimálny limit. Predvyplnená hodnota je 65 €. Skutočné denné výdavky môžu dosiahnuť dvojnásobok denného rozpočtu, za sedem dní maximálne sedemnásobok.</p>
 </details>
 <details>
 <summary>Koľko stojí kliknutie v ChatGPT Ads na Slovensku?</summary>
@@ -287,7 +287,7 @@
         "name": "Aký je minimálny rozpočet pre ChatGPT Ads?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Oficiálne minimum pre európske účty OpenAI nezverejnil. V našom účte bol predvyplnený denný rozpočet 65 €, systém však bez problémov akceptoval aj 15 €. Skutočné denné výdavky môžu dosiahnuť dvojnásobok denného rozpočtu, za sedem dní maximálne sedemnásobok."
+          "text": "Pre slovenský účet je minimálny denný rozpočet 15 €, pri nižšej sume formulár zahlási minimálny limit. Predvyplnená hodnota je 65 €. Skutočné denné výdavky môžu dosiahnuť dvojnásobok denného rozpočtu, za sedem dní maximálne sedemnásobok."
         }
       },
       {
