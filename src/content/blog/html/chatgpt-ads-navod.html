@@ -40,7 +40,7 @@
 <li><strong>Účet si založíte na <a href="https://ads.openai.com" title="ads.openai.com" target="_blank" rel="noopener noreferrer">ads.openai.com</a></strong> – od 31. 8. 2026 aj ako firma registrovaná na Slovensku. Rozhranie je od prvého dňa kompletne po slovensky („Správca reklám", beta).</li>
 <li><strong>Bez fakturácie sa nič nespustí.</strong> Kampaň aj reklamu vyskladáte, ale účet zobrazuje „Reklamy sa nebudú zobrazovať, kým nedokončíte nastavenie účtu."</li>
 <li><strong>Rozpočet:</strong> denný, predvyplnených 65 €, tvrdé minimum 15 € (pri 14 € formulár zahlási minimálny limit). Stropy: 2× denne a 7× za týždeň (pri 15 € teda max 30 € za deň a 105 € za 7 dní).</li>
-<li><strong>CPC:</strong> pri manuálnom biddingu na slovenskú kampaň nám systém označil 1 € ako „Nemusí sa doručiť" a 1,95 € ako „Silné doručovanie". Prvý reálny cenový signál pre SK trh.</li>
+<li><strong>CPC:</strong> pri manuálnom biddingu na slovenskú kampaň je ešte aj 1,90 € „Nemusí sa doručiť" – presne od 1,95 € sa signál prepne na „Silné doručovanie". De facto minimálna ponuka pre SK trh je teda 1,95 €.</li>
 <li><strong>V EHP zatiaľ nefungujú vlastné publiká</strong> – rozhranie to píše natvrdo: personalizované reklamy u nás nie sú dostupné, cielenie je kontextové.</li>
 <li><strong>Pozor na predvolené AI Prispôsobenie textu</strong> – generuje preložené verzie vašich reklám bez vášho schválenia.</li>
 <li><strong>Formáty:</strong> nadpis max 50 znakov, popis max 100 znakov, obrázok štvorec min. 256 × 256 px.</li>
@@ -85,7 +85,7 @@
 <p><strong>Parametre dopytu vstupnej stránky</strong> ocení každý, kto rieši meranie: do URL si viete automaticky pridávať šablónové hodnoty {campaign_id}, {ad_group_id}, {ad_id}, {ad_account_id} a {oppref}. Bez toho by ste v analytike videli len anonymnú návštevu – takto si kliknutia spárujete s konkrétnou kampaňou a reklamou. Nastavte hneď pri prvej kampani; je to jedna z vecí, ktorú pri novom kanáli nechcete riešiť spätne. Prečo je poriadok v meraní dôležitejší než samotný kanál, sme rozpísali v článku <a href="https://starbomedia.sk/ecommerce-tracking-2026-bullshit-vs-realita-merania-e-shopov/" title="E-commerce tracking 2026">E-commerce tracking 2026</a>.</p>
 <p><strong>Rozpočet</strong> je denný a systém nám predvyplnil 65 €. Minimum je 15 € – pri pokuse zadať 14 € formulár zahlási, že minimálny limit je 15 €. Pri 15 € už prejde a upozorní len na mechaniku stropov:</p>
 <blockquote><p>„Toto je priemerná suma, ktorú ste ochotní minúť za deň. Vaše maximálne denné výdavky sú €30.00 a maximálne výdavky za sedem dní sú €105.00."</p></blockquote>
-<p>Inými slovami: denný rozpočet je priemer, v jednotlivý deň systém smie minúť až dvojnásobok, ale za sedem dní nikdy neprekročí sedemnásobok. Rovnakú logiku poznáte z Google Ads (tam je mesačný strop) – tu je okno týždňové, čo je pre kontrolu výdavkov o čosi prísnejšie. Minimum pre slovenský účet je teda 15 € na deň; pre porovnanie, pri indickom spustení OpenAI uviedol denné minimum 725 ₹, teda zhruba 7,60 $ – minimá sa líšia trh od trhu. Tvrdé minimum má aj pole maximálnej CPC ponuky – formulár pod ním zobrazí minimálny limit rovnako ako pri rozpočte.</p>
+<p>Inými slovami: denný rozpočet je priemer, v jednotlivý deň systém smie minúť až dvojnásobok, ale za sedem dní nikdy neprekročí sedemnásobok. Rovnakú logiku poznáte z Google Ads (tam je mesačný strop) – tu je okno týždňové, čo je pre kontrolu výdavkov o čosi prísnejšie. Minimum pre slovenský účet je teda 15 € na deň; pre porovnanie, pri indickom spustení OpenAI uviedol denné minimum 725 ₹, teda zhruba 7,60 $ – minimá sa líšia trh od trhu. Pri CPC je minimum mäkšie než pri rozpočte: nižšie sumy pole prijme, no až do 1,90 € ich označuje červeným „Nemusí sa doručiť" – reálne použiteľná ponuka začína na 1,95 €.</p>
 <p><strong>Prispôsobenie textu</strong> – a tu spozornejte. Prepínač s ikonou AI je <strong>predvolene zapnutý</strong> a jeho popis stojí za doslovnú citáciu:</p>
 <blockquote><p>„AI automaticky generuje prispôsobené a preložené verzie nadpisov a opisov vašej reklamy, ktoré sa môžu zobraziť bez toho, aby ste si ich skontrolovali alebo schválili."</p></blockquote>
 <p>Bez toho, aby ste si ich skontrolovali alebo schválili. Pre inzerenta s voľným rozpočtom na experimenty fajn – systém otestuje varianty, ktoré by vám nenapadli. Ale ak máte prísny brand voice, právne citlivé formulácie alebo jednoducho chcete vedieť, čo presne vaša značka hovorí, prepínač vypnite. My sme ho pre prvý test vypli: pri kanáli, kde ešte nepoznáme správanie systému, chceme mať kontrolu nad každým znakom.</p>
@@ -101,10 +101,11 @@
 <figcaption>CPC signalizácia v ChatGPT Ads – 1 € nestačí, 1,95 € je konkurencieschopné</figcaption>
 </figure>
 <ul>
-<li>Pri <strong>1 €</strong> sa zobrazilo červené varovanie: „Nemusí sa doručiť – Vaša ponuka môže byť príliš nízka na spoľahlivé doručovanie."</li>
-<li>Pri <strong>1,95 €</strong> sa indikátor prepol na zelené „Silné doručovanie – Vaša ponuka je pre túto reklamnú skupinu pravdepodobne konkurencieschopná."</li>
+<li>Pri <strong>1 €</strong> aj pri <strong>1,90 €</strong> svieti červené varovanie: „Nemusí sa doručiť – Vaša ponuka môže byť príliš nízka na spoľahlivé doručovanie."</li>
+<li>Presne pri <strong>1,95 €</strong> sa indikátor prepne na zelené „Silné doručovanie – Vaša ponuka je pre túto reklamnú skupinu pravdepodobne konkurencieschopná."</li>
 </ul>
-<p>Je to prvý cenový údaj zo slovenského inventára, ktorý máme z prvej ruky – a naznačuje, že systém odhaduje konkurencieschopnú ponuku pre slovenskú kampaň niekde pod 2 €. Nejde o garantovanú cenu za klik, ale o odhad sily ponuky v aukcii. Dve poctivé výhrady: je to odhad aukcie pred spustením, nie odpočet z reálnych kliknutí, a platí pre našu kombináciu (cieľ Kliknutia, lokalita Slovensko, B2B služby). Skutočné CPC ukáže až bežiaca kampaň. Ale oproti číslam „3–5 $", ktoré kolujú po amerických blogoch, je to výrazne prívetivejší štart.</p>
+<p>Hranicu sme hľadali cielene, po centoch – 1,95 € je presný bod prepnutia, teda <strong>de facto minimálna ponuka pre spoľahlivé doručovanie</strong> na slovenskej kampani s cieľom Kliknutia.</p>
+<p>Je to prvý cenový údaj zo slovenského inventára, ktorý máme z prvej ruky. Nejde o garantovanú cenu za klik – je to odhad sily ponuky v aukcii a skutočné CPC po spustení môže byť nižšie (platíte aukčnú cenu, nie svoj strop). Ale ako štartovací bod je 1,95 € najkonkrétnejšie číslo, aké dnes pre slovenský inventár existuje. Dve poctivé výhrady: je to odhad aukcie pred spustením, nie odpočet z reálnych kliknutí, a platí pre našu kombináciu (cieľ Kliknutia, lokalita Slovensko, B2B služby). Skutočné CPC ukáže až bežiaca kampaň. Ale oproti číslam „3–5 $", ktoré kolujú po amerických blogoch, je to výrazne prívetivejší štart.</p>
 <p><strong>Kontextové tipy</strong> sú nenápadné textové pole, ktoré považujeme za strategicky najdôležitejšie miesto celého nastavenia. Rozhranie ho opisuje takto: „Opíšte konverzácie, témy alebo kľúčové slová, pri ktorých môžu byť vaše produkty alebo služby relevantné. Tieto indície usmerňujú priraďovanie, no nie sú pravidlami presného zacielenia."</p>
 <p>Prečítajte si to ešte raz: indície, nie pravidlá. Nefunguje to ako kľúčové slová v Search kampani – skôr napovedáte systému, pri akých témach konverzácií má vašu reklamu zvažovať. Keďže vlastné publiká v EHP nefungujú, je toto pole spolu s kreatívou jediný nástroj, ktorým relevanciu ovplyvníte. Odporúčame venovať mu viac než dve slová: opíšte situácie, v ktorých váš zákazník reálne rieši to, čo predávate.</p>
 <h3>Krok 3: Reklama, kontrola a publikovanie</h3>
@@ -130,8 +131,8 @@
 <tr><td>Predvolený denný rozpočet</td><td>65 €</td><td>náš účet</td></tr>
 <tr><td>Minimálny denný rozpočet (14 € formulár odmietne)</td><td>15 €</td><td>náš účet</td></tr>
 <tr><td>Strop výdavkov</td><td>2× denný rozpočet/deň, 7× za 7 dní</td><td>text rozhrania</td></tr>
-<tr><td>CPC „príliš nízke" (SK, Kliknutia)</td><td>1 €</td><td>signál formulára</td></tr>
-<tr><td>CPC „konkurencieschopné" (SK, Kliknutia)</td><td>1,95 €</td><td>signál formulára</td></tr>
+<tr><td>CPC „Nemusí sa doručiť" (SK, Kliknutia)</td><td>1,00 – 1,90 €</td><td>signál formulára</td></tr>
+<tr><td>CPC „Silné doručovanie" – de facto minimum</td><td>od 1,95 € (presná hranica)</td><td>signál formulára</td></tr>
 <tr><td>Mena účtu</td><td>EUR</td><td>náš účet</td></tr>
 </tbody>
 </table></div>
@@ -170,7 +171,7 @@
 <li><strong>Založte účet a pošlite prvú reklamu do policy kontroly</strong> – aj keď ešte nechcete míňať. Účet nič nestojí a až kontrola reklamy vám povie, či vaše odvetvie prejde.</li>
 <li><strong>Dokončite fakturáciu</strong>, inak všetko ostatné zostane cvičením nasucho.</li>
 <li><strong>Nastavte konverzie a URL parametre</strong> pred prvým eurom – nový kanál bez merania je strieľanie naslepo.</li>
-<li><strong>Štartujte s denným rozpočtom 15–30 €</strong> a manuálnym CPC okolo 2 € – v pásme, ktoré systém označuje ako konkurencieschopné. Automatiku pustite k rozpočtu, až keď uvidíte prvé reálne čísla.</li>
+<li><strong>Štartujte s denným rozpočtom 15–30 €</strong> a manuálnym CPC od 1,95 € – od hranice, ktorú systém označuje ako silné doručovanie. Automatiku pustite k rozpočtu, až keď uvidíte prvé reálne čísla.</li>
 <li><strong>Investujte čas do kontextových tipov a kreatívy.</strong> V systéme bez publík je relevancia voči téme konverzácie všetko.</li>
 <li><strong>Vypnite AI prispôsobenie textu</strong>, kým si neoveríte, ako sa systém správa k vašej značke.</li>
 <li><strong>Držte očakávania na uzde.</strong> Slovenský inventár je neznáma – prvé týždne sú test, nie výkonnostný kanál. Ako ChatGPT Ads zapadajú do širšieho AI marketingu, riešime aj v článku <a href="https://starbomedia.sk/geo-vs-seo/" title="GEO vs SEO">GEO vs SEO</a>.</li>
@@ -189,7 +190,7 @@
 </details>
 <details>
 <summary>Koľko stojí kliknutie v ChatGPT Ads na Slovensku?</summary>
-<p>Reálne CPC ukáže až bežiaca kampaň. Formulár manuálneho biddingu nám pri slovenskej kampani s cieľom Kliknutia označil ponuku 1 € ako pravdepodobne nedostatočnú a 1,95 € ako konkurencieschopnú – systémový odhad teda štartuje pod 2 €, výrazne nižšie než čísla z amerických prehľadov.</p>
+<p>Reálne CPC ukáže až bežiaca kampaň. Formulár manuálneho biddingu pri slovenskej kampani s cieľom Kliknutia označuje ponuky do 1,90 € ako pravdepodobne nedostatočné a presne od 1,95 € ako konkurencieschopné – de facto minimálna ponuka je teda 1,95 €, výrazne menej než čísla z amerických prehľadov.</p>
 </details>
 <details>
 <summary>Dá sa v ChatGPT Ads cieliť na vlastné publiká?</summary>
@@ -295,7 +296,7 @@
         "name": "Koľko stojí kliknutie v ChatGPT Ads na Slovensku?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Reálne CPC ukáže až bežiaca kampaň. Formulár manuálneho biddingu nám pri slovenskej kampani s cieľom Kliknutia označil ponuku 1 € ako pravdepodobne nedostatočnú a 1,95 € ako konkurencieschopnú – systémový odhad teda štartuje pod 2 €, výrazne nižšie než čísla z amerických prehľadov."
+          "text": "Reálne CPC ukáže až bežiaca kampaň. Formulár manuálneho biddingu pri slovenskej kampani s cieľom Kliknutia označuje ponuky do 1,90 € ako pravdepodobne nedostatočné a presne od 1,95 € ako konkurencieschopné – de facto minimálna ponuka je teda 1,95 €, výrazne menej než čísla z amerických prehľadov."
         }
       },
       {
