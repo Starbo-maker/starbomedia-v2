@@ -1,35 +1,34 @@
-<article class="ucp-article" itemscope="" itemtype="https://schema.org/Article">
-
-<header>
-  <h1 itemprop="headline">Universal Commerce Protocol od Google: Čo to znamená pre eshopy v strednej Európe</h1>
-  <p><time datetime="2026-03-13" itemprop="datePublished">13. marca 2026</time> · Čas čítania: 10 min</p>
- Aktualizované: <time datetime="2026-03-19" itemprop="dateModified">19. marca 2026</time>
-</header>
+<article class="ucp-article" itemscope itemtype="https://schema.org/Article">
+  <header>
+    <p><time datetime="2026-03-13" itemprop="datePublished">Publikované: 13. marca 2026</time> · <time datetime="2026-09-03" itemprop="dateModified">Aktualizované: 3. septembra 2026</time> · Čas čítania: 12 min</p>
+  </header>
 
 <nav aria-label="Obsah článku">
   <strong>Obsah</strong>
   <ol>
     <li><a href="#tldr">TL;DR – Zhrnutie v 5 bodoch</a></li>
+    <li><a href="#co-je-nove">Čo sa zmenilo od marca 2026</a></li>
     <li><a href="#co-je-ucp">Čo je Universal Commerce Protocol (UCP)</a></li>
     <li><a href="#google-shopping-merchant-center">Ako UCP ovplyvní Google Shopping a Merchant Center</a></li>
+    <li><a href="#konverzacne-atributy">Šesť konverzačných atribútov, ktoré Google naozaj vydal</a></li>
     <li><a href="#dopad-cee">Dopad UCP na eshopy v CEE regióne</a></li>
     <li><a href="#ako-sa-pripravit">Ako sa pripraviť na UCP – praktický návod</a></li>
     <li><a href="#faq">Často kladené otázky</a></li>
   </ol>
 </nav>
 
-<p>V januári 2026 Google predstavil novinku, ktorá zásadne mení pravidlá hry v online obchode. Volá sa <strong>Universal Commerce Protocol</strong> (UCP) a jeho cieľom je vytvoriť spoločný jazyk medzi umelou inteligenciou a eshopmi. Namiesto toho, aby zákazník prechádzal desiatky stránok, porovnával ceny a ručne zadával objednávku, to za neho urobí AI agent – priamo v prostredí Google vyhľadávania alebo aplikácie Gemini.</p>
+<p>V januári 2026 Google predstavil novinku, ktorá mení pravidlá hry v online obchode. Volá sa <strong>Universal Commerce Protocol</strong> (UCP) a jeho cieľom je vytvoriť spoločný jazyk medzi umelou inteligenciou a eshopmi. Namiesto toho, aby zákazník prechádzal desiatky stránok, porovnával ceny a ručne zadával objednávku, to za neho urobí AI agent – priamo v prostredí Google vyhľadávania alebo aplikácie Gemini.</p>
 
-<p>Pre eshopy v strednej Európe to nie je len technologická zaujímavosť. Je to signál, že sa mení samotný spôsob, akým ľudia nakupujú online. A kto sa nepripraví, toho AI jednoducho obíde.</p>
+<p>Tento článok sme pôvodne napísali v marci 2026, dva mesiace po oznámení. Odvtedy Google zverejnil presné názvy konverzačných atribútov, spustil nákup v AI Mode v USA, predstavil spoločný košík Universal Cart a vypol staré Content API. V septembri 2026 sme preto článok prepísali tak, aby ste v ňom našli to, čo platí dnes, nie to, čo sa v januári len sľubovalo.</p>
 
 <h2 id="tldr">TL;DR – Zhrnutie v 5 bodoch</h2>
 
 <ul>
-  <li><strong>UCP je otvorený štandard</strong> vyvinutý Googlom spolu so Shopify, Walmart, Visa a ďalšími 20+ partnermi. Umožňuje AI agentom objavovať produkty, nakupovať a spracovávať objednávky bez nutnosti návštevy eshopu.</li>
-  <li><strong>Google sa mení z zdroja návštevnosti na transakčnú platformu</strong> – nákupy prebiehajú priamo v AI Mode v Search a Gemini, bez presmerovania na web obchodníka.</li>
-  <li><strong>SEO sa transformuje</strong> – kvalita produktových dát sa stáva dôležitejšou než pozícia vo vyhľadávaní. AI si vyberá produkty podľa kompletnosti a presnosti informácií, nie podľa množstva spätných odkazov.</li>
-  <li><strong>CEE región zaostáva v integrácii</strong> – lokálne platformy ako Shoptet a Upgates zatiaľ nemajú priamu podporu UCP. Most predstavuje Shopify Catalog cez nový Agentic plan.</li>
-  <li><strong>Príležitosť pre malých hráčov</strong> – AI hodnotí produkty podľa relevancie, nie podľa veľkosti značky. Eshop s kvalitnými dátami môže poraziť nadnárodnú sieť.</li>
+  <li><strong>UCP je otvorený štandard</strong> vyvinutý Googlom spolu so Shopify, Walmart, Target, Etsy a ďalšími 20+ partnermi. Umožňuje AI agentom objavovať produkty, nakupovať a spracovávať objednávky bez nutnosti návštevy eshopu.</li>
+  <li><strong>Nákup priamo v AI Mode a Gemini beží od jari 2026 v USA.</strong> Kanada a Austrália sú ohlásené, Spojené kráľovstvo do konca roka 2026. Pre EÚ, Slovensko ani Česko Google termín neoznámil.</li>
+  <li><strong>Vrstva objavovania funguje aj u nás už dnes.</strong> AI Mode, AI Overviews a Gemini čítajú produktové dáta z Merchant Center. Google v júni 2026 zdokumentoval šesť konverzačných atribútov: question_and_answer, related_product, popularity_rank, item_group_title, variant_option a document_link.</li>
+  <li><strong>SEO sa mení na správu produktových dát</strong> – AI si vyberá produkty podľa úplnosti a presnosti informácií vo feede a na webe, nie podľa hustoty kľúčových slov.</li>
+  <li><strong>CEE platformy stále čakajú</strong> – Shoptet ani Upgates k septembru 2026 natívnu integráciu UCP neoznámili. Most predstavuje Shopify Catalog cez Agentic plan a zjednodušený onboarding cez Merchant Center, ktorý Google pridal v marci.</li>
 </ul>
 
 <figure>
@@ -37,29 +36,40 @@
   <figcaption>Tri vrstvy Universal Commerce Protocol: objavovanie, transakcia a plnenie</figcaption>
 </figure>
 
+<h2 id="co-je-nove">Čo sa zmenilo od marca 2026</h2>
+
+<p>Ak ste čítali pôvodnú verziu článku alebo náš implementačný návod z marca, toto sú štyri veci, ktoré sa odvtedy zmenili:</p>
+
+<ol>
+  <li><strong>Konverzačné atribúty majú oficiálne názvy.</strong> V januári Google hovoril o „desiatkach nových atribútov“, ale nezverejnil ich. Do júna 2026 pribudla do špecifikácie Merchant Center sada šiestich atribútov (podrobne nižšie). Názvy ako best_for, compatible_with, substitute_for či care_instruction, ktoré kolovali na jar po internete, sa do špecifikácie nedostali. Ak ste ich nasadili, nič nekazia, ale Google ich nečíta.</li>
+  <li><strong>Nákup v AI Mode a Gemini je živý, ale len v USA.</strong> Google ho spustil pre vybraných obchodníkov cez Google Pay a neskôr PayPal. Na Google I/O v máji 2026 pridal <strong>Universal Cart</strong>, spoločný košík naprieč Search, Gemini a neskôr YouTube a Gmail. Obchodník zostáva predajcom (merchant of record).</li>
+  <li><strong>Content API for Shopping skončilo 18. augusta 2026.</strong> Kto zapisuje do Merchant Center programovo, robí to už len cez Merchant API.</li>
+  <li><strong>Atribúty sú voliteľné.</strong> Google výslovne píše, že konverzačné atribúty neovplyvňujú schválenie produktov. Naša marcová formulácia „prázdne pole znamená vylúčenie z AI výberu“ bola príliš silná. Presnejšie: čím úplnejšie dáta, tým lepšie AI produkt pochopí a tým skôr ho použije v odpovedi.</li>
+</ol>
+
 <h2 id="co-je-ucp">Čo je Universal Commerce Protocol (UCP)</h2>
 
-<p>UCP je otvorený protokol, ktorý definuje spoločný jazyk medzi AI agentmi (napríklad Google Search, Gemini, ChatGPT) a backendmi eshopov. Predstavte si ho ako pravidlá cestnej premávky – bez nich by každé auto jazilo po svojom a na križovatkách by vládol chaos.</p>
+<p>UCP je otvorený protokol, ktorý definuje spoločný jazyk medzi AI agentmi (napríklad Google Search, Gemini, ChatGPT) a backendmi eshopov. Predstavte si ho ako pravidlá cestnej premávky – bez nich by každé auto jazdilo po svojom a na križovatkách by vládol chaos.</p>
 
 <p>Pred UCP musel každý obchodník vybudovať samostatnú integráciu pre každého AI agenta. A každý nový AI povrch musel vytvoriť unikátne pripojenie ku každému eshopu. Vznikla tak neudržateľná spleť individuálnych napojení, ktorá brzdila inovácie a sťažovala obchodníkom vstup do nového sveta AI nakupovania.</p>
 
 <p>UCP tento problém rieši tým, že zavádza tri jasné vrstvy interakcie:</p>
 
 <ol>
-  <li><strong>Objavovanie (Discovery)</strong> – AI agent nájde a pochopí produkty obchodníka</li>
-  <li><strong>Transakcia (Transaction)</strong> – Agent pridá do košíka, dokončí objednávku a zaplatí</li>
-  <li><strong>Plnenie (Fulfillment)</strong> – Agent sleduje stav objednávky a rieši prípadné reklamácie</li>
+  <li><strong>Objavovanie (Discovery)</strong> – AI agent nájde a pochopí produkty obchodníka. Táto vrstva funguje aj na Slovensku, lebo stojí na Merchant Center a štruktúrovaných dátach na webe.</li>
+  <li><strong>Transakcia (Transaction)</strong> – Agent pridá do košíka, dokončí objednávku a zaplatí. Zatiaľ USA, ohlásené Kanada, Austrália a Spojené kráľovstvo.</li>
+  <li><strong>Plnenie (Fulfillment)</strong> – Agent sleduje stav objednávky a rieši prípadné reklamácie. Vyžaduje integráciu na strane eshopu po schválení Googlom.</li>
 </ol>
 
-<p>Technicky je UCP postavený na overených štandardoch – REST API, JSON-RPC, a je kompatibilný s protokolmi Model Context Protocol (MCP) a Agent2Agent (A2A). Platby zabezpečuje Agent Payments Protocol (AP2) s tokenizovanými platbami a kryptografickým dôkazom súhlasu používateľa.</p>
+<p>Technicky je UCP postavený na overených štandardoch – REST API, JSON-RPC, a je kompatibilný s protokolmi Model Context Protocol (MCP) a Agent2Agent (A2A). Platby zabezpečuje Agent Payments Protocol (AP2) s tokenizovanými platbami a kryptografickým dôkazom súhlasu používateľa. V marcovej aktualizácii pribudli voliteľné schopnosti: viacpoložkový košík, realtime dáta o variantoch, sklade a cene a prepojenie identity pre vernostné výhody.</p>
 
 <p>Google tento protokol vyvinul spoločne s gigantmi ako Shopify, Etsy, Wayfair, Target a Walmart. Medzi endorsermi sú Visa, Mastercard, American Express, Stripe, Adyen a Zalando.</p>
 
-<h3>Ako UCP nahrádza tradičné produktové feedy</h3>
+<h3>Ako UCP dopĺňa tradičné produktové feedy</h3>
 
-<p>Doteraz ste ako obchodník nahrali produktový feed do Google Merchant Center a dúfali, že Google ho správne spracuje. UCP ide o krok ďalej – namiesto statického XML súboru umožňuje dynamický, obojsmerný dialóg medzi AI agentom a vaším eshopom.</p>
+<p>Doteraz ste ako obchodník nahrali produktový feed do Google Merchant Center a dúfali, že Google ho správne spracuje. UCP ide o krok ďalej – k statickému feedu pridáva dynamický, obojsmerný dialóg medzi AI agentom a vaším eshopom. Feed ale nezaniká, naopak: je to prvá vec, ktorú AI agent číta, a pre eshopy mimo USA je to dnes jediná vrstva, ktorú majú plne vo svojich rukách.</p>
 
-<p>Obchodník v UCP deklaruje svoje schopnosti v štandardizovanom profile: „Podporujem checkout, guest checkout, Google Pay, vrátenie do 30 dní.“ AI agent si tento profil prečíta, vyhodnotí čo dokáže sprostredkovať zákazníkovi, a automaticky sa nakonfiguruje. Žiadne ručné nastavovanie, žiadne e-maily s technickou podporou.</p>
+<p>Obchodník v UCP deklaruje svoje schopnosti v štandardizovanom profile: „Podporujem checkout, guest checkout, Google Pay, vrátenie do 30 dní.“ AI agent si tento profil prečíta, vyhodnotí, čo dokáže sprostredkovať zákazníkovi, a automaticky sa nakonfiguruje.</p>
 
 <h3>UCP vs. Agentic Commerce Protocol – hlavné rozdiely</h3>
 
@@ -79,28 +89,49 @@
 
 <h2 id="google-shopping-merchant-center">Ako UCP ovplyvní Google Shopping a Merchant Center</h2>
 
-<p>Najviditeľnejšia zmena pre bežného používateľa je jednoduchá: <strong>nakupovanie bez opustenia Google</strong>. Keď v AI Mode v Google Search alebo Gemini hľadáte produkt, UCP umožní dokončiť nákup priamo v tomto prostredí – cez Google Pay s kartami uloženými v Google Wallet, čoskoro aj cez PayPal.</p>
+<p>Najviditeľnejšia zmena pre bežného používateľa je jednoduchá: <strong>nakupovanie bez opustenia Google</strong>. Keď v AI Mode v Google Search alebo Gemini hľadáte produkt, UCP umožní dokončiť nákup priamo v tomto prostredí – cez Google Pay s kartami uloženými v Google Wallet alebo cez PayPal. V USA to od jari 2026 funguje u vybraných obchodníkov, u nás zatiaľ nie.</p>
 
-<p>Funkcia nazvaná <strong>agentic checkout</strong> ide ešte ďalej. Nastavíte si parametre – „chcem biele tenisky Nike v mojej veľkosti do 80 eur“ – a Google sleduje ceny. Keď produkt splní vaše kritériá, AI agent nakúpi automaticky (samozrejme s vaším povolením).</p>
+<p>Universal Cart z mája 2026 pridáva druhú cestu: košík poskladaný v AI sa dá preniesť na web obchodníka a dokončiť tam. Pre eshopy, ktoré nechcú alebo nemôžu integrovať Checkout API, je to spôsob, ako z AI nákupu neodísť naprázdno.</p>
 
 <h3>Zmeny v Google Merchant Center pre rok 2026</h3>
 
-<p>Google oznámil desiatky nových dátových atribútov v Merchant Center navrhnutých pre konverzačné nakupovanie. Nejde len o klasické polia ako cena a dostupnosť. Nové atribúty zahŕňajú:</p>
+<p>Merchant Center dostalo v roku 2026 tri veci, ktoré sa vás týkajú:</p>
 
 <ul>
-  <li><strong>Odpovede na bežné otázky</strong> k produktu</li>
-  <li><strong>Kompatibilné príslušenstvo</strong> a doplnky</li>
-  <li><strong>Substitúty</strong> a alternatívy</li>
-  <li><strong>Podrobné špecifikácie</strong> materiálu, rozmerov a vlastností</li>
+  <li><strong>Konverzačné atribúty</strong> – šesť voliteľných polí pre AI plochy, podrobne v ďalšej sekcii.</li>
+  <li><strong>native_commerce</strong> – prepínač, ktorým označíte produkty vhodné pre nákup priamo v AI. Má sub-atribúty checkout_eligibility, consumer_notice a merchant_item_id. Je oficiálny, ale zatiaľ funguje len v americkom pilote.</li>
+  <li><strong>Merchant API</strong> namiesto Content API – od 18. augusta 2026 jediná cesta pre programový zápis produktov, dátových zdrojov a čítanie stavu položiek.</li>
 </ul>
 
-<p>Čím viac týchto polí vyplníte, tým lepšie AI agent pochopí váš produkt a tým vyššia je šanca, že ho odporučí zákazníkovi. Google Shopping Graph sa podľa dostupných informácií obnovuje miliardykrát za hodinu – takže neaktuálna cena alebo vypredaný produkt znamená okamžité vypadnutie z AI odporúčaní.</p>
+<p>Google Shopping Graph podľa Googlu obnovuje vyše dve miliardy záznamov každú hodinu – takže neaktuálna cena alebo vypredaný produkt znamená rýchle vypadnutie z AI odporúčaní. Základ, ktorý platil vždy, platí ďalej: <a href="/optimalizacia-google-merchant-center-a-shopping-feedu-2026/">kvalitný feed v Merchant Center</a> s GTIN, presnou kategóriou, product_highlight a product_detail.</p>
 
 <h3>Čo to znamená pre produktové kampane</h3>
 
 <p>Tradičná logika produktových kampaní sa mení. Doteraz ste optimalizovali bidovanie, kľúčové slová a cieľové skupiny. V ére UCP sa <strong>kvalita produktových dát stáva hlavným konkurenčným faktorom</strong>.</p>
 
-<p>Reklamy (Direct Offers) sa integrujú priamo do AI odpovedí – vzniká zmiešaná vrstva, kde kvalita feedu, obsahu a mediálnej stratégie spolupracujú vnútri AI nákupného zážitku. Hranica medzi plateným a organickým výsledkom sa rozmazáva.</p>
+<p>Reklamy sa integrujú priamo do AI odpovedí – vzniká zmiešaná vrstva, kde kvalita feedu, obsahu a mediálnej stratégie spolupracujú vnútri AI nákupného zážitku. Jedno upozornenie kvôli presnosti: Google dokumentuje konverzačné atribúty pre AI Mode, AI Overviews a Gemini, nie ako signál pre Shopping alebo Performance Max kampane. Reklamy v AI Mode síce čerpajú z toho istého feedu, ale že by nové atribúty ovplyvňovali ich výkon, Google nikde netvrdí.</p>
+
+<h2 id="konverzacne-atributy">Šesť konverzačných atribútov, ktoré Google naozaj vydal</h2>
+
+<p>Google ich v špecifikácii Merchant Center označuje ako <em>conversational attributes</em>: voliteľné polia, ktoré pomáhajú AI systémom pochopiť nuansy produktu. Neovplyvňujú schválenie produktov a Google výslovne píše, že informácie, ktoré už máte v description, product_highlight alebo product_detail, do nich netreba kopírovať.</p>
+
+<table>
+  <thead>
+    <tr><th>Atribút</th><th>Na čo slúži</th><th>Odkiaľ vziať dáta</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>question_and_answer</strong></td><td>Otázky a odpovede k produktu (FAQ).</td><td>Reálne otázky zákazníkov z podpory, recenzií a chatu.</td></tr>
+    <tr><td><strong>related_product</strong></td><td>Vzťah k inému produktu z vášho katalógu: substitute, accessory, required_part, often_bought_with, different_brand, part_of_set.</td><td>Objednávky (čo sa kupuje spolu), parametre (substitúty), vaše „súvisiace produkty“.</td></tr>
+    <tr><td><strong>popularity_rank</strong></td><td>Poradie popularity produktu v rámci vášho katalógu.</td><td>Predaje alebo kliky za posledné obdobie.</td></tr>
+    <tr><td><strong>item_group_title</strong></td><td>Spoločný názov pre všetky varianty, bez farby a veľkosti.</td><td>Názov rodiny produktu z eshopu.</td></tr>
+    <tr><td><strong>variant_option</strong></td><td>Čím sa varianty od seba líšia (farba, veľkosť, objem).</td><td>Variantné atribúty z eshopu.</td></tr>
+    <tr><td><strong>document_link</strong></td><td>Odkazy na PDF: návody, karty, certifikáty.</td><td>Súbory, ktoré už máte na produktovej stránke.</td></tr>
+  </tbody>
+</table>
+
+<p>Najzaujímavejší je related_product. Jedna hodnota zodpovedá jednému vzťahu a má tri časti oddelené dvojbodkou: typ vzťahu, typ identifikátora (id alebo gtin) a samotný identifikátor, napríklad <code>often_bought_with:id:SKU-4471</code>. Odkazovaný produkt musí byť v tom istom účte Merchant Center. Na produkt konkurencie sa odkázať nedá, čo je zásadný rozdiel oproti jarným špekuláciám o „lacnejšej alternatíve k značke X“.</p>
+
+<p>Praktické pravidlo z našej skúsenosti: vzťahy a odpovede stavajte z reálnych dát, teda z objednávok, parametrov a otázok zákazníkov, nie z odhadu alebo vizuálnej podobnosti. Nesprávne priradený náhradný diel v AI odpovedi škodí viac, než keby ste atribút nechali prázdny. Presnú syntax všetkých šiestich atribútov nájdete v <a href="https://support.google.com/merchants/answer/17085370" target="_blank" rel="noopener noreferrer">dokumentácii Merchant Center</a>.</p>
 
 <h2 id="dopad-cee">Dopad UCP na eshopy v CEE regióne</h2>
 
@@ -108,22 +139,22 @@
 
 <h3>Pripravenosť lokálnych platforiem</h3>
 
-<p>Tu nastáva problém. Najpoužívanejšie e-commerce platformy v Česku a na Slovensku – <strong>Shoptet</strong> (27 700+ aktívnych eshopov, tretina celého CZ/SK trhu) a <strong>Upgates</strong> (1 500+ eshopov) – <strong>zatiaľ nemajú priamu integráciu s UCP</strong>.</p>
+<p>Tu nastáva problém. Najpoužívanejšie e-commerce platformy v Česku a na Slovensku – <strong>Shoptet</strong> (27 700+ aktívnych eshopov, tretina celého CZ/SK trhu) a <strong>Upgates</strong> (1 500+ eshopov) – <strong>ani k septembru 2026 natívnu integráciu UCP neoznámili</strong>.</p>
 
-<p>UCP ekosystém sa momentálne sústredí na Shopify-natívnych obchodníkov a veľkých globálnych retailerov. Pre Shopify obchodníkov je integrácia prakticky automatická – celý proces sa riadi z Shopify Admin cez funkciu Agentic Storefronts.</p>
+<p>UCP ekosystém sa sústredí na Shopify-natívnych obchodníkov a veľkých globálnych retailerov. Pre Shopify obchodníkov je integrácia prakticky automatická – celý proces sa riadi z Shopify Admin cez funkciu Agentic Storefronts. Google v marci 2026 zjednodušil onboarding obchodníkov do UCP priamo cez Merchant Center s cieľom pripojiť „obchodníkov všetkých veľkostí“, no to sa zatiaľ týka trhov, kde checkout beží.</p>
 
-<p>Pre eshopy na Shoptete alebo Upgates existuje <strong>prechodné riešenie</strong>: Shopify otvoril svoj Catalog pre všetky značky cez nový <strong>Agentic plan</strong>. To znamená, že aj eshop na Shoptete môže využiť Shopify infraštruktúru na predaj cez AI kanály bez toho, aby musel migrovať celý obchod.</p>
+<p>Pre eshopy na Shoptete alebo Upgates existuje <strong>prechodné riešenie</strong>: Shopify otvoril svoj Catalog pre všetky značky cez <strong>Agentic plan</strong>. To znamená, že aj eshop na Shoptete môže využiť Shopify infraštruktúru na predaj cez AI kanály bez toho, aby musel migrovať celý obchod.</p>
 
 <p>Je to však len dočasný most. Dlhodobá otázka znie: budú lokálne platformy implementovať UCP natívne, alebo sa stanú neviditeľnými pre AI agentov?</p>
 
 <h3>Jazykové a lokalizačné výzvy</h3>
 
-<p>CEE región je mozaika jazykov a kultúr. UCP momentálne funguje primárne v angličtine a začína sa rozširovať v USA. Pre slovenských, českých a poľských obchodníkov to znamená:</p>
+<p>CEE región je mozaika jazykov a kultúr. UCP checkout dnes funguje v angličtine v USA. Pre slovenských, českých a poľských obchodníkov to znamená:</p>
 
 <ul>
-  <li><strong>Produktové dáta musia byť v lokálnom jazyku aj v angličtine</strong> – AI agent musí rozumieť produktu v oboch jazykoch</li>
+  <li><strong>Produktové dáta v lokálnom jazyku musia byť úplné</strong> – AI Mode a Gemini už dnes odpovedajú po slovensky a čítajú slovenský feed. Angličtina navyše nezaškodí, ale nie je podmienkou.</li>
   <li><strong>Lokálne platobné metódy</strong> – Google Pay nestačí. V Poľsku je dominantný BLIK, na Slovensku kartové platby, v Bulharsku stále dobierka</li>
-  <li><strong>Regionálne regulácie</strong> – GDPR, spotrebiteľská ochrana, a budúce EU regulácie pre AI systémy</li>
+  <li><strong>Regionálne regulácie</strong> – GDPR, spotrebiteľská ochrana a EU AI Act</li>
 </ul>
 
 <figure>
@@ -133,42 +164,50 @@
 
 <h2 id="ako-sa-pripravit">Ako sa pripraviť na UCP – praktický návod pre marketérov</h2>
 
-<p>Aj keď UCP zatiaľ nie je v CEE plne dostupný, príprava začína teraz. Obchodníci, ktorí budú mať dáta v poriadku, budú prví v rade, keď sa brána otvorí.</p>
+<p>Aj keď UCP checkout zatiaľ v CEE nie je dostupný, vrstva objavovania beží. Obchodníci, ktorí budú mať dáta v poriadku, sú v AI odpovediach už dnes a budú prví v rade, keď sa otvorí aj nákup.</p>
 
 <h3>Technická príprava</h3>
 
 <p><strong>1. Audit produktových dát</strong><br>
-Prejdite si každý produkt v katalógu. Má vyplnené: GTIN (EAN kód), presný názov, detailný popis, materiál, rozmery, farbu, hmotnosť, obrázky z viacerých uhlov? Čím viac atribútov, tým lepšie.</p>
+Prejdite si každý produkt v katalógu. Má vyplnené GTIN (EAN kód), presný názov, popis aspoň 500 znakov, materiál, rozmery, farbu, aspoň tri fotky? V product_highlight majte 4 až 6 konkrétnych bodov, v product_detail len potvrdené parametre. Neopakujte to isté v oboch poliach.</p>
 
-<p><strong>2. Schema.org markup na webe</strong><br>
-Implementujte štruktúrované dáta typu <code>Product</code> na každej produktovej stránke. To nie je len SEO best practice – je to presne ten smer, ktorým UCP ide. Schema.org a UCP hovoria rovnakým jazykom.</p>
+<p><strong>2. Konverzačné atribúty cez doplnkový zdroj dát</strong><br>
+Šesť nových atribútov nemusíte tlačiť do primárneho feedu. Doplnkový (supplemental) zdroj v Merchant Center ich pripojí podľa ID produktu, primárny feed ostane nedotknutý a prípadnú chybu vypnete jedným kliknutím. Začnite tými, ktoré sa dajú odvodiť automaticky: item_group_title, variant_option a popularity_rank. Potom related_product z objednávok a question_and_answer z reálnych otázok.</p>
 
-<p><strong>3. Google Merchant Center v poriadku</strong><br>
-Uistite sa, že feed v Merchant Center je synchronizovaný s webom v reálnom čase. Žiadne neaktuálne ceny, žiadne vypredané produkty v ponuke. Aktivujte všetky nové atribúty, ktoré Google pridáva.</p>
+<p><strong>3. Schema.org markup na webe</strong><br>
+Implementujte štruktúrované dáta typu <code>Product</code> na každej produktovej stránke vrátane shippingDetails a hasMerchantReturnPolicy s returnMethod a returnFees. FAQPage schému rušiť netreba, ale od mája 2026 ju Google nezobrazuje ako rozšírený výsledok, takže otázky dajte aj do question_and_answer vo feede.</p>
 
-<p><strong>4. Guest checkout a Google Pay</strong><br>
-Ak váš eshop vyžaduje registráciu pred nákupom, odstráňte túto bariéru. Agentic checkout potrebuje plynulý guest checkout. Zvážte integráciu Google Pay.</p>
+<p><strong>4. Merchant Center v poriadku</strong><br>
+Nastavte Return policy a Customer support info, feed držte synchronizovaný s webom. Ak do Merchant Center zapisujete programovo, prejdite na Merchant API, Content API už nefunguje.</p>
+
+<p><strong>5. Guest checkout a Google Pay</strong><br>
+Ak váš eshop vyžaduje registráciu pred nákupom, odstráňte túto bariéru. Agentic checkout aj Universal Cart potrebujú plynulý guest checkout. Overte Google Pay u svojej platobnej brány.</p>
 
 <h3>SEO stratégia v ére UCP</h3>
 
 <p><strong>1. Kvalita obsahu namiesto kvantity kľúčových slov</strong><br>
-AI agent nehodnotí hustotu kľúčových slov. Hodnotí, či produktový popis zodpovedá reálne otázky zákazníka. Píšte pre ľudí, nie pre vyhľadávače – paradoxne, práve to je teraz najlepšia SEO stratégia.</p>
+AI agent nehodnotí hustotu kľúčových slov. Hodnotí, či produktový popis odpovedá na reálne otázky zákazníka. Píšte pre ľudí, nie pre vyhľadávače – paradoxne, práve to je teraz najlepšia SEO stratégia. Ako AI plochy vyberajú zdroje, rozoberáme v <a href="/ai-overviews-kompletny-sprievodca/">sprievodcovi AI Overviews</a>.</p>
 
 <p><strong>2. Recenzie a sociálny dôkaz</strong><br>
-AI agent berie do úvahy hodnotenia a recenzie pri rozhodovaní, ktorý produkt odporučiť. Investujte do zberu recenzií a odpovedajte na otázky zákazníkov.</p>
+AI agent berie do úvahy hodnotenia a recenzie pri rozhodovaní, ktorý produkt odporučiť. Investujte do zberu recenzií a odpovedajte na otázky zákazníkov. Tie isté otázky sú zároveň najlepší zdroj pre question_and_answer.</p>
 
 <p><strong>3. Diverzifikácia zdrojov návštevnosti</strong><br>
 Ak 40 – 70 % vášho obratu závisí od organického trafficu z Google, je čas diverzifikovať. E-mail marketing, partnerstvá, vlastné komunity – to sú kanály, ktoré AI neovládne.</p>
 
 <p><strong>4. Nové metriky</strong><br>
-Klasický model atribúcie prestáva fungovať. Zákaznícka cesta teraz zahŕňa konverzácie v Gemini, prieskum v AI Mode a agentic checkout. Pripravte sa na sledovanie nových touchpointov.</p>
+Klasický model atribúcie prestáva fungovať. Zákaznícka cesta teraz zahŕňa konverzácie v Gemini, prieskum v AI Mode a agentic checkout. Meranie je zatiaľ slabé: Merchant Center pre free listingy ukazuje len kliky, Search Console AI Mode nerozlišuje. Pripravte sa na to, že dopad zmien vo feede budete čítať z trendov, nie z presných čísel.</p>
 
 <section id="faq">
   <h2>Často kladené otázky</h2>
 
   <details>
     <summary>Je UCP dostupný na Slovensku a v Česku?</summary>
-    <p>Zatiaľ nie. UCP sa aktuálne rozširuje v USA u vybraných obchodníkov. Presný termín pre európsky a CEE trh nebol oznámený, ale vzhľadom na účasť Zalando a ďalších európskych partnerov sa očakáva rozšírenie v priebehu roka 2026.</p>
+    <p>Nákup priamo v AI Mode a Gemini zatiaľ nie. Beží v USA u vybraných obchodníkov, Google ohlásil Kanadu, Austráliu a do konca 2026 Spojené kráľovstvo. Pre EÚ termín nie je. Vrstva objavovania, teda čítanie vášho feedu a konverzačných atribútov v AI odpovediach, funguje aj na Slovensku už dnes.</p>
+  </details>
+
+  <details>
+    <summary>Ktoré konverzačné atribúty existujú a sú povinné?</summary>
+    <p>Google zdokumentoval šesť: question_and_answer, related_product, popularity_rank, item_group_title, variant_option a document_link. Všetky sú voliteľné a neovplyvňujú schválenie produktov. Názvy ako best_for, compatible_with alebo substitute_for, ktoré kolovali na jar 2026, v špecifikácii nie sú.</p>
   </details>
 
   <details>
@@ -178,7 +217,7 @@ Klasický model atribúcie prestáva fungovať. Zákaznícka cesta teraz zahŕň
 
   <details>
     <summary>Nahradí UCP tradičné SEO?</summary>
-    <p>Nie, doplní ho. Tradičné SEO (technická optimalizácia, kvalitný obsah, spätné odkazy) zostáva dôležité pre klasické vyhľadávanie. UCP pridáva novú vrstvu – optimalizáciu pre AI agentov, kde rozhoduje kvalita produktových dát a štruktúrované informácie. Napríklad: ak máte na produktovej stránke implementovaný Schema.org Product markup s GTIN, aktuálnou cenou a recenziami, ste už teraz na polceste k UCP pripravenosti. Kompletná <a href="https://developers.google.com/merchant/ucp" title="Technická dokumentácia Universal Commerce Protocol" target="_blank" rel="noopener noreferrer">technická dokumentácia UCP</a> je verejne dostupná na Google for Developers.</p>
+    <p>Nie, doplní ho. Tradičné SEO (technická optimalizácia, kvalitný obsah, spätné odkazy) zostáva dôležité pre klasické vyhľadávanie. UCP pridáva novú vrstvu – optimalizáciu pre AI agentov, kde rozhoduje kvalita produktových dát a štruktúrované informácie. Ak máte na produktovej stránke Schema.org Product markup s GTIN, aktuálnou cenou a recenziami a vo feede vyplnené product_highlight a product_detail, ste už teraz na polceste. Kompletná <a href="https://developers.google.com/merchant/ucp" title="Technická dokumentácia Universal Commerce Protocol" target="_blank" rel="noopener noreferrer">technická dokumentácia UCP</a> je verejne dostupná na Google for Developers.</p>
   </details>
 
   <details>
@@ -188,7 +227,7 @@ Klasický model atribúcie prestáva fungovať. Zákaznícka cesta teraz zahŕň
 
   <details>
     <summary>Ako UCP ovplyvní platené kampane v Google Ads?</summary>
-    <p>Reklamy sa integrujú priamo do AI odpovedí ako Direct Offers. Kvalita produktového feedu bude mať väčší vplyv na výkon kampane než bidovacia stratégia. Hranica medzi plateným a organickým sa rozmazáva.</p>
+    <p>Reklamy sa zobrazujú priamo v AI odpovediach a čerpajú z toho istého feedu ako organické výsledky. Kvalita produktových dát tak ovplyvňuje obe strany. Konverzačné atribúty ale Google dokumentuje len pre AI Mode, AI Overviews a Gemini, nie ako signál pre Shopping alebo Performance Max kampane.</p>
   </details>
 
   <details>
