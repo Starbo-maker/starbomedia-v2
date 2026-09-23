@@ -1,0 +1,414 @@
+<article class="ucp-article" itemscope="" itemtype="https://schema.org/Article">
+
+  <header>
+    <p class="article-meta">
+      <time itemprop="datePublished" datetime="2026-09-23">23. septembra 2026</time>
+      · ~17 min čítania    </p>
+  </header>
+
+  <nav aria-label="Obsah článku">
+<h2>Obsah článku</h2>
+<ol>
+<li><a href="#tl-dr">TL;DR – to najdôležitejšie v skratke</a></li>
+<li><a href="#co-je-rezim-ai-google-a-ako-funguje">Čo je režim AI Google a ako funguje</a></li>
+<li><a href="#ako-zapnut-ai-rezim-v-google-na-pocitaci-a-v-mobile">Ako zapnúť AI režim v Google na počítači a v mobile</a></li>
+<li><a href="#co-sa-zmenilo-v-auguste-a-septembri-2026">Čo sa zmenilo v auguste a septembri 2026</a></li>
+<li><a href="#rezim-ai-ai-mode-vs-ai-overviews-aky-je-rozdiel">Režim AI (AI Mode) vs. AI Overviews: aký je rozdiel</a></li>
+<li><a href="#google-ai-mode-pre-firmy-ako-sa-dostat-do-odpovedi">Google AI Mode pre firmy: ako sa dostať do odpovedí</a></li>
+<li><a href="#ako-merat-rezim-ai-v-search-console">Ako merať režim AI v Search Console</a></li>
+<li><a href="#reklamy-v-rezime-ai-co-je-potvrdene">Reklamy v režime AI: čo je potvrdené</a></li>
+<li><a href="#checklist-pre-e-shopy-a-firmy">Checklist pre e-shopy a firmy</a></li>
+<li><a href="#faq">Často kladené otázky</a></li>
+</ol>
+</nav>
+
+  <div itemprop="articleBody">
+<p>Na Slovensku sa na „režim AI" v júli aj auguste 2026 hľadalo podľa dát z Google Ads zhruba <strong>27 100-krát za mesiac</strong>. Pred rokom to bolo takmer nič. Google za ten čas posunul režim AI oveľa bližšie k bežnému vyhľadávaniu. V auguste začal rozbaľovať AI Overviews do podoby odpovedí v štýle AI Mode. Na konci augusta sprístupnil v Search Console prehľady AI pre všetky weby. V septembri testuje, ako do AI Mode dostať klasické reklamy.</p>
+<p>Slovenské články o režime AI pochádzajú väčšinou z októbra 2025, keď funkcia prišla na Slovensko. Tento článok zachytáva stav k septembru 2026 a má dve časti. Prvá vysvetľuje, čo režim AI je a ako ho zapnúť alebo obísť. Druhá je pre firmy a e-shopy: ako sa dostať do odpovedí AI, ako to merať a čo sa deje s reklamou. Opierame sa o oficiálnu dokumentáciu Google a o vlastné merania AI citácií, ktoré robíme od júla 2026 pre Starbomediu a 11 klientov.</p>
+<h2 id="tl-dr">TL;DR – to najdôležitejšie v skratke</h2>
+<ul>
+<li><strong>Režim AI (AI Mode)</strong> je konverzačné vyhľadávanie Google. Namiesto zoznamu odkazov napíše odpoveď a zdroje uvedie ako odkazy. Po slovensky funguje od októbra 2025.</li>
+<li><strong>Zapnete ho</strong> na google.com/ai, tlačidlom „Režim AI" vo výsledkoch vyhľadávania alebo v aplikácii Google. Podľa Pomocníka Google potrebujete <strong>vek 18+ a osobný účet Google</strong>.</li>
+<li><strong>Vypínať ho netreba</strong>, je to samostatný režim a kým doň nevstúpite, nepoužívate ho. <strong>AI Overviews sa vypnúť nedajú vôbec.</strong> Filter „Web" zobrazí len klasické odkazy.</li>
+<li><strong>Od I/O 2026 beží režim AI predvolene na modeli Gemini 3.5 Flash.</strong> Predplatitelia Google AI Pro a Ultra si od 2. 9. 2026 môžu vybrať Gemini 3.8 Flash.</li>
+<li><strong>Od 27.–28. 8. 2026</strong> sa AI Overviews pri niektorých dopytoch rovno rozbalia do plnej odpovede s poľom na doplňujúcu otázku. Organické výsledky sa tým posunú nižšie.</li>
+<li><strong>Pre firmy:</strong> od 31. 8. 2026 má každý web v Search Console <strong>prehľad zobrazení v AI Overviews a AI Mode</strong> (kliky zatiaľ neukazuje) a <strong>nastavenie na vylúčenie webu z AI funkcií</strong>. Vylúčenie neodporúčame, kým nepoznáte vlastné čísla.</li>
+<li><strong>Reklamy:</strong> do AI Mode sa zatiaľ dostanete hlavne cez AI Max a Performance Max. Začiatkom septembra Google spustil malý experiment s frázovou a presnou zhodou. Či to platí aj pre Slovensko, Google neuviedol.</li>
+</ul>
+<h2 id="co-je-rezim-ai-google-a-ako-funguje">Čo je režim AI Google a ako funguje</h2>
+<p>Režim AI je samostatná časť Google Vyhľadávania. Otázku v ňom položíte bežnou vetou, napríklad „aký robotický vysávač do bytu s mačkou a kobercami do 400 €". Google na ňu odpovie súvislým textom, pridá odkazy na weby, z ktorých čerpal, a môžete sa pýtať ďalej bez opakovania kontextu. Pripomína to chatbota, ale odpovede stoja na aktuálnom indexe Google, nie len na pamäti jazykového modelu.</p>
+<p>Google sám režim AI označuje za svoje <a href="https://support.google.com/websearch/answer/16011537?hl=sk" title="najvýkonnejšie vyhľadávanie pomocou umelej inteligencie" target="_blank" rel="noopener noreferrer">najvýkonnejšie vyhľadávanie pomocou umelej inteligencie</a>. Čísla používateľov zverejňuje otvorene: na I/O v máji 2026 oznámil, že <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" title="AI Mode prekonal miliardu mesačných používateľov" target="_blank" rel="noopener noreferrer">AI Mode prekonal miliardu mesačných používateľov</a> a počet dopytov sa od spustenia každý štvrťrok viac ako zdvojnásobil. AI Overviews (súhrny od AI nad bežnými výsledkami) majú podľa Google <a href="https://blog.google/products-and-platforms/products/search/new-controls-website-owners/" title="viac ako 2,5 miliardy mesačných aktívnych používateľov" target="_blank" rel="noopener noreferrer">viac ako 2,5 miliardy mesačných aktívnych používateľov</a>.</p>
+<p>Na Slovensko prišiel režim AI v rozšírení zo <a href="https://blog.google/products-and-platforms/products/search/ai-mode-expands-languages-locations/" title="7. októbra 2025" target="_blank" rel="noopener noreferrer">7. októbra 2025</a>, keď Google pridal viac ako 35 jazykov a 40 krajín. Hľadanosť odvtedy rastie strmo:</p>
+<table>
+<thead><tr><th>Obdobie</th><th>Hľadanosť „režim ai" na SK (mesačne)</th></tr></thead>
+<tbody>
+<tr><td>október 2025</td><td style="text-align:right">1 900</td></tr>
+<tr><td>január 2026</td><td style="text-align:right">12 100</td></tr>
+<tr><td>apríl 2026</td><td style="text-align:right">18 100</td></tr>
+<tr><td>júl 2026</td><td style="text-align:right">27 100</td></tr>
+<tr><td>august 2026</td><td style="text-align:right">27 100</td></tr>
+</tbody>
+</table>
+<p><em>Zdroj: dáta o hľadanosti z Google Ads (cez DataForSEO), stiahnuté 23. 9. 2026.</em></p>
+<ul>
+<li>Za 10 mesiacov vzrástla hľadanosť zhruba 14-násobne a v lete sa ustálila okolo 27 000 hľadaní mesačne.</li>
+<li>Časť hľadaní je navigačná, teda ľudia chcú režim AI len otvoriť. Rast však ukazuje, že sa o funkciu zaujíma široká verejnosť, nie len marketéri.</li>
+<li>K tomu treba prirátať varianty „ai režim" (2 400 v auguste), „ai mode" (6 600) a „ai mód" (1 000).</li>
+</ul>
+<h3 id="query-fan-out-jedna-otazka-desiatky-vyhladavani">Query fan-out: jedna otázka, desiatky vyhľadávaní</h3>
+<p>Podstatné je, ako režim AI k odpovedi dospeje. Google to popisuje tak, že <a href="https://support.google.com/websearch/answer/16011537?hl=sk" title="otázku rozloží na podtémy a prehľadá web paralelne" target="_blank" rel="noopener noreferrer">otázku rozloží na podtémy a prehľadá web paralelne</a>. Tomuto postupu sa v SEO hovorí <strong>query fan-out</strong> (rozvetvenie dopytu). Z jednej otázky „aký vysávač do bytu s mačkou" tak vznikne niekoľko menších vyhľadávaní: vysávač na zvieracie chlpy, vysávač na koberce, vysávače do 400 €, hlučnosť, recenzie. Odpoveď je poskladaná z výsledkov všetkých týchto vyhľadávaní.</p>
+<p>Pre čitateľa to znamená, že dostane komplexnejšiu odpoveď, než by mu dal jeden dopyt. Pre firmu to znamená, že do odpovede sa podľa toho, čo vidíme v meraniach, častejšie dostane web, ktorý <strong>najpresnejšie odpovedá na niektorú z podotázok</strong>, než „najsilnejší web v odvetví". K tomu sa vrátime v časti pre firmy.</p>
+<p>Podľa Google sú otázky v režime AI <a href="https://blog.google/products-and-platforms/products/search/ai-mode-expands-languages-locations/" title="takmer trikrát dlhšie" target="_blank" rel="noopener noreferrer">takmer trikrát dlhšie</a> než pri klasickom vyhľadávaní (údaj z októbra 2025). Ľudia teda píšu celé vety s podmienkami, nie dve-tri kľúčové slová.</p>
+<h3 id="na-akych-modeloch-bezi-stav-september-2026">Na akých modeloch beží (stav september 2026)</h3>
+<ul>
+<li><strong>Gemini 3.5 Flash</strong> je od I/O 2026 <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" title="predvolený model režimu AI pre všetkých" target="_blank" rel="noopener noreferrer">predvolený model režimu AI pre všetkých</a>.</li>
+<li><strong>Gemini 3.8 Flash</strong> (vydaný 2. 9. 2026) je v režime AI <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/" title="dostupný pre predplatiteľov Google AI Pro a Ultra" target="_blank" rel="noopener noreferrer">dostupný pre predplatiteľov Google AI Pro a Ultra</a>. Predchodca 3.7 Flash vyšiel o tri týždne skôr.</li>
+</ul>
+<p>Niektoré zahraničné prehľady píšu, že 3.8 Flash už „poháňa AI Mode". To nie je presné. Bežný používateľ bez predplatného dostáva predvolený model a Google tri „Flash" verzie vymenil za šesť týždňov. Pre firmy z toho vyplýva praktická vec: <strong>správanie režimu AI sa mení bez ohlásenia na vašej strane</strong>. Pri modeloch, ktoré sledujeme, sa po zmene verzie menilo aj to, ako často AI vôbec hľadá na webe. Viac v časti o našich dátach.</p>
+<h2 id="ako-zapnut-ai-rezim-v-google-na-pocitaci-a-v-mobile">Ako zapnúť AI režim v Google na počítači a v mobile</h2>
+<p>Režim AI nie je aplikácia, ktorú treba inštalovať. Podľa <a href="https://support.google.com/websearch/answer/16011537?hl=sk" title="Pomocníka Google" target="_blank" rel="noopener noreferrer">Pomocníka Google</a> sa k nemu dostanete tromi spôsobmi:</p>
+<ol>
+<li><strong>Priamo cez adresu google.com/ai.</strong> Najrýchlejšia cesta na počítači aj v mobile.</li>
+<li><strong>Z bežného vyhľadávania.</strong> Na google.com zadáte otázku a vo výsledkoch kliknete na „Režim AI".</li>
+<li><strong>V aplikácii Google.</strong> Na domovskej obrazovke aplikácie ťuknete na „Režim AI".</li>
+</ol>
+<p>Režim AI funguje aj v prehliadači Chrome na počítači aj v Androide, kde má Google samostatný návod.</p>
+<p><strong>Čo musíte splniť.</strong> Pomocník Google uvádza <strong>vek aspoň 18 rokov</strong> a prihlásenie do <strong>osobného účtu Google, ktorý spravujete sami</strong>. Ak máte firemný účet spravovaný administrátorom (Google Workspace), režim AI sa vám nemusí zobraziť. Google odporúča mať zapnutú históriu vyhľadávania, aby odpovede nadväzovali na predchádzajúce otázky.</p>
+<p><strong>História.</strong> Staré konverzácie nájdete pod ikonou História priamo v režime AI. Jednotlivé vyhľadávania alebo celú históriu tam môžete aj zmazať.</p>
+<p><strong>Nový vyhľadávací box.</strong> Od I/O 2026 Google postupne zavádza <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" title="prepracované vyhľadávacie pole" target="_blank" rel="noopener noreferrer">prepracované vyhľadávacie pole</a> vo všetkých krajinách a jazykoch, kde je režim AI. Pole sa podľa dĺžky otázky rozšíri a namiesto textu doň môžete vložiť aj obrázok, súbor, video alebo kartu z Chrome. Na výsledky sa môžete pýtať rovno nad nimi.</p>
+<figure>
+<img src="/blog/rezim-ai-google/ako-otvorit-rezim-ai.webp" alt="Ako otvoriť režim AI v Google: cez google.com/ai, tlačidlom Režim AI vo výsledkoch alebo v aplikácii Google" loading="lazy" width="1200" height="675">
+<figcaption>Tri spôsoby, ako otvoriť režim AI podľa Pomocníka Google</figcaption>
+</figure>
+<h3 id="ako-vypnut-ai-v-google-a-da-sa-to-vobec">Ako vypnúť AI v Google (a dá sa to vôbec?)</h3>
+<p>Na toto sa ľudia pýtajú často a odpoveď má dve časti:</p>
+<ul>
+<li><strong>Režim AI netreba vypínať.</strong> Je to samostatný režim. Kým naň nekliknete alebo neotvoríte google.com/ai, Google vám odpovede v ňom nezobrazí.</li>
+<li><strong>AI Overviews vypnúť nejde.</strong> Google to v <a href="https://support.google.com/websearch/answer/14901683?hl=en" title="Pomocníkovi" target="_blank" rel="noopener noreferrer">Pomocníkovi</a> píše priamo: AI Overviews sú základnou funkciou Vyhľadávania, rovnako ako znalostné panely, a funkcie sa vypnúť nedajú.</li>
+</ul>
+<p>Ak chcete klasické výsledky bez AI, po vyhľadaní zvoľte filter <strong>„Web"</strong> medzi filtrami pod vyhľadávacím poľom (niekedy je skrytý v ponuke „Viac"). Tento filter podľa Google zobrazí len textové odkazy bez AI Overviews. V diskusiách sa objavuje aj trik s parametrom <code>udm=14</code> v adrese vyhľadávania, ktorý nastaví webový filter natrvalo cez vlastný vyhľadávač v prehliadači. Google ho však oficiálne nedokumentuje a nemusí fungovať navždy.</p>
+<h2 id="co-sa-zmenilo-v-auguste-a-septembri-2026">Čo sa zmenilo v auguste a septembri 2026</h2>
+<p>Staršie slovenské články tieto zmeny nemajú, pritom práve ony menia, koľko ľudí na režim AI narazí aj bez toho, aby ho hľadali.</p>
+<table>
+<thead><tr><th>Dátum</th><th>Zmena</th><th>Zdroj</th><th>Stav</th></tr></thead>
+<tbody>
+<tr><td>máj 2026 (I/O)</td><td>Gemini 3.5 Flash ako predvolený model, nový inteligentný vyhľadávací box</td><td><a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" title="blog.google" target="_blank" rel="noopener noreferrer">blog.google</a></td><td>oficiálne</td></tr>
+<tr><td>27.–28. 8. 2026</td><td>AI Overviews sa pri niektorých dopytoch automaticky rozbalia do plnej odpovede s poľom na doplňujúcu otázku</td><td><a href="https://www.seroundtable.com/google-ai-overviews-push-ai-mode-responses-41974.html" title="Search Engine Roundtable" target="_blank" rel="noopener noreferrer">Search Engine Roundtable</a> s vyjadrením Google</td><td>potvrdené hovorcom Google</td></tr>
+<tr><td>31. 8. 2026</td><td>Prehľady generatívnej AI a nastavenie vylúčenia z AI funkcií v Search Console pre všetky weby</td><td><a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" title="Search Central" target="_blank" rel="noopener noreferrer">Search Central</a></td><td>oficiálne</td></tr>
+<tr><td>2. 9. 2026</td><td>Gemini 3.8 Flash v režime AI pre AI Pro a Ultra</td><td><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/" title="blog.google" target="_blank" rel="noopener noreferrer">blog.google</a></td><td>oficiálne</td></tr>
+<tr><td>začiatok 9. 2026</td><td>Malý experiment: reklamy s frázovou a presnou zhodou v režime AI</td><td><a href="https://searchengineland.com/google-tests-traditional-search-campaigns-in-ai-mode-487199" title="Search Engine Land" target="_blank" rel="noopener noreferrer">Search Engine Land</a> s vyjadrením Google Ads</td><td>test</td></tr>
+<tr><td>15. 9. 2026</td><td>Zachytený test reklám ako textových odkazov s označením „Sponsored" v odpovedi</td><td><a href="https://www.seroundtable.com/google-ai-mode-text-link-ads-42082.html" title="Search Engine Roundtable" target="_blank" rel="noopener noreferrer">Search Engine Roundtable</a></td><td>test, bez vyjadrenia Google</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Najväčší praktický dopad má zmena z konca augusta. Ľudia sa k odpovedi v štýle AI Mode dostanú aj bez kliknutia na „Režim AI", rovno z bežného vyhľadávania.</li>
+<li>Google k tomu uviedol, že AI Overviews sa môžu dynamicky rozbaliť pri témach, kde to jeho systémy vyhodnotia ako najužitočnejšie. Ak už používateľ scrolluje nižšie, rozbalenie sa zastaví.</li>
+<li>Či a pri akých slovenských dopytoch sa AI Overviews takto rozbaľujú, Google nezverejnil. Počítajte s tým, že sa to môže týkať aj vašich tém.</li>
+</ul>
+<h2 id="rezim-ai-ai-mode-vs-ai-overviews-aky-je-rozdiel">Režim AI (AI Mode) vs. AI Overviews: aký je rozdiel</h2>
+<p>Tieto dve funkcie sa pletú najčastejšie a od konca augusta sa k sebe ešte priblížili.</p>
+<table>
+<thead><tr><th></th><th>AI Overviews (súhrny od AI)</th><th>Režim AI (AI Mode)</th></tr></thead>
+<tbody>
+<tr><td>Kde sa zobrazuje</td><td>nad bežnými výsledkami vyhľadávania</td><td>samostatný režim (google.com/ai, tlačidlo „Režim AI")</td></tr>
+<tr><td>Kto rozhoduje o zobrazení</td><td>Google, pri dopytoch, kde to považuje za užitočné</td><td>používateľ, keď doň vstúpi</td></tr>
+<tr><td>Dĺžka odpovede</td><td>spravidla kratší súhrn, od 8/2026 pri niektorých dopytoch rozbalený</td><td>dlhá odpoveď, rozhovor s doplňujúcimi otázkami</td></tr>
+<tr><td>Dá sa vypnúť</td><td>nie, len obísť filtrom „Web"</td><td>netreba, používa sa len dobrovoľne</td></tr>
+<tr><td>Požiadavky</td><td>žiadne zvláštne</td><td>podľa Pomocníka 18+ a osobný účet Google</td></tr>
+<tr><td>Meranie v Search Console</td><td>áno, v prehľade generatívnej AI</td><td>áno, v tom istom prehľade</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Z pohľadu firmy ide o <strong>jednu tému</strong>. Obe funkcie čerpajú z indexu Google, obe cituje ten istý prehľad v Search Console a na obe sa vzťahuje to isté nastavenie vylúčenia.</li>
+<li>Rozdiel je v zámere používateľa. Do režimu AI chodia ľudia s konkrétnou, často dlhou otázkou. AI Overview sa zobrazí aj tomu, kto napíše tri slová.</li>
+<li>Samotné AI Overviews podrobne rozoberáme v článku <a href="https://starbomedia.sk/ai-overviews-kompletny-sprievodca" title="Ako fungujú AI Overviews a aký majú dopad na SEO">Ako fungujú AI Overviews a aký majú dopad na SEO</a>.</li>
+</ul>
+<h2 id="google-ai-mode-pre-firmy-ako-sa-dostat-do-odpovedi">Google AI Mode pre firmy: ako sa dostať do odpovedí</h2>
+<p>Pri optimalizácii pre režim AI neexistuje zvláštny tag ani nastavenie, ktoré by web „prihlásilo" do odpovedí. Google v <a href="https://blog.google/products-and-platforms/products/search/new-controls-website-owners/" title="aktualizovaných odporúčaniach pre weby" target="_blank" rel="noopener noreferrer">aktualizovaných odporúčaniach pre weby</a> zdôrazňuje štyri veci: jedinečný obsah, ktorý nie je bežnou komoditou, prehľadnú organizáciu obsahu, dobrú skúsenosť na stránke a kvalitné obrázky a video. Zároveň píše, že do odpovedí pridal viac odkazov priamo v texte a náhľady webov, aby ľudia klikali ďalej.</p>
+<p>V praxi sú to tie isté zásady ako pri bežnom SEO. Ak web nie je v indexe Google alebo neodpovedá na otázku lepšie než ostatné, režim AI ho citovať nebude. Širší rámec, ako sa líši optimalizácia pre AI vyhľadávače (GEO) od klasického SEO, sme spísali v článku <a href="https://starbomedia.sk/geo-vs-seo" title="GEO vs SEO 2026">GEO vs SEO 2026</a>.</p>
+<h3 id="co-vidime-v-datach-nasich-klientov">Čo vidíme v dátach našich klientov</h3>
+<p>Od júla 2026 každý mesiac meriame, ako často AI modely (ChatGPT, Claude, Gemini a Perplexity) citujú Starbomediu a 11 našich klientov v odpovediach na reálne otázky zákazníkov. Súbežne sledujeme zmienky klientov v Google AI Overviews. Režim AI Google na priame meranie cez API nesprístupňuje, takže ide o príbuzné systémy, nie o AI Mode samotný. Vzorce sa však opakujú:</p>
+<ul>
+<li><strong>Cituje sa presná odpoveď, nie veľká značka.</strong> Starbomedia mala v prvom meraní 16. 7. 2026 na sade 12 otázok o našich službách podiel na citáciách (share of voice) 0,64 %. Po publikovaní stránok, ktoré priamo odpovedajú na otázky zákazníkov (koľko stojí Google Ads, ako vybrať agentúru, expanzia do CEE), sme na tej istej sade otázok boli 21. 8. 2026 na 4,67 %. V ten deň nás prvýkrát citovali všetky štyri modely.</li>
+<li><strong>Blogy sú najsilnejší zdroj AI viditeľnosti e-shopu.</strong> Mobilonline.sk mal 2. 9. 2026 až 72 zmienok v Google AI Overviews (pri prvom meraní v júli 54). Z toho 26 pochádzalo z blogu, 22 z kategórií a 11 z produktových stránok.</li>
+<li><strong>Témy článkov sa premietajú do citácií.</strong> Outdoorový e-shop Sportrysy.sk je v odpovediach AI na 1. mieste presne pri témach, na ktoré má články: turistické topánky, topánky na Rysy, Poprad a Tatry. Pri téme Tatier ho cituje aj ChatGPT.</li>
+<li><strong>Zmena modelu mení výsledky bez vášho zásahu.</strong> Pri meraní 15. 9. 2026 náš podiel klesol na 2,97 %. Hlavný dôvod bol, že Gemini po prechode z verzie 3.6 na 3.8 Flash vyhľadával na webe len pri 6 z 12 otázok, predtým pri 10. Keď AI nehľadá, odpovedá z pamäte a necituje nikoho.</li>
+</ul>
+<p>Jednu chybu vidíme často: firmy chcú vlastným obsahom vyhrať aj otázky typu „najlepšia agentúra", „skúsenosti s…" alebo „overený partner". Pri nich modely otvárajú registre, rebríčky a recenzné weby, nie blogy firiem, takže vlastný článok tu nepomôže. Pomôže zápis v adresári partnerov, recenzie a zmienky na cudzích weboch.</p>
+<figure>
+<img src="/blog/rezim-ai-google/podiel-ai-citacii-starbomedia.webp" alt="Graf podielu Starbomedie na citáciách v odpovediach ChatGPT, Claude, Gemini a Perplexity od 0,64 % 16. 7. po 4,67 % 21. 8. a 2,97 % 15. 9. 2026" loading="lazy" width="1200" height="675">
+<figcaption>Podiel Starbomedie na citáciách v odpovediach AI, rovnaká sada 12 otázok, 16. 7. – 15. 9. 2026</figcaption>
+</figure>
+<h3 id="co-robit-s-obsahom">Čo robiť s obsahom</h3>
+<p>Z toho, čo vidíme, vychádza päť krokov, ktoré majú zmysel pre väčšinu firiem a e-shopov:</p>
+<ol>
+<li><strong>Zistite, na aké podotázky sa vaši zákazníci pýtajú.</strong> Nie „robotický vysávač", ale „robotický vysávač na chlpy", „do 400 €", „na koberce", „ako často meniť kefy". Každá z nich môže byť jedna vetva fan-outu.</li>
+<li><strong>Odpovedajte hneď na začiatku.</strong> Prvé dve vety pod nadpisom majú dať priamu odpoveď. Až potom príde vysvetlenie a detail. AI odpoveď skladá z konkrétnych úsekov, nie z celého článku.</li>
+<li><strong>Používajte otázky ako nadpisy a doplňte FAQ.</strong> Nadpis „Koľko stojí SEO na Slovensku?" je pre AI jednoznačnejší signál než „Cenník". Naša stránka o <a href="https://starbomedia.sk/kolko-stoji-seo-na-slovensku-2026" title="cene SEO">cene SEO</a> sa asi päť týždňov po publikovaní objavila v AI Overview pri dopytoch „seo cena" a „seo cenník".</li>
+<li><strong>Dajte čísla, ktoré nikto iný nemá.</strong> Tabuľka s vlastnými dátami, porovnanie z praxe, reálne ceny. Google výslovne hovorí o „non-commodity" obsahu, teda obsahu, ktorý nie je zameniteľný s desiatimi inými stránkami.</li>
+<li><strong>Nezabudnite na kategórie a produkty.</strong> U e-shopov sa AI viditeľnosť delí medzi blog, kategórie a produkty. Presné názvy, parametre a odpovede na časté otázky priamo na kategórii majú rovnakú váhu ako článok.</li>
+</ol>
+<h2 id="ako-merat-rezim-ai-v-search-console">Ako merať režim AI v Search Console</h2>
+<p>Donedávna nebolo možné zistiť, či sa váš web v AI odpovediach Google zobrazuje. To sa zmenilo 31. 8. 2026.</p>
+<h3 id="nove-prehlady-generativnej-ai">Nové prehľady generatívnej AI</h3>
+<p>Google 3. 6. 2026 oznámil <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" title="prehľady výkonu generatívnej AI v Search Console" target="_blank" rel="noopener noreferrer">prehľady výkonu generatívnej AI v Search Console</a> a 31. 8. 2026 ich sprístupnil všetkým webom na svete. Sú dva, jeden pre Vyhľadávanie (AI Overviews a režim AI) a jeden pre Discover.</p>
+<table>
+<thead><tr><th>Čo prehľad ukazuje</th><th>Čo zatiaľ neukazuje</th></tr></thead>
+<tbody>
+<tr><td>zobrazenia (koľkokrát sa URL objavila v AI funkcii)</td><td>kliky a mieru prekliku (CTR)</td></tr>
+<tr><td>ktoré stránky sa zobrazili</td><td>dopyty, pri ktorých sa zobrazili</td></tr>
+<tr><td>krajiny</td><td>pozíciu v odpovedi</td></tr>
+<tr><td>zariadenia (pri Vyhľadávaní)</td><td>dáta z experimentov v Search Labs</td></tr>
+<tr><td>vývoj v čase (po hodinách, dňoch, týždňoch, mesiacoch)</td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Prehľad odpovedá na otázku „som viditeľný?", nie „prináša mi to peniaze?". Na tržby treba stále pozerať cez GA4 a porovnať stránky s vysokými AI zobrazeniami s ich reálnou návštevnosťou.</li>
+<li>Google píše, že ďalšie metriky pridá postupne, a John Mueller zo Search Central v septembri doplnil, že meranie pozícií a zobrazení pre AI funkcie sa bude ešte meniť. Dnešné čísla teda nie sú konečná metodika.</li>
+<li>Prehľad sa zobrazí len vtedy, ak má web dosť zobrazení v AI funkciách. Menší web ho preto nemusí vidieť hneď.</li>
+</ul>
+<p><strong>Ako s prehľadom pracovať:</strong> raz mesačne si stiahnite stránky s najvyšším počtom AI zobrazení a porovnajte ich s organickými klikmi v bežnom prehľade výkonu. Stránky s veľa AI zobrazeniami a málo klikmi sú kandidáti na úpravu: jasnejšiu odpoveď hore, silnejší dôvod kliknúť (kalkulačka, tabuľka, porovnanie) alebo vlastné dáta.</p>
+<figure>
+<img src="/blog/rezim-ai-google/search-console-prehlad-ai.webp" alt="Search Console: čo ukazuje prehľad generatívnej AI a tri možnosti nastavenia Search generative AI – Include, Exclude, Inherit" loading="lazy" width="1200" height="675">
+<figcaption>Prehľad generatívnej AI a nastavenie vylúčenia v Search Console</figcaption>
+</figure>
+<h3 id="vylucenie-webu-z-ai-funkcii-kedy-ano-a-kedy-nie">Vylúčenie webu z AI funkcií: kedy áno a kedy nie</h3>
+<p>Spolu s prehľadmi prišlo aj nastavenie <strong>Search generative AI</strong> (Search Console → Nastavenia → Search generative AI). Podľa <a href="https://support.google.com/webmasters/answer/16908024?hl=en" title="dokumentácie Google" target="_blank" rel="noopener noreferrer">dokumentácie Google</a> má tri možnosti:</p>
+<ul>
+<li><strong>Zahrnúť (Include).</strong> Predvolená voľba. Obsah a odkazy webu sa môžu zobrazovať v AI Overviews, režime AI a AI funkciách v Discover.</li>
+<li><strong>Vylúčiť (Exclude).</strong> Odkazy ani obsah webu sa v týchto funkciách nezobrazia a obsah sa nepoužije ako podklad na tvorbu AI odpovede. Z týchto funkcií nebudete mať žiadne zobrazenia ani návštevy.</li>
+<li><strong>Dediť od nadradeného vlastníctva (Inherit).</strong> Podstránka alebo subdoména preberie nastavenie z hlavnej domény.</li>
+</ul>
+<p>Čo vylúčenie <strong>nerobí</strong>, je rovnako dôležité:</p>
+<ul>
+<li>Podľa Google to <strong>nie je signál pre poradie</strong> v ostatných častiach Vyhľadávania. Bežné výsledky by to nemalo ovplyvniť.</li>
+<li><strong>Nemení Merchant Center ani Google Ads.</strong> Produkty a reklamy sa riadia vlastnými nastaveniami.</li>
+<li><strong>Neovplyvňuje tréning AI.</strong> Na to slúži Google-Extended v robots.txt.</li>
+<li>Zmena sa prejaví spravidla do 1–2 dní, niekedy neskôr, lebo Google má obsah uložený vo vyrovnávacej pamäti (cache).</li>
+</ul>
+<p>Ďalší háčik uvádza Google sám: po vylúčení sa v AI odpovediach naďalej zobrazí <strong>obsah iných webov, ktorý môže vyzerať podobne ako váš</strong>. Vylúčením teda neodstránite tému z AI, len seba z nej.</p>
+<p><strong>Náš názor:</strong> pre väčšinu e-shopov a firiem vylúčenie nedáva zmysel. Stratíte zobrazenia a citácie, no odpovede na vaše témy v AI ostanú, len s obsahom iných webov. Výnimkou môžu byť vydavatelia, ktorých obchodný model stojí na tom, že čitateľ príde na stránku a pozrie si reklamu alebo si kúpi predplatné. Ani tam by sme však nerozhodovali bez čísel. Najprv mesiac-dva sledujte prehľad generatívnej AI, porovnajte ho s klikmi a až potom rozhodnite.</p>
+<h2 id="reklamy-v-rezime-ai-co-je-potvrdene">Reklamy v režime AI: čo je potvrdené</h2>
+<p>Okolo reklám v AI Mode koluje veľa odhadov, preto oddeľujeme potvrdené od testov:</p>
+<p><strong>Potvrdené:</strong></p>
+<ul>
+<li>Do režimu AI sa reklamy dostávajú cez <strong>AI Max pre vyhľadávanie a Performance Max</strong>. Google ich označuje za produkty na zložité konverzačné dopyty a patria k nim aj nové formáty reklám v AI Mode.</li>
+</ul>
+<p><strong>Testuje sa:</strong></p>
+<ul>
+<li>Začiatkom septembra 2026 Google podľa <a href="https://searchengineland.com/google-tests-traditional-search-campaigns-in-ai-mode-487199" title="Search Engine Land" target="_blank" rel="noopener noreferrer">Search Engine Land</a> spustil „malý experiment". Kľúčové slová vo <strong>frázovej a presnej zhode</strong> môžu v režime AI zobraziť textovú reklamu, no len pri dopytoch s jasným a priamym zámerom. Potvrdila to Ginny Marvin, zástupkyňa Google Ads pre inzerentov. Rozsah testu Google nezverejnil.</li>
+<li>15. 9. 2026 <a href="https://www.seroundtable.com/google-ai-mode-text-link-ads-42082.html" title="Search Engine Roundtable" target="_blank" rel="noopener noreferrer">Search Engine Roundtable</a> zachytil reklamy, ktoré vyzerajú ako bežné odkazy v texte odpovede, s označením „Sponsored" nad odpoveďou. Google to zatiaľ oficiálne nekomentoval.</li>
+</ul>
+<p><strong>Čo nevieme:</strong> Google nezverejnil, v ktorých krajinách a jazykoch sa reklamy v režime AI zobrazujú. Či ich uvidia slovenskí používatelia a za akých podmienok, zatiaľ nikto verejne nedoložil.</p>
+<p><strong>Čo z toho plynie pre inzerentov na Slovensku:</strong> preto neodporúčame kvôli AI Mode narýchlo prestavovať účet. Ak už máte AI Max alebo Performance Max, ste v kampaniach, ktoré do AI Mode môžu vstúpiť. Pri AI Max však sledujte výrazy vyhľadávania a vylúčenia, lebo rozšírenie zhody vie priniesť aj nerelevantné dopyty. Ak Google Ads len rozbiehate, začnite podľa nášho návodu <a href="https://starbomedia.sk/google-ads-ako-zacat-2026" title="Google Ads – ako začať v roku 2026">Google Ads – ako začať v roku 2026</a>. Pre porovnanie, reklama v ChatGPT je na Slovensku dostupná od augusta 2026, <a href="https://starbomedia.sk/chatgpt-ads-stredna-europa-slovensko" title="prehľad nájdete tu">prehľad nájdete tu</a>.</p>
+<h2 id="checklist-pre-e-shopy-a-firmy">Checklist pre e-shopy a firmy</h2>
+<p><strong>Tento týždeň:</strong></p>
+<ul class="checklist" style="list-style:none;padding-left:0">
+<li>☐ Otvorte Search Console → prehľad generatívnej AI a pozrite, či a ktoré stránky máte v AI Overviews a režime AI.</li>
+<li>☐ Skontrolujte Nastavenia → Search generative AI, že je nastavené „Zahrnúť" (predvolené), ak ste to zámerne nemenili.</li>
+<li>☐ Zadajte do režimu AI 5–10 otázok, ktoré kladú vaši zákazníci, a zapíšte si, koho Google cituje.</li>
+</ul>
+<p><strong>Tento mesiac:</strong></p>
+<ul class="checklist" style="list-style:none;padding-left:0">
+<li>☐ Pri stránkach s AI zobrazeniami porovnajte zobrazenia s klikmi a vyberte 3 na úpravu.</li>
+<li>☐ Na kľúčových stránkach dajte priamu odpoveď do prvých dvoch viet a otázkové nadpisy.</li>
+<li>☐ Doplňte FAQ na kategórie a na najdôležitejšie služby.</li>
+<li>☐ Pridajte aspoň jednu tabuľku alebo číslo, ktoré máte len vy.</li>
+</ul>
+<p><strong>Priebežne:</strong></p>
+<ul class="checklist" style="list-style:none;padding-left:0">
+<li>☐ Sledujte zmeny modelov a formátov. Pokles AI zobrazení nemusí znamenať chybu na webe, ale zmenu u Google.</li>
+<li>☐ Pri otázkach typu „najlepší / skúsenosti" pracujte s recenziami a zápismi v registroch, nielen s vlastným obsahom.</li>
+</ul>
+<section id="faq">
+<h2>Často kladené otázky</h2>
+<details>
+<summary>Je AI mód v Google zadarmo?</summary>
+<p>Áno. Režim AI je súčasťou Google Vyhľadávania a nič sa zaň neplatí. Predplatné Google AI Pro alebo Ultra dáva prístup k novším modelom (od 2. 9. 2026 Gemini 3.8 Flash) a k niektorým funkciám skôr, napríklad k informačným agentom.</p>
+</details>
+<details>
+<summary>Režim AL alebo režim AI – čo je správne?</summary>
+<p>Správne je „režim AI", skratka pre umelú inteligenciu (artificial intelligence). „Režim AL" je častý preklep, lebo veľké I a malé l vyzerajú v mnohých písmach rovnako. Na Slovensku sa takto hľadá približne 2 400-krát mesačne.</p>
+</details>
+<details>
+<summary>Aká umelá inteligencia Google poháňa režim AI?</summary>
+<p>Režim AI beží na modeloch Gemini. Od I/O 2026 je predvoleným modelom pre všetkých Gemini 3.5 Flash. Predplatitelia Google AI Pro a Ultra môžu od 2. 9. 2026 používať Gemini 3.8 Flash.</p>
+</details>
+<details>
+<summary>Prečo sa mi režim AI nezobrazuje?</summary>
+<p>Najčastejšie preto, že nie ste prihlásení, používate firemný účet spravovaný administrátorom alebo účet nespĺňa vekovú hranicu 18 rokov. Skúste otvoriť google.com/ai v osobnom účte Google.</p>
+</details>
+<details>
+<summary>Dá sa režim AI vypnúť?</summary>
+<p>Netreba ho vypínať, používate ho len vtedy, keď doň vstúpite. AI Overviews nad bežnými výsledkami vypnúť nejde. Obísť ich môžete filtrom „Web", ktorý zobrazí len textové odkazy.</p>
+</details>
+<details>
+<summary>Uvidím v Search Console, koľko návštev mi prináša režim AI?</summary>
+<p>Zatiaľ nie. Prehľad generatívnej AI od 31. 8. 2026 ukazuje zobrazenia, stránky, krajiny, zariadenia a vývoj v čase, ale nie kliky ani dopyty. Google avizuje, že ďalšie metriky pridá postupne.</p>
+</details>
+<details>
+<summary>Uškodí môjmu SEO, ak web vylúčim z AI funkcií?</summary>
+<p>Podľa Google sa toto nastavenie nepoužíva ako signál pre poradie v bežných výsledkoch. Prídete však o všetky zobrazenia a návštevy z AI Overviews, režimu AI a AI funkcií v Discover. Pre väčšinu firiem to neodporúčame.</p>
+</details>
+<details>
+<summary>Zobrazujú sa v režime AI reklamy aj na Slovensku?</summary>
+<p>Google to pre Slovensko nepotvrdil. Oficiálne sa do režimu AI dostávajú kampane AI Max a Performance Max, frázová a presná zhoda sú v malom experimente. Dostupnosť podľa krajín Google nezverejnil.</p>
+</details>
+</section>
+<p>Ak chcete vedieť, ako si váš web vedie v AI odpovediach a čo s tým robiť, <a href="https://starbomedia.sk/kontakt" title="ozvite sa nám">ozvite sa nám</a>. Viditeľnosť v AI meriame pre vlastný web aj pre klientov a radi vám ukážeme, ako to vyzerá u vás.</p>
+
+  </div>
+</article>
+
+<!-- Meta tagy pre CMS (vložiť do <head>) -->
+<!--
+<meta name="description" content="Režim AI (AI Mode) v Google k septembru 2026: ako ho zapnúť a obísť, čím sa líši od AI Overviews a čo znamená pre firmy, e-shopy a Search Console.">
+<title>Režim AI v Google: čo to je, ako ho zapnúť a vypnúť (2026)</title>
+<link rel="canonical" href="https://starbomedia.sk/rezim-ai-google">
+-->
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Režim AI v Google: čo to je, ako ho zapnúť a čo znamená pre firmy (2026)",
+    "description": "Režim AI (AI Mode) v Google k septembru 2026: ako ho zapnúť a obísť, čím sa líši od AI Overviews a čo znamená pre firmy, e-shopy a Search Console.",
+    "datePublished": "2026-09-23",
+    "dateModified": "2026-09-23",
+    "inLanguage": "sk",
+    "author": [
+      {
+        "@type": "Organization",
+        "name": "Starbomedia",
+        "url": "https://starbomedia.sk"
+      },
+      {
+        "@type": "Person",
+        "name": "Peter Štrbo",
+        "jobTitle": "CEO a zakladateľ, Starbomedia",
+        "url": "https://starbomedia.sk/tim-starbomedia",
+        "knowsAbout": [
+          "Google Ads",
+          "SEO",
+          "GEO",
+          "AI vyhľadávanie"
+        ]
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Starbomedia",
+      "url": "https://starbomedia.sk",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://starbomedia.sk/logo.png"
+      }
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://starbomedia.sk/blog/rezim-ai-google/hero-rezim-ai-google.webp",
+      "width": 1200,
+      "height": 675
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://starbomedia.sk/rezim-ai-google"
+    },
+    "keywords": "režim ai, ai režim, ai mode, režim ai google, google ai mode, ai mód, ako vypnúť ai v google"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Je AI mód v Google zadarmo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno. Režim AI je súčasťou Google Vyhľadávania a nič sa zaň neplatí. Predplatné Google AI Pro alebo Ultra dáva prístup k novším modelom (od 2. 9. 2026 Gemini 3.8 Flash) a k niektorým funkciám skôr, napríklad k informačným agentom."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Režim AL alebo režim AI – čo je správne?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Správne je „režim AI\", skratka pre umelú inteligenciu (artificial intelligence). „Režim AL\" je častý preklep, lebo veľké I a malé l vyzerajú v mnohých písmach rovnako. Na Slovensku sa takto hľadá približne 2 400-krát mesačne."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Aká umelá inteligencia Google poháňa režim AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Režim AI beží na modeloch Gemini. Od I/O 2026 je predvoleným modelom pre všetkých Gemini 3.5 Flash. Predplatitelia Google AI Pro a Ultra môžu od 2. 9. 2026 používať Gemini 3.8 Flash."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Prečo sa mi režim AI nezobrazuje?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Najčastejšie preto, že nie ste prihlásení, používate firemný účet spravovaný administrátorom alebo účet nespĺňa vekovú hranicu 18 rokov. Skúste otvoriť google.com/ai v osobnom účte Google."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dá sa režim AI vypnúť?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Netreba ho vypínať, používate ho len vtedy, keď doň vstúpite. AI Overviews nad bežnými výsledkami vypnúť nejde. Obísť ich môžete filtrom „Web\", ktorý zobrazí len textové odkazy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Uvidím v Search Console, koľko návštev mi prináša režim AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zatiaľ nie. Prehľad generatívnej AI od 31. 8. 2026 ukazuje zobrazenia, stránky, krajiny, zariadenia a vývoj v čase, ale nie kliky ani dopyty. Google avizuje, že ďalšie metriky pridá postupne."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Uškodí môjmu SEO, ak web vylúčim z AI funkcií?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Podľa Google sa toto nastavenie nepoužíva ako signál pre poradie v bežných výsledkoch. Prídete však o všetky zobrazenia a návštevy z AI Overviews, režimu AI a AI funkcií v Discover. Pre väčšinu firiem to neodporúčame."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Zobrazujú sa v režime AI reklamy aj na Slovensku?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Google to pre Slovensko nepotvrdil. Oficiálne sa do režimu AI dostávajú kampane AI Max a Performance Max, frázová a presná zhoda sú v malom experimente. Dostupnosť podľa krajín Google nezverejnil."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Domov",
+        "item": "https://starbomedia.sk/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://starbomedia.sk/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Režim AI v Google: čo to je, ako ho zapnúť a čo znamená pre firmy (2026)"
+      }
+    ]
+  }
+]
+</script>
