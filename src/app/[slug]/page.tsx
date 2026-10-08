@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
-import { Calendar, User, ArrowLeft } from 'lucide-react';
+import { Calendar, User, ArrowLeft, Clock, RefreshCw } from 'lucide-react';
 import postsData from '../../content/blog/posts.json';
 import { getAuthor } from '../../data/authors';
 import AuthorBox from '../../components/AuthorBox';
@@ -16,6 +16,8 @@ type Post = {
     title: string;
     date: string;
     modified?: string;
+    // Viditeľný dátum aktualizácie obsahu (len pri vecnej aktualizácii; `modified` ide do sitemap/JSON-LD).
+    updated?: string;
     excerpt: string;
     category: string;
     featuredImage: string | null;
@@ -42,6 +44,13 @@ function formatDate(iso: string) {
     } catch {
         return (iso || '').slice(0, 10);
     }
+}
+
+// Čas čítania z textu fragmentu (~220 slov/min).
+function readingMinutes(html: string) {
+    const text = html.replace(/<(script|style)[\s\S]*?<\/\1>/gi, ' ').replace(/<[^>]+>/g, ' ');
+    const words = text.split(/\s+/).filter(Boolean).length;
+    return Math.max(1, Math.round(words / 220));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -121,6 +130,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                     <h1 className={styles.title}>{post.title}</h1>
                     <div className={styles.meta}>
                         <span className={styles.metaItem}><Calendar size={16} /> {formatDate(post.date)}</span>
+                        {post.updated && (
+                            <span className={styles.metaItem}><RefreshCw size={16} /> Aktualizované {formatDate(post.updated)}</span>
+                        )}
+                        <span className={styles.metaItem}><Clock size={16} /> {readingMinutes(html)} min čítania</span>
                         <span className={styles.metaItem}><User size={16} /> {author.name}</span>
                     </div>
                 </div>
