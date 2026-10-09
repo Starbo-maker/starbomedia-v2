@@ -373,7 +373,7 @@ export default function FacebookAdsPage() {
                             <p className={styles.faqAnswer}>
                                 Cena má dve časti: mediálny rozpočet, ktorý platíte priamo Mete, a odmenu za správu kampaní.
                                 Menšie e-shopy zvyčajne začínajú na 300–500 € mesačne mediálneho rozpočtu, väčšie projekty
-                                pracujú s rozpočtami v tisícoch eur. Reálne čísla z 22 slovenských účtov v našej správe – CPC podľa
+                                pracujú s rozpočtami v tisícoch eur. Reálne čísla z vyše 20 slovenských účtov v našej správe – CPC podľa
                                 segmentov, CPM aj sezónny index – sme zverejnili v článku{' '}
                                 <Link href="/kolko-stoji-reklama-na-facebooku-instagrame-2026">Koľko stojí reklama na Facebooku a Instagrame</Link>.
                                 Presný odhad vrátane očakávanej ceny za konverziu dostanete po bezplatnom audite účtu.
