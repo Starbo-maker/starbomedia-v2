@@ -12,7 +12,6 @@ export const metadata = {
 
 const EMAIL = 'ads@starbomedia.sk';
 const META_ID = '959548974063192';
-const MCC_ID = '391-384-6954';
 
 type Platforma = {
     id: string;
@@ -30,14 +29,13 @@ const PLATFORMY: Platforma[] = [
         id: 'google-ads',
         video: 'ads',
         nazov: 'Google Ads',
-        potrebujeme: `Prepojenie s naším manažérskym účtom Starbo Media s.r.o. (${MCC_ID}). Žiadosť vám pošleme my, vy ju len prijmete.`,
+        potrebujeme: 'Najprv nám pošlite 10-miestne číslo vášho účtu Google Ads – nájdete ho vpravo hore vedľa názvu účtu (v tvare 123-456-7890). Pošleme vám žiadosť o prepojenie a vy ju prijmete.',
         kroky: [
             'Vľavo kliknite na Správca.',
             'Otvorte Prístup a zabezpečenie.',
             'Prejdite na kartu Správcovia.',
             'Pri žiadosti od Starbo Media kliknite na Prijať.',
         ],
-        poznamka: 'Aby sme vám mohli žiadosť poslať, potrebujeme 10-miestne číslo vášho účtu Google Ads. Nájdete ho vpravo hore vedľa názvu účtu (v tvare 123-456-7890).',
         odkaz: { text: 'Otvoriť Google Ads', href: 'https://ads.google.com/' },
     },
     {
@@ -144,10 +142,6 @@ export default function PristupyPage() {
                         <KeyRound size={24} color="#5B2C7F" /> Naše údaje
                     </h2>
                     <div style={{ display: 'grid', gap: '1rem' }}>
-                        <div>
-                            <p className={styles.text} style={{ margin: '0 0 0.4rem', fontWeight: 600 }}>Manažérsky účet Google Ads (žiadosť posielame my)</p>
-                            <CopyValue value={MCC_ID} />
-                        </div>
                         <div>
                             <p className={styles.text} style={{ margin: '0 0 0.4rem', fontWeight: 600 }}>ID firemného portfólia pre Meta</p>
                             <CopyValue value={META_ID} />
