@@ -74,6 +74,8 @@ const Footer = () => {
                     © {currentYear} Starbo Media s.r.o.
                     <span style={{ margin: '0 0.5rem' }}>•</span>
                     <Link href="/ochrana-osobnych-udajov">Ochrana súkromia</Link>
+                    <span style={{ margin: '0 0.5rem' }}>•</span>
+                    <Link href="/pristupy">Prístupy pre klientov</Link>
                 </div>
 
                 <div className={styles.socials}>
