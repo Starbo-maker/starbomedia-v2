@@ -1,6 +1,18 @@
 [
   {
     "author": "peter-strbo",
+    "category": "Digitálny marketing",
+    "date": "2026-10-13T10:00:00+00:00",
+    "modified": "2026-10-13T10:00:00+00:00",
+    "slug": "google-search-console-navod",
+    "title": "Google Search Console: návod pre začiatočníkov – nastavenie, indexovanie a čo kontrolovať (2026)",
+    "excerpt": "Google Search Console krok za krokom: pridanie webu, overenie cez DNS, sitemap, vyžiadanie indexovania, stavy stránok a čo kontrolovať každý mesiac.",
+    "featuredImage": "/blog/google-search-console-navod/hero-google-search-console-navod.webp",
+    "featuredW": 1200,
+    "featuredH": 675
+  },
+  {
+    "author": "peter-strbo",
     "category": "PPC reklama",
     "date": "2026-10-08T11:00:00+00:00",
     "modified": "2026-10-08T11:00:00+00:00",

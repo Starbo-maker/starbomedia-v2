@@ -1,0 +1,338 @@
+<article class="ucp-article" itemscope="" itemtype="https://schema.org/Article">
+
+  <nav aria-label="Obsah článku">
+<h2>Obsah článku</h2>
+<ol>
+<li><a href="#co-je-google-search-console-a-cim-nie-je">Čo je Google Search Console a čím nie je</a></li>
+<li><a href="#ako-pridat-web-do-search-console-a-overit-vlastnictvo">Ako pridať web do Search Console a overiť vlastníctvo</a></li>
+<li><a href="#ako-odoslat-sitemap-do-google-search-console">Ako odoslať sitemap do Google Search Console</a></li>
+<li><a href="#kontrola-webovej-adresy-a-vyziadanie-indexovania">Kontrola webovej adresy a vyžiadanie indexovania</a></li>
+<li><a href="#prehlad-strany-preco-stranka-nie-je-indexovana">Prehľad Strany: prečo stránka nie je indexovaná</a></li>
+<li><a href="#vykonnost-kliky-zobrazenia-ctr-a-pozicia">Výkonnosť: kliky, zobrazenia, CTR a pozícia</a></li>
+<li><a href="#prehlady-generativnej-ai-v-search-console">Prehľady generatívnej AI v Search Console</a></li>
+<li><a href="#ako-pridat-pouzivatela-do-search-console-napr-agenturu">Ako pridať používateľa do Search Console (napr. agentúru)</a></li>
+<li><a href="#10-minutovy-mesacny-checklist">10-minútový mesačný checklist</a></li>
+<li><a href="#faq">Často kladené otázky</a></li>
+</ol>
+</nav>
+
+  <div itemprop="articleBody">
+<p>Google Search Console je miesto, kde vám Google priamo povie, ako vidí váš web: ktoré stránky má v indexe, na aké dopyty vás ukazuje a kde má problém. Z našej skúsenosti ju veľa firiem má nastavenú, ale otvorí ju, až keď niečo prestane fungovať.</p>
+<p>Tento návod je pre tých, ktorí s ňou začínajú alebo sa v nej zatiaľ necítia isto. Prejdeme nastavenie, odoslanie sitemapy, vyžiadanie indexovania, najčastejšie stavy stránok a krátky mesačný postup. K trom krokom pridávame videonávody. Názvy tlačidiel a stavov uvádzame tak, ako ich slovenské rozhranie zobrazovalo v októbri 2026.</p>
+<h2 id="tl-dr">TL;DR</h2>
+<ul>
+<li><strong>Do Google Search Console sa prihlásite na <a href="https://search.google.com/search-console" title="search.google.com/search-console" target="_blank" rel="noopener noreferrer">search.google.com/search-console</a>.</strong> Je to bezplatný nástroj Google, ktorý ukazuje, ako sa váš web zobrazuje vo Vyhľadávaní Google: kliky, zobrazenia, dopyty a stav indexovania.</li>
+<li><strong>Web pridajte ako vlastníctvo typu Doména</strong> a overte ho záznamom TXT v DNS. Pokryje všetky subdomény aj http/https a overenie vydrží aj zmenu hostingu, ak TXT záznam v DNS zostane.</li>
+<li><strong>Sitemapu odošlite raz</strong>, potom už len sledujte, či má stav „Úspech". Pri nových alebo zmenených stránkach použite Kontrolu webovej adresy a „Vyžiadať indexovanie".</li>
+<li><strong>Neindexované stránky nie sú automaticky chyba.</strong> Presmerovania, alternatívne stránky s kanonickou značkou či zámerný noindex sú v poriadku. Riešte, keď medzi nimi skončia stránky, ktoré majú zarábať.</li>
+<li><strong>Pri menšom webe stačí raz mesačne 10 minút:</strong> Výkonnosť bez značky, prehľad Strany, sitemap, prehľad generatívnej AI a správy o bezpečnosti.</li>
+</ul>
+<h2 id="co-je-google-search-console-a-cim-nie-je">Čo je Google Search Console a čím nie je</h2>
+<p>Google Search Console (skrátene GSC, do roku 2015 <a href="https://developers.google.com/search/blog/2015/05/announcing-google-search-console-new" title="Google Webmaster Tools" target="_blank" rel="noopener noreferrer">Google Webmaster Tools</a>) je <a href="https://support.google.com/webmasters/answer/9128668" title="bezplatná služba Google" target="_blank" rel="noopener noreferrer">bezplatná služba Google</a>, ktorá vám ukáže, ako Google váš web prehľadáva, indexuje a zobrazuje vo výsledkoch. Na to, aby ste sa vo Vyhľadávaní Google zobrazovali, ju mať nemusíte. Bez nej však nevidíte, prečo sa niektorá stránka nezobrazuje, ani na aké dopyty vás ľudia nachádzajú.</p>
+<p>Najčastejší zmätok vzniká pri porovnaní s Google Analytics 4. Oba nástroje sú od Google, oba ukazujú návštevnosť, a predsa sa ich čísla takmer nikdy nezhodujú. Je to tým, že merajú dve rôzne veci:</p>
+<table>
+<thead><tr><th></th><th>Google Search Console</th><th>Google Analytics 4</th></tr></thead>
+<tbody>
+<tr><td>Čo meria</td><td>čo sa deje vo Vyhľadávaní Google <strong>pred klikom</strong></td><td>čo robí návštevník <strong>na webe po kliku</strong></td></tr>
+<tr><td>Základná jednotka</td><td>zobrazenie a klik vo výsledkoch</td><td>relácia, udalosť, konverzia</td></tr>
+<tr><td>Zdroj dát</td><td>dáta Google z Vyhľadávania</td><td>meracia značka na webe (JavaScript)</td></tr>
+<tr><td>Dopyty, na ktoré sa zobrazujete</td><td>áno (časť dopytov je skrytá kvôli súkromiu)</td><td>nie</td></tr>
+<tr><td>Indexovanie a technické problémy</td><td>áno</td><td>nie</td></tr>
+<tr><td>Nákupy, formuláre, tržby</td><td>nie</td><td>áno</td></tr>
+<tr><td>Iné kanály (reklama, e-mail, sociálne siete)</td><td>nie</td><td>áno</td></tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Kliky v GSC sa nerovnajú reláciám v GA4.</strong> GA4 nezaznamená návštevu, ak sa meracia značka nespustí, napríklad keď návštevník odíde skôr, než sa stránka načíta, alebo <a href="https://developers.google.com/tag-platform/security/guides/consent" title="podľa nastavenia režimu súhlasu" target="_blank" rel="noopener noreferrer">podľa nastavenia režimu súhlasu</a> odmietne cookies.</li>
+<li><strong>Dni sa posúvajú.</strong> Search Console počíta dni <a href="https://support.google.com/webmasters/answer/96568" title="podľa času v Kalifornii" target="_blank" rel="noopener noreferrer">podľa času v Kalifornii</a>, GA4 podľa časového pásma vašej služby.</li>
+<li><strong>Na obchodné otázky potrebujete oba.</strong> GSC povie, na ktorý dopyt prišiel klik, GA4 povie, či z neho bola objednávka. Prepojenie oboch nástrojov sa oplatí.</li>
+</ul>
+<h2 id="ako-pridat-web-do-search-console-a-overit-vlastnictvo">Ako pridať web do Search Console a overiť vlastníctvo</h2>
+<p>Po prihlásení kliknete na „Pridať web" a Search Console sa opýta na typ vlastníctva. Ponúka dve možnosti:</p>
+<table>
+<thead><tr><th></th><th>Doména</th><th>Predpona webovej adresy</th></tr></thead>
+<tbody>
+<tr><td>Čo pokrýva</td><td>všetky subdomény (www, m., …) a protokoly http aj https</td><td>len adresy pod zadanou adresou a jedným protokolom</td></tr>
+<tr><td>Ako sa overuje</td><td>len cez DNS</td><td>viac spôsobov: HTML súbor, HTML značka, Google Analytics, Google Tag Manager, DNS</td></tr>
+<tr><td>Kedy sa hodí</td><td>takmer vždy</td><td>keď nemáte prístup k DNS alebo chcete sledovať len časť webu</td></tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Odporúčame vlastníctvo typu Doména.</strong> Uvidíte celý web naraz a nestane sa vám, že dáta z verzie s www alebo bez nej sedia v inom vlastníctve.</li>
+<li><strong>Predpona webovej adresy má zmysel ako doplnok</strong>, napríklad pre jazykovú verziu v podpriečinku (/cz/, /hu/), ktorú chcete sledovať zvlášť.</li>
+<li><strong>Dáta sa začnú zbierať hneď po pridaní vlastníctva</strong>, prvé sa podľa Google <a href="https://support.google.com/webmasters/answer/34592" title="zobrazia o niekoľko dní" target="_blank" rel="noopener noreferrer">zobrazia o niekoľko dní</a>.</li>
+</ul>
+<p>Na uvítacej obrazovke si od leta 2026 všimnete aj druhú možnosť: pridať účet na Instagrame, TikToku, X alebo YouTube. Ide o samostatný typ vlastníctva (platform property), ktorý ukazuje, ako sa vaše príspevky a videá zobrazujú vo Vyhľadávaní Google, v Discover a v Google Správach. Každý účet sa pridáva zvlášť a <a href="https://developers.google.com/search/docs/monitor-debug/analyze-social-video-content" title="podľa dokumentácie Google" target="_blank" rel="noopener noreferrer">podľa dokumentácie Google</a> neukazuje, čo sa deje priamo na danej sieti. S vlastníctvom webu nesúvisí, na web ho nepotrebujete.</p>
+<p>Overenie cez DNS vyzerá takto: Search Console vám dá záznam typu TXT, ktorý sa začína <code>google-site-verification=</code>. Ten vložíte v administrácii domény u registrátora alebo tam, kde spravujete DNS, a potom overenie potvrdíte v Search Console. Ak hneď neprejde, počkajte. Google uvádza, že <a href="https://support.google.com/webmasters/answer/9008080" title="novému záznamu môže trvať aj dva až tri dni" target="_blank" rel="noopener noreferrer">novému záznamu môže trvať aj dva až tri dni</a>, kým ho poskytovateľ začne zobrazovať.</p>
+<p>Jedno pravidlo, na ktoré sa často zabúda: <strong>TXT záznam po overení nemažte.</strong> Search Console overenie priebežne kontroluje a podľa Pomocníka platí len dovtedy, kým token na mieste nájde. Výhoda DNS je, že prežije zmenu hostingu, redizajn aj prechod na iný redakčný systém. Pozor iba pri presune samotnej správy DNS k inému poskytovateľovi – vtedy treba TXT záznam preniesť tiež.</p>
+<h2 id="ako-odoslat-sitemap-do-google-search-console">Ako odoslať sitemap do Google Search Console</h2>
+<p>Sitemap (mapa webu) je súbor, väčšinou na adrese <code>vasweb.sk/sitemap.xml</code>, so zoznamom stránok, ktoré chcete mať vo Vyhľadávaní. Väčšina redakčných systémov a e-shopových platforiem ju generuje sama. Search Console jej adresu potrebuje poznať iba raz.</p>
+<p>V ľavom menu otvorte <strong>Indexovanie → Počet súborov Sitemap</strong>, do poľa „Zadajte webovú adresu mapy webu" vložte adresu sitemapy (napríklad <code>https://vasweb.sk/sitemap.xml</code>) a kliknite na <strong>ODOSLAŤ</strong>.</p>
+<figure>
+<video src="/blog/google-search-console-navod/navod-sitemap.mp4" poster="/blog/google-search-console-navod/navod-sitemap.webp" width="1200" height="675" autoplay muted loop playsinline aria-label="Videonávod: ako odoslať sitemap v Google Search Console – Indexovanie, Počet súborov Sitemap, zadanie adresy a Odoslať"><img src="/blog/google-search-console-navod/navod-sitemap.webp" alt="Videonávod: ako odoslať sitemap v Google Search Console – Indexovanie, Počet súborov Sitemap, zadanie adresy a Odoslať" loading="lazy" width="1200" height="675"></video>
+<figcaption>Odoslanie sitemapy v Search Console (ukážka na fiktívnom webe vas-eshop.sk)</figcaption>
+</figure>
+<p>V tabuľke „Odoslané mapy webu" potom sledujte stĺpec Stav. Má byť „Úspech". Vedľa uvidíte, kedy si ju Google naposledy načítal a koľko stránok v nej objavil.</p>
+<p>Pri starbomedia.sk sme sitemapu odoslali 11. 6. 2026 pri spustení nového webu. V októbri 2026 ukazuje Search Console posledné načítanie 29. 9. 2026 a 104 objavených stránok.</p>
+<p>Dve veci, ktoré je dobré vedieť:</p>
+<ul>
+<li><strong>Sitemapu netreba odosielať znova</strong> po každom novom článku. Google si ju načítava sám. Znova ju odošlite, keď sa na webe zmení veľa naraz, napríklad po migrácii.</li>
+<li><strong>Sitemap nie je príkaz na indexovanie.</strong> Google podľa <a href="https://support.google.com/webmasters/answer/7451001" title="Pomocníka" target="_blank" rel="noopener noreferrer">Pomocníka</a> nezaručuje, že prehľadá alebo zaindexuje každú adresu, ktorú v nej nájde.</li>
+</ul>
+<h2 id="kontrola-webovej-adresy-a-vyziadanie-indexovania">Kontrola webovej adresy a vyžiadanie indexovania</h2>
+<p>Kontrola webovej adresy (URL Inspection) odpovie na otázku „je táto konkrétna stránka v Google?". Do vyhľadávacieho riadku hore („Skontrolujte ľubovoľnú webovú adresu v zdroji…") vložte celú adresu stránky. Po chvíli uvidíte jeden z dvoch výsledkov: „Webová adresa je na Googli", alebo že na Googli nie je, spolu s dôvodom.</p>
+<p>Ak ste stránku práve publikovali alebo ste ju výrazne zmenili, kliknite na <strong>VYŽIADAŤ INDEXOVANIE</strong>. Google tým dostane žiadosť, aby stránku prehľadal znova.</p>
+<figure>
+<video src="/blog/google-search-console-navod/navod-indexovanie.mp4" poster="/blog/google-search-console-navod/navod-indexovanie.webp" width="1200" height="675" autoplay muted loop playsinline aria-label="Videonávod: kontrola webovej adresy a vyžiadanie indexovania v Google Search Console"><img src="/blog/google-search-console-navod/navod-indexovanie.webp" alt="Videonávod: kontrola webovej adresy a vyžiadanie indexovania v Google Search Console" loading="lazy" width="1200" height="675"></video>
+<figcaption>Kontrola webovej adresy a tlačidlo Vyžiadať indexovanie (ukážka na fiktívnom webe vas-eshop.sk)</figcaption>
+</figure>
+<p>Čo od toho čakať:</p>
+<ul>
+<li><strong>Žiadosť nie je záruka.</strong> Google v <a href="https://support.google.com/webmasters/answer/9012289" title="Pomocníkovi" target="_blank" rel="noopener noreferrer">Pomocníkovi</a> píše, že indexovanie často trvá deň, ale môže trvať aj týždeň či dva, a stránka sa do indexu nemusí dostať vôbec.</li>
+<li><strong>Opakované klikanie nepomôže.</strong> Podľa <a href="https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl" title="dokumentácie Search Central" target="_blank" rel="noopener noreferrer">dokumentácie Search Central</a> viac žiadostí na tú istú adresu prehľadanie nezrýchli.</li>
+<li><strong>Žiadosti majú denný limit.</strong> Google ho potvrdzuje, presné číslo však nezverejňuje. Hromadné vyžiadanie indexovania v Search Console neexistuje – na veľa stránok naraz slúži sitemap.</li>
+<li><strong>Tlačidlo „OTESTOVAŤ ZVEREJNENÚ WEBOVÚ ADRESU"</strong> skontroluje aktuálnu verziu stránky naživo. Hodí sa, keď ste niečo opravili a chcete vedieť, či to Google už vidí.</li>
+</ul>
+<h2 id="prehlad-strany-preco-stranka-nie-je-indexovana">Prehľad Strany: prečo stránka nie je indexovaná</h2>
+<p>V menu <strong>Indexovanie → Strany</strong> nájdete dve čísla: koľko stránok je indexovaných a koľko nie. Pod grafom je tabuľka „Prečo stránky nie sú indexované" s dôvodmi. Na prvý pohľad pôsobí desivo, lebo neindexovaných stránok býva veľa. U nás je to v októbri 2026 106 indexovaných a 77 neindexovaných stránok, a web je v poriadku.</p>
+<p>Kľúčové je rozlíšiť, či je stav zámerný, alebo problém:</p>
+<table>
+<thead><tr><th>Stav v Search Console</th><th>Čo znamená</th><th>Čo s tým</th></tr></thead>
+<tbody>
+<tr><td>Stránka s presmerovaním</td><td>adresa presmeruje inam, indexuje sa cieľ</td><td>nič, ak presmerovanie chcete</td></tr>
+<tr><td>Alternatívna stránka so správnou kanonickou značkou</td><td>stránka odkazuje na hlavnú verziu, ktorá je v indexe</td><td>nič</td></tr>
+<tr><td>Vylúčená na základe značky „noindex"</td><td>stránka sama Google žiada, aby ju neindexoval</td><td>skontrolovať, či tam značka má byť</td></tr>
+<tr><td>Nenájdené (404)</td><td>stránka neexistuje</td><td>ak sa presunula, presmerovať (301), inak nič</td></tr>
+<tr><td>Blokovaná súborom robots.txt</td><td>Google na stránku nesmie</td><td>ak má byť vo výsledkoch, upraviť robots.txt</td></tr>
+<tr><td>Duplicitná, Google vybral inú kánonickú stránku než používateľ</td><td>Google za hlavnú považuje inú adresu, než ste určili</td><td>porovnať obe adresy v Kontrole webovej adresy</td></tr>
+<tr><td>Indexovo prehľadávané – momentálne neindexované</td><td>Google stránku prečítal, ale do indexu ju zatiaľ nezaradil</td><td>zlepšiť obsah a interné odkazy, znova neposielať</td></tr>
+<tr><td>Objavené – momentálne nie je v indexe</td><td>Google o stránke vie, ale ešte ju neprehľadal</td><td>dať čas, dôležité stránky vyžiadať</td></tr>
+<tr><td>Chyba servera (5xx)</td><td>server Googlu nevrátil stránku</td><td>riešiť s hostingom alebo vývojárom</td></tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Pozerajte na dôležité stránky, nie na súčet.</strong> Google sám v <a href="https://support.google.com/webmasters/answer/7440203" title="Pomocníkovi" target="_blank" rel="noopener noreferrer">Pomocníkovi</a> píše, že nemáte čakať indexovanie všetkých adries webu. Stačí, keď sú v indexe stránky, ktoré majú zarábať.</li>
+<li><strong>Stĺpec Zdroj napovie, kto stav spôsobil.</strong> „Web" znamená nastavenie na vašej strane (presmerovanie, noindex), „Systémy Googlu" rozhodnutie Google.</li>
+<li><strong>Po oprave spustite v detaile stavu overenie.</strong> Stĺpec „Overenie" potom ukazuje, ako ďaleko je Google s kontrolou opravených stránok.</li>
+</ul>
+<h3 id="z-nasej-praxe-42-stranok-objavene-momentalne-nie-je-v-indexe">Z našej praxe: 42 stránok „Objavené – momentálne nie je v indexe"</h3>
+<p>Keď sme 11. 6. 2026 spustili nový web starbomedia.sk (prechod z WordPressu na Next.js), adresy ostali rovnaké. Zmenilo sa len koncové lomítko, staré adresy preto presmerovali na nové. O jedenásť dní neskôr ukazovala Search Console 42 adries v stave „Objavené – momentálne nie je v indexe", medzi nimi aj hlavné stránky služieb. Pri každej bol dátum posledného prehľadania 1. 1. 1970, čo v praxi znamená „ešte nikdy".</p>
+<p>Prešli sme web technicky: každá stránka mala kanonickú značku sama na seba, nikde nebol noindex, všetko bolo interne prelinkované a v sitemape. Technickú chybu sme nenašli. Podľa našej diagnózy išlo o bežný priebeh migrácie: obsah mal Google v indexe stále pod starými adresami, takže prehľadanie nových nepovažoval za naliehavé. Google pri tomto stave v <a href="https://support.google.com/webmasters/answer/7440203" title="Pomocníkovi" target="_blank" rel="noopener noreferrer">Pomocníkovi</a> uvádza, že prehľadanie zvyčajne odloží preto, lebo by mohlo preťažiť server.</p>
+<p>Postupovali sme jednoducho: kľúčové stránky (služby, rozcestníky) sme po dávkach poslali cez Vyžiadať indexovanie a zvyšok nechali na bežné prehľadávanie. Počítali sme s dvoma až šiestimi týždňami. Podľa našej Search Console je 13. 10. 2026 v tomto stave už len jedna adresa zo 183, ktoré Google na webe eviduje.</p>
+<p>Indexing API, ktoré niektoré návody odporúčajú na „rýchle indexovanie", sme zámerne nepoužili. Google ho podľa <a href="https://developers.google.com/search/apis/indexing-api/v3/quickstart" title="dokumentácie" target="_blank" rel="noopener noreferrer">dokumentácie</a> podporuje len pre stránky s pracovnými ponukami (JobPosting) a priamymi prenosmi (BroadcastEvent). Na bežné stránky služieb a e-shopu nie je určené.</p>
+<h2 id="vykonnost-kliky-zobrazenia-ctr-a-pozicia">Výkonnosť: kliky, zobrazenia, CTR a pozícia</h2>
+<p>Prehľad <strong>Výkonnosť</strong> je miesto, kam sa budete vracať najčastejšie. Hore sú štyri čísla:</p>
+<ul>
+<li><strong>Celkové kliknutia</strong> – koľkokrát niekto klikol na váš web vo výsledkoch Google.</li>
+<li><strong>Celkové zobrazenia</strong> – koľkokrát sa váš web vo výsledkoch zobrazil, aj keď naň nikto neklikol.</li>
+<li><strong>Priemerná CTR</strong> (miera prekliku) – kliky delené zobrazeniami.</li>
+<li><strong>Priemerná pozícia</strong> – priemerné umiestnenie vášho najvyššieho výsledku.</li>
+</ul>
+<p>Pod grafom sú karty Dopyty, Strany, Krajiny, Zariadenia, Vzhľad vo vyhľadávaní a Dni. Na začiatok stačia prvé dve: na aké frázy sa zobrazujete a ktoré stránky prinášajú kliky.</p>
+<p>Dve novinky z jesene 2026, ktoré sa oplatí poznať:</p>
+<ul>
+<li><strong>Typ vyhľadávania „Web" sa delí na Textové a Multimodálne.</strong> Multimodálne sú vyhľadávania obrázkom, napríklad cez Google Lens alebo nahratím fotky do Vyhľadávania. Google ich <a href="https://developers.google.com/search/blog/2026/09/web-multimodal-in-sc" title="pridal 24. 9. 2026" target="_blank" rel="noopener noreferrer">pridal 24. 9. 2026</a> a zobrazia sa len webom, ktoré z nich majú návštevnosť.</li>
+<li><strong>Vo filtri Krajina môžete zaškrtnúť viac krajín naraz</strong> a vidieť ich súčet. E-shopom, ktoré predávajú na viacerých trhoch z jednej domény, to ušetrí sčítavanie v exporte. Predvolene vidíte posledné 3 mesiace, cez „Viac" sa dostanete až na <a href="https://support.google.com/analytics/answer/13682862" title="16 mesiacov" target="_blank" rel="noopener noreferrer">16 mesiacov</a> dozadu. Dáta prichádzajú s oneskorením <a href="https://support.google.com/webmasters/answer/96568" title="zvyčajne 2 – 3 dni" target="_blank" rel="noopener noreferrer">zvyčajne 2 – 3 dni</a>, takže včerajšok býva neúplný.</li>
+</ul>
+<p>Ako tieto čísla čítať, ukazuje príklad z našej Search Console. Za tri mesiace (11. 7. – 10. 10. 2026) sa náš článok o režime AI zobrazil na dopyt „režim ai" 4 972-krát a priniesol 5 kliknutí.</p>
+<p>Zobrazenia bez klikov nemusia znamenať zlyhanie. Hovoria, že Google stránku pri dopyte ukazuje, ale niečo ľudí od kliku odrádza: pozícia, nadpis vo výsledku alebo to, že odpoveď dostanú priamo v Google. Čo s tým, záleží od cieľa stránky.</p>
+<h3 id="filter-znacka-vs-ostatne-dopyty">Filter značka vs. ostatné dopyty</h3>
+<p>Prvá úprava, ktorú v Search Console odporúčame: oddeľte dopyty na vašu značku. Kliknite na <strong>Pridať filter → Dopyt</strong>, zvoľte <strong>Dopyty, ktoré neobsahujú výraz</strong> a napíšte názov firmy. Ak sa firma hľadá vo viacerých tvaroch (s preklepmi, bez diakritiky, s medzerou a bez nej), použite <strong>Vlastné (regulárny výraz)</strong>.</p>
+<p>Uvidíte, koľko ľudí vás nájde bez toho, aby už poznali vaše meno. Toto číslo lepšie ukazuje, ako sa darí obsahu a SEO. Dopyty na značku ovplyvňuje aj reklama, PR či odporúčania, takže v súčte prácu na SEO zakryjú.</p>
+<h3 id="porovnanie-obdobi-pasca-nerovnakej-dlzky">Porovnanie období: pasca nerovnakej dĺžky</h3>
+<p>V dialógu „Obdobie" na karte <strong>Porovnať</strong> si môžete dať vedľa seba dve obdobia, napríklad posledné 3 mesiace s predchádzajúcimi alebo medziročne. Pri voľbe „Vlastná" si však ľahko porovnáte obdobia rôznej dĺžky.</p>
+<p>Pri jednom z klientov sme dostali export s porovnaním 123 dní proti 89 dňom. V súčte to vyzeralo ako rast: 22 277 klikov proti 17 769. Po prepočte na deň to bol pokles o 9 % (181 klikov denne proti 200) a zobrazenia klesli o 12 %. Preto pri každom porovnaní najprv pozrite, koľko dní má každé obdobie, a pri rôznej dĺžke porovnávajte priemer na deň.</p>
+<h2 id="prehlady-generativnej-ai-v-search-console">Prehľady generatívnej AI v Search Console</h2>
+<p>Od 31. 8. 2026 má Search Console pre všetky weby aj prehľad výkonnosti vo funkciách generatívnej AI. Ukazuje, koľkokrát sa vaše stránky zobrazili v AI Overviews a v režime AI, v ktorých krajinách a na akých zariadeniach. Kliky, dopyty ani pozíciu v AI odpovedi zatiaľ neukazuje a menší web ho nemusí vidieť hneď. Otvoríte ho cez upozornenie v prehľade Výkonnosť („Otvoriť prehľad").</p>
+<p>Čo s ním robiť a kedy (ne)vylúčiť web z AI funkcií, rozoberáme podrobne v článku <a href="/rezim-ai-google" title="Režim AI v Google: čo to je a čo znamená pre firmy">Režim AI v Google: čo to je a čo znamená pre firmy</a>. Ak chcete pochopiť, ako sa obsah do AI odpovedí dostáva, pokračujte na <a href="/geo-vs-seo" title="GEO vs SEO">GEO vs SEO</a>.</p>
+<h2 id="ako-pridat-pouzivatela-do-search-console-napr-agenturu">Ako pridať používateľa do Search Console (napr. agentúru)</h2>
+<p>Keď chcete dať prístup kolegovi alebo agentúre, nepožičiavajte im svoje heslo. Search Console má vlastné používateľské role. Pridať niekoho môže len vlastník: <strong>Nastavenia → Používatelia a povolenia → Pridať používateľa</strong>, zadáte e-mail jeho účtu Google a zvolíte povolenie.</p>
+<figure>
+<video src="/blog/google-search-console-navod/navod-pouzivatel.mp4" poster="/blog/google-search-console-navod/navod-pouzivatel.webp" width="1200" height="675" autoplay muted loop playsinline aria-label="Videonávod: ako pridať používateľa v Google Search Console – Nastavenia, Používatelia a povolenia, Pridať používateľa"><img src="/blog/google-search-console-navod/navod-pouzivatel.webp" alt="Videonávod: ako pridať používateľa v Google Search Console – Nastavenia, Používatelia a povolenia, Pridať používateľa" loading="lazy" width="1200" height="675"></video>
+<figcaption>Pridanie používateľa v Search Console – v ukážke dávame prístup agentúre Starbomedia</figcaption>
+</figure>
+<p>Na výber sú <a href="https://support.google.com/webmasters/answer/7687615" title="tri úrovne" target="_blank" rel="noopener noreferrer">tri úrovne</a>:</p>
+<ul>
+<li><strong>Úplné</strong> (úplný používateľ) – vidí všetky dáta, môže odoslať sitemap, vyžiadať indexovanie aj overiť opravu. Pre agentúru, ktorá robí SEO, je to správna voľba.</li>
+<li><strong>Obmedzené</strong> (obmedzený používateľ) – vidí väčšinu dát, ale nič nemení. Hodí sa pre kolegu, ktorý potrebuje len čísla.</li>
+<li><strong>Vlastník</strong> – môže všetko vrátane pridávania a odoberania ľudí. Túto rolu si nechajte vo firme.</li>
+</ul>
+<p>Ak niekto s vami prestane spolupracovať, v tom istom menu ho odoberiete. Pridať sa dá len konkrétny účet Google, e-mailovú skupinu Search Console neprijme.</p>
+<h2 id="10-minutovy-mesacny-checklist">10-minútový mesačný checklist</h2>
+<p>Search Console netreba sledovať denne. Pri menšom webe stačí raz za mesiac prejsť týchto päť bodov:</p>
+<ol>
+<li><strong>Výkonnosť s filtrom bez značky</strong>, posledné 28 dní proti predchádzajúcim 28 dňom. Ktoré stránky a dopyty stratili kliky najviac?</li>
+<li><strong>Strany:</strong> pribudla v neindexovaných nejaká dôležitá stránka? Skontrolujte najmä 404, noindex a „Indexovo prehľadávané – momentálne neindexované".</li>
+<li><strong>Počet súborov Sitemap:</strong> stav „Úspech" a dátum posledného načítania nie starší ako niekoľko týždňov.</li>
+<li><strong>Prehľad generatívnej AI:</strong> ktoré stránky majú veľa zobrazení v AI a málo klikov v bežnom prehľade.</li>
+<li><strong>Zabezpečenie a ručné akcie:</strong> majú byť prázdne. Ak tam niečo je, riešte to ako prvé.</li>
+</ol>
+<p>Pri vážnych problémoch posiela Search Console upozornenia aj e-mailom. Skontrolujte, či ich dostáva niekto, kto ich naozaj číta, nie len zabudnutý účet bývalého dodávateľa webu.</p>
+<section id="faq">
+<h2>Často kladené otázky</h2>
+<details>
+<summary>Google Search Console – čo to je?</summary>
+<p>Bezplatný nástroj Google pre majiteľov webov. Ukazuje, na aké dopyty sa web zobrazuje vo Vyhľadávaní Google, koľko má kliknutí a zobrazení, ktoré stránky sú indexované a aké problémy Google na webe našiel. Prihlásite sa na search.google.com/search-console účtom Google.</p>
+</details>
+<details>
+<summary>Je Google Webmaster Tools to isté ako Search Console?</summary>
+<p>Áno. Google Webmaster Tools je pôvodný názov nástroja, Google ho v roku 2015 premenoval na Search Console a odvtedy ho niekoľkokrát prerobil. Návody s názvom Webmaster Tools sú preto väčšinou zastarané, menu aj prehľady dnes vyzerajú inak.</p>
+</details>
+<details>
+<summary>Je Search Console zadarmo?</summary>
+<p>Áno, Google Search Console je bezplatná. Potrebujete len účet Google a overiť, že web je váš. Žiadna platená verzia s viac funkciami neexistuje.</p>
+</details>
+<details>
+<summary>Ako dlho trvá indexovanie novej stránky?</summary>
+<p>Podľa Google zvyčajne deň až dva týždne, niekedy dlhšie. Vyžiadanie indexovania cez Kontrolu webovej adresy môže proces urýchliť, ale nič nezaručí. Pri novom webe alebo po migrácii počítajte s niekoľkými týždňami, kým Google prehľadá všetky dôležité stránky.</p>
+</details>
+<details>
+<summary>Prečo sa moja stránka neindexuje?</summary>
+<p>Najprv ju skontrolujte v Kontrole webovej adresy, ktorá ukáže dôvod. Najčastejšie ide o značku noindex, blokovanie v robots.txt, kanonickú značku na inú adresu, chýbajúce interné odkazy alebo príliš slabý či duplicitný obsah. Stav „Objavené – momentálne nie je v indexe" pri novom webe býva len otázkou času.</p>
+</details>
+<details>
+<summary>Search Console vs. Google Analytics – aký je rozdiel?</summary>
+<p>Search Console ukazuje, čo sa deje vo Vyhľadávaní Google pred klikom: zobrazenia, kliky, dopyty, pozície a indexovanie. Google Analytics 4 meria, čo návštevník robí na webe po príchode z akéhokoľvek kanála: relácie, konverzie a tržby. Ich čísla sa preto nezhodujú a na rozhodovanie potrebujete oba.</p>
+</details>
+</section>
+<p>Ak sa v Search Console objavil stav, ktorý si neviete vysvetliť, alebo chcete vedieť, prečo váš web neprináša návštevnosť z Google, pozrieme sa na to v rámci <a href="/seo" title="SEO auditu">SEO auditu</a>.</p>
+
+  </div>
+</article>
+
+<!-- Meta tagy pre CMS (vložiť do <head>) -->
+<!--
+<meta name="description" content="Google Search Console krok za krokom: pridanie webu, overenie cez DNS, sitemap, vyžiadanie indexovania, stavy stránok a čo kontrolovať každý mesiac.">
+<title>Google Search Console: návod pre začiatočníkov (2026)</title>
+<link rel="canonical" href="https://starbomedia.sk/google-search-console-navod">
+-->
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Google Search Console: návod pre začiatočníkov – nastavenie, indexovanie a čo kontrolovať (2026)",
+    "description": "Google Search Console krok za krokom: pridanie webu, overenie cez DNS, sitemap, vyžiadanie indexovania, stavy stránok a čo kontrolovať každý mesiac.",
+    "datePublished": "2026-10-13",
+    "dateModified": "2026-10-13",
+    "inLanguage": "sk",
+    "author": [
+      {
+        "@type": "Organization",
+        "name": "Starbomedia",
+        "url": "https://starbomedia.sk"
+      },
+      {
+        "@type": "Person",
+        "name": "Peter Štrbo",
+        "jobTitle": "CEO a zakladateľ, Starbomedia",
+        "url": "https://starbomedia.sk/tim-starbomedia",
+        "knowsAbout": [
+          "SEO",
+          "Google Search Console",
+          "Google Ads",
+          "GEO"
+        ]
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Starbomedia",
+      "url": "https://starbomedia.sk",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://starbomedia.sk/logo.png"
+      }
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://starbomedia.sk/blog/google-search-console-navod/hero-google-search-console-navod.webp",
+      "width": 1200,
+      "height": 675
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://starbomedia.sk/google-search-console-navod"
+    },
+    "keywords": "google search console, search console, google search console návod, webmaster tools, sitemap, vyžiadať indexovanie, objavené momentálne nie je v indexe, kontrola webovej adresy"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Google Search Console – čo to je?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bezplatný nástroj Google pre majiteľov webov. Ukazuje, na aké dopyty sa web zobrazuje vo Vyhľadávaní Google, koľko má kliknutí a zobrazení, ktoré stránky sú indexované a aké problémy Google na webe našiel. Prihlásite sa na search.google.com/search-console účtom Google."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Je Google Webmaster Tools to isté ako Search Console?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno. Google Webmaster Tools je pôvodný názov nástroja, Google ho v roku 2015 premenoval na Search Console a odvtedy ho niekoľkokrát prerobil. Návody s názvom Webmaster Tools sú preto väčšinou zastarané, menu aj prehľady dnes vyzerajú inak."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Je Search Console zadarmo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno, Google Search Console je bezplatná. Potrebujete len účet Google a overiť, že web je váš. Žiadna platená verzia s viac funkciami neexistuje."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ako dlho trvá indexovanie novej stránky?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Podľa Google zvyčajne deň až dva týždne, niekedy dlhšie. Vyžiadanie indexovania cez Kontrolu webovej adresy môže proces urýchliť, ale nič nezaručí. Pri novom webe alebo po migrácii počítajte s niekoľkými týždňami, kým Google prehľadá všetky dôležité stránky."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Prečo sa moja stránka neindexuje?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Najprv ju skontrolujte v Kontrole webovej adresy, ktorá ukáže dôvod. Najčastejšie ide o značku noindex, blokovanie v robots.txt, kanonickú značku na inú adresu, chýbajúce interné odkazy alebo príliš slabý či duplicitný obsah. Stav „Objavené – momentálne nie je v indexe\" pri novom webe býva len otázkou času."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Search Console vs. Google Analytics – aký je rozdiel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Search Console ukazuje, čo sa deje vo Vyhľadávaní Google pred klikom: zobrazenia, kliky, dopyty, pozície a indexovanie. Google Analytics 4 meria, čo návštevník robí na webe po príchode z akéhokoľvek kanála: relácie, konverzie a tržby. Ich čísla sa preto nezhodujú a na rozhodovanie potrebujete oba."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Domov",
+        "item": "https://starbomedia.sk/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://starbomedia.sk/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Google Search Console: návod pre začiatočníkov – nastavenie, indexovanie a čo kontrolovať (2026)"
+      }
+    ]
+  }
+]
+</script>
