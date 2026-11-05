@@ -4,7 +4,7 @@ import {
     BarChart3,
     FileText,
     ShieldCheck,
-    PenTool,
+    Image as ImageIcon,
     Layers,
     Megaphone,
     CheckCircle,
@@ -46,7 +46,7 @@ const steps = [
     },
     {
         title: 'Sémantické HTML',
-        desc: 'Konverzia do čistého HTML — obsah a TOC, FAQ akordeón, Schema.org JSON-LD a ohľad na Core Web Vitals.',
+        desc: 'Konverzia do čistého HTML — obsah a TOC, tabuľky, FAQ akordeón, Schema.org JSON-LD, vygenerované obrázky a diagramy.',
     },
     {
         title: 'Distribučný balík',
@@ -106,13 +106,13 @@ export default function AiSeoArticlesPage() {
                             </p>
                             <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 500 }}>
-                                    <CheckCircle size={20} color="#10b981" /> Reálne SEO dáta cez DataForSEO
+                                    <CheckCircle size={20} color="#10b981" /> Témy postavené na reálnych dátach o vyhľadávaní
                                 </li>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 500 }}>
                                     <CheckCircle size={20} color="#10b981" /> Fact-checking z viacerých zdrojov
                                 </li>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 500 }}>
-                                    <CheckCircle size={20} color="#10b981" /> HTML pripravené pre WordPress aj Webflow
+                                    <CheckCircle size={20} color="#10b981" /> Hotové HTML s obrázkami a diagramami pre akýkoľvek web
                                 </li>
                             </ul>
                         </div>
@@ -153,8 +153,8 @@ export default function AiSeoArticlesPage() {
                             <BarChart3 className={styles.cardIcon} />
                             <h3 className={styles.cardTitle}>Reálne SEO dáta</h3>
                             <p className={styles.cardDesc}>
-                                Napojenie na DataForSEO prináša search volume, CPC, obtiažnosť aj intent v reálnom čase.
-                                Témy tak vychádzajú z dát, nie z dohadov.
+                                Pracujeme s aktuálnymi dátami o vyhľadávaní — hľadanosť, obtiažnosť, konkurencia aj
+                                zámer, s ktorým ľudia hľadajú. Témy tak vychádzajú z dát, nie z dohadov.
                             </p>
                         </div>
                         <div className={styles.card}>
@@ -175,18 +175,20 @@ export default function AiSeoArticlesPage() {
                         </div>
                         <div className={styles.card}>
                             <Layers className={styles.cardIcon} />
-                            <h3 className={styles.cardTitle}>Sémantické HTML pre CMS</h3>
+                            <h3 className={styles.cardTitle}>Hotové HTML pre akýkoľvek web</h3>
                             <p className={styles.cardDesc}>
-                                Výstupom je čisté HTML s obsahom a TOC, FAQ akordeónom, Schema.org JSON-LD a ohľadom
-                                na Core Web Vitals — pripravené pre WordPress aj Webflow.
+                                Článok dostanete ako čisté HTML, ktoré vložíte do Shoptetu, WordPressu, Shopify aj
+                                vlastného systému. Žiadne kopírovanie z Wordu a rozbité formátovanie — obsah, tabuľky,
+                                FAQ, meta údaje, interné odkazy aj štruktúrované dáta sú už na svojom mieste.
                             </p>
                         </div>
                         <div className={styles.card}>
-                            <PenTool className={styles.cardIcon} />
-                            <h3 className={styles.cardTitle}>Interné prelinkovanie a meta</h3>
+                            <ImageIcon className={styles.cardIcon} />
+                            <h3 className={styles.cardTitle}>Obrázky a diagramy v balíku</h3>
                             <p className={styles.cardDesc}>
-                                Súčasťou revízie je doplnenie meta údajov a logické interné prelinkovanie naprieč
-                                obsahom webu.
+                                K textu pripravíme obrázky a diagramy, ktoré vysvetlia postup či porovnanie rýchlejšie
+                                než odsek textu. Sú optimalizované na rýchle načítanie a s popisom (alt textom) pre
+                                vyhľadávače aj čítačky obrazovky.
                             </p>
                         </div>
                         <div className={styles.card}>

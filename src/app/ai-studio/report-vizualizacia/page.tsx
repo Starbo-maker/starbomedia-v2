@@ -83,7 +83,7 @@ export default function ReportVisualizationPage() {
                     <div className={styles.card}>
                         <Database className={styles.cardIcon} />
                         <h3 className={styles.cardTitle}>Napojené zdroje dát</h3>
-                        <p className={styles.cardDesc}>Dáta ťaháme cez Google Ads API a DataForSEO, výstupy posielame do Slacku a Ecomailu. Bez ručného kopírovania tabuliek.</p>
+                        <p className={styles.cardDesc}>Dáta ťaháme priamo z reklamných systémov, analytiky a SEO zdrojov, výstupy posielame do Slacku a Ecomailu. Bez ručného kopírovania tabuliek.</p>
                     </div>
                 </div>
 
