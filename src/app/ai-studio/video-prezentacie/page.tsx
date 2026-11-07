@@ -32,7 +32,7 @@ export default function VideoPresentationsPage() {
                                 Na vyžiadanie / beta
                             </span>
                         </div>
-                        <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>AI video prezentácie</h1>
+                        <h1 className={styles.title} style={{ fontSize: 'var(--fs-h1)' }}>AI video prezentácie</h1>
                         <p className={styles.subtitle}>
                             Firemné video prezentácie a školenia s AI avatarom a klonovaným hlasom. Prepíšete skript a vznikne nové video bez natáčania. Pripravujeme ako pilotnú službu na mieru pre konkrétne zadanie.
                         </p>
@@ -59,7 +59,7 @@ export default function VideoPresentationsPage() {
                 </div>
             </header>
 
-            <div className="container" style={{ paddingBottom: '8rem' }}>
+            <div className="container" style={{ paddingBottom: 'var(--space-8)' }}>
                 <div className={styles.grid}>
                     <div className={styles.card}>
                         <Video className={styles.cardIcon} />
@@ -73,7 +73,7 @@ export default function VideoPresentationsPage() {
                     </div>
                 </div>
 
-                <div className={styles.demoContainer} style={{ marginTop: '4rem' }}>
+                <div className={styles.demoContainer} style={{ marginTop: 'var(--space-4)' }}>
                     <h2 style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>Technológie, s ktorými pracujeme</h2>
                     <p style={{ color: '#64748b', lineHeight: '1.6', marginBottom: '2rem' }}>
                         Pilot staviame na overených nástrojoch. Hlas riešime cez ElevenLabs (voice clone a text-to-speech), obraz cez avatarové a lip-sync nástroje. Rozsah a podobu výstupu nastavujeme podľa konkrétneho zadania.
@@ -88,7 +88,7 @@ export default function VideoPresentationsPage() {
                     </ul>
                 </div>
 
-                <div className={styles.ctaBox} style={{ marginTop: '4rem' }}>
+                <div className={styles.ctaBox} style={{ marginTop: 'var(--space-4)' }}>
                     <h2 className={styles.ctaTitle} style={{ color: 'white' }}>Chcete vyskúšať pilot na mieru?</h2>
                     <Link href="/kontakt" className="btn" style={{ background: 'white', color: '#6366f1', marginTop: '2rem' }}>
                         Ozvite sa nám

@@ -168,3 +168,13 @@
     text-align: center;
     margin-top: 2.5rem;
 }
+
+@media (max-width: 640px) {
+    .wrap {
+        padding: 3rem 0;
+    }
+
+    .card {
+        padding: 1.35rem;
+    }
+}

@@ -108,7 +108,7 @@ export default function AuditPage() {
             <div className={`container ${styles.content}`}>
                 {/* Kedy audit chcieť */}
                 <section className={styles.section} style={{ padding: '2rem 0' }}>
-                    <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>Kedy dáva audit zmysel?</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2-md)', marginBottom: '1rem' }}>Kedy dáva audit zmysel?</h2>
                     <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', maxWidth: '48rem' }}>
                         <li className={styles.featureItem}><CheckCircle size={18} color="#10b981" /> Máte podozrenie, že rozpočet sa míňa zbytočne — výsledky stagnujú, náklady rastú.</li>
                         <li className={styles.featureItem}><CheckCircle size={18} color="#10b981" /> Účet spravuje agentúra či freelancer a chcete <strong>nezávislý druhý názor</strong>.</li>
@@ -119,7 +119,7 @@ export default function AuditPage() {
 
                 {/* 9 oblastí */}
                 <section className={styles.section}>
-                    <h2 style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>Čo audit kontroluje: 74 bodov v 9 oblastiach</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '0.75rem' }}>Čo audit kontroluje: 74 bodov v 9 oblastiach</h2>
                     <p className={styles.text} style={{ marginBottom: '1.5rem', maxWidth: '46rem' }}>
                         Používame vlastnú kontrolnú metodiku so 74 bodmi, postavenú na správe účtov s ročným spendom 10M€+ naprieč 13 trhmi CEE.
                     </p>
@@ -136,7 +136,7 @@ export default function AuditPage() {
 
                 {/* Najčastejšie nálezy */}
                 <section className={styles.section}>
-                    <h2 style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>Čo v auditoch nachádzame najčastejšie</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '0.75rem' }}>Čo v auditoch nachádzame najčastejšie</h2>
                     <p className={styles.text} style={{ marginBottom: '1.5rem', maxWidth: '46rem' }}>
                         Päť nálezov, ktoré sa opakujú naprieč účtami bez ohľadu na veľkosť — a ktoré spolu tvoria väčšinu zbytočne minutých rozpočtov:
                     </p>
@@ -157,7 +157,7 @@ export default function AuditPage() {
                 </section>
 
                 {/* Priebeh */}
-                <section className={styles.section} style={{ background: '#f8fafc', padding: '2.5rem', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
+                <section className={styles.section} style={{ background: '#f8fafc', padding: 'var(--box-pad)', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
                     <h2 style={{ fontSize: '1.8rem', marginBottom: '1.5rem' }}>Ako audit prebieha</h2>
                     <div className={styles.grid} style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
                         {[
@@ -176,7 +176,7 @@ export default function AuditPage() {
 
                 {/* FAQ */}
                 <section className={styles.section}>
-                    <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Často kladené otázky o audite</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1.5rem' }}>Často kladené otázky o audite</h2>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', maxWidth: '52rem' }}>
                         {faq.map((f) => (
                             <details key={f.q} style={{ background: 'white', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '1rem 1.25rem' }}>

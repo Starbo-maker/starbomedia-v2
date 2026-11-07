@@ -74,7 +74,7 @@ export default function ComparisonsPage() {
                 </section>
 
                 {/* Platforms */}
-                <section className={styles.section} style={{ marginTop: '4rem' }}>
+                <section className={styles.section} style={{ marginTop: 'var(--space-4)' }}>
                     <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Kde všade predávame?</h2>
                     <div className={styles.cardGrid}>
                         {/* Heureka */}
@@ -113,7 +113,7 @@ export default function ComparisonsPage() {
                     </div>
                 </section>
 
-                <div className={styles.ctaBox} style={{ marginTop: '5rem' }}>
+                <div className={styles.ctaBox} style={{ marginTop: 'var(--space-5)' }}>
                     <h2 className={styles.ctaTitle}>Využite potenciál porovnávačov naplno</h2>
                     <Link href="/kontakt" className="btn btn-primary" style={{ background: '#0ea5e9', border: 'none', padding: '1rem 3rem' }}>
                         Chcem audit feedu

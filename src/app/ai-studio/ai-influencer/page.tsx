@@ -32,7 +32,7 @@ export default function AiInfluencerPage() {
                                 Beta · na vyžiadanie
                             </span>
                         </div>
-                        <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>AI influencer a lip-sync</h1>
+                        <h1 className={styles.title} style={{ fontSize: 'var(--fs-h1)' }}>AI influencer a lip-sync</h1>
                         <p className={styles.subtitle}>
                             Vytvoríme konzistentného virtuálneho charakteru — tvár vašej značky, ktorá vyzerá rovnako
                             naprieč všetkými zábermi. Vlastný hlas a lip-sync video použiteľné v rôznych jazykoch.
@@ -61,12 +61,12 @@ export default function AiInfluencerPage() {
                 </div>
             </header>
 
-            <div className="container" style={{ paddingBottom: '8rem' }}>
+            <div className="container" style={{ paddingBottom: 'var(--space-8)' }}>
                 <div className={styles.demoContainer}>
                     <div className={styles.grid} style={{ alignItems: 'center' }}>
                         <div style={{ padding: '1rem' }}>
                             <UserCheck size={48} color="#6366f1" style={{ marginBottom: '1.5rem' }} />
-                            <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Tvár, ktorá ostáva konzistentná</h2>
+                            <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1rem' }}>Tvár, ktorá ostáva konzistentná</h2>
                             <p style={{ color: '#64748b', lineHeight: '1.6', marginBottom: '2rem' }}>
                                 Hlavnou prednosťou je face lock — charakter zafixujeme cez sériu referenčných obrázkov,
                                 takže si tvár udrží konzistenciu naprieč jednotlivými zábermi. Doplníme vlastný hlas
@@ -101,7 +101,7 @@ export default function AiInfluencerPage() {
                     </div>
                 </div>
 
-                <div className={styles.grid} style={{ marginTop: '5rem' }}>
+                <div className={styles.grid} style={{ marginTop: 'var(--space-5)' }}>
                     <div className={styles.card}>
                         <Layers className={styles.cardIcon} />
                         <h3 className={styles.cardTitle}>Reálny stack</h3>

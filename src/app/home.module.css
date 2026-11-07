@@ -42,7 +42,32 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1.75rem;
+}
+
+/* Riadok dôvery pod tlačidlami v hero */
+.trustRow {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 3.5rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.trustRow svg {
+    vertical-align: -3px;
+    margin-right: 0.35rem;
+}
+
+.trustRow strong {
+    color: var(--foreground);
+}
+
+.trustRow a:hover {
+    color: var(--primary-dark);
 }
 
 /* Client Marquee */
@@ -238,4 +263,117 @@
     text-align: center;
     padding: 6rem 0;
     background: linear-gradient(180deg, white 0%, #f8fafc 100%);
+}
+.aiInner {
+    position: relative;
+    z-index: 2;
+    padding: 0 2rem;
+}
+
+.ctaButton {
+    padding: 1.2rem 4rem;
+    font-size: 1.2rem;
+}
+
+/* Mobil: technológie preč, tlačidlá pod sebou, kompaktnejšie medzery */
+@media (max-width: 640px) {
+    .hero {
+        padding: 6.5rem 0 1rem;
+    }
+
+    .heroTitle {
+        font-size: clamp(2.3rem, 9vw + 0.3rem, 3rem);
+    }
+
+    .heroSubtitle {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 1rem;
+    }
+
+    .trustRow {
+        gap: 0.4rem 1rem;
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+    }
+
+    .marqueeSection {
+        display: none;
+    }
+
+    .bentoSection {
+        padding: 2.5rem 0;
+    }
+
+    .bentoGrid {
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .bentoCard {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .cardIcon {
+        margin-bottom: 1rem;
+    }
+
+    .aiSection {
+        margin: 1rem 0 2rem;
+        padding: 3rem 0;
+        border-radius: 24px;
+    }
+
+    .aiInner {
+        padding: 0 1.25rem;
+    }
+
+    .aiGrid {
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .aiCard {
+        padding: 1.5rem;
+    }
+
+    .statsContainer {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem 1rem;
+        margin: 2rem 0;
+        padding: 1.75rem 1rem;
+    }
+
+    .statNumber {
+        font-size: 2.2rem;
+    }
+
+    .statLabel {
+        font-size: 0.75rem;
+    }
+
+    .ctaSection {
+        padding: 3.5rem 0;
+    }
+
+    .ctaButton {
+        padding: 1rem 1.75rem;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+}
+
+.cardLink {
+    margin-top: auto;
+    padding-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
 }

@@ -20,7 +20,7 @@ export default function PpcSpecialistaPage() {
                     <span style={{ display: 'inline-block', background: 'rgba(139, 92, 246, 0.1)', color: 'var(--primary-dark)', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', padding: '0.35rem 0.9rem', borderRadius: '50px', marginBottom: '1.25rem' }}>
                         Kariéra · Šaľa
                     </span>
-                    <h1 className={serviceStyles.title} style={{ fontSize: '2.5rem' }}>Senior PPC špecialista</h1>
+                    <h1 className={serviceStyles.title} style={{ fontSize: 'var(--fs-h2)' }}>Senior PPC špecialista</h1>
                 </div>
             </header>
 

@@ -15,7 +15,7 @@ export default function ProductToVideoPage() {
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
                         <div className={styles.badge}>Video a hlas</div>
-                        <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>Product to Video</h1>
+                        <h1 className={styles.title} style={{ fontSize: 'var(--fs-h1)' }}>Product to Video</h1>
                         <p className={styles.subtitle}>
                             Z produktovej fotky alebo feedu vytvoríme krátke video reklamy. Pomocou AI rozhýbeme vaše vizuály
                             do 5 až 10 sekundových klipov pripravených pre Meta, TikTok a YouTube Shorts.
@@ -43,12 +43,12 @@ export default function ProductToVideoPage() {
                 </div>
             </header>
 
-            <div className="container" style={{ paddingBottom: '8rem' }}>
+            <div className="container" style={{ paddingBottom: 'var(--space-8)' }}>
                 <div className={styles.demoContainer}>
                     <div className={styles.grid}>
                         <div style={{ padding: '1rem' }}>
                             <Video size={48} color="#6366f1" style={{ marginBottom: '1.5rem' }} />
-                            <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Z fotky na video reklamu</h2>
+                            <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1rem' }}>Z fotky na video reklamu</h2>
                             <p style={{ color: '#64748b', marginBottom: '2rem' }}>
                                 Vezmeme vašu produktovú fotku alebo položku z feedu a technikou image-to-video ju rozhýbeme do krátkeho klipu.
                                 Výstupom je hotový vertikálny formát pripravený do reklamy na Meta, TikToku či YouTube Shorts — bez kameramana a drahej techniky.
@@ -63,7 +63,7 @@ export default function ProductToVideoPage() {
                     </div>
                 </div>
 
-                <h2 style={{ fontSize: '2rem', marginTop: '5rem', marginBottom: '0.75rem', textAlign: 'center' }}>
+                <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginTop: 'var(--space-5)', marginBottom: '0.75rem', textAlign: 'center' }}>
                     Nepoužívame jeden univerzálny model
                 </h2>
                 <p style={{ color: '#64748b', lineHeight: '1.6', maxWidth: '640px', margin: '0 auto 2.5rem', textAlign: 'center' }}>

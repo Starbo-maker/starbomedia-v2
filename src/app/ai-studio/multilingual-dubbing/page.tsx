@@ -15,7 +15,7 @@ export default function MultilingualDubbingPage() {
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
                         <div className={styles.badge}>Video a hlas</div>
-                        <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>Viacjazyčný dabing videí</h1>
+                        <h1 className={styles.title} style={{ fontSize: 'var(--fs-h1)' }}>Viacjazyčný dabing videí</h1>
                         <p className={styles.subtitle}>
                             Zbúrajte jazykové bariéry a oslovte zákazníkov v ich rodnej reči.
                             Automaticky nadabujeme vaše video do viac než 40 jazykov so zachovaním pôvodného
@@ -44,7 +44,7 @@ export default function MultilingualDubbingPage() {
                 </div>
             </header>
 
-            <div className="container" style={{ paddingBottom: '8rem' }}>
+            <div className="container" style={{ paddingBottom: 'var(--space-8)' }}>
                 <div className={styles.grid}>
                     <div className={styles.card}>
                         <Globe className={styles.cardIcon} />
@@ -63,7 +63,7 @@ export default function MultilingualDubbingPage() {
                     </div>
                 </div>
 
-                <div style={{ marginTop: '4rem', textAlign: 'center' }}>
+                <div style={{ marginTop: 'var(--space-4)', textAlign: 'center' }}>
                     <Link href="/kontakt" className="btn btn-primary" style={{ background: 'var(--ai-gradient)' }}>
                         Chcem expandovať do zahraničia
                     </Link>

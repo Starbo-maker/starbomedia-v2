@@ -57,7 +57,7 @@ export default function SeoPage() {
                 <section className={styles.section} style={{ padding: '2rem 0' }}>
                     <div className={styles.grid} style={{ gap: '3rem', alignItems: 'center' }}>
                         <div>
-                            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Čo sa v SEO zmenilo</h2>
+                            <h2 style={{ fontSize: 'var(--fs-h2)', marginBottom: '1.5rem' }}>Čo sa v SEO zmenilo</h2>
                             <p className={styles.text} style={{ marginBottom: '1rem' }}>
                                 Google ročne robí tisíce úprav a niekoľko veľkých core aktualizácií. Pribudli AI Overviews, prísnejšie
                                 hodnotenie dôveryhodnosti a tvrdší postih voči nečítanému obsahu. Generický text prepísaný z konkurencie
@@ -74,23 +74,23 @@ export default function SeoPage() {
                             </ul>
                         </div>
                         {/* Stats Box */}
-                        <div style={{ background: '#f8fafc', padding: '2.5rem', borderRadius: '20px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
+                        <div style={{ background: '#f8fafc', padding: 'var(--box-pad)', borderRadius: '20px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
                             <h3 style={{ fontSize: '1.2rem', color: '#64748b', marginBottom: '2rem' }}>Starbomedia v skratke</h3>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#10b981' }}>od 2012</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#10b981' }}>od 2012</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>V online marketingu</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#059669' }}>84+</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#059669' }}>84+</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Klientov v starostlivosti</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#3b82f6' }}>13</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#3b82f6' }}>13</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Trhov CEE, kde pôsobíme</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#f59e0b' }}>10 M€+</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#f59e0b' }}>10 M€+</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Ročný ad spend naprieč kanálmi</div>
                                 </div>
                             </div>
@@ -234,7 +234,7 @@ export default function SeoPage() {
 
                 {/* Process */}
                 <section className={styles.section} style={{ marginTop: '2rem' }}>
-                    <div style={{ background: '#ecfdf5', borderRadius: '24px', padding: 'clamp(1.5rem, 5vw, 3rem)' }}>
+                    <div style={{ background: '#ecfdf5', borderRadius: '24px', padding: 'clamp(1rem, 5vw, 3rem)' }}>
                         <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Ako prebieha spolupráca?</h2>
                         <div className={styles.cardGrid} style={{ alignItems: 'flex-start' }}>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #d1fae5' }}>

@@ -32,7 +32,7 @@ export default function VoiceBotsPage() {
                                 Na vyžiadanie / beta
                             </span>
                         </div>
-                        <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>AI Voice boti</h1>
+                        <h1 className={styles.title} style={{ fontSize: 'var(--fs-h1)' }}>AI Voice boti</h1>
                         <p className={styles.subtitle}>
                             Hlasoví AI agenti, ktorí zdvihnú hovor, odpovedia na otázky a dohodnú termín.
                             Hovoria plynule po slovensky a zvládnu odchádzajúce volania aj prichádzajúcu podporu.
@@ -61,11 +61,11 @@ export default function VoiceBotsPage() {
                 </div>
             </header>
 
-            <div className="container" style={{ paddingBottom: '8rem' }}>
+            <div className="container" style={{ paddingBottom: 'var(--space-8)' }}>
                 <div className={styles.demoContainer}>
                     <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
                         <Mic size={48} color="#6366f1" style={{ marginBottom: '1.5rem' }} />
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>O čom sa porozprávame?</h2>
+                        <h2 style={{ fontSize: 'var(--fs-h2)', marginBottom: '1.5rem' }}>O čom sa porozprávame?</h2>
                         <p style={{ color: '#64748b', fontSize: '1.1rem', marginBottom: '3rem' }}>
                             Hlasový AI agent spojí jazykový model s prirodzeným slovenským hlasom, takže konverzácia plynie
                             ako bežný telefonát. Žiadne tónové menu typu „stlačte jednotku“ — bot počúva, odpovedá
@@ -86,7 +86,7 @@ export default function VoiceBotsPage() {
                     </div>
                 </div>
 
-                <div className={styles.grid} style={{ marginTop: '5rem' }}>
+                <div className={styles.grid} style={{ marginTop: 'var(--space-5)' }}>
                     <div className={styles.card}>
                         <Bot className={styles.cardIcon} />
                         <h3 className={styles.cardTitle}>Ako to staviame</h3>

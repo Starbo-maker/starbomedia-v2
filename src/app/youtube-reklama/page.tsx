@@ -111,7 +111,7 @@ export default function YoutubeAdsPage() {
                 </section>
 
                 {/* Strategy */}
-                <section className={styles.section} style={{ textAlign: 'center', marginTop: '6rem' }}>
+                <section className={styles.section} style={{ textAlign: 'center', marginTop: 'var(--space-6)' }}>
                     <h2 style={{ marginBottom: '3rem' }}>Video reklama v nákupnom lieviku (See-Think-Do)</h2>
                     <div className={styles.cardGrid}>
                         <div className={styles.card}>

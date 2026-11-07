@@ -93,7 +93,7 @@ export default function SocialMediaPage() {
                 <section className={styles.section} style={{ padding: '2rem 0' }}>
                     <div className={styles.grid} style={{ gap: '3rem', alignItems: 'center' }}>
                         <div>
-                            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Správa sociálnych sietí a tvorba obsahu na kľúč</h2>
+                            <h2 style={{ fontSize: 'var(--fs-h2)', marginBottom: '1.5rem' }}>Správa sociálnych sietí a tvorba obsahu na kľúč</h2>
                             <p className={styles.text} style={{ marginBottom: '1rem' }}>
                                 Staráme sa o vaše sociálne siete od stratégie až po hotový, odpublikovaný príspevok.
                                 Vymyslíme témy, napíšeme scenáre, prídeme natočiť obsah priamo k vám, zostriháme videá,
@@ -105,7 +105,7 @@ export default function SocialMediaPage() {
                             </p>
                         </div>
                         {/* Checklist box */}
-                        <div style={{ background: '#f8fafc', padding: '2.5rem', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
+                        <div style={{ background: '#f8fafc', padding: 'var(--box-pad)', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
                             <h3 style={{ fontSize: '1.2rem', color: '#64748b', marginBottom: '1.5rem' }}>Čo máte u nás vybavené</h3>
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
                                 {[
@@ -128,7 +128,7 @@ export default function SocialMediaPage() {
 
                 {/* Reels a krátke videá — hlavná sekcia hneď za úvodom (podľa stratégie obsahu) */}
                 <section className={styles.section}>
-                    <div style={{ background: ACCENT_SOFT, borderRadius: '24px', padding: 'clamp(1.5rem, 5vw, 3rem)', border: `1px solid ${ACCENT_BORDER}` }}>
+                    <div style={{ background: ACCENT_SOFT, borderRadius: '24px', padding: 'clamp(1rem, 5vw, 3rem)', border: `1px solid ${ACCENT_BORDER}` }}>
                         <div style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
                             <Clapperboard size={32} color={ACCENT} style={{ marginBottom: '1rem' }} />
                             <h2 style={{ marginBottom: '1rem' }}>Reels a krátke videá — hlavný formát dnešných sociálnych sietí</h2>
@@ -213,7 +213,7 @@ export default function SocialMediaPage() {
 
                 {/* Ako spolupráca prebieha — 8 krokov */}
                 <section className={styles.section} style={{ marginTop: '1rem' }}>
-                    <div style={{ background: '#f8fafc', borderRadius: '24px', padding: 'clamp(1.5rem, 5vw, 3rem)', border: '1px solid #e2e8f0' }}>
+                    <div style={{ background: '#f8fafc', borderRadius: '24px', padding: 'clamp(1rem, 5vw, 3rem)', border: '1px solid #e2e8f0' }}>
                         <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>Ako spolupráca prebieha</h2>
                         <p className={styles.text} style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3rem' }}>
                             Jednoduchý a predvídateľný proces — vždy viete, čo sa kedy deje.

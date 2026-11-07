@@ -52,7 +52,7 @@ export default function AnalyticsPage() {
                 <section className={styles.section} style={{ padding: '2rem 0' }}>
                     <div className={styles.grid} style={{ alignItems: 'center', gap: '4rem' }}>
                         <div>
-                            <h2 style={{ marginBottom: '1.5rem', fontSize: '2.5rem' }}>Meráte správne? Pravdepodobne nie.</h2>
+                            <h2 style={{ marginBottom: '1.5rem', fontSize: 'var(--fs-h2)' }}>Meráte správne? Pravdepodobne nie.</h2>
                             <p className={styles.text} style={{ marginBottom: '1.5rem' }}>
                                 S príchodom <strong>Google Analytics 4 (GA4)</strong> sa pravidlá hry zmenili. Staré "Universal Analytics" návyky už nefungujú.
                                 Ak nemáte nastavený <strong>Server-side GTM</strong> a <strong>Consent Mode v2</strong>, môžete prichádzať aj o 20-40 % dát o vašich konverziách kvôli blokovačom reklám a cookie lištám.

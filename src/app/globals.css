@@ -31,6 +31,20 @@
   /* Spacing */
   --container-padding: 2rem;
   --max-width: 1200px;
+  /* Veľké vertikálne medzery (inline marginTop/paddingBottom) — na mobile sa zmenšia */
+  --space-4: 4rem;
+  --space-5: 5rem;
+  --space-6: 6rem;
+  --space-8: 8rem;
+  --box-pad: clamp(1.25rem, 4vw, 2.5rem);
+
+  /* Typografia — plynulé veľkosti, aby nadpisy na mobile nepretekali */
+  --fs-h1: clamp(2.2rem, 6vw + 0.9rem, 3.5rem);
+  --fs-h2-lg: clamp(1.85rem, 4vw + 1rem, 3rem);
+  --fs-h2: clamp(1.7rem, 3vw + 1rem, 2.5rem);
+  --fs-h2-md: clamp(1.6rem, 2vw + 1rem, 2.2rem);
+  --fs-h2-sm: clamp(1.5rem, 1.5vw + 1rem, 2rem);
+  --fs-stat: clamp(1.8rem, 4vw + 0.8rem, 2.5rem);
 
   /* Animations */
   --transition-fast: 0.2s ease;
@@ -86,10 +100,11 @@ h6 {
   margin-bottom: 1rem;
   color: #0f172a;
   /* Slate 900 */
+  overflow-wrap: break-word;
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: var(--fs-h1);
   letter-spacing: -0.02em;
   color: #6d28d9;
   /* fallback ak background-clip:text zlyhá */
@@ -100,7 +115,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: var(--fs-h2);
   letter-spacing: -0.01em;
 }
 
@@ -187,6 +202,35 @@ p {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary);
+}
+
+/* Mobil: menšie bočné okraje a odsadenia, aby text nebol v úzkom slížiku */
+@media (max-width: 640px) {
+  :root {
+    --container-padding: 1.25rem;
+    --space-4: 2.5rem;
+    --space-5: 3rem;
+    --space-6: 3.5rem;
+    --space-8: 4rem;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .btn {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .btn-lg {
+    padding: 0.95rem 1.75rem;
+  }
 }
 
 /* Accessibility: viditeľný fokus pre klávesnicu */

@@ -15,7 +15,7 @@ export default function MarketingBannersPage() {
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
                         <div className={styles.badge}>Generovanie kreatív</div>
-                        <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>Marketing bannery</h1>
+                        <h1 className={styles.title} style={{ fontSize: 'var(--fs-h1)' }}>Marketing bannery</h1>
                         <p className={styles.subtitle}>
                             Reklamné bannery generujeme z vašej brand DNA – z loga, farieb a tónu, nie zo šablón.
                             Produkt ostáva verný, scény tvoríme na mieru pre Meta aj Google Ads.
@@ -43,12 +43,12 @@ export default function MarketingBannersPage() {
                 </div>
             </header>
 
-            <div className="container" style={{ paddingBottom: '8rem' }}>
+            <div className="container" style={{ paddingBottom: 'var(--space-8)' }}>
                 <div className={styles.demoContainer}>
-                    <div className={styles.grid}>
-                        <div style={{ padding: '2rem' }}>
+                    <div>
+                        <div className={styles.demoText}>
                             <ImageIcon size={48} color="#6366f1" style={{ marginBottom: '1.5rem' }} />
-                            <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Kreatívy z vašej brand DNA</h2>
+                            <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1rem' }}>Kreatívy z vašej brand DNA</h2>
                             <p style={{ color: '#64748b', lineHeight: '1.6', marginBottom: '2rem' }}>
                                 Vaše logo, farby a tón uložíme ako brand profil. Z neho generujeme reklamné bannery a kreatívy na mieru – nepracujeme so šablónami. Produkt ostáva verný a scény vznikajú presne pre váš brand.
                             </p>
@@ -64,14 +64,10 @@ export default function MarketingBannersPage() {
                                 </li>
                             </ul>
                         </div>
-                        <div style={{ background: '#f1f5f9', borderRadius: '16px', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            {/* Placeholder for demo image */}
-                            <span style={{ color: '#94a3b8', fontWeight: 600 }}>Ukážka bannerov pre Meta a Google Ads</span>
-                        </div>
                     </div>
                 </div>
 
-                <div className={styles.grid} style={{ marginTop: '5rem' }}>
+                <div className={styles.grid} style={{ marginTop: 'var(--space-5)' }}>
                     <div className={styles.card}>
                         <ShieldCheck className={styles.cardIcon} />
                         <h3 className={styles.cardTitle}>Brand-locked generovanie</h3>
@@ -88,7 +84,7 @@ export default function MarketingBannersPage() {
                         <p className={styles.cardDesc}>Meta feed aj story, Google Display a Shopping. Pripravíme pomery 1:1, 9:16, 16:9 a 4:5 z jedného brand profilu.</p>
                     </div>
                 </div>
-                <div style={{ marginTop: '4rem', textAlign: 'center' }}>
+                <div style={{ marginTop: 'var(--space-4)', textAlign: 'center' }}>
                     <Link href="/kontakt" className="btn btn-primary" style={{ background: 'var(--ai-gradient)' }}>
                         Objednať sadu bannerov
                     </Link>

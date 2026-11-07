@@ -167,7 +167,7 @@ export default function PristupyPage() {
 
                 {PLATFORMY.map((p) => (
                     <section key={p.id} id={p.id} className={styles.section} style={{ scrollMarginTop: '6rem' }}>
-                        <h2 style={{ fontSize: '2rem', marginBottom: '0.6rem' }}>{p.nazov}</h2>
+                        <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '0.6rem' }}>{p.nazov}</h2>
                         <p className={styles.text} style={{ marginBottom: '1.25rem' }}><strong>Čo potrebujeme:</strong> {p.potrebujeme}</p>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '1.75rem', alignItems: 'start' }}>
                             <LoopVideo name={p.video} label={`Videonávod: ${p.nazov}`} />

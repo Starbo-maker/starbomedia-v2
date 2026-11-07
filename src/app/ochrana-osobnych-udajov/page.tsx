@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         <>
             <header className={serviceStyles.header} style={{ padding: '6rem 0 3rem' }}>
                 <div className={`container ${serviceStyles.headerContent}`}>
-                    <h1 className={serviceStyles.title} style={{ fontSize: '2.5rem' }}>Ochrana osobných údajov</h1>
+                    <h1 className={serviceStyles.title} style={{ fontSize: 'var(--fs-h2)' }}>Ochrana osobných údajov</h1>
                 </div>
             </header>
 

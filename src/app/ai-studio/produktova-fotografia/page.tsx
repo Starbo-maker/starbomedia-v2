@@ -49,7 +49,7 @@ export default function AiProductPhotoPage() {
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
                         <div className={styles.badge}>AI foto štúdio</div>
-                        <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>AI produktová fotografia</h1>
+                        <h1 className={styles.title} style={{ fontSize: 'var(--fs-h1)' }}>AI produktová fotografia</h1>
                         <p className={styles.subtitle}>
                             Z jedinej fotky produktu vytvoríme desiatky profesionálnych scén – lifestyle zábery,
                             hero shoty aj social kreatívy v hotových reklamných formátoch. Bez drahého fotenia
@@ -78,12 +78,12 @@ export default function AiProductPhotoPage() {
                 </div>
             </header>
 
-            <div className="container" style={{ paddingBottom: '8rem' }}>
+            <div className="container" style={{ paddingBottom: 'var(--space-8)' }}>
                 <div className={styles.demoContainer}>
                     <div className={styles.grid}>
-                        <div style={{ padding: '2rem' }}>
+                        <div className={styles.demoText}>
                             <ImageIcon size={48} color="#6366f1" style={{ marginBottom: '1.5rem' }} />
-                            <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Scény šité na váš produkt</h2>
+                            <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1rem' }}>Scény šité na váš produkt</h2>
                             <p style={{ color: '#64748b', lineHeight: '1.6', marginBottom: '2rem' }}>
                                 Z jednej fotky vášho produktu pripravíme celú sadu vizuálov – rôzne scény, uhly aj varianty,
                                 všetko v jednotnom štýle naprieč celým katalógom. Hotové vizuály nasadíte na produktový detail
@@ -116,9 +116,9 @@ export default function AiProductPhotoPage() {
                     </div>
                 </div>
 
-                <section style={{ marginTop: '6rem' }}>
+                <section style={{ marginTop: 'var(--space-6)' }}>
                     <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 3rem' }}>
-                        <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>Ukážky pred / po</h2>
+                        <h2 style={{ fontSize: 'var(--fs-h2-md)', marginBottom: '1rem' }}>Ukážky pred / po</h2>
                         <p style={{ color: '#64748b', lineHeight: '1.6' }}>
                             Reálne výstupy z našej produkcie. Malá fotka vľavo dole je vždy pôvodný podklad
                             z e-shopu – veľký vizuál je hotová AI scéna.
@@ -158,7 +158,7 @@ export default function AiProductPhotoPage() {
                         </div>
                     </div>
 
-                    <div className={styles.demoContainer} style={{ marginTop: '4rem', maxWidth: 'none' }}>
+                    <div className={styles.demoContainer} style={{ marginTop: 'var(--space-4)', maxWidth: 'none' }}>
                         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                             <h3 style={{ fontSize: '1.6rem', marginBottom: '0.5rem' }}>Tri scény z jednej fotky</h3>
                             <p style={{ color: '#64748b' }}>
@@ -188,7 +188,7 @@ export default function AiProductPhotoPage() {
                     </div>
                 </section>
 
-                <div className={styles.grid} style={{ marginTop: '5rem' }}>
+                <div className={styles.grid} style={{ marginTop: 'var(--space-5)' }}>
                     <div className={styles.card}>
                         <Zap className={styles.cardIcon} />
                         <h3 className={styles.cardTitle}>1 200 vizuálov za 2 až 4 dni</h3>

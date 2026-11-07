@@ -40,7 +40,7 @@
 }
 
 .title {
-    font-size: 3rem;
+    font-size: var(--fs-h1);
     font-weight: 800;
     margin-bottom: 1.5rem;
     line-height: 1.1;
@@ -315,4 +315,50 @@
 
 .headerContent span {
     display: block;
+}
+/* Mobil: dekoratívny vizuál preč, kompaktnejšie karty a medzery */
+@media (max-width: 640px) {
+    .header {
+        padding: 6.5rem 0 1rem;
+    }
+
+    .headerGrid {
+        gap: 0;
+    }
+
+    .heroVisual {
+        display: none;
+    }
+
+    .content {
+        padding-bottom: 3rem;
+    }
+
+    .section {
+        padding: 2.25rem 0;
+    }
+
+    .grid,
+    .cardGrid,
+    .gridTwo {
+        gap: 1.25rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .faqAnswer {
+        padding-right: 0;
+    }
+
+    .ctaBox {
+        margin-top: 3rem;
+        padding: 2.5rem 1.25rem;
+    }
+
+    .ctaTitle {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
 }

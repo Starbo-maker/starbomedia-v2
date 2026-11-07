@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import { Search, BarChart2, Share2, Globe, TrendingUp, Monitor, Zap, Mic, Video, Layers, ArrowRight, ShieldCheck, PieChart } from 'lucide-react';
+import { Search, BarChart2, Share2, Globe, TrendingUp, Monitor, Zap, Mic, Video, Layers, ArrowRight, ShieldCheck, PieChart, Star } from 'lucide-react';
 import styles from './home.module.css';
 import GoogleReviews from '../components/GoogleReviews';
+import { REVIEW_AGGREGATE } from '../data/reviews';
 
 export default function Home() {
   return (
@@ -37,13 +38,24 @@ export default function Home() {
             </p>
 
             <div className={styles.buttonGroup}>
-              <Link href="/kontakt" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}>
+              <Link href="/kontakt" className="btn btn-primary btn-lg">
                 Mám záujem o audit
               </Link>
               <Link href="/ai-studio" className="btn btn-secondary" style={{ padding: '1rem 2rem' }}>
                 Objaviť AI Studio
               </Link>
             </div>
+
+            <ul className={styles.trustRow}>
+              <li>
+                <a href={REVIEW_AGGREGATE.profileUrl} target="_blank" rel="noopener noreferrer">
+                  <Star size={16} fill="#f59e0b" color="#f59e0b" aria-hidden="true" />
+                  <strong>{REVIEW_AGGREGATE.rating.toFixed(1).replace('.', ',')}</strong> na Google ({REVIEW_AGGREGATE.count} recenzií)
+                </a>
+              </li>
+              <li><strong>84+</strong> klientov</li>
+              <li><ShieldCheck size={16} color="#8b5cf6" aria-hidden="true" /> Google Partner</li>
+            </ul>
           </div>
         </div>
 
@@ -64,7 +76,7 @@ export default function Home() {
       <section id="sluzby" className={styles.bentoSection}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Komplexný ekosystém pre váš rast</h2>
+            <h2 style={{ fontSize: 'var(--fs-h2)', marginBottom: '1rem' }}>Komplexný ekosystém pre váš rast</h2>
             <p style={{ maxWidth: '600px', margin: '0 auto', color: '#64748b' }}>
               Od prvého kliknutia až po opakovaný nákup. Pokrývame celú cestu zákazníka.
             </p>
@@ -85,7 +97,7 @@ export default function Home() {
                 <div><div style={{ fontWeight: 800, fontSize: '1.5rem', color: '#8b5cf6' }}>10 M€+</div><div style={{ fontSize: '0.8rem' }}>Ročný spend</div></div>
                 <div><div style={{ fontWeight: 800, fontSize: '1.5rem', color: '#10b981' }}>od 2012</div><div style={{ fontSize: '0.8rem' }}>Skúsenosti</div></div>
               </div>
-              <Link href="/google-reklama" style={{ position: 'absolute', bottom: '2rem', right: '2rem', background: '#f8fafc', padding: '0.8rem', borderRadius: '50%' }}>
+              <Link href="/google-reklama" aria-label="Google Ads – zistiť viac" style={{ position: 'absolute', bottom: '2rem', right: '2rem', background: '#f8fafc', padding: '0.8rem', borderRadius: '50%' }}>
                 <ArrowRight size={20} />
               </Link>
             </div>
@@ -95,7 +107,7 @@ export default function Home() {
               <div className={styles.cardIcon} style={{ color: '#ec4899' }}><Share2 size={28} /></div>
               <h3 className={styles.cardTitle}>Social Media</h3>
               <p className={styles.cardDesc}>Facebook & Instagram reklama, ktorá zastaví scrollovanie. Kreatíva, ktorá predáva emócie.</p>
-              <Link href="/facebook-reklama" style={{ marginTop: 'auto', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, color: '#ec4899' }}>
+              <Link href="/facebook-reklama" className={styles.cardLink} style={{ color: '#ec4899' }}>
                 Zistiť viac <ArrowRight size={16} />
               </Link>
             </div>
@@ -105,6 +117,9 @@ export default function Home() {
               <div className={styles.cardIcon} style={{ color: '#10b981' }}><TrendingUp size={28} /></div>
               <h3 className={styles.cardTitle}>SEO Optimalizácia</h3>
               <p className={styles.cardDesc}>Dostaňte sa na prvé miesta organicky. Technické SEO, linkbuilding a content stratégia.</p>
+              <Link href="/seo" className={styles.cardLink} style={{ color: '#047857' }}>
+                Zistiť viac <ArrowRight size={16} />
+              </Link>
             </div>
 
             {/* Web Analytics */}
@@ -112,6 +127,9 @@ export default function Home() {
               <div className={styles.cardIcon} style={{ color: '#f59e0b' }}><BarChart2 size={28} /></div>
               <h3 className={styles.cardTitle}>Dáta & Analytika</h3>
               <p className={styles.cardDesc}>Meranie, ktoré dáva zmysel. GTM, GA4, Looker Studio dashboardy.</p>
+              <Link href="/analyza-webu" className={styles.cardLink} style={{ color: '#b45309' }}>
+                Zistiť viac <ArrowRight size={16} />
+              </Link>
             </div>
 
             {/* Export */}
@@ -119,6 +137,9 @@ export default function Home() {
               <div className={styles.cardIcon} style={{ color: '#3b82f6' }}><Globe size={28} /></div>
               <h3 className={styles.cardTitle}>Export do zahraničia</h3>
               <p className={styles.cardDesc}>Expandujte do CZ, HU, RO. Lokalizácia kampaní a podpora.</p>
+              <Link href="/expanzia-eshopu-do-zahranicia-ppc-cee-2026" className={styles.cardLink} style={{ color: '#2563eb' }}>
+                Ako na expanziu <ArrowRight size={16} />
+              </Link>
             </div>
 
             {/* Sociálne siete a obsah — nová služba */}
@@ -151,11 +172,11 @@ export default function Home() {
       <section className="container">
         <div className={styles.aiSection}>
           <div className={styles.aiGlow}></div>
-          <div className="container" style={{ position: 'relative', zIndex: 2, padding: '0 2rem' }}>
+          <div className={styles.aiInner}>
             <div style={{ display: 'inline-block', border: '1px solid rgba(249, 115, 22, 0.5)', padding: '0.5rem 1rem', borderRadius: '50px', color: '#f97316', background: 'rgba(249, 115, 22, 0.1)', marginBottom: '1.5rem', fontWeight: 600 }}>
               NOVINKA: STARBO AI STUDIO
             </div>
-            <h2 style={{ fontSize: '3rem', color: 'white', marginBottom: '1.5rem' }}>Budúcnosť marketingu je automatizovaná</h2>
+            <h2 style={{ fontSize: 'var(--fs-h2-lg)', color: 'white', marginBottom: '1.5rem' }}>Budúcnosť marketingu je automatizovaná</h2>
             <p style={{ maxWidth: '700px', margin: '0 auto 3rem', color: '#cbd5e1', fontSize: '1.1rem' }}>
               Nestrácajte čas manuálnou prácou. Využite silu umelej inteligencie na tvorbu obsahu, videí a interakciu so zákazníkmi.
             </p>
@@ -223,13 +244,13 @@ export default function Home() {
       {/* Final CTA */}
       <section className={styles.ctaSection}>
         <div className="container">
-          <h2 style={{ fontSize: '3rem', marginBottom: '1.5rem', lineHeight: 1.1 }}>
+          <h2 style={{ fontSize: 'var(--fs-h2-lg)', marginBottom: '1.5rem', lineHeight: 1.1 }}>
             Máte web, ale chýbajú<br />vám zákazníci?
           </h2>
           <p style={{ fontSize: '1.2rem', color: '#64748b', maxWidth: '600px', margin: '0 auto 3rem' }}>
             Nečakajte na zázrak. Objednajte si nezáväzný audit a my vám ukážeme, kde leží potenciál pre rast vášho biznisu.
           </p>
-          <Link href="/kontakt" className="btn btn-primary" style={{ padding: '1.2rem 4rem', fontSize: '1.2rem', boxShadow: '0 10px 30px rgba(249, 115, 22, 0.3)' }}>
+          <Link href="/kontakt" className={`btn btn-primary btn-lg ${styles.ctaButton}`} style={{ boxShadow: '0 10px 30px rgba(249, 115, 22, 0.3)' }}>
             Chcem nezáväzný audit
           </Link>
         </div>

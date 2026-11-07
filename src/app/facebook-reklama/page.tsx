@@ -63,7 +63,7 @@ export default function FacebookAdsPage() {
                 <section className={styles.section} style={{ padding: '2rem 0' }}>
                     <div className={styles.grid} style={{ gap: '3rem', alignItems: 'center' }}>
                         <div>
-                            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>„Facebook reklama nám nefunguje“</h2>
+                            <h2 style={{ fontSize: 'var(--fs-h2)', marginBottom: '1.5rem' }}>„Facebook reklama nám nefunguje“</h2>
                             <p className={styles.text} style={{ marginBottom: '1rem' }}>
                                 Túto vetu počúvame často. Väčšinou nie je problém v platforme, ale v dvoch veciach: chýbajúce
                                 server-side meranie a kreatíva, ktorá algoritmu nedáva s čím pracovať. Meta v roku 2026
@@ -80,23 +80,23 @@ export default function FacebookAdsPage() {
                             </ul>
                         </div>
                         {/* Stats Box */}
-                        <div style={{ background: '#f8fafc', padding: '2.5rem', borderRadius: '20px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
+                        <div style={{ background: '#f8fafc', padding: 'var(--box-pad)', borderRadius: '20px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
                             <h3 style={{ fontSize: '1.2rem', color: '#64748b', marginBottom: '2rem' }}>Starbomedia v skratke</h3>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: ACCENT }}>10 M€+</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: ACCENT }}>10 M€+</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Ročný ad spend (CEE)</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: PURPLE }}>od 2012</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: PURPLE }}>od 2012</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Skúseností s reklamou</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#1877f2' }}>13</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#1877f2' }}>13</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Trhov CEE, kde inzerujeme</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#10b981' }}>84+</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#10b981' }}>84+</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Spokojných klientov</div>
                                 </div>
                             </div>
@@ -281,7 +281,7 @@ export default function FacebookAdsPage() {
 
                 {/* Creative is more important than targeting - callout band */}
                 <section className={styles.section} style={{ marginTop: '1rem' }}>
-                    <div style={{ background: ACCENT_SOFT, borderRadius: '24px', padding: 'clamp(1.5rem, 5vw, 3rem)', border: `1px solid ${ACCENT_BORDER}` }}>
+                    <div style={{ background: ACCENT_SOFT, borderRadius: '24px', padding: 'clamp(1rem, 5vw, 3rem)', border: `1px solid ${ACCENT_BORDER}` }}>
                         <div style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
                             <Sparkles size={32} color={ACCENT} style={{ marginBottom: '1rem' }} />
                             <h2 style={{ marginBottom: '1rem' }}>Kreatíva dnes rozhoduje viac než cielenie</h2>
@@ -314,7 +314,7 @@ export default function FacebookAdsPage() {
 
                 {/* Process */}
                 <section className={styles.section} style={{ marginTop: '2rem' }}>
-                    <div style={{ background: '#f8fafc', borderRadius: '24px', padding: 'clamp(1.5rem, 5vw, 3rem)', border: '1px solid #e2e8f0' }}>
+                    <div style={{ background: '#f8fafc', borderRadius: '24px', padding: 'clamp(1rem, 5vw, 3rem)', border: '1px solid #e2e8f0' }}>
                         <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Ako prebieha spolupráca?</h2>
                         <div className={styles.grid} style={{ alignItems: 'flex-start', gap: '2rem' }}>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: `1px solid ${ACCENT_BORDER}` }}>

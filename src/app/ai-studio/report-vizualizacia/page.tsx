@@ -15,7 +15,7 @@ export default function ReportVisualizationPage() {
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
                         <div className={styles.badge}>Reporty &amp; dáta</div>
-                        <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>Automatizované reporty</h1>
+                        <h1 className={styles.title} style={{ fontSize: 'var(--fs-h1)' }}>Automatizované reporty</h1>
                         <p className={styles.subtitle}>
                             Každý pondelok konzistentný report výkonu kampaní naprieč všetkými trhmi.
                             WoW delty, automatické upozornenia na anomálie a interpretácia v ľudskej reči
@@ -44,12 +44,12 @@ export default function ReportVisualizationPage() {
                 </div>
             </header>
 
-            <div className="container" style={{ paddingBottom: '8rem' }}>
+            <div className="container" style={{ paddingBottom: 'var(--space-8)' }}>
                 <div className={styles.demoContainer}>
-                    <div className={styles.grid}>
-                        <div style={{ padding: '2rem' }}>
+                    <div>
+                        <div className={styles.demoText}>
                             <BarChart3 size={48} color="#6366f1" style={{ marginBottom: '1.5rem' }} />
-                            <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Report, ktorý je rovnaký každý týždeň</h2>
+                            <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1rem' }}>Report, ktorý je rovnaký každý týždeň</h2>
                             <p style={{ color: '#64748b', lineHeight: '1.6', marginBottom: '2rem' }}>
                                 Reporty výkonu kampaní generujeme automatizovane naprieč 14 brandmi a klientmi. Výpočty sú deterministické a prechádzajú validáciou, takže čísla sedia. Namiesto holej tabuľky dostanete delty oproti minulému týždňu, upozornenie na výkyvy a krátku interpretáciu v ľudskej reči.
                             </p>
@@ -68,13 +68,10 @@ export default function ReportVisualizationPage() {
                                 </li>
                             </ul>
                         </div>
-                        <div style={{ background: '#1e293b', borderRadius: '16px', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem' }}>
-                            <span style={{ color: 'white', opacity: 0.5, fontWeight: 600, textAlign: 'center' }}>Ukážka týždenného reportu v Slacku</span>
-                        </div>
                     </div>
                 </div>
 
-                <div className={styles.grid} style={{ marginTop: '5rem' }}>
+                <div className={styles.grid} style={{ marginTop: 'var(--space-5)' }}>
                     <div className={styles.card}>
                         <BarChart3 className={styles.cardIcon} />
                         <h3 className={styles.cardTitle}>Looker Studio dashboardy</h3>
@@ -87,7 +84,7 @@ export default function ReportVisualizationPage() {
                     </div>
                 </div>
 
-                <div className={styles.demoContainer} style={{ marginTop: '5rem' }}>
+                <div className={styles.demoContainer} style={{ marginTop: 'var(--space-5)' }}>
                     <Workflow size={40} color="#6366f1" style={{ marginBottom: '1rem' }} />
                     <h2 style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>Voliteľná nadstavba: predikcia trendov</h2>
                     <p style={{ color: '#64748b', lineHeight: '1.6', marginBottom: 0, maxWidth: '720px' }}>
@@ -95,7 +92,7 @@ export default function ReportVisualizationPage() {
                     </p>
                 </div>
 
-                <div style={{ marginTop: '4rem', textAlign: 'center' }}>
+                <div style={{ marginTop: 'var(--space-4)', textAlign: 'center' }}>
                     <Link href="/kontakt" className="btn btn-primary" style={{ background: 'var(--ai-gradient)' }}>
                         Chcem reporty bez ručnej práce
                     </Link>

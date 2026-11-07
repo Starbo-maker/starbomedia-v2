@@ -185,7 +185,7 @@ export default function PrecoStarbomediaPage() {
 
                 {/* V čom sme iní */}
                 <section className={styles.section}>
-                    <h2 style={{ fontSize: '2.2rem', marginBottom: '1.75rem' }}>V čom sme iní</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2-md)', marginBottom: '1.75rem' }}>V čom sme iní</h2>
                     <div style={{ display: 'grid', gap: '2rem' }}>
                         {ODLISNOSTI.map((o) => (
                             <div key={o.nadpis} style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '1.25rem', alignItems: 'start' }}>
@@ -202,8 +202,8 @@ export default function PrecoStarbomediaPage() {
                 </section>
 
                 {/* Pre koho nie sme */}
-                <section className={styles.section} style={{ background: '#f8fafc', padding: '2.5rem', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-                    <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Pre koho nie sme</h2>
+                <section className={styles.section} style={{ background: '#f8fafc', padding: 'var(--box-pad)', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
+                    <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1rem' }}>Pre koho nie sme</h2>
                     <p className={styles.text} style={{ marginBottom: '1.25rem' }}>
                         Nerobíme ideamaking ani branding. Nerobíme kampane, ktorých výsledok sa nedá zmerať.
                     </p>
@@ -223,7 +223,7 @@ export default function PrecoStarbomediaPage() {
 
                 {/* Cena */}
                 <section className={styles.section}>
-                    <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Koľko to stojí</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1rem' }}>Koľko to stojí</h2>
                     <p className={styles.text}>
                         Správa Google Ads od 350 € mesačne, Meta Ads od 350 €, oboje spolu od 600 €.
                         SEO od 400 €, nastavenie merania od 400 € jednorazovo, audit účtu od 250 €.
@@ -243,7 +243,7 @@ export default function PrecoStarbomediaPage() {
 
                 {/* Prvých 30 dní */}
                 <section className={styles.section}>
-                    <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Čo sa stane v prvých 30 dňoch</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1.5rem' }}>Čo sa stane v prvých 30 dňoch</h2>
                     <div className={styles.grid} style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
                         {ONBOARDING.map((f) => (
                             <div key={f.faza} className={styles.card}>
@@ -262,7 +262,7 @@ export default function PrecoStarbomediaPage() {
 
                 {/* Freelancer vs agentúra */}
                 <section className={styles.section}>
-                    <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Freelancer, in-house, alebo agentúra?</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1rem' }}>Freelancer, in-house, alebo agentúra?</h2>
                     <p className={styles.text}>
                         Nie sme odpoveď na každú situáciu. Pri malom rozpočte a jednoduchom účte býva lacnejší
                         freelancer, pri veľkom objeme a stálej agende sa oplatí in-house tím.
@@ -276,7 +276,7 @@ export default function PrecoStarbomediaPage() {
 
                 {/* FAQ */}
                 <section className={styles.section} id="faq">
-                    <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Často kladené otázky</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1.5rem' }}>Často kladené otázky</h2>
                     <div style={{ display: 'grid', gap: '0.75rem' }}>
                         {faq.map((f) => (
                             <details key={f.q} className={styles.faqItem} style={{ background: '#f8fafc', padding: '1.25rem 1.5rem', borderRadius: '14px', border: '1px solid #e2e8f0' }}>

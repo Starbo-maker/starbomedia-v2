@@ -100,7 +100,7 @@ export default function CennikPage() {
             <div className={`container ${styles.content}`}>
                 {/* Cenníková tabuľka */}
                 <section className={styles.section} style={{ padding: '2rem 0' }}>
-                    <h2 style={{ fontSize: '2.2rem', marginBottom: '0.75rem' }}>Cenník služieb</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2-md)', marginBottom: '0.75rem' }}>Cenník služieb</h2>
                     <p className={styles.text} style={{ marginBottom: '2rem', maxWidth: '46rem' }}>
                         Ceny sú spodné hranice pásiem — presnú ponuku dostanete po vstupnom audite spolu s rozsahom práce.
                         Mediálny rozpočet (kredit pre Google/Meta) je samostatná platba priamo platformám.
@@ -131,7 +131,7 @@ export default function CennikPage() {
 
                 {/* Dve platby */}
                 <section className={styles.section}>
-                    <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Dve platby, s ktorými treba rátať</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1rem' }}>Dve platby, s ktorými treba rátať</h2>
                     <div className={styles.grid} style={{ gap: '2rem' }}>
                         <div style={{ background: '#f8fafc', padding: '2rem', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
                             <h3 style={{ marginBottom: '0.5rem' }}>1. Mediálny rozpočet</h3>
@@ -152,7 +152,7 @@ export default function CennikPage() {
 
                 {/* Čo dostanete v cene */}
                 <section className={styles.section}>
-                    <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Čo dostanete v cene správy</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1.5rem' }}>Čo dostanete v cene správy</h2>
                     <div className={styles.grid} style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
                         {[
                             { icon: <Gauge size={22} color="#8b5cf6" />, t: 'Meranie, ktorému sa dá veriť', d: 'Server-side tagging a Enhanced Conversions — cielime na zachytenie 90 %+ reálnych tržieb, mesačne validované voči e-shopu.' },
@@ -172,7 +172,7 @@ export default function CennikPage() {
                 </section>
 
                 {/* Férovosť */}
-                <section className={styles.section} style={{ background: '#f8fafc', padding: '2.5rem', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
+                <section className={styles.section} style={{ background: '#f8fafc', padding: 'var(--box-pad)', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
                     <h2 style={{ fontSize: '1.6rem', marginBottom: '1rem' }}>Hráme férovo</h2>
                     <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                         <li className={styles.featureItem}><CheckCircle size={18} color="#10b981" /> Žiadna viazanosť — mesačná výpovedná lehota.</li>
@@ -184,7 +184,7 @@ export default function CennikPage() {
 
                 {/* FAQ */}
                 <section className={styles.section}>
-                    <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Často kladené otázky o cenách</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1.5rem' }}>Často kladené otázky o cenách</h2>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', maxWidth: '52rem' }}>
                         {faq.map((f) => (
                             <details key={f.q} style={{ background: 'white', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '1rem 1.25rem' }}>

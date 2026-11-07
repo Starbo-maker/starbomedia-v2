@@ -59,7 +59,7 @@ export default function ReklamaNaInternetePage() {
                 <section className={styles.section} style={{ padding: '2rem 0' }}>
                     <div className={styles.grid} style={{ gap: '3rem', alignItems: 'center' }}>
                         <div>
-                            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Prečo záleží na tom, kto vám spravuje reklamu</h2>
+                            <h2 style={{ fontSize: 'var(--fs-h2)', marginBottom: '1.5rem' }}>Prečo záleží na tom, kto vám spravuje reklamu</h2>
                             <p className={styles.text} style={{ marginBottom: '1rem' }}>
                                 Kampaň podľa návodu na YouTube dnes nastaví takmer ktokoľvek. Skutočná hodnota je inde: pochopiť, prečo
                                 GA4 ukazuje o desiatky percent nižšie tržby ako pokladňa, prečo Meta pripisuje konverzie, ktoré by nastali
@@ -77,23 +77,23 @@ export default function ReklamaNaInternetePage() {
                             </ul>
                         </div>
                         {/* Stats Box */}
-                        <div style={{ background: '#f8fafc', padding: '2.5rem', borderRadius: '20px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
+                        <div style={{ background: '#f8fafc', padding: 'var(--box-pad)', borderRadius: '20px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
                             <h3 style={{ fontSize: '1.2rem', color: '#64748b', marginBottom: '2rem' }}>Starbomedia v skratke</h3>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#8b5cf6' }}>10 M€+</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#8b5cf6' }}>10 M€+</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Ročný rozpočet (CEE)</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#f97316' }}>od 2012</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#f97316' }}>od 2012</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Na trhu online reklamy</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#10b981' }}>13</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#10b981' }}>13</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Trhov CEE, kde inzerujeme</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#3b82f6' }}>84+</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#3b82f6' }}>84+</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Klientov, 269+ kampaní</div>
                                 </div>
                             </div>
@@ -245,7 +245,7 @@ export default function ReklamaNaInternetePage() {
 
                 {/* Ako prebieha spolupráca (process) */}
                 <section className={styles.section} style={{ marginTop: '2rem' }}>
-                    <div style={{ background: '#f5f3ff', borderRadius: '24px', padding: 'clamp(1.5rem, 5vw, 3rem)' }}>
+                    <div style={{ background: '#f5f3ff', borderRadius: '24px', padding: 'clamp(1rem, 5vw, 3rem)' }}>
                         <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Ako prebieha spolupráca</h2>
                         <div className={styles.grid} style={{ alignItems: 'flex-start', gap: '1.5rem' }}>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #ede9fe' }}>

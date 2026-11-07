@@ -25,7 +25,7 @@ export default function SeoMetaTextyPage() {
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
                         <div className={styles.badge}>Obsah a SEO</div>
-                        <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>Hromadné SEO meta a alt texty</h1>
+                        <h1 className={styles.title} style={{ fontSize: 'var(--fs-h1)' }}>Hromadné SEO meta a alt texty</h1>
                         <p className={styles.subtitle}>
                             Náš nástroj SEO Meta &amp; Alt Text Generator vytvorí unikátne meta description a alt texty
                             pre e-shopy s tisíckami produktov. Žiadne šablóny, žiadne prázdne alt atribúty — len texty
@@ -54,13 +54,13 @@ export default function SeoMetaTextyPage() {
                 </div>
             </header>
 
-            <div className="container" style={{ paddingBottom: '8rem' }}>
+            <div className="container" style={{ paddingBottom: 'var(--space-8)' }}>
                 {/* PROBLÉM */}
                 <div className={styles.demoContainer}>
                     <div className={styles.grid}>
-                        <div style={{ padding: '2rem' }}>
+                        <div className={styles.demoText}>
                             <Search size={48} color="#6366f1" style={{ marginBottom: '1.5rem' }} />
-                            <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Šablónové meta vás brzdia</h2>
+                            <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1rem' }}>Šablónové meta vás brzdia</h2>
                             <p style={{ color: '#64748b', lineHeight: '1.6', marginBottom: '2rem' }}>
                                 Väčšina e-shopov má rovnaký meta text s vymeneným názvom produktu a prázdne alebo generické
                                 alt atribúty. Pri tisíckach URL je manuálne písanie unikátnych textov neúnosné — a tak ostáva
@@ -86,9 +86,9 @@ export default function SeoMetaTextyPage() {
                 </div>
 
                 {/* AKO TO FUNGUJE — 4 FÁZY */}
-                <div style={{ marginTop: '6rem', textAlign: 'center' }}>
+                <div style={{ marginTop: 'var(--space-6)', textAlign: 'center' }}>
                     <div className={styles.badge}>Ako to funguje</div>
-                    <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', marginTop: '1rem' }}>Štyri fázy od domény po CSV</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2)', marginBottom: '1rem', marginTop: '1rem' }}>Štyri fázy od domény po CSV</h2>
                     <p style={{ color: '#64748b', lineHeight: '1.6', maxWidth: '640px', margin: '0 auto' }}>
                         Stačí sitemap. Nástroj prejde celý web, pochopí značku aj typ stránok a vygeneruje texty
                         pripravené na import.
@@ -135,10 +135,10 @@ export default function SeoMetaTextyPage() {
                 </div>
 
                 {/* PRED / PO UKÁŽKA */}
-                <div className={styles.demoContainer} style={{ marginTop: '6rem' }}>
+                <div className={styles.demoContainer} style={{ marginTop: 'var(--space-6)' }}>
                     <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
                         <div className={styles.badge}>Pred a po</div>
-                        <h2 style={{ fontSize: '2rem', marginTop: '1rem' }}>Zo šablóny na text, ktorý predáva</h2>
+                        <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginTop: '1rem' }}>Zo šablóny na text, ktorý predáva</h2>
                     </div>
                     <div className={styles.grid}>
                         <div style={{ background: '#fff7ed', border: '1px solid rgba(249, 115, 22, 0.2)', borderRadius: '16px', padding: '2rem' }}>
@@ -163,7 +163,7 @@ export default function SeoMetaTextyPage() {
                 </div>
 
                 {/* PRÍPAD MURAT */}
-                <div className={styles.grid} style={{ marginTop: '6rem' }}>
+                <div className={styles.grid} style={{ marginTop: 'var(--space-6)' }}>
                     <div className={styles.card}>
                         <div className={styles.cardIcon}><Zap size={28} /></div>
                         <h3 className={styles.cardTitle}>Prípad Murat: 1000 URL za menej ako hodinu</h3>
@@ -186,7 +186,7 @@ export default function SeoMetaTextyPage() {
                 {/* CTA */}
                 <div className={styles.ctaBox}>
                     <div className={styles.pulseGlow} />
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem', position: 'relative', zIndex: 1 }}>
+                    <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 800, marginBottom: '1rem', position: 'relative', zIndex: 1 }}>
                         Premeňte celý katalóg na unikátne texty
                     </h2>
                     <p style={{ fontSize: '1.15rem', opacity: 0.9, maxWidth: '600px', margin: '0 auto 2rem', position: 'relative', zIndex: 1 }}>

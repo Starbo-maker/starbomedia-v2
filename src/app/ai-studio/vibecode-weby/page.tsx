@@ -15,7 +15,7 @@ export default function VibeCodePage() {
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
                         <div className={styles.badge}>Tvorba webov s AI</div>
-                        <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>Vibecode weby</h1>
+                        <h1 className={styles.title} style={{ fontSize: 'var(--fs-h1)' }}>Vibecode weby</h1>
                         <p className={styles.subtitle}>
                             Moderné weby a landing pages, kde kód píšeme s pomocou AI a dizajn aj stratégiu
                             vyladíme my. Rýchle, čisté a bez balastu WordPressu. Tento web je toho dôkazom.
@@ -43,12 +43,12 @@ export default function VibeCodePage() {
                 </div>
             </header>
 
-            <div className="container" style={{ paddingBottom: '8rem' }}>
+            <div className="container" style={{ paddingBottom: 'var(--space-8)' }}>
                 <div className={styles.demoContainer}>
                     <div className={styles.grid}>
-                        <div style={{ padding: '2rem' }}>
+                        <div className={styles.demoText}>
                             <Code size={48} color="#6366f1" style={{ marginBottom: '1.5rem' }} />
-                            <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Prečo vibecode weby?</h2>
+                            <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1rem' }}>Prečo vibecode weby?</h2>
                             <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '2rem' }}>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                                     <Zap color="#f97316" /> <strong>Rýchle a optimalizované</strong> - čistý kód bez zbytočných pluginov, ladený pre Core Web Vitals.

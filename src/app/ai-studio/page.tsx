@@ -160,10 +160,10 @@ export default function AiStudioPage() {
             </header>
 
             {/* Services by Category */}
-            <section id="sluzby" className="container" style={{ paddingBottom: '8rem' }}>
+            <section id="sluzby" className="container" style={{ paddingBottom: 'var(--space-8)' }}>
                 {categories.map((category, index) => (
                     <div key={category.name} style={{ marginTop: index === 0 ? 0 : '5rem' }}>
-                        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '2.5rem', color: '#1e293b' }}>
+                        <h2 style={{ fontSize: 'var(--fs-h2-sm)', fontWeight: 700, marginBottom: '2.5rem', color: '#1e293b' }}>
                             {category.name}
                         </h2>
                         <div className={styles.grid}>
@@ -205,7 +205,7 @@ export default function AiStudioPage() {
             {/* Process Section */}
             <section className={styles.processSection} style={{ background: '#f8fafc' }}>
                 <div className="container">
-                    <h2 style={{ textAlign: 'center', marginBottom: '5rem', fontSize: '3rem' }}>Ako to funguje?</h2>
+                    <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-5)', fontSize: 'var(--fs-h2-lg)' }}>Ako to funguje?</h2>
                     <div className={styles.grid} style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
                         <div className={styles.processStep}>
                             <div className={styles.stepNumber}>01</div>
@@ -232,11 +232,11 @@ export default function AiStudioPage() {
             </section>
 
             {/* CTA */}
-            <div className="container" style={{ paddingBottom: '5rem' }}>
+            <div className="container" style={{ paddingBottom: 'var(--space-5)' }}>
                 <div className={styles.ctaBox}>
                     <div className={styles.pulseGlow} />
                     <div style={{ position: 'relative', zIndex: 2 }}>
-                        <h2 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', color: 'white' }}>Pripravení na transformáciu?</h2>
+                        <h2 style={{ fontSize: 'var(--fs-h1)', marginBottom: '1.5rem', color: 'white' }}>Pripravení na transformáciu?</h2>
                         <Link href="/kontakt" className="btn" style={{ background: 'white', color: '#6366f1', padding: '1rem 3rem' }}>
                             Kontaktovať AI tím
                         </Link>

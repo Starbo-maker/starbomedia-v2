@@ -62,7 +62,7 @@ export default function AiSeoArticlesPage() {
                 <div className={`container ${styles.heroGrid}`}>
                     <div className={styles.heroContent}>
                         <div className={styles.badge}>Obsah &amp; SEO</div>
-                        <h1 className={styles.title} style={{ fontSize: '3.5rem' }}>AI tvorba SEO článkov</h1>
+                        <h1 className={styles.title} style={{ fontSize: 'var(--fs-h1)' }}>AI tvorba SEO článkov</h1>
                         <p className={styles.subtitle}>
                             Náš vlastný automatizovaný nástroj SEO Article Pipeline prevedie obsah celou cestou — od
                             výskumu po publikáciu za minúty namiesto dní. Pod kapotou pracuje 8-krokový proces viacerých
@@ -91,13 +91,13 @@ export default function AiSeoArticlesPage() {
                 </div>
             </header>
 
-            <div className="container" style={{ paddingBottom: '8rem' }}>
+            <div className="container" style={{ paddingBottom: 'var(--space-8)' }}>
                 {/* Úvodný blok — čo to je */}
                 <div className={styles.demoContainer}>
                     <div className={styles.grid}>
-                        <div style={{ padding: '2rem' }}>
+                        <div className={styles.demoText}>
                             <FileText size={48} color="#6366f1" style={{ marginBottom: '1.5rem' }} />
-                            <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Od výskumu po publikáciu na jeden beh</h2>
+                            <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginBottom: '1rem' }}>Od výskumu po publikáciu na jeden beh</h2>
                             <p style={{ color: '#64748b', lineHeight: '1.6', marginBottom: '2rem' }}>
                                 SEO Article Pipeline je vlastný nástroj Starbomedia. Spojili sme do neho viacerých
                                 špecializovaných AI agentov, ktorí na seba nadväzujú — od dátového výskumu cez písanie
@@ -126,9 +126,9 @@ export default function AiSeoArticlesPage() {
                 </div>
 
                 {/* Ako to funguje — 8 krokov */}
-                <div style={{ marginTop: '8rem', textAlign: 'center' }}>
+                <div style={{ marginTop: 'var(--space-8)', textAlign: 'center' }}>
                     <div className={styles.badge}>Ako to funguje</div>
-                    <h2 style={{ fontSize: '2.5rem', marginTop: '1rem', marginBottom: '1rem' }}>8 krokov od kľúčového slova k publikácii</h2>
+                    <h2 style={{ fontSize: 'var(--fs-h2)', marginTop: '1rem', marginBottom: '1rem' }}>8 krokov od kľúčového slova k publikácii</h2>
                     <p style={{ color: '#64748b', maxWidth: '640px', margin: '0 auto 4rem', lineHeight: '1.6' }}>
                         Každý krok má na starosti samostatný špecializovaný agent. Výstup jedného sa stáva vstupom
                         pre ďalší, takže obsah postupne dozrieva od dát až po hotový článok.
@@ -146,8 +146,8 @@ export default function AiSeoArticlesPage() {
                 </div>
 
                 {/* Kľúčové funkcie */}
-                <div style={{ marginTop: '8rem', textAlign: 'center' }}>
-                    <h2 style={{ fontSize: '2.5rem', marginBottom: '4rem' }}>Kľúčové funkcie</h2>
+                <div style={{ marginTop: 'var(--space-8)', textAlign: 'center' }}>
+                    <h2 style={{ fontSize: 'var(--fs-h2)', marginBottom: 'var(--space-4)' }}>Kľúčové funkcie</h2>
                     <div className={styles.grid} style={{ textAlign: 'left' }}>
                         <div className={styles.card}>
                             <BarChart3 className={styles.cardIcon} />
@@ -203,11 +203,11 @@ export default function AiSeoArticlesPage() {
                 </div>
 
                 {/* Prípad Fabulo */}
-                <div className={styles.demoContainer} style={{ marginTop: '8rem' }}>
+                <div className={styles.demoContainer} style={{ marginTop: 'var(--space-8)' }}>
                     <div className={styles.grid}>
-                        <div style={{ padding: '2rem' }}>
+                        <div className={styles.demoText}>
                             <div className={styles.badge}>Doložený prípad</div>
-                            <h2 style={{ fontSize: '2rem', marginTop: '1rem', marginBottom: '1rem' }}>Prvé nasadenie pre Fabulo.sk</h2>
+                            <h2 style={{ fontSize: 'var(--fs-h2-sm)', marginTop: '1rem', marginBottom: '1rem' }}>Prvé nasadenie pre Fabulo.sk</h2>
                             <p style={{ color: '#64748b', lineHeight: '1.6', marginBottom: '2rem' }}>
                                 Pri kľúčovom slove „masážny stôl“ tvorili TOP 10 takmer výhradne e-shopy bez
                                 informačného obsahu — jasná obsahová medzera. Pipeline z nej vytvorila približne
@@ -238,7 +238,7 @@ export default function AiSeoArticlesPage() {
                 <div className={styles.ctaBox}>
                     <div className={styles.pulseGlow} />
                     <div style={{ position: 'relative', zIndex: 1 }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>Pustime SEO obsah na plný výkon</h2>
+                        <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 800, marginBottom: '1rem' }}>Pustime SEO obsah na plný výkon</h2>
                         <p style={{ fontSize: '1.15rem', maxWidth: '640px', margin: '0 auto 2.5rem', opacity: 0.95, lineHeight: '1.6' }}>
                             Necháme špecialistov pri stratégii a rutinu zveríme pipeline. Ozvite sa nám a pripravíme
                             SEO články presne pre váš trh a témy.

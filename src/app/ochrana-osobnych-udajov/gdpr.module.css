@@ -66,3 +66,16 @@
     font-weight: 700;
     color: #0f172a;
 }
+
+.legal li,
+.legal a {
+    overflow-wrap: anywhere;
+}
+
+/* Mobil: tabuľka sa posúva vodorovne, stĺpce ostanú čitateľné */
+@media (max-width: 640px) {
+    .legal th,
+    .legal td {
+        min-width: 180px;
+    }
+}
