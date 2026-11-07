@@ -229,7 +229,7 @@ export default function AiSeoArticlesPage() {
                         <div style={{ background: '#f1f5f9', borderRadius: '16px', minHeight: '300px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '2rem' }}>
                             <Sparkles size={40} color="#6366f1" />
                             <span style={{ color: '#475569', fontWeight: 700, fontSize: '1.5rem' }}>~3 000 slov</span>
-                            <span style={{ color: '#94a3b8', fontWeight: 600, textAlign: 'center' }}>odborný sprievodca z jedného behu pipeline</span>
+                            <span style={{ color: '#475569', fontWeight: 600, textAlign: 'center' }}>odborný sprievodca z jedného behu pipeline</span>
                         </div>
                     </div>
                 </div>

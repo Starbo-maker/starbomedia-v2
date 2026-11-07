@@ -9,7 +9,11 @@
     "excerpt": "Google Search Console krok za krokom: pridanie webu, overenie cez DNS, sitemap, vyžiadanie indexovania, stavy stránok a čo kontrolovať každý mesiac.",
     "featuredImage": "/blog/google-search-console-navod/hero-google-search-console-navod.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "seo",
+      "meranie"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -21,7 +25,11 @@
     "excerpt": "Koľko dať do reklamy pre malý e-shop a kde začať? Dáta z vyše 100 Google Ads účtov podľa rozpočtu, poradie kanálov a plán na prvých 90 dní.",
     "featuredImage": "/blog/reklama-pre-maly-eshop/hero-reklama-pre-maly-eshop.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "eshopy",
+      "ceny"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -33,7 +41,12 @@
     "excerpt": "Black Friday 2026 je 27. 11. Ako nastaviť ciele CPA/ROAS po zmene zo 17. 8., rozpočty, feed, Meta kreatívy a časový plán od októbra po Vianoce.",
     "featuredImage": "/blog/black-friday-2026-ako-pripravit-google-ads-a-meta-ads/hero-black-friday-2026.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "google-ads",
+      "meta-ads",
+      "eshopy"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -45,7 +58,10 @@
     "excerpt": "Novinky v marketingu za Q3 2026: zmena biddingu, AI Max, koniec jazykového cielenia, spam updaty, Meta bez vylúčení, ChatGPT Ads v SK a AI Act.",
     "featuredImage": "/blog/najvacsie-novinky-v-online-marketingu-jul-september-2026-google-ads-meta-seo-ai-a-tiktok/hero-novinky-online-marketing-q3-2026.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "novinky"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -57,7 +73,11 @@
     "excerpt": "Režim AI (AI Mode) v Google k septembru 2026: ako ho zapnúť a obísť, čím sa líši od AI Overviews a čo znamená pre firmy, e-shopy a Search Console.",
     "featuredImage": "/blog/rezim-ai-google/hero-rezim-ai-google.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "seo",
+      "ai"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -69,7 +89,11 @@
     "excerpt": "Založili sme si slovenský ChatGPT Ads účet v deň otvorenia. Návod krok za krokom: rozhranie, rozpočty, CPC signály, konverzie a čo v EHP zatiaľ nefunguje.",
     "featuredImage": "/blog/chatgpt-ads-navod/hero-chatgpt-ads-navod.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "ai",
+      "novinky"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -82,7 +106,11 @@
     "excerpt": "ChatGPT Ads bežia v 31 európskych trhoch vrátane SK a od 31. 8. 2026 si účet založíte sami. Komu sa zobrazujú, ako sa cielia v režime GDPR a pre koho sa oplatia.",
     "featuredImage": "/blog/chatgpt-ads-stredna-europa-slovensko/hero-chatgpt-ads-cee.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "ai",
+      "novinky"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -94,7 +122,11 @@
     "excerpt": "Koľko stojí SEO na Slovensku v 2026? Reálne cenové pásma za správu, audit aj linkbuilding, cena SEO optimalizácie bez hmly a návod, ako čítať ponuky agentúr.",
     "featuredImage": "/blog/kolko-stoji-seo-na-slovensku-2026/hero-kolko-stoji-seo.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "seo",
+      "ceny"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -106,7 +138,11 @@
     "excerpt": "Koľko stojí reklama na Facebooku? CPC 0,05 – 0,56 €, CPM 1,2 – 7,2 €. Reálne dáta z vyše 500 000 € na vyše 20 slovenských Meta Ads účtoch za 12 mesiacov.",
     "featuredImage": "/blog/kolko-stoji-reklama-na-facebooku-instagrame-2026/hero-kolko-stoji-meta-reklama.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "meta-ads",
+      "ceny"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -118,7 +154,10 @@
     "excerpt": "Otestovali sme Nano Banana 2, GPT Image 2, Seedream 5.0 Pro a Grok na 102 obrázkoch: produktové fotky, slovenská diakritika, portréty. S dôkazmi a verdiktom.",
     "featuredImage": "/blog/nano-banana-2-velky-test-ai-generatorov-obrazkov/hero-test-ai-generatorov.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "ai"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -130,7 +169,11 @@
     "excerpt": "Google nepenalizuje AI obsah, ale nekvalitný áno. Ako overovať čísla, čo naozaj hovoria smernice pre hodnotiteľov a prečo je optimalizácia na AI detektory v slovenčine slepá ulička.",
     "featuredImage": "/blog/seo-clanky-s-ai-ako-overit-obsah/hero-overovanie-tvrdeni.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "seo",
+      "ai"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -142,7 +185,11 @@
     "excerpt": "Férové porovnanie freelancera, agentúry a in-house na správu Google Ads: ceny na SK v 2026, zastupiteľnosť, špecializácie a návod, ako sa rozhodnúť podľa situácie.",
     "featuredImage": "/blog/freelancer-vs-agentura-google-ads/hero-freelancer-agentura.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "google-ads",
+      "ceny"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -154,7 +201,12 @@
     "excerpt": "Aké PNO a ROAS je dobré pre e-shop? Break-even ROAS = 1 ÷ marža, realistické pásma pre 2026, benchmarky podľa kategórie a návod, ako si nastaviť vlastný cieľ.",
     "featuredImage": "/blog/pno-roas-benchmarky-pre-eshopy-2026/hero-pno-roas.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "google-ads",
+      "meranie",
+      "eshopy"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -166,7 +218,11 @@
     "excerpt": "Ktorý trh zvoliť ako prvý pri expanzii e-shopu, prečo blízke Česko nie je najľahšie a kde má nová značka rýchlejší nábeh. Checklist expanzie, dobierka a porovnávače.",
     "featuredImage": "/blog/expanzia-eshopu-do-zahranicia-ppc-cee-2026/hero-cee-expanzia.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "google-ads",
+      "eshopy"
+    ]
   },
   {
     "author": "peter-strbo",
@@ -178,7 +234,10 @@
     "excerpt": "Ako vybrať PPC alebo marketingovú agentúru: 15 otázok so správnou odpoveďou, červené vlajky vs. zelené signály, modely odmeňovania a čo si overiť v zmluve – z reálnych auditov účtov.",
     "featuredImage": "/blog/ako-vybrat-ppc-agenturu-checklist-2026/hero-vyber-ppc-agentury.webp",
     "featuredW": 1200,
-    "featuredH": 675
+    "featuredH": 675,
+    "topics": [
+      "ceny"
+    ]
   },
   {
     "slug": "kolko-stoji-google-ads-reklama-na-slovensku-2026",
@@ -190,7 +249,11 @@
     "featuredImage": "/blog/kolko-stoji-google-ads-reklama-na-slovensku-2026/hero-kolko-stoji-google-ads.webp",
     "featuredW": 2752,
     "featuredH": 1536,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "google-ads",
+      "ceny"
+    ]
   },
   {
     "slug": "optimalizacia-meta-ads-kampani-2026",
@@ -202,7 +265,10 @@
     "featuredImage": "/blog/optimalizacia-meta-ads-kampani-2026/infografika_porovnanie_nakladov_meta_google_linkedin.webp",
     "featuredW": 1280,
     "featuredH": 720,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "meta-ads"
+    ]
   },
   {
     "slug": "google-ads-quality-score-2026",
@@ -214,7 +280,10 @@
     "featuredImage": "/blog/google-ads-quality-score-2026/infografika_quality_score_komponenty.webp",
     "featuredW": 1280,
     "featuredH": 720,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "google-ads"
+    ]
   },
   {
     "slug": "google-ads-ako-zacat-2026",
@@ -226,7 +295,10 @@
     "featuredImage": "/blog/google-ads-ako-zacat-2026/infografika_typy_kampani_google_ads.webp",
     "featuredW": 1280,
     "featuredH": 720,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "google-ads"
+    ]
   },
   {
     "slug": "nano-banana-pro-vs-gpt-image-2",
@@ -238,7 +310,10 @@
     "featuredImage": "/blog/nano-banana-pro-vs-gpt-image-2/nano-banana-pro-vs-gpt-image-2-hero.webp",
     "featuredW": 1200,
     "featuredH": 675,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "ai"
+    ]
   },
   {
     "slug": "najvacsie-novinky-v-online-marketingu-maj-jun-2026-google-ads-meta-seo-geo-a-tiktok",
@@ -250,7 +325,10 @@
     "featuredImage": "/blog/najvacsie-novinky-v-online-marketingu-maj-jun-2026-google-ads-meta-seo-geo-a-tiktok/novinky-online-marketing-maj-jun-2026.webp",
     "featuredW": 1280,
     "featuredH": 714,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "novinky"
+    ]
   },
   {
     "slug": "webmcp-ako-pripravit-web-na-ai-agentov",
@@ -262,7 +340,11 @@
     "featuredImage": "/blog/infografika_webmcp_porovnanie.webp",
     "featuredW": 1200,
     "featuredH": 678,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "ai",
+      "seo"
+    ]
   },
   {
     "slug": "optimalizacia-google-merchant-center-a-shopping-feedu-2026",
@@ -274,7 +356,11 @@
     "featuredImage": "/blog/optimalizacia-google-merchant-center-a-shopping-feedu-2026/infografika_feed_atributy.webp",
     "featuredW": 1200,
     "featuredH": 675,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "google-ads",
+      "eshopy"
+    ]
   },
   {
     "slug": "google-io-2026-prehlad-najdolezitejsich-noviniek",
@@ -286,7 +372,11 @@
     "featuredImage": "/blog/google-io-2026-prehlad-najdolezitejsich-noviniek/google-io-2026-prehlad-hero.webp",
     "featuredW": 1280,
     "featuredH": 714,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "novinky",
+      "ai"
+    ]
   },
   {
     "slug": "ecommerce-tracking-2026-bullshit-vs-realita-merania-e-shopov",
@@ -298,7 +388,11 @@
     "featuredImage": "/blog/ecommerce-tracking-2026-bullshit-vs-realita-merania-e-shopov/ecommerce-tracking-2026-2000x1116.webp",
     "featuredW": 1280,
     "featuredH": 714,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "meranie",
+      "eshopy"
+    ]
   },
   {
     "slug": "najvacsie-novinky-v-online-marketingu-marec-april-2026-google-ads-meta-seo-geo-a-tiktok",
@@ -310,7 +404,10 @@
     "featuredImage": "/blog/najvacsie-novinky-v-online-marketingu-marec-april-2026-google-ads-meta-seo-geo-a-tiktok/novinky-v-online-marketing-april-2026-768x429.webp",
     "featuredW": 768,
     "featuredH": 429,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "novinky"
+    ]
   },
   {
     "slug": "google-shopping-kampane-v-chorvatsku-slovinsku-a-bulharsku-co-prinesie-roll-out-v-2026",
@@ -323,7 +420,12 @@
     "featuredImage": "/blog/google-shopping-kampane-v-chorvatsku-slovinsku-a-bulharsku-co-prinesie-roll-out-v-2026/google-shopping-balkan-2026-768x434.webp",
     "featuredW": 768,
     "featuredH": 434,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "google-ads",
+      "eshopy",
+      "novinky"
+    ]
   },
   {
     "slug": "google-moja-firma-kompletny-sprievodca-lokalnym-seo-v-roku-2026",
@@ -335,7 +437,10 @@
     "featuredImage": "/blog/google-moja-firma-kompletny-sprievodca-lokalnym-seo-v-roku-2026/lokalne-seo-2026-kompletny-sprievodca-2000x1116.webp",
     "featuredW": 1280,
     "featuredH": 714,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "seo"
+    ]
   },
   {
     "slug": "kam-smeruje-google-ads-v-roku-2026-trendy-novinky-a-co-caka-inzerentov",
@@ -347,7 +452,11 @@
     "featuredImage": "/blog/kam-smeruje-google-ads-v-roku-2026-trendy-novinky-a-co-caka-inzerentov/google-ads-2026-trendy-novinky-1-2000x2000.webp",
     "featuredW": 1280,
     "featuredH": 1280,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "google-ads",
+      "novinky"
+    ]
   },
   {
     "slug": "platobne-brany-a-dopravcovia-pre-e-commerce-v-strednej-a-vychodnej-europe-velke-porovnanie-2026",
@@ -359,7 +468,10 @@
     "featuredImage": "/blog/platobne-brany-a-dopravcovia-pre-e-commerce-v-strednej-a-vychodnej-europe-velke-porovnanie-2026/platobne-brany-a-dopracovia-pre-ecommerce-cee-2000x2000.webp",
     "featuredW": 1280,
     "featuredH": 1280,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "eshopy"
+    ]
   },
   {
     "slug": "google-ads-vs-seo-co-je-lepsie-pre-slovensky-biznis-v-roku-2026",
@@ -371,7 +483,11 @@
     "featuredImage": "/blog/google-ads-vs-seo-co-je-lepsie-pre-slovensky-biznis-v-roku-2026/google-ads-vs-seo-1.webp",
     "featuredW": 1280,
     "featuredH": 1280,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "google-ads",
+      "seo"
+    ]
   },
   {
     "slug": "server-side-tagging-vs-server-side-tracking-aky-je-skutocny-rozdiel",
@@ -383,7 +499,10 @@
     "featuredImage": "/blog/server-side-tagging-vs-server-side-tracking-aky-je-skutocny-rozdiel/server-side-tagging-vs-server-side-tracking.webp",
     "featuredW": 1280,
     "featuredH": 1280,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "meranie"
+    ]
   },
   {
     "slug": "universal-commerce-protocol-ucp-od-google-co-to-znamena-pre-seo-a-e-commerce-v-roku-2026",
@@ -396,7 +515,12 @@
     "featuredImage": "/blog/universal-commerce-protocol-ucp-od-google-co-to-znamena-pre-seo-a-e-commerce-v-roku-2026/google-ucp-1.webp",
     "featuredW": 1280,
     "featuredH": 714,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "seo",
+      "eshopy",
+      "ai"
+    ]
   },
   {
     "slug": "andromeda-ako-novy-algoritmus-zmenil-logiku-meta-reklam-a-co-robit-v-roku-2025",
@@ -408,7 +532,10 @@
     "featuredImage": "/blog/andromeda-ako-novy-algoritmus-zmenil-logiku-meta-reklam-a-co-robit-v-roku-2025/meta-ads-andromeda-cover.webp",
     "featuredW": 1280,
     "featuredH": 853,
-    "author": "david-barczi"
+    "author": "david-barczi",
+    "topics": [
+      "meta-ads"
+    ]
   },
   {
     "slug": "ai-max-pre-vyhladavanie-revolucia-v-google-reklamach-ktora-cita-myslienky-vasich-zakaznikov",
@@ -420,7 +547,11 @@
     "featuredImage": "/blog/ai-max-pre-vyhladavanie-revolucia-v-google-reklamach-ktora-cita-myslienky-vasich-zakaznikov/google-search-ai-max.webp",
     "featuredW": 1280,
     "featuredH": 853,
-    "author": "david-barczi"
+    "author": "david-barczi",
+    "topics": [
+      "google-ads",
+      "ai"
+    ]
   },
   {
     "slug": "ai-overviews-kompletny-sprievodca",
@@ -433,7 +564,11 @@
     "featuredImage": "/blog/ai-overviews-kompletny-sprievodca/starboBez-nazvu-Reklama-na-Facebook-–-Reklama-na-Facebook-2025-06-25-14-11-22-high-fidelity-v2-2x.webp",
     "featuredW": 1280,
     "featuredH": 662,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "seo",
+      "ai"
+    ]
   },
   {
     "slug": "preco-je-dolezite-sledovat-google-ads-konverzie-podla-casu",
@@ -445,7 +580,11 @@
     "featuredImage": "/blog/preco-je-dolezite-sledovat-google-ads-konverzie-podla-casu/starbo__A_professional_and_modern_digital_illustration_of_onl_57ad46f0-0a49-4d85-97b8-8579e75d8160_2.webp",
     "featuredW": 1280,
     "featuredH": 674,
-    "author": "david-barczi"
+    "author": "david-barczi",
+    "topics": [
+      "google-ads",
+      "meranie"
+    ]
   },
   {
     "slug": "geo-vs-seo",
@@ -458,7 +597,11 @@
     "featuredImage": "/blog/geo-vs-seo/geo-vs-seo-posun-hero.webp",
     "featuredW": 1200,
     "featuredH": 670,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "seo",
+      "ai"
+    ]
   },
   {
     "slug": "preco-roas-nestaci-poas-vam-odhali-skutocny-zisk-z-reklamy",
@@ -470,7 +613,11 @@
     "featuredImage": "/blog/preco-roas-nestaci-poas-vam-odhali-skutocny-zisk-z-reklamy/poas-vs-roas-starbomedia-blog-768x768.webp",
     "featuredW": 768,
     "featuredH": 768,
-    "author": "david-barczi"
+    "author": "david-barczi",
+    "topics": [
+      "meranie",
+      "eshopy"
+    ]
   },
   {
     "slug": "deepseek-cinska-ai-revolucia-alebo-bezpecnostna-hrozba",
@@ -482,7 +629,10 @@
     "featuredImage": "/blog/deepseek-cinska-ai-revolucia-alebo-bezpecnostna-hrozba/starbo__A_colossal_blue_whale_representing_DeepSeek_gliding_thr_4703b831-85e6-4c0a-9125-11e411aa924f-768x430.webp",
     "featuredW": 768,
     "featuredH": 430,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "ai"
+    ]
   },
   {
     "slug": "google-core-update-2024-prirucka",
@@ -494,7 +644,11 @@
     "featuredImage": "/blog/google-core-update-2024-prirucka/starbo__A_massive_futuristic_search_engine_control_panel_with_a_10d3ec48-8a24-4a15-9706-0922a73afb00-768x430.webp",
     "featuredW": 768,
     "featuredH": 430,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "seo",
+      "novinky"
+    ]
   },
   {
     "slug": "gpsr",
@@ -506,7 +660,10 @@
     "featuredImage": "/blog/gpsr/cc3c8ba2-6ca9-470c-b76b-50334cc9336e.webp",
     "featuredW": 1280,
     "featuredH": 731,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "eshopy"
+    ]
   },
   {
     "slug": "trendy-onlinemarketing-2024",
@@ -518,7 +675,10 @@
     "featuredImage": "/blog/trendy-onlinemarketing-2024/DALL·E-2023-12-09-12.12.03-A-digital-marketing-expert-analyzing-complex-data-on-a-computer-screen-with-futuristic-AI-and-automation-icons-floating-around-symbolizing-the-integ.webp",
     "featuredW": 1280,
     "featuredH": 731,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "novinky"
+    ]
   },
   {
     "slug": "gemini-vs-gpt-4-suboj-titanov-umelej-inteligencie",
@@ -530,7 +690,10 @@
     "featuredImage": "/blog/gemini-vs-gpt-4-suboj-titanov-umelej-inteligencie/starbo__In_a_futuristic_cityscape_the_AI_entities_GPT-4_and_G_4e2800f7-d1dc-4ade-9dd5-f5884326f100_1.webp",
     "featuredW": 1280,
     "featuredH": 717,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "ai"
+    ]
   },
   {
     "slug": "analyza-klucovych-slov-cesta-k-vasmu-uspesnemu-online-podnikaniu",
@@ -542,7 +705,11 @@
     "featuredImage": "/blog/analyza-klucovych-slov-cesta-k-vasmu-uspesnemu-online-podnikaniu/banner_new.webp",
     "featuredW": 953,
     "featuredH": 636,
-    "author": "david-barczi"
+    "author": "david-barczi",
+    "topics": [
+      "seo",
+      "google-ads"
+    ]
   },
   {
     "slug": "remarketing-nahanacka-v-online-marketingu",
@@ -554,6 +721,10 @@
     "featuredImage": "/blog/remarketing-nahanacka-v-online-marketingu/štrbo-creative-e1539248617292.webp",
     "featuredW": 800,
     "featuredH": 534,
-    "author": "peter-strbo"
+    "author": "peter-strbo",
+    "topics": [
+      "google-ads",
+      "meta-ads"
+    ]
   }
 ]

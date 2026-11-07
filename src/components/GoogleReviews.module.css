@@ -14,7 +14,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--primary);
+    color: var(--primary-dark);
     margin-bottom: 0.75rem;
 }
 
@@ -63,7 +63,7 @@
 .badgeLink {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--primary);
+    color: #6d28d9;
     border-left: 1px solid var(--border);
     padding-left: 0.85rem;
 }

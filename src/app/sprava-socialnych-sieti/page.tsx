@@ -8,7 +8,7 @@ import {
 import styles from '../service.module.css';
 
 // Akcent služby: fuchsiová — vizuálne v rodine s Meta ružovou, ale odlíšená.
-const ACCENT = '#d946ef';
+const ACCENT = '#a21caf';
 const ACCENT_SOFT = '#fdf4ff';
 const ACCENT_BORDER = '#f5d0fe';
 const PURPLE = '#8b5cf6';
@@ -262,7 +262,7 @@ export default function SocialMediaPage() {
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>Pravidelný a konzistentný obsah, ktorý buduje značku a dá sa použiť aj ako kreatíva do reklám.</p>
                         </div>
                         <div className={styles.card}>
-                            <Users className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <Users className={styles.cardIcon} style={{ color: '#059669' }} />
                             <h3 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>Podnikatelia</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>Profesionálna komunikácia bez budovania interného tímu — od stratégie po publikovanie.</p>
                         </div>
@@ -290,7 +290,7 @@ export default function SocialMediaPage() {
                         ))}
                     </div>
                     <p className={styles.text} style={{ textAlign: 'center', maxWidth: '680px', margin: '2.5rem auto 0', fontSize: '0.95rem' }}>
-                        <CheckCircle size={16} style={{ display: 'inline', verticalAlign: 'middle', color: '#10b981', marginRight: '0.4rem' }} />
+                        <CheckCircle size={16} style={{ display: 'inline', verticalAlign: 'middle', color: '#059669', marginRight: '0.4rem' }} />
                         Organický obsah a platená reklama u nás fungujú spolu — najlepšie videá z profilu vieme nasadiť
                         ako <Link href="/facebook-reklama" style={{ color: ACCENT, fontWeight: 600 }}>reklamy na Facebooku a Instagrame</Link>.
                     </p>

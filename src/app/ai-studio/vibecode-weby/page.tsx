@@ -64,7 +64,7 @@ export default function VibeCodePage() {
                         <div style={{ background: '#f8fafc', borderRadius: '16px', minHeight: '300px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', border: '1px dashed #cbd5e1', padding: '2rem', textAlign: 'center' }}>
                             <Layers size={40} color="#6366f1" />
                             <span style={{ color: '#475569', fontWeight: 600 }}>Tento web (starbomedia.sk)</span>
-                            <span style={{ color: '#94a3b8', fontSize: '0.9rem' }}>postavený rovnakým postupom</span>
+                            <span style={{ color: '#64748b', fontSize: '0.9rem' }}>postavený rovnakým postupom</span>
                         </div>
                     </div>
                 </div>

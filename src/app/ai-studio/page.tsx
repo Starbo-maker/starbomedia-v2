@@ -3,7 +3,7 @@ import { Camera, Layers, Video, Wand2, Monitor, Mic, Languages, FileText, Search
 import styles from '../ai-studio.module.css';
 
 export const metadata = {
-    title: 'AI Studio | Starbomedia',
+    title: 'AI Studio: AI fotografia produktov a SEO články | Starbomedia',
     description: 'AI nástroje pre marketing, ktoré reálne používame pre klientov — produktová fotografia, marketing bannery, video z produktov, viacjazyčný dabing, SEO obsah, weby aj automatizované reporty.',
 };
 
@@ -180,7 +180,7 @@ export default function AiStudioPage() {
                                                 fontWeight: 600,
                                                 textTransform: 'uppercase',
                                                 letterSpacing: '0.04em',
-                                                color: '#f97316',
+                                                color: '#c2410c',
                                                 background: 'rgba(249, 115, 22, 0.1)',
                                                 border: '1px solid rgba(249, 115, 22, 0.2)',
                                                 borderRadius: '50px',

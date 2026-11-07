@@ -3,7 +3,7 @@ import styles from '../service.module.css';
 import ContactForm from '../../components/ContactForm';
 
 export const metadata = {
-    title: 'Kontakt | Starbomedia',
+    title: 'Kontakt – online marketingová agentúra Starbomedia',
     description: 'Kontaktujte nás pre nezáväznú konzultáciu. Starbomedia — vaša online marketing agentúra.',
 };
 
@@ -26,7 +26,7 @@ export default function ContactPage() {
                     {/* Contact Info */}
                     <div>
                         <div className={styles.card}>
-                            <h3 className={styles.cardTitle} style={{ marginBottom: '2rem' }}>Kontaktné údaje</h3>
+                            <h2 className={styles.cardTitle} style={{ marginBottom: '2rem' }}>Kontaktné údaje</h2>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                                     <div style={{ background: '#eff6ff', padding: '1rem', borderRadius: '12px' }}>
@@ -67,7 +67,7 @@ export default function ContactPage() {
 
                     {/* Contact Form */}
                     <div className={styles.card} style={{ background: '#fff', borderColor: '#e2e8f0' }}>
-                        <h3 className={styles.cardTitle}>Napíšte nám</h3>
+                        <h2 className={styles.cardTitle}>Napíšte nám</h2>
                         <ContactForm />
                     </div>
                 </section>

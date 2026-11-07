@@ -81,7 +81,7 @@ export default function CennikPage() {
                             a vstupný audit, ktorý sa vám pri spolupráci odpočíta z prvej faktúry. Nižšie nájdete kompletné pásma aj to, čo za ne reálne dostanete.
                         </p>
                         <div style={{ marginTop: '2rem' }}>
-                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#8b5cf6', boxShadow: '0 4px 14px 0 rgba(139, 92, 246, 0.4)' }}>
+                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#7c3aed', boxShadow: '0 4px 14px 0 rgba(139, 92, 246, 0.4)' }}>
                                 Chcem vstupný audit
                             </Link>
                         </div>
@@ -120,7 +120,7 @@ export default function CennikPage() {
                                         <td style={{ padding: '0.9rem 1.1rem', fontWeight: 600 }}>
                                             <Link href={c.href} style={{ color: '#0f172a' }}>{c.sluzba}</Link>
                                         </td>
-                                        <td style={{ padding: '0.9rem 1.1rem', whiteSpace: 'nowrap', fontWeight: 700, color: c.cena === 'zdarma' ? '#10b981' : '#F04E24' }}>{c.cena}</td>
+                                        <td style={{ padding: '0.9rem 1.1rem', whiteSpace: 'nowrap', fontWeight: 700, color: c.cena === 'zdarma' ? '#047857' : '#c2410c' }}>{c.cena}</td>
                                         <td style={{ padding: '0.9rem 1.1rem', color: '#475569' }}>{c.detail}</td>
                                     </tr>
                                 ))}
@@ -204,7 +204,7 @@ export default function CennikPage() {
                         Pošlite nám prístup alebo web — vo vstupnom audite vám povieme, kadiaľ utekajú peniaze,
                         aký rozpočet dáva zmysel a koľko by stála správa u nás.
                     </p>
-                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#8b5cf6' }}>Objednať vstupný audit</Link>
+                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#7c3aed' }}>Objednať vstupný audit</Link>
                 </section>
             </div>
 

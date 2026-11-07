@@ -14,7 +14,7 @@ export default function ComparisonsPage() {
                 <div className={styles.headerBackground} style={{ background: 'radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.1), transparent 60%)' }} />
                 <div className={`container ${styles.headerGrid}`}>
                     <div className={styles.headerContent}>
-                        <span style={{ color: '#0ea5e9', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem', display: 'block' }}>
+                        <span style={{ color: '#0369a1', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem', display: 'block' }}>
                             Porovnávače cien
                         </span>
                         <h1 className={styles.title}>Ovládnite porovnávače cien</h1>
@@ -23,7 +23,7 @@ export default function ComparisonsPage() {
                             Zabezpečíme, aby ste boli vidieť na popredných miestach a neplatili zbytočne veľa.
                         </p>
                         <div style={{ marginTop: '2rem' }}>
-                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#0ea5e9', boxShadow: '0 4px 14px 0 rgba(14, 165, 233, 0.4)' }}>
+                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#0369a1', boxShadow: '0 4px 14px 0 rgba(14, 165, 233, 0.4)' }}>
                                 Chcem audit feedu
                             </Link>
                         </div>
@@ -108,14 +108,14 @@ export default function ComparisonsPage() {
                         Sme certifikovaný partner Mergado. Tento nástroj nám umožňuje upravovať váš XML feed hromadne, bez zásahu programátora.
                         Vieme meniť názvy, skrývať neprofitabilné produkty či prepočítavať ceny pre zahraničie.
                     </p>
-                    <div style={{ display: 'inline-block', padding: '0.5rem 1.5rem', background: '#0ea5e9', color: 'white', borderRadius: '50px', fontWeight: 600, marginTop: '1rem' }}>
+                    <div style={{ display: 'inline-block', padding: '0.5rem 1.5rem', background: '#0369a1', color: 'white', borderRadius: '50px', fontWeight: 600, marginTop: '1rem' }}>
                         Mergado Certified Partner
                     </div>
                 </section>
 
                 <div className={styles.ctaBox} style={{ marginTop: 'var(--space-5)' }}>
                     <h2 className={styles.ctaTitle}>Využite potenciál porovnávačov naplno</h2>
-                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#0ea5e9', border: 'none', padding: '1rem 3rem' }}>
+                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#0369a1', border: 'none', padding: '1rem 3rem' }}>
                         Chcem audit feedu
                     </Link>
                 </div>

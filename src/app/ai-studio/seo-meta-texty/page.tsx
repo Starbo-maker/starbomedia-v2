@@ -80,7 +80,7 @@ export default function SeoMetaTextyPage() {
                         </div>
                         <div style={{ background: '#f1f5f9', borderRadius: '16px', minHeight: '300px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '2rem', textAlign: 'center' }}>
                             <Layers size={40} color="#94a3b8" />
-                            <span style={{ color: '#94a3b8', fontWeight: 600 }}>Tisíce produktov, jeden beh</span>
+                            <span style={{ color: '#475569', fontWeight: 600 }}>Tisíce produktov, jeden beh</span>
                         </div>
                     </div>
                 </div>
@@ -142,7 +142,7 @@ export default function SeoMetaTextyPage() {
                     </div>
                     <div className={styles.grid}>
                         <div style={{ background: '#fff7ed', border: '1px solid rgba(249, 115, 22, 0.2)', borderRadius: '16px', padding: '2rem' }}>
-                            <div style={{ display: 'inline-block', padding: '0.3rem 0.9rem', borderRadius: '50px', background: 'rgba(249, 115, 22, 0.12)', color: '#ea580c', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '1.25rem' }}>
+                            <div style={{ display: 'inline-block', padding: '0.3rem 0.9rem', borderRadius: '50px', background: 'rgba(249, 115, 22, 0.12)', color: '#9a3412', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '1.25rem' }}>
                                 Pred — šablóna
                             </div>
                             <p style={{ color: '#475569', lineHeight: '1.7', fontStyle: 'italic' }}>

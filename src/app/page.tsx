@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Search, BarChart2, Share2, Globe, TrendingUp, Monitor, Zap, Mic, Video, Layers, ArrowRight, ShieldCheck, PieChart, Star } from 'lucide-react';
+import { Search, BarChart2, Share2, Globe, TrendingUp, Zap, Video, FileText, Image as ImageIcon, ArrowRight, ShieldCheck, Star } from 'lucide-react';
 import styles from './home.module.css';
 import GoogleReviews from '../components/GoogleReviews';
 import { REVIEW_AGGREGATE } from '../data/reviews';
@@ -90,12 +90,12 @@ export default function Home() {
                 <h3 className={styles.cardTitle}>Google Ads & Performance</h3>
                 <p className={styles.cardDesc}>
                   Maximalizujte návratnosť s kampaňami, ktoré cielia na ľudí pripravených nakupovať.
-                  Search, Shopping, PMax - ladíme PNO na stotiny percenta.
+                  Search, Shopping a PMax nastavené podľa marže a PNO, nie podľa počtu preklikov.
                 </p>
               </div>
               <div style={{ marginTop: '2rem', display: 'flex', gap: '2rem' }}>
                 <div><div style={{ fontWeight: 800, fontSize: '1.5rem', color: '#8b5cf6' }}>10 M€+</div><div style={{ fontSize: '0.8rem' }}>Ročný spend</div></div>
-                <div><div style={{ fontWeight: 800, fontSize: '1.5rem', color: '#10b981' }}>od 2012</div><div style={{ fontSize: '0.8rem' }}>Skúsenosti</div></div>
+                <div><div style={{ fontWeight: 800, fontSize: '1.5rem', color: '#059669' }}>od 2012</div><div style={{ fontSize: '0.8rem' }}>Skúsenosti</div></div>
               </div>
               <Link href="/google-reklama" aria-label="Google Ads – zistiť viac" style={{ position: 'absolute', bottom: '2rem', right: '2rem', background: '#f8fafc', padding: '0.8rem', borderRadius: '50%' }}>
                 <ArrowRight size={20} />
@@ -104,19 +104,19 @@ export default function Home() {
 
             {/* Social Media */}
             <div className={`${styles.bentoCard} ${styles.span4}`}>
-              <div className={styles.cardIcon} style={{ color: '#ec4899' }}><Share2 size={28} /></div>
+              <div className={styles.cardIcon} style={{ color: '#db2777' }}><Share2 size={28} /></div>
               <h3 className={styles.cardTitle}>Social Media</h3>
               <p className={styles.cardDesc}>Facebook & Instagram reklama, ktorá zastaví scrollovanie. Kreatíva, ktorá predáva emócie.</p>
-              <Link href="/facebook-reklama" className={styles.cardLink} style={{ color: '#ec4899' }}>
+              <Link href="/facebook-reklama" className={styles.cardLink} style={{ color: '#db2777' }}>
                 Zistiť viac <ArrowRight size={16} />
               </Link>
             </div>
 
             {/* SEO */}
             <div className={`${styles.bentoCard} ${styles.span4}`}>
-              <div className={styles.cardIcon} style={{ color: '#10b981' }}><TrendingUp size={28} /></div>
+              <div className={styles.cardIcon} style={{ color: '#059669' }}><TrendingUp size={28} /></div>
               <h3 className={styles.cardTitle}>SEO Optimalizácia</h3>
-              <p className={styles.cardDesc}>Dostaňte sa na prvé miesta organicky. Technické SEO, linkbuilding a content stratégia.</p>
+              <p className={styles.cardDesc}>Technické SEO, obsah a odkazy, aby vás našli v Google aj v AI vyhľadávaní.</p>
               <Link href="/seo" className={styles.cardLink} style={{ color: '#047857' }}>
                 Zistiť viac <ArrowRight size={16} />
               </Link>
@@ -134,7 +134,7 @@ export default function Home() {
 
             {/* Export */}
             <div className={`${styles.bentoCard} ${styles.span4}`}>
-              <div className={styles.cardIcon} style={{ color: '#3b82f6' }}><Globe size={28} /></div>
+              <div className={styles.cardIcon} style={{ color: '#2563eb' }}><Globe size={28} /></div>
               <h3 className={styles.cardTitle}>Export do zahraničia</h3>
               <p className={styles.cardDesc}>Expandujte do CZ, HU, RO. Lokalizácia kampaní a podpora.</p>
               <Link href="/expanzia-eshopu-do-zahranicia-ppc-cee-2026" className={styles.cardLink} style={{ color: '#2563eb' }}>
@@ -145,9 +145,9 @@ export default function Home() {
             {/* Sociálne siete a obsah — nová služba */}
             <div className={`${styles.bentoCard} ${styles.span12}`} style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.25rem', flex: '1 1 420px' }}>
-                <div className={styles.cardIcon} style={{ color: '#d946ef', flexShrink: 0 }}><Video size={28} /></div>
+                <div className={styles.cardIcon} style={{ color: '#a21caf', flexShrink: 0 }}><Video size={28} /></div>
                 <div>
-                  <span style={{ display: 'inline-block', background: '#fdf4ff', color: '#d946ef', border: '1px solid #f5d0fe', borderRadius: '50px', padding: '0.15rem 0.7rem', fontSize: '0.75rem', fontWeight: 700, marginBottom: '0.5rem' }}>NOVÁ SLUŽBA</span>
+                  <span style={{ display: 'inline-block', background: '#fdf4ff', color: '#a21caf', border: '1px solid #f5d0fe', borderRadius: '50px', padding: '0.15rem 0.7rem', fontSize: '0.75rem', fontWeight: 700, marginBottom: '0.5rem' }}>NOVÁ SLUŽBA</span>
                   <h3 className={styles.cardTitle}>Sociálne siete a tvorba obsahu</h3>
                   <p className={styles.cardDesc} style={{ marginBottom: 0 }}>
                     Správa profilov na kľúč — stratégia, natáčanie priamo u vás, Reels a TikTok videá,
@@ -176,34 +176,34 @@ export default function Home() {
             <div style={{ display: 'inline-block', border: '1px solid rgba(249, 115, 22, 0.5)', padding: '0.5rem 1rem', borderRadius: '50px', color: '#f97316', background: 'rgba(249, 115, 22, 0.1)', marginBottom: '1.5rem', fontWeight: 600 }}>
               NOVINKA: STARBO AI STUDIO
             </div>
-            <h2 style={{ fontSize: 'var(--fs-h2-lg)', color: 'white', marginBottom: '1.5rem' }}>Budúcnosť marketingu je automatizovaná</h2>
+            <h2 style={{ fontSize: 'var(--fs-h2-lg)', color: 'white', marginBottom: '1.5rem' }}>AI, ktorá robí reálnu prácu</h2>
             <p style={{ maxWidth: '700px', margin: '0 auto 3rem', color: '#cbd5e1', fontSize: '1.1rem' }}>
-              Nestrácajte čas manuálnou prácou. Využite silu umelej inteligencie na tvorbu obsahu, videí a interakciu so zákazníkmi.
+              Vlastné AI nástroje, ktoré reálne používame v práci pre klientov – od produktových vizuálov cez SEO články po reporty kampaní.
             </p>
 
             <div className={styles.aiGrid}>
-              <Link href="/ai-studio/ai-influencer" className={styles.aiCard}>
+              <Link href="/ai-studio/produktova-fotografia" className={styles.aiCard}>
                 <div style={{ background: 'rgba(99, 102, 241, 0.2)', width: '50px', height: '50px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem' }}>
-                  <Mic color="#818cf8" />
+                  <ImageIcon color="#818cf8" />
                 </div>
-                <h3 style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0.5rem' }}>AI Influenceri</h3>
-                <p style={{ fontSize: '0.9rem', color: '#94a3b8' }}>Virtuálne osobnosti, ktoré propagujú vašu značku 24/7 bez nárokov na honorár.</p>
+                <h3 style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0.5rem' }}>AI produktová fotografia</h3>
+                <p style={{ fontSize: '0.9rem', color: '#94a3b8' }}>Z jednej fotky produktu desiatky reklamných scén. Značka aj etiketa ostávajú verné.</p>
               </Link>
 
-              <Link href="/ai-studio/product-to-video" className={styles.aiCard}>
+              <Link href="/ai-studio/seo-clanky" className={styles.aiCard}>
                 <div style={{ background: 'rgba(249, 115, 22, 0.2)', width: '50px', height: '50px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem' }}>
-                  <Video color="#fb923c" />
+                  <FileText color="#fb923c" />
                 </div>
-                <h3 style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0.5rem' }}>Product-to-Video</h3>
-                <p style={{ fontSize: '0.9rem', color: '#94a3b8' }}>Z jednej fotky produktu vytvoríme profesionálne promo video do 24 hodín.</p>
+                <h3 style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0.5rem' }}>AI tvorba SEO článkov</h3>
+                <p style={{ fontSize: '0.9rem', color: '#94a3b8' }}>Vlastný 8-krokový proces od výskumu kľúčových slov po hotový článok s overenými faktami.</p>
               </Link>
 
-              <Link href="/ai-studio/vibecode-weby" className={styles.aiCard}>
+              <Link href="/ai-studio/report-vizualizacia" className={styles.aiCard}>
                 <div style={{ background: 'rgba(236, 72, 153, 0.2)', width: '50px', height: '50px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem' }}>
-                  <Monitor color="#f472b6" />
+                  <BarChart2 color="#f472b6" />
                 </div>
-                <h3 style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0.5rem' }}>VibeCode Weby</h3>
-                <p style={{ fontSize: '0.9rem', color: '#94a3b8' }}>Webstránky generované AI, ktoré sa samé optimalizujú pre konverzie.</p>
+                <h3 style={{ fontSize: '1.2rem', color: 'white', marginBottom: '0.5rem' }}>Automatizované reporty</h3>
+                <p style={{ fontSize: '0.9rem', color: '#94a3b8' }}>Každý pondelok report kampaní naprieč trhmi s upozornením na výkyvy, priamo do Slacku.</p>
               </Link>
             </div>
 

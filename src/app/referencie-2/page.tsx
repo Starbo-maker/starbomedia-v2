@@ -5,17 +5,17 @@ import CountryFlags from '../../components/CountryFlags';
 import { REVIEWS, REVIEW_AGGREGATE } from '../../data/reviews';
 
 export const metadata = {
-    title: 'Referencie | Starbomedia',
+    title: 'Referencie a recenzie klientov – PPC a SEO agentúra | Starbomedia',
     description: 'Klienti, ktorým pomáhame rásť — Bubulákovo, Murat, Bežeckepotreby.sk, Športrysy, Ecoprodukt, Ecovacs, Stadlerform, Fabulo a ďalší. Google Ads, Meta Ads, SEO a cenové porovnávače.',
 };
 
 const SERVICE_COLORS: Record<string, string> = {
-    'Google Ads': '#3b82f6',
-    'Meta Ads': '#ec4899',
-    'SEO': '#10b981',
-    'Heureka': '#f97316',
-    'Zboží': '#f97316',
-    'Sklik': '#dc2626',
+    'Google Ads': '#1d4ed8',
+    'Meta Ads': '#be185d',
+    'SEO': '#047857',
+    'Heureka': '#c2410c',
+    'Zboží': '#c2410c',
+    'Sklik': '#b91c1c',
 };
 
 const CLIENTS: { name: string; note?: string; services: string[]; countries: string[] }[] = [

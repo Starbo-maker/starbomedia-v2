@@ -20,7 +20,7 @@ export default function SeoPage() {
                     <div className={styles.headerContent}>
                         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#ecfdf5', padding: '0.3rem 0.8rem', borderRadius: '50px', marginBottom: '1.5rem', border: '1px solid #d1fae5' }}>
                             <TrendingUp size={16} color="#10b981" />
-                            <span style={{ color: '#10b981', fontWeight: 600, fontSize: '0.85rem' }}>ORGANICKÝ RAST OD ROKU 2012</span>
+                            <span style={{ color: '#047857', fontWeight: 600, fontSize: '0.85rem' }}>ORGANICKÝ RAST OD ROKU 2012</span>
                         </div>
                         <h1 className={styles.title}>SEO, ktoré sa meria v tržbách.</h1>
                         <p className={styles.subtitle}>
@@ -28,7 +28,7 @@ export default function SeoPage() {
                             slovách a odkazoch. Je to o tom, aby váš web dával odpovede, ktorým Google aj AI dôverujú.
                         </p>
                         <div style={{ marginTop: '2rem' }}>
-                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#10b981', boxShadow: '0 4px 14px 0 rgba(16, 185, 129, 0.4)' }}>
+                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#047857', boxShadow: '0 4px 14px 0 rgba(16, 185, 129, 0.4)' }}>
                                 Chcem SEO audit
                             </Link>
                         </div>
@@ -78,7 +78,7 @@ export default function SeoPage() {
                             <h3 style={{ fontSize: '1.2rem', color: '#64748b', marginBottom: '2rem' }}>Starbomedia v skratke</h3>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                                 <div>
-                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#10b981' }}>od 2012</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#059669' }}>od 2012</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>V online marketingu</div>
                                 </div>
                                 <div>
@@ -86,15 +86,15 @@ export default function SeoPage() {
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Klientov v starostlivosti</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#3b82f6' }}>13</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#2563eb' }}>13</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Trhov CEE, kde pôsobíme</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#f59e0b' }}>10 M€+</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#d97706' }}>10 M€+</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Ročný ad spend naprieč kanálmi</div>
                                 </div>
                             </div>
-                            <p style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '1.5rem', lineHeight: 1.5 }}>
+                            <p style={{ fontSize: '0.8rem', color: '#64748b', marginTop: '1.5rem', lineHeight: 1.5 }}>
                                 SEO spájame so znalosťou platených kanálov — dáta z PPC priamo zlepšujú organickú stratégiu.
                             </p>
                         </div>
@@ -111,7 +111,7 @@ export default function SeoPage() {
                     <div className={styles.cardGrid}>
                         {/* Technical SEO */}
                         <div className={styles.card}>
-                            <Gauge className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <Gauge className={styles.cardIcon} style={{ color: '#059669' }} />
                             <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Technické SEO a audit</h3>
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Bez čistého technického základu obsah nepomôže. Ideme do hĺbky kódu, nie len do online SEO skóre.
@@ -124,7 +124,7 @@ export default function SeoPage() {
                         </div>
                         {/* Keywords & intent */}
                         <div className={styles.card}>
-                            <Search className={styles.cardIcon} style={{ color: '#3b82f6' }} />
+                            <Search className={styles.cardIcon} style={{ color: '#2563eb' }} />
                             <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Kľúčové slová a zámer</h3>
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Nepozeráme len na objem dopytov. Mapujeme zámer vyhľadávania, aby každá stránka odpovedala na to, čo človek naozaj hľadá.
@@ -163,7 +163,7 @@ export default function SeoPage() {
                         </div>
                         {/* Local SEO */}
                         <div className={styles.card}>
-                            <MapPin className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <MapPin className={styles.cardIcon} style={{ color: '#059669' }} />
                             <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Lokálne SEO</h3>
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Pre kamenné prevádzky je lokálne vyhľadávanie často priorita číslo jeden — najmä na mobiloch.
@@ -176,7 +176,7 @@ export default function SeoPage() {
                         </div>
                         {/* E-commerce SEO */}
                         <div className={styles.card}>
-                            <Layers className={styles.cardIcon} style={{ color: '#3b82f6' }} />
+                            <Layers className={styles.cardIcon} style={{ color: '#2563eb' }} />
                             <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>SEO pre e-shopy</h3>
                             <p className={styles.text} style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                                 Samostatná disciplína — pri tisícoch URL rozhoduje kanonizácia, indexačná stratégia a poriadok v štruktúre.
@@ -198,7 +198,7 @@ export default function SeoPage() {
                     </p>
                     <div className={styles.gridTwo}>
                         <div className={styles.card}>
-                            <BarChart2 className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <BarChart2 className={styles.cardIcon} style={{ color: '#059669' }} />
                             <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Meriame biznis, nie pozície</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>
                                 Namiesto reportu o 500 kľúčových slovách sledujeme organickú tržbu, konverzie z organickej návštevnosti a podiel
@@ -206,7 +206,7 @@ export default function SeoPage() {
                             </p>
                         </div>
                         <div className={styles.card}>
-                            <Target className={styles.cardIcon} style={{ color: '#3b82f6' }} />
+                            <Target className={styles.cardIcon} style={{ color: '#2563eb' }} />
                             <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>SEO neoddeľujeme od platených kanálov</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>
                                 Spravujeme aj Google Ads a Meta Ads, takže poznatky z PPC prenášame do SEO. Ak kľúčové slovo konvertuje v reklame,
@@ -238,27 +238,27 @@ export default function SeoPage() {
                         <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Ako prebieha spolupráca?</h2>
                         <div className={styles.cardGrid} style={{ alignItems: 'flex-start' }}>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #d1fae5' }}>
-                                <div style={{ color: '#10b981', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>01. Úvodná analýza</div>
+                                <div style={{ color: '#059669', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>01. Úvodná analýza</div>
                                 <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Nezáväzne, do 2–3 dní. Rýchly pohľad na indexáciu, viditeľnosť, technické bloky a najväčšie príležitosti.</p>
                             </div>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #d1fae5' }}>
-                                <div style={{ color: '#10b981', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>02. Komplexný audit</div>
+                                <div style={{ color: '#059669', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>02. Komplexný audit</div>
                                 <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Technika, obsah, kľúčové slová, konkurencia a návrh štruktúry. Výstupom je akčný dokument, nie 50-stranové PDF.</p>
                             </div>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #d1fae5' }}>
-                                <div style={{ color: '#10b981', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>03. Implementácia</div>
+                                <div style={{ color: '#059669', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>03. Implementácia</div>
                                 <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Úpravy nasadíme sami (ak máme prístup k CMS) alebo s vašimi vývojármi. Každá zmena má prioritu a očakávaný dopad.</p>
                             </div>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #d1fae5' }}>
-                                <div style={{ color: '#10b981', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>04. Obsahová produkcia</div>
+                                <div style={{ color: '#059669', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>04. Obsahová produkcia</div>
                                 <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Tvorba a revízia obsahu, ktorý buduje topickú autoritu podľa schválenej obsahovej stratégie.</p>
                             </div>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #d1fae5' }}>
-                                <div style={{ color: '#10b981', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>05. Monitoring a reporting</div>
+                                <div style={{ color: '#059669', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>05. Monitoring a reporting</div>
                                 <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Mesačný report s vývojom pozícií, organickej návštevnosti a konverzií — metriky orientované na biznis.</p>
                             </div>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #d1fae5' }}>
-                                <div style={{ color: '#10b981', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>06. Priebežné ladenie</div>
+                                <div style={{ color: '#059669', fontWeight: 800, fontSize: '1.4rem', marginBottom: '0.5rem' }}>06. Priebežné ladenie</div>
                                 <p style={{ fontSize: '0.95rem', color: '#64748b' }}>SEO nie je jednorazová akcia. Reagujeme na core aktualizácie, konkurenciu a vývoj dopytov v čase.</p>
                             </div>
                         </div>
@@ -273,12 +273,12 @@ export default function SeoPage() {
                     </p>
                     <div className={styles.gridTwo}>
                         <div className={styles.card}>
-                            <Layers className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <Layers className={styles.cardIcon} style={{ color: '#059669' }} />
                             <h3 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>E-shopy</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>Kategórie a produktové stránky s priamo merateľným prínosom pre organickú tržbu.</p>
                         </div>
                         <div className={styles.card}>
-                            <Globe className={styles.cardIcon} style={{ color: '#3b82f6' }} />
+                            <Globe className={styles.cardIcon} style={{ color: '#2563eb' }} />
                             <h3 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>B2B služby</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>Dlhší rozhodovací cyklus, kde rozhoduje odbornosť a dôveryhodnosť obsahu (E-E-A-T).</p>
                         </div>
@@ -294,7 +294,7 @@ export default function SeoPage() {
                         </div>
                     </div>
                     <p className={styles.text} style={{ textAlign: 'center', maxWidth: '680px', margin: '2.5rem auto 0', fontSize: '0.95rem' }}>
-                        <CheckCircle size={16} style={{ display: 'inline', verticalAlign: 'middle', color: '#10b981', marginRight: '0.4rem' }} />
+                        <CheckCircle size={16} style={{ display: 'inline', verticalAlign: 'middle', color: '#059669', marginRight: '0.4rem' }} />
                         Hráme férovo — ak potrebujete výsledky okamžite, povieme vám to. Vtedy začíname Google Ads alebo Meta Ads a SEO budujeme paralelne ako dlhodobý kanál.
                     </p>
                 </section>
@@ -363,7 +363,7 @@ export default function SeoPage() {
 
                 <div className={styles.ctaBox} style={{ background: '#ecfdf5', borderColor: '#6ee7b7', marginTop: '3rem' }}>
                     <h2 className={styles.ctaTitle}>Kde sa váš web nachádza dnes?</h2>
-                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#10b981', border: 'none', padding: '1rem 3rem' }}>
+                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#047857', border: 'none', padding: '1rem 3rem' }}>
                         Chcem SEO audit
                     </Link>
                 </div>

@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from 'react';
 import Script from 'next/script';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { CONTACT_SERVICES } from '../data/contactServices';
+import styles from './ContactForm.module.css';
 
 // Cloudflare Turnstile site key — public, nastavuje sa vo Verceli.
 // Keď nie je nastavený, widget sa nezobrazí a server-side overenie sa preskočí
@@ -17,6 +19,7 @@ declare global {
 
 const inputStyle: React.CSSProperties = {
     padding: '0.8rem',
+    font: 'inherit',
     borderRadius: '8px',
     background: '#f8fafc',
     border: '1px solid var(--border)',
@@ -50,7 +53,8 @@ export default function ContactForm() {
                 body: JSON.stringify({
                     meno: fd.get('meno'),
                     email: fd.get('email'),
-                    predmet: fd.get('predmet'),
+                    stranka: fd.get('stranka'),
+                    sluzby: fd.getAll('sluzby'),
                     sprava: fd.get('sprava'),
                     web: fd.get('web'),
                     ts: loadedAt,
@@ -99,9 +103,21 @@ export default function ContactForm() {
             </div>
 
             <div style={fieldStyle}>
-                <label htmlFor="predmet" style={labelStyle}>Predmet</label>
-                <input id="predmet" name="predmet" type="text" maxLength={150} placeholder="Mám záujem o audit..." style={inputStyle} />
+                <label htmlFor="stranka" style={labelStyle}>Web alebo e-shop <span className={styles.optional}>(nepovinné)</span></label>
+                <input id="stranka" name="stranka" type="text" inputMode="url" autoComplete="url" maxLength={200} placeholder="www.vasfirma.sk" style={inputStyle} />
             </div>
+
+            <fieldset className={styles.services}>
+                <legend style={labelStyle}>O čo máte záujem? <span className={styles.optional}>(nepovinné)</span></legend>
+                <div className={styles.serviceChips}>
+                    {CONTACT_SERVICES.map((s) => (
+                        <label key={s} className={styles.serviceChip}>
+                            <input type="checkbox" name="sluzby" value={s} />
+                            <span>{s}</span>
+                        </label>
+                    ))}
+                </div>
+            </fieldset>
 
             <div style={fieldStyle}>
                 <label htmlFor="sprava" style={labelStyle}>Správa</label>

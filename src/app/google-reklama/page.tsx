@@ -20,7 +20,7 @@ export default function GoogleAdsPage() {
                     <div className={styles.headerContent}>
                         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#eff6ff', padding: '0.3rem 0.8rem', borderRadius: '50px', marginBottom: '1.5rem', border: '1px solid #dbeafe' }}>
                             <ShieldCheck size={16} color="#3b82f6" />
-                            <span style={{ color: '#3b82f6', fontWeight: 600, fontSize: '0.85rem' }}>CERTIFIKOVANÝ GOOGLE PARTNER</span>
+                            <span style={{ color: '#2563eb', fontWeight: 600, fontSize: '0.85rem' }}>CERTIFIKOVANÝ GOOGLE PARTNER</span>
                         </div>
                         <h1 className={styles.title}>Google reklama, ktorá platí vaše účty.</h1>
                         <p className={styles.subtitle}>
@@ -28,7 +28,7 @@ export default function GoogleAdsPage() {
                             strednej a východnej Európy. Neplatíte za zobrazenia — platíte za zákazníkov pripravených nakúpiť.
                         </p>
                         <div style={{ marginTop: '2rem' }}>
-                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#3b82f6', boxShadow: '0 4px 14px 0 rgba(59, 130, 246, 0.4)' }}>
+                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#2563eb', boxShadow: '0 4px 14px 0 rgba(59, 130, 246, 0.4)' }}>
                                 Chcem audit kampaní
                             </Link>
                         </div>
@@ -77,11 +77,11 @@ export default function GoogleAdsPage() {
                             <h3 style={{ fontSize: '1.2rem', color: '#64748b', marginBottom: '2rem' }}>Starbomedia v skratke</h3>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                                 <div>
-                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#3b82f6' }}>10 M€+</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#2563eb' }}>10 M€+</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Ročný ad spend (CEE)</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#10b981' }}>od 2012</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#059669' }}>od 2012</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Skúseností s Google Ads</div>
                                 </div>
                                 <div>
@@ -89,7 +89,7 @@ export default function GoogleAdsPage() {
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Trhov CEE, kde inzerujeme</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#f59e0b' }}>90 %+</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#d97706' }}>90 %+</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Presnosť merania tržieb</div>
                                 </div>
                             </div>
@@ -193,7 +193,7 @@ export default function GoogleAdsPage() {
                     </p>
                     <div className={styles.gridTwo}>
                         <div className={styles.card}>
-                            <ShieldCheck className={styles.cardIcon} style={{ color: '#3b82f6' }} />
+                            <ShieldCheck className={styles.cardIcon} style={{ color: '#2563eb' }} />
                             <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Meranie ako základ</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>
                                 Nasadzujeme server-side tagging, Enhanced Conversions a Conversion API. Bez nich GA4 zachytí typicky len
@@ -201,7 +201,7 @@ export default function GoogleAdsPage() {
                             </p>
                         </div>
                         <div className={styles.card}>
-                            <Scale className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <Scale className={styles.cardIcon} style={{ color: '#059669' }} />
                             <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Ekonomika pred cieľmi</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>
                                 Skôr než nastavíme ciele, analyzujeme vaše marže, fixné náklady a bod zvratu. Nepozeráme len na ROAS, ale na
@@ -233,15 +233,15 @@ export default function GoogleAdsPage() {
                         <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Ako prebieha spolupráca?</h2>
                         <div className={styles.grid} style={{ alignItems: 'flex-start', gap: '2rem' }}>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #dbeafe' }}>
-                                <div style={{ color: '#3b82f6', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>01. Nezáväzný audit</div>
+                                <div style={{ color: '#2563eb', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>01. Nezáväzný audit</div>
                                 <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Hĺbková analýza histórie účtu. Nájdeme miesta, kadiaľ vám utekajú peniaze, a ukážeme potenciál.</p>
                             </div>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #dbeafe' }}>
-                                <div style={{ color: '#3b82f6', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>02. Nastavenie</div>
+                                <div style={{ color: '#2563eb', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>02. Nastavenie</div>
                                 <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Nastavenie merania konverzií, prepojenie s GA4 a štruktúra kampaní podľa maržovosti produktov.</p>
                             </div>
                             <div style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid #dbeafe' }}>
-                                <div style={{ color: '#3b82f6', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>03. Škálovanie</div>
+                                <div style={{ color: '#2563eb', fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.5rem' }}>03. Škálovanie</div>
                                 <p style={{ fontSize: '0.95rem', color: '#64748b' }}>Priebežne optimalizujeme ponuky, dopĺňame vylučujúce slová a testujeme nové reklamy a publiká.</p>
                             </div>
                         </div>
@@ -253,12 +253,12 @@ export default function GoogleAdsPage() {
                     <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Pre koho je Google Ads vhodná</h2>
                     <div className={styles.gridTwo}>
                         <div className={styles.card}>
-                            <Store className={styles.cardIcon} style={{ color: '#3b82f6' }} />
+                            <Store className={styles.cardIcon} style={{ color: '#2563eb' }} />
                             <h3 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>E-shopy</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>Shopping a PMax s priamo merateľnou návratnosťou z predaja produktov.</p>
                         </div>
                         <div className={styles.card}>
-                            <MapPin className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <MapPin className={styles.cardIcon} style={{ color: '#059669' }} />
                             <h3 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>Lokálne služby</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>Geograficky cielené Search kampane pre zákazníkov vo vašom okolí.</p>
                         </div>
@@ -274,7 +274,7 @@ export default function GoogleAdsPage() {
                         </div>
                     </div>
                     <p className={styles.text} style={{ textAlign: 'center', maxWidth: '640px', margin: '2.5rem auto 0', fontSize: '0.95rem' }}>
-                        <CheckCircle size={16} style={{ display: 'inline', verticalAlign: 'middle', color: '#10b981', marginRight: '0.4rem' }} />
+                        <CheckCircle size={16} style={{ display: 'inline', verticalAlign: 'middle', color: '#059669', marginRight: '0.4rem' }} />
                         Hráme férovo — ak Google Ads vášmu biznisu nesadne, povieme vám to a odporučíme, kam investovať radšej.
                     </p>
                 </section>

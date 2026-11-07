@@ -21,7 +21,7 @@ export default function AiInfluencerPage() {
                                 alignItems: 'center',
                                 padding: '0.3rem 0.7rem',
                                 background: 'rgba(249, 115, 22, 0.08)',
-                                color: '#ea580c',
+                                color: '#c2410c',
                                 border: '1px solid rgba(249, 115, 22, 0.2)',
                                 borderRadius: '50px',
                                 fontWeight: 600,

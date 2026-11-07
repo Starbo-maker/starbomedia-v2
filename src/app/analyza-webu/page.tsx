@@ -14,7 +14,7 @@ export default function AnalyticsPage() {
                 <div className={styles.headerBackground} style={{ background: 'radial-gradient(circle at 30% 20%, rgba(249, 115, 22, 0.15), transparent 60%)' }} />
                 <div className={`container ${styles.headerGrid}`}>
                     <div className={styles.headerContent}>
-                        <span style={{ color: '#f97316', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem', display: 'block' }}>
+                        <span style={{ color: '#c2410c', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem', display: 'block' }}>
                             Dáta a analytika
                         </span>
                         <h1 className={styles.title}>Dáta, nie pocity</h1>
@@ -57,7 +57,7 @@ export default function AnalyticsPage() {
                                 S príchodom <strong>Google Analytics 4 (GA4)</strong> sa pravidlá hry zmenili. Staré "Universal Analytics" návyky už nefungujú.
                                 Ak nemáte nastavený <strong>Server-side GTM</strong> a <strong>Consent Mode v2</strong>, môžete prichádzať aj o 20-40 % dát o vašich konverziách kvôli blokovačom reklám a cookie lištám.
                             </p>
-                            <p className={styles.text} style={{ fontWeight: 600, color: '#f97316' }}>
+                            <p className={styles.text} style={{ fontWeight: 600, color: '#c2410c' }}>
                                 Bez presných dát riadite firmu "naslepo". My vám vrátime presný a úplný prehľad o vašich dátach.
                             </p>
                         </div>
@@ -126,7 +126,7 @@ export default function AnalyticsPage() {
                 <section className={styles.section}>
                     <div className={styles.grid} style={{ alignItems: 'flex-start' }}>
                         <div>
-                            <span style={{ color: '#f97316', fontWeight: 700, letterSpacing: '0.05em' }}>UX / UI AUDIT</span>
+                            <span style={{ color: '#c2410c', fontWeight: 700, letterSpacing: '0.05em' }}>UX / UI AUDIT</span>
                             <h2 style={{ marginTop: '0.5rem', marginBottom: '1.5rem' }}>Prečo ľudia odchádzajú z košíka?</h2>
                             <p className={styles.text} style={{ marginBottom: '1.5rem' }}>
                                 Dáta nám povedia "čo" sa stalo, UX analýza nám povie "prečo".
@@ -146,7 +146,7 @@ export default function AnalyticsPage() {
                         </div>
 
                         <div style={{ background: '#1e293b', borderRadius: '16px', padding: '2rem', color: 'white' }}>
-                            <h3 style={{ marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '1rem' }}>Čo kontrolujeme v rámci auditu?</h3>
+                            <h3 style={{ color: 'white', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '1rem' }}>Čo kontrolujeme v rámci auditu?</h3>
                             <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                                 <li style={{ display: 'flex', gap: '1rem' }}>
                                     <Smartphone size={20} color="#f97316" style={{ flexShrink: 0 }} />
@@ -180,7 +180,7 @@ export default function AnalyticsPage() {
                     <p style={{ maxWidth: '600px', margin: '0 auto 2rem', color: '#475569' }}>
                         Objednajte si kompletný audit merania a UX. Zistíme, kde strácate peniaze a navrhneme riešenie.
                     </p>
-                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#f97316', border: 'none', padding: '1rem 3rem' }}>
+                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#c2410c', border: 'none', padding: '1rem 3rem' }}>
                         Chcem audit merania
                     </Link>
                 </div>

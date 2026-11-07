@@ -3,7 +3,7 @@ import { Youtube, Play, MonitorPlay, Tv, Eye, Video as VideoIcon } from 'lucide-
 import styles from '../service.module.css';
 
 export const metadata = {
-    title: 'YouTube reklama | Starbomedia',
+    title: 'YouTube reklama – správa kampaní na YouTube | Starbomedia',
     description: 'Video reklama na YouTube. Budujte povedomie o značke vďaka najväčšej video platforme sveta. Video produkcia a správa kampaní.',
 };
 
@@ -14,7 +14,7 @@ export default function YoutubeAdsPage() {
                 <div className={styles.headerBackground} style={{ background: 'radial-gradient(circle at 70% 20%, rgba(220, 38, 38, 0.1), transparent 60%)' }} />
                 <div className={`container ${styles.headerGrid}`}>
                     <div className={styles.headerContent}>
-                        <span style={{ color: '#ef4444', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem', display: 'block' }}>
+                        <span style={{ color: '#dc2626', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem', display: 'block' }}>
                             Video marketing
                         </span>
                         <h1 className={styles.title}>Buďte tam, kde sú oči všetkých</h1>
@@ -23,7 +23,7 @@ export default function YoutubeAdsPage() {
                             Zasiahnite svojich zákazníkov pútavým videom v momente, keď relaxujú alebo sa vzdelávajú.
                         </p>
                         <div style={{ marginTop: '2rem' }}>
-                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#ef4444', boxShadow: '0 4px 14px 0 rgba(220, 38, 38, 0.4)' }}>
+                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#dc2626', boxShadow: '0 4px 14px 0 rgba(220, 38, 38, 0.4)' }}>
                                 Chcem video kampaň
                             </Link>
                         </div>
@@ -59,15 +59,15 @@ export default function YoutubeAdsPage() {
                         </p>
                         <div className={styles.featureList}>
                             <div className={styles.featureItem}>
-                                <Eye size={24} className={styles.featureIcon} style={{ color: '#ef4444' }} />
+                                <Eye size={24} className={styles.featureIcon} style={{ color: '#dc2626' }} />
                                 Platíte len, ak si divák pozrie video
                             </div>
                             <div className={styles.featureItem}>
-                                <Tv size={24} className={styles.featureIcon} style={{ color: '#ef4444' }} />
+                                <Tv size={24} className={styles.featureIcon} style={{ color: '#dc2626' }} />
                                 Zásah na TV obrazovkách, mobiloch aj PC
                             </div>
                             <div className={styles.featureItem}>
-                                <VideoIcon size={24} className={styles.featureIcon} style={{ color: '#ef4444' }} />
+                                <VideoIcon size={24} className={styles.featureIcon} style={{ color: '#dc2626' }} />
                                 Ideálne pre demonštráciu produktov
                             </div>
                         </div>
@@ -115,19 +115,19 @@ export default function YoutubeAdsPage() {
                     <h2 style={{ marginBottom: '3rem' }}>Video reklama v nákupnom lieviku (See-Think-Do)</h2>
                     <div className={styles.cardGrid}>
                         <div className={styles.card}>
-                            <h3 style={{ color: '#ef4444', fontSize: '1.8rem', marginBottom: '0.5rem' }}>See</h3>
+                            <h3 style={{ color: '#dc2626', fontSize: '1.8rem', marginBottom: '0.5rem' }}>See</h3>
                             <p className={styles.text}>
                                 <strong>Budovanie povedomia.</strong> Zasiahne široké publikum. Cieľom je, aby si ľudia zapamätali vašu značku. Využívame Bumper Ads.
                             </p>
                         </div>
                         <div className={styles.card}>
-                            <h3 style={{ color: '#ef4444', fontSize: '1.8rem', marginBottom: '0.5rem' }}>Think</h3>
+                            <h3 style={{ color: '#dc2626', fontSize: '1.8rem', marginBottom: '0.5rem' }}>Think</h3>
                             <p className={styles.text}>
                                 <strong>Zvažovanie.</strong> Cielime na ľudí, ktorí hľadajú recenzie alebo riešenie problému. Dlhšie In-Stream videá vysvetľujúce produkt.
                             </p>
                         </div>
                         <div className={styles.card}>
-                            <h3 style={{ color: '#ef4444', fontSize: '1.8rem', marginBottom: '0.5rem' }}>Do</h3>
+                            <h3 style={{ color: '#dc2626', fontSize: '1.8rem', marginBottom: '0.5rem' }}>Do</h3>
                             <p className={styles.text}>
                                 <strong>Konverzia.</strong> Remarketing. Ukážeme video ľuďom, ktorí boli na webe a pripomenieme im nedokončený nákup.
                             </p>
@@ -156,7 +156,7 @@ export default function YoutubeAdsPage() {
 
                 <div className={styles.ctaBox}>
                     <h2 className={styles.ctaTitle}>Ukážte sa svetu</h2>
-                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#ef4444', border: 'none', padding: '1rem 3rem' }}>
+                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#dc2626', border: 'none', padding: '1rem 3rem' }}>
                         Chcem video kampaň
                     </Link>
                 </div>

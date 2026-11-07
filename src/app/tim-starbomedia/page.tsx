@@ -4,7 +4,7 @@ import { Users, Target, Rocket } from 'lucide-react';
 import styles from '../service.module.css';
 
 export const metadata = {
-    title: 'O nás | Tím Starbo Media',
+    title: 'O nás – tím online marketingovej agentúry | Starbomedia',
     description: 'Sme digitálna agentúra zameraná na výsledky. Zoznámte sa s naším tímom a filozofiou.',
 };
 

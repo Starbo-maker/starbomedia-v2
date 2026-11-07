@@ -50,7 +50,7 @@ export default function CareerPage() {
                             <p className={styles.text} style={{ marginTop: '1rem' }}>
                                 Správa Google Ads a Meta Ads kampaní pre projekty doma aj v zahraničí. Analytické myslenie a skúsenosti podmienkou.
                             </p>
-                            <Link href="/kariera-ppc-specialista" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#0d9488', boxShadow: '0 4px 14px 0 rgba(13, 148, 136, 0.4)' }}>Zobraziť inzerát</Link>
+                            <Link href="/kariera-ppc-specialista" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#0f766e', boxShadow: '0 4px 14px 0 rgba(13, 148, 136, 0.4)' }}>Zobraziť inzerát</Link>
                         </div>
 
                         <div className={styles.card}>
@@ -59,7 +59,7 @@ export default function CareerPage() {
                             <p className={styles.text} style={{ marginTop: '1rem' }}>
                                 Tvorba obsahu s pomocou AI (ChatGPT, Claude, Gemini) a moderný digitálny marketing v praxi. Hľadáme talent, ktorý vychováme.
                             </p>
-                            <Link href="/kariera-marketing-staz" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#0d9488', boxShadow: '0 4px 14px 0 rgba(13, 148, 136, 0.4)' }}>Zobraziť inzerát</Link>
+                            <Link href="/kariera-marketing-staz" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#0f766e', boxShadow: '0 4px 14px 0 rgba(13, 148, 136, 0.4)' }}>Zobraziť inzerát</Link>
                         </div>
                     </div>
                 </section>

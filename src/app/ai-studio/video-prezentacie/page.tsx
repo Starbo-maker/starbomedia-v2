@@ -24,7 +24,7 @@ export default function VideoPresentationsPage() {
                                 fontWeight: 600,
                                 letterSpacing: '0.04em',
                                 textTransform: 'uppercase',
-                                color: '#64748b',
+                                color: '#475569',
                                 background: 'rgba(100, 116, 139, 0.08)',
                                 border: '1px dashed rgba(100, 116, 139, 0.35)',
                                 borderRadius: '50px',

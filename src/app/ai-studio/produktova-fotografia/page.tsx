@@ -109,7 +109,7 @@ export default function AiProductPhotoPage() {
                                 altPred="Pôvodná produktová fotka masážneho stola Fabulo UNO"
                                 aspectRatio="16 / 10"
                             />
-                            <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '0.8rem', textAlign: 'center' }}>
+                            <p style={{ color: '#64748b', fontSize: '0.85rem', marginTop: '0.8rem', textAlign: 'center' }}>
                                 Z e-shopového packshotu lifestyle scéna – produkt sa nezmenil ani o milimeter.
                             </p>
                         </div>

@@ -81,7 +81,7 @@ export default function AuditPage() {
                     <div className={styles.headerContent}>
                         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#ecfdf5', padding: '0.3rem 0.8rem', borderRadius: '50px', marginBottom: '1.5rem', border: '1px solid #d1fae5' }}>
                             <ShieldCheck size={16} color="#10b981" />
-                            <span style={{ color: '#10b981', fontWeight: 600, fontSize: '0.85rem' }}>PRI NÁSLEDNEJ SPOLUPRÁCI ZDARMA</span>
+                            <span style={{ color: '#047857', fontWeight: 600, fontSize: '0.85rem' }}>PRI NÁSLEDNEJ SPOLUPRÁCI ZDARMA</span>
                         </div>
                         <h1 className={styles.title}>Google Ads audit: 74-bodová kontrola, ktorá nájde, kadiaľ utekajú peniaze.</h1>
                         <p className={styles.subtitle}>
@@ -89,7 +89,7 @@ export default function AuditPage() {
                             Cena od 250 € podľa veľkosti účtu — a ak sa následne stanete naším klientom, audit vám odpočítame z prvej faktúry. Výstup do 3 – 5 dní v ľudskej reči: hlavné nedostatky s dopadom na peniaze, nie mikromanažment.
                         </p>
                         <div style={{ marginTop: '2rem' }}>
-                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#10b981', boxShadow: '0 4px 14px 0 rgba(16, 185, 129, 0.4)' }}>
+                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#047857', boxShadow: '0 4px 14px 0 rgba(16, 185, 129, 0.4)' }}>
                                 Objednať audit
                             </Link>
                         </div>
@@ -150,9 +150,9 @@ export default function AuditPage() {
                     </div>
                     <p className={styles.text} style={{ marginTop: '1.25rem' }}>
                         O meraní, ktoré zachytáva len časť tržieb, sme písali podrobne v článku{' '}
-                        <Link href="/ecommerce-tracking-2026-bullshit-vs-realita-merania-e-shopov" style={{ color: '#10b981', fontWeight: 600 }}>E-commerce tracking: bullshit vs. realita</Link>
+                        <Link href="/ecommerce-tracking-2026-bullshit-vs-realita-merania-e-shopov" style={{ color: '#047857', fontWeight: 600 }}>E-commerce tracking: bullshit vs. realita</Link>
                         {' '}— a o cenách za klik v analýze{' '}
-                        <Link href="/kolko-stoji-google-ads-reklama-na-slovensku-2026" style={{ color: '#10b981', fontWeight: 600 }}>Koľko stojí Google Ads na Slovensku</Link>.
+                        <Link href="/kolko-stoji-google-ads-reklama-na-slovensku-2026" style={{ color: '#047857', fontWeight: 600 }}>Koľko stojí Google Ads na Slovensku</Link>.
                     </p>
                 </section>
 
@@ -196,9 +196,9 @@ export default function AuditPage() {
                         Audit od 250 € podľa veľkosti účtu — pri následnej spolupráci vám ho odpočítame z prvej faktúry. Ak je účet v poriadku, povieme vám to.
                         Ak nie, dostanete konkrétny zoznam, čo opraviť — u nás alebo kdekoľvek inde.
                     </p>
-                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#10b981' }}>Objednať audit</Link>
+                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#047857' }}>Objednať audit</Link>
                     <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#64748b' }}>
-                        Ceny ostatných služieb nájdete v <Link href="/cennik" style={{ color: '#10b981', fontWeight: 600 }}>cenníku</Link>.
+                        Ceny ostatných služieb nájdete v <Link href="/cennik" style={{ color: '#047857', fontWeight: 600 }}>cenníku</Link>.
                     </p>
                 </section>
             </div>

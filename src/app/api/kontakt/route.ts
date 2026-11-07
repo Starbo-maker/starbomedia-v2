@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { CONTACT_SERVICES } from '../../../data/contactServices';
 
 /**
  * Kontaktný formulár → e-mail cez Resend.
@@ -62,6 +63,10 @@ export async function POST(req: NextRequest) {
     const email = str(body.email, 200);
     const predmet = str(body.predmet, 150);
     const sprava = str(body.sprava, 5000);
+    const stranka = str(body.stranka, 200);
+    const sluzby = (Array.isArray(body.sluzby) ? body.sluzby : [])
+        .map((x) => str(x, 40))
+        .filter((x): x is (typeof CONTACT_SERVICES)[number] => (CONTACT_SERVICES as readonly string[]).includes(x));
     if (meno.length < 2 || sprava.length < 10 || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
         return NextResponse.json(
             { ok: false, error: 'Vyplňte prosím meno, platný e-mail a správu (aspoň 10 znakov).' },
@@ -90,10 +95,12 @@ export async function POST(req: NextRequest) {
         from: RESEND_FROM,
         to: [CONTACT_TO],
         replyTo: email,
-        subject: `Dopyt z webu: ${predmet || meno}`,
+        subject: `Dopyt z webu: ${predmet || (sluzby.length ? `${sluzby.join(', ')} – ${meno}` : meno)}`,
         text: [
             `Meno: ${meno}`,
             `E-mail: ${email}`,
+            stranka ? `Web: ${stranka}` : null,
+            sluzby.length ? `Záujem o: ${sluzby.join(', ')}` : null,
             predmet ? `Predmet: ${predmet}` : null,
             '',
             sprava,

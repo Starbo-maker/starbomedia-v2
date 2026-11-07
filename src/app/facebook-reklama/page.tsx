@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import styles from '../service.module.css';
 
-const ACCENT = '#ec4899';
+const ACCENT = '#be185d';
 const ACCENT_SOFT = '#fdf2f8';
 const ACCENT_BORDER = '#fbcfe8';
 const PURPLE = '#8b5cf6';
@@ -96,7 +96,7 @@ export default function FacebookAdsPage() {
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Trhov CEE, kde inzerujeme</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#10b981' }}>84+</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#059669' }}>84+</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Spokojných klientov</div>
                                 </div>
                             </div>
@@ -131,7 +131,7 @@ export default function FacebookAdsPage() {
                             </p>
                         </div>
                         <div className={styles.card}>
-                            <ShieldCheck className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <ShieldCheck className={styles.cardIcon} style={{ color: '#059669' }} />
                             <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Conversion API už nie je voliteľné</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>
                                 Samotný Meta Pixel blokujú adblockery, Safari ITP aj používatelia, ktorí odmietnu cookies.
@@ -259,7 +259,7 @@ export default function FacebookAdsPage() {
                             </p>
                         </div>
                         <div className={styles.card}>
-                            <RefreshCw className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <RefreshCw className={styles.cardIcon} style={{ color: '#059669' }} />
                             <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Kreatíva v iteráciách, nie raz</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>
                                 Každý mesiac testujeme nové kreatívy — rôzne uhly pohľadu, formáty a hooky. Identifikujeme,
@@ -348,7 +348,7 @@ export default function FacebookAdsPage() {
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>Nové produkty, launch kampane, sezónne akcie. Video a Reels majú najlepší dosah za najnižší CPM.</p>
                         </div>
                         <div className={styles.card}>
-                            <Users className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <Users className={styles.cardIcon} style={{ color: '#059669' }} />
                             <h3 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>Firmy na zber dopytov</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>B2B služby, vzdelávanie, finančné produkty. Natívne formuláre v kombinácii s presným cielením.</p>
                         </div>
@@ -359,7 +359,7 @@ export default function FacebookAdsPage() {
                         </div>
                     </div>
                     <p className={styles.text} style={{ textAlign: 'center', maxWidth: '680px', margin: '2.5rem auto 0', fontSize: '0.95rem' }}>
-                        <CheckCircle size={16} style={{ display: 'inline', verticalAlign: 'middle', color: '#10b981', marginRight: '0.4rem' }} />
+                        <CheckCircle size={16} style={{ display: 'inline', verticalAlign: 'middle', color: '#059669', marginRight: '0.4rem' }} />
                         Hráme férovo — ak ľudia váš produkt aktívne hľadajú, povieme vám, že Meta je skôr doplnok ku Google Ads, a kde sa investícia oplatí viac.
                     </p>
                 </section>

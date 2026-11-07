@@ -24,7 +24,7 @@ export default function VoiceBotsPage() {
                                 fontWeight: 600,
                                 letterSpacing: '0.04em',
                                 textTransform: 'uppercase',
-                                color: '#f97316',
+                                color: '#c2410c',
                                 background: 'rgba(249, 115, 22, 0.08)',
                                 border: '1px solid rgba(249, 115, 22, 0.25)',
                                 borderRadius: '50px',

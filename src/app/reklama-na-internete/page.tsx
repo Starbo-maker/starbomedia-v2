@@ -71,9 +71,9 @@ export default function ReklamaNaInternetePage() {
                                 marže je ako ladiť motor bez tachometra.
                             </p>
                             <ul style={{ marginTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                                <li className={styles.featureItem}><CheckCircle size={18} style={{ color: '#10b981', flexShrink: 0 }} /> Online reklamu vidíme zhora — naprieč všetkými kanálmi naraz</li>
-                                <li className={styles.featureItem}><CheckCircle size={18} style={{ color: '#10b981', flexShrink: 0 }} /> Rozhodujeme sa podľa dát, nie podľa pocitov</li>
-                                <li className={styles.featureItem}><CheckCircle size={18} style={{ color: '#10b981', flexShrink: 0 }} /> Reportujeme čísla, ktoré ovplyvňujú váš biznis</li>
+                                <li className={styles.featureItem}><CheckCircle size={18} style={{ color: '#059669', flexShrink: 0 }} /> Online reklamu vidíme zhora — naprieč všetkými kanálmi naraz</li>
+                                <li className={styles.featureItem}><CheckCircle size={18} style={{ color: '#059669', flexShrink: 0 }} /> Rozhodujeme sa podľa dát, nie podľa pocitov</li>
+                                <li className={styles.featureItem}><CheckCircle size={18} style={{ color: '#059669', flexShrink: 0 }} /> Reportujeme čísla, ktoré ovplyvňujú váš biznis</li>
                             </ul>
                         </div>
                         {/* Stats Box */}
@@ -85,19 +85,19 @@ export default function ReklamaNaInternetePage() {
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Ročný rozpočet (CEE)</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#f97316' }}>od 2012</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#c2410c' }}>od 2012</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Na trhu online reklamy</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#10b981' }}>13</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#059669' }}>13</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Trhov CEE, kde inzerujeme</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#3b82f6' }}>84+</div>
+                                    <div style={{ fontSize: 'var(--fs-stat)', fontWeight: 800, color: '#2563eb' }}>84+</div>
                                     <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>Klientov, 269+ kampaní</div>
                                 </div>
                             </div>
-                            <p style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '2rem', lineHeight: 1.5 }}>
+                            <p style={{ fontSize: '0.8rem', color: '#64748b', marginTop: '2rem', lineHeight: 1.5 }}>
                                 Certifikovaný Google Partner a Blue Winston Certified Partner. Tím 7+ špecialistov.
                             </p>
                         </div>
@@ -216,7 +216,7 @@ export default function ReklamaNaInternetePage() {
                             </p>
                         </div>
                         <div className={styles.card}>
-                            <Scale className={styles.cardIcon} style={{ color: '#f97316' }} />
+                            <Scale className={styles.cardIcon} style={{ color: '#c2410c' }} />
                             <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Ekonomika pred cieľmi</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>
                                 Skôr než nastavíme ciele, analyzujeme vaše marže, fixné náklady a bod zvratu. Nepozeráme len na ROAS, ale
@@ -225,7 +225,7 @@ export default function ReklamaNaInternetePage() {
                             </p>
                         </div>
                         <div className={styles.card}>
-                            <Activity className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <Activity className={styles.cardIcon} style={{ color: '#059669' }} />
                             <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Validácia voči tržbám</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>
                                 Dáta z Google Ads, Meta a GA4 každý mesiac porovnávame so skutočnými tržbami v e-shope. Ak sa čísla
@@ -233,7 +233,7 @@ export default function ReklamaNaInternetePage() {
                             </p>
                         </div>
                         <div className={styles.card}>
-                            <GitCompare className={styles.cardIcon} style={{ color: '#3b82f6' }} />
+                            <GitCompare className={styles.cardIcon} style={{ color: '#2563eb' }} />
                             <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Pohľad naprieč kanálmi</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>
                                 Sledujeme, ako spolupracuje Google Ads, Meta Ads, SEO aj cenové porovnávače. Atribúciu riešime celkovo,
@@ -285,23 +285,23 @@ export default function ReklamaNaInternetePage() {
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>Elektronika, nábytok, šport, galantéria, zdravé doplnky, fotovoltika aj FMCG — všade, kde sa návratnosť dá merať.</p>
                         </div>
                         <div className={styles.card}>
-                            <MapPin className={styles.cardIcon} style={{ color: '#10b981' }} />
+                            <MapPin className={styles.cardIcon} style={{ color: '#059669' }} />
                             <h3 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>Lokálne firmy a služby</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>Geograficky cielené kampane pre zákazníkov vo vašom okolí, s dôrazom na merateľné dopyty a hovory.</p>
                         </div>
                         <div className={styles.card}>
-                            <Globe className={styles.cardIcon} style={{ color: '#f97316' }} />
+                            <Globe className={styles.cardIcon} style={{ color: '#c2410c' }} />
                             <h3 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>Export do zahraničia</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>13 trhov CEE — SK, CZ, HU, PL, RO, DE, AT, HR, SI, IT, FR, BE aj BG. Lokalizácia feedov a multi-country PMax štruktúry.</p>
                         </div>
                         <div className={styles.card}>
-                            <Building2 className={styles.cardIcon} style={{ color: '#3b82f6' }} />
+                            <Building2 className={styles.cardIcon} style={{ color: '#2563eb' }} />
                             <h3 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.5rem' }}>Rastúce značky</h3>
                             <p className={styles.text} style={{ fontSize: '0.92rem' }}>Od lokálnych e-shopov po medzinárodné značky, ktoré chcú stáť na dátach a transparentnom prístupe, nie na pocitoch.</p>
                         </div>
                     </div>
                     <p className={styles.text} style={{ textAlign: 'center', maxWidth: '660px', margin: '2.5rem auto 0', fontSize: '0.95rem' }}>
-                        <CheckCircle size={16} style={{ display: 'inline', verticalAlign: 'middle', color: '#10b981', marginRight: '0.4rem' }} />
+                        <CheckCircle size={16} style={{ display: 'inline', verticalAlign: 'middle', color: '#059669', marginRight: '0.4rem' }} />
                         Hráme férovo — ak niektorý kanál vášmu biznisu nesadne, povieme vám to a odporučíme, kam investovať radšej.
                     </p>
                 </section>

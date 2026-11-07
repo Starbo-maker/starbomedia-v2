@@ -152,7 +152,7 @@ export default function PrecoStarbomediaPage() {
                             Namiesto sľubov čísla, ktoré si viete porovnať s kýmkoľvek iným.
                         </p>
                         <div style={{ marginTop: '1.5rem' }}>
-                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#8b5cf6', boxShadow: '0 4px 14px 0 rgba(139, 92, 246, 0.4)' }}>
+                            <Link href="/kontakt" className="btn btn-primary" style={{ background: '#7c3aed', boxShadow: '0 4px 14px 0 rgba(139, 92, 246, 0.4)' }}>
                                 Ozvite sa nám
                             </Link>
                         </div>
@@ -294,7 +294,7 @@ export default function PrecoStarbomediaPage() {
                         Pošlite nám prístup do účtu alebo adresu e-shopu. Vo vstupnom audite vám povieme, kadiaľ
                         utekajú peniaze, koľko tržieb vaše meranie nevidí a aký rozpočet dáva zmysel.
                     </p>
-                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#8b5cf6' }}>Ozvite sa nám</Link>
+                    <Link href="/kontakt" className="btn btn-primary" style={{ background: '#7c3aed' }}>Ozvite sa nám</Link>
                 </section>
             </div>
 

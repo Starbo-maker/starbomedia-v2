@@ -18,7 +18,7 @@ function GoogleG({ size = 18 }: { size?: number }) {
 
 function Stars({ rating, size = 16 }: { rating: number; size?: number }) {
     return (
-        <span className={styles.stars} aria-label={`${rating} z 5 hviezdičiek`}>
+        <span className={styles.stars} role="img" aria-label={`${rating} z 5 hviezdičiek`}>
             {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} size={size} fill={i < rating ? STAR_COLOR : 'none'} color={i < rating ? STAR_COLOR : '#cbd5e1'} strokeWidth={1.5} />
             ))}

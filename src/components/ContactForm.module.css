@@ -1,0 +1,61 @@
+.optional {
+    color: var(--text-muted);
+    font-size: 0.85em;
+}
+
+.services {
+    border: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+.services legend {
+    margin-bottom: 0.6rem;
+}
+
+.serviceChips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Checkbox ako klikateľný štítok — natívny input ostáva kvôli klávesnici a čítačkám */
+.serviceChip {
+    position: relative;
+    cursor: pointer;
+}
+
+.serviceChip input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.serviceChip span {
+    display: inline-block;
+    padding: 0.5rem 0.95rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    background: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--foreground);
+    transition: border-color var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+}
+
+.serviceChip:hover span {
+    border-color: var(--primary);
+}
+
+.serviceChip input:checked + span {
+    background: #6d28d9;
+    border-color: #6d28d9;
+    color: white;
+}
+
+.serviceChip input:focus-visible + span {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
