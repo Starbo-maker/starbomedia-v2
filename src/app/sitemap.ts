@@ -52,11 +52,16 @@ function priorityFor(p: string): number {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const now = new Date();
+    // lastmod uvádzame len tam, kde poznáme skutočný dátum zmeny (články a /blog).
+    // Statické stránky a slovník ho nemajú – dátum buildu by Google naučil lastmod ignorovať.
+    const newestPost = (posts as Post[]).reduce(
+        (max, post) => Math.max(max, new Date(post.modified || post.date).getTime()),
+        0,
+    );
 
     const staticEntries: MetadataRoute.Sitemap = STATIC_PATHS.map((p) => ({
         url: p ? `${SITE}/${p}` : SITE,
-        lastModified: now,
+        ...(p === 'blog' && newestPost ? { lastModified: new Date(newestPost) } : {}),
         changeFrequency: p === '' || p === 'blog' ? 'weekly' : 'monthly',
         priority: priorityFor(p),
     }));
@@ -74,7 +79,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // sa do sitemap pridá automaticky.
     const glossaryEntries: MetadataRoute.Sitemap = getPagedTerms().map((t) => ({
         url: `${SITE}/slovnik-pojmov/${t.slug}`,
-        lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.5,
     }));
